@@ -1,0 +1,6 @@
+framework module Pods_Vaif_R2___VPN_Widget {
+  umbrella header "Pods-Vaif R2 - VPN Widget-umbrella.h"
+
+  export *
+  module * { export * }
+}

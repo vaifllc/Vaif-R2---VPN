@@ -1,0 +1,72 @@
+PODS:
+  - AwesomeSpotlightView (0.1.15)
+  - CocoaLumberjack/Core (3.7.4)
+  - CocoaLumberjack/Swift (3.7.4):
+    - CocoaLumberjack/Core
+  - DynamicBlurView (4.1.0)
+  - KeychainAccess (4.2.2)
+  - NicoProgress (0.4.0)
+  - PopupDialog (1.1.1):
+    - DynamicBlurView (~> 4.0)
+  - PromiseKit (6.18.1):
+    - PromiseKit/CorePromise (= 6.18.1)
+    - PromiseKit/Foundation (= 6.18.1)
+    - PromiseKit/UIKit (= 6.18.1)
+  - PromiseKit/CorePromise (6.18.1)
+  - PromiseKit/Foundation (6.18.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.18.1):
+    - PromiseKit/CorePromise
+  - ReachabilitySwift (5.0.0)
+  - RQShineLabel (1.0.0)
+  - SnapshotTesting (1.9.0)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
+  - SwiftyStoreKit (0.16.1)
+
+DEPENDENCIES:
+  - AwesomeSpotlightView
+  - CocoaLumberjack/Swift
+  - KeychainAccess
+  - NicoProgress
+  - PopupDialog
+  - PromiseKit
+  - ReachabilitySwift
+  - RQShineLabel
+  - SnapshotTesting (~> 1.9.0)
+  - SwiftMessages
+  - SwiftyStoreKit
+
+SPEC REPOS:
+  trunk:
+    - AwesomeSpotlightView
+    - CocoaLumberjack
+    - DynamicBlurView
+    - KeychainAccess
+    - NicoProgress
+    - PopupDialog
+    - PromiseKit
+    - ReachabilitySwift
+    - RQShineLabel
+    - SnapshotTesting
+    - SwiftMessages
+    - SwiftyStoreKit
+
+SPEC CHECKSUMS:
+  AwesomeSpotlightView: 51b2d3a2262f251ed0b7735b73fe658a13e8f14b
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  NicoProgress: 8e26d401623a1ba9456748b04b30183d5e212d25
+  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
+  PromiseKit: 49d70c53d5d20e346beaea4b276b5dd2ab446bb4
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  RQShineLabel: 17457abf7250d1220ddd99bc61323d57563344cd
+  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+
+PODFILE CHECKSUM: a6f8d9f99784e2031fd2e233a1cb29d18233d02c
+
+COCOAPODS: 1.11.3
