@@ -228,6 +228,7 @@
 		B7EA16E128DBBCB2008D8D3E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160F928D7CFB90028BE35 /* CloudKit.framework */; };
 		B7EA16E228DBBD0E008D8D3E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
 		B7EA16E328DBBD18008D8D3E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */; };
+		B7EA16E428DBC03B008D8D3E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
 		CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */; };
 		E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */; };
 		EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */; };
@@ -486,6 +487,7 @@
 				B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */,
 				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
 				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				B7EA16E428DBC03B008D8D3E /* NetworkExtension.framework in Frameworks */,
 				B75160E328D7CAF50028BE35 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
