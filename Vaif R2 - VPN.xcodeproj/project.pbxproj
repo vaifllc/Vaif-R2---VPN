@@ -229,6 +229,10 @@
 		B7EA16E228DBBD0E008D8D3E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
 		B7EA16E328DBBD18008D8D3E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */; };
 		B7EA16E428DBC03B008D8D3E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
+		B7EA16EC28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
+		B7EA16ED28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
+		B7EA16EE28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
+		B7EA16EF28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
 		CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */; };
 		E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */; };
 		EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */; };
@@ -469,6 +473,7 @@
 		B7948E0E28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsAuthorizationUI.swift; sourceTree = "<group>"; };
 		B7948E1428D7C760004CDB79 /* OneTimeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeActions.swift; sourceTree = "<group>"; };
 		B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedFileAccess.swift; sourceTree = "<group>"; };
+		B7EA16F028DBD25C008D8D3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -581,6 +586,7 @@
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B7EA16F328DBDB6C008D8D3E /* R2 Auth */,
 			);
 			path = "R2 UI Scenes";
 			sourceTree = "<group>";
@@ -786,6 +792,7 @@
 		B7948D0A28D6502A004CDB79 = {
 			isa = PBXGroup;
 			children = (
+				B7EA16F128DBD25C008D8D3E /* Localizable.strings */,
 				B75160E428D7CB4A0028BE35 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements */,
 				B7948D2E28D7B8C6004CDB79 /* Settings.bundle */,
 				B7948DB328D7BFDA004CDB79 /* Shared */,
@@ -822,6 +829,7 @@
 		B7948D1528D6502A004CDB79 /* Vaif R2 - VPN */ = {
 			isa = PBXGroup;
 			children = (
+				B7EA16F228DBDB5C008D8D3E /* R2 Auth Extensions */,
 				B751612528D8BAAA0028BE35 /* R2 Base Extensions */,
 				B751611928D7E7EB0028BE35 /* R2 Services */,
 				B751611728D7DF680028BE35 /* R2 Config */,
@@ -946,6 +954,20 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
+		B7EA16F228DBDB5C008D8D3E /* R2 Auth Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "R2 Auth Extensions";
+			sourceTree = "<group>";
+		};
+		B7EA16F328DBDB6C008D8D3E /* R2 Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "R2 Auth";
+			sourceTree = "<group>";
+		};
 		C01C6274F32B807A421E8FBC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -981,11 +1003,13 @@
 			buildConfigurationList = B7948D2A28D6502C004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN" */;
 			buildPhases = (
 				A0D2861E5EBDF387F6920741 /* [CP] Check Pods Manifest.lock */,
+				B7EA16E628DBD189008D8D3E /* Check For BartyCrouch */,
 				B7948D0F28D6502A004CDB79 /* Sources */,
 				B7948D1028D6502A004CDB79 /* Frameworks */,
 				B7948D1128D6502A004CDB79 /* Resources */,
 				46D8B1F47987A19D7815B0F8 /* [CP] Embed Pods Frameworks */,
 				B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */,
+				B7EA16E528DBCEA9008D8D3E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1208,6 +1232,7 @@
 				B75161DB28D906230028BE35 /* SF-Pro-Rounded-Medium.otf in Resources */,
 				B75161DC28D906230028BE35 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				B75160E728D7CCF30028BE35 /* privacyBlockList.json in Resources */,
+				B7EA16EC28DBD25C008D8D3E /* Localizable.strings in Resources */,
 				45FDC9D472CCBDEFC0B81467 /* Pods-Vaif R2 - VPN-metadata.plist in Resources */,
 				B75160EA28D7CD100028BE35 /* socialBlockList.json in Resources */,
 				B75161D728D906230028BE35 /* Montserrat-Medium.ttf in Resources */,
@@ -1237,6 +1262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C820B0F15886505AC1B4C0 /* Pods-Vaif R2 - VPN Widget-metadata.plist in Resources */,
+				B7EA16ED28DBD25C008D8D3E /* Localizable.strings in Resources */,
 				F765EE8D8B61F53D8EB6272A /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1255,6 +1281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F00375F34C926AD4516205E /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist in Resources */,
+				B7EA16EE28DBD25C008D8D3E /* Localizable.strings in Resources */,
 				5334E1A8D3382D884668C2B3 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1273,6 +1300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7948DA728D7BA4F004CDB79 /* Assets.xcassets in Resources */,
+				B7EA16EF28DBD25C008D8D3E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,6 +1428,41 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B7EA16E528DBCEA9008D8D3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"${PROJECT_DIR}\" ; agvtool bump\n";
+		};
+		B7EA16E628DBD189008D8D3E /* Check For BartyCrouch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check For BartyCrouch";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which bartycrouch > /dev/null; then\n    bartycrouch update -x\n    bartycrouch lint -x\nelse\n    echo \"warning: BartyCrouch not installed, download it from https://github.com/Flinesoft/BartyCrouch\"\nfi\n";
 		};
 		BEE5E4A4F828AF3C2B9C0832 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1687,6 +1750,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		B7EA16F128DBD25C008D8D3E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7EA16F028DBD25C008D8D3E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1813,7 +1884,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -1850,7 +1921,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -1884,7 +1955,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -1911,7 +1982,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -1938,7 +2009,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -1965,7 +2036,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -1992,7 +2063,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -2019,7 +2090,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -2046,7 +2117,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -2073,7 +2144,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -2100,7 +2171,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -2119,7 +2190,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -2139,7 +2210,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
@@ -2167,7 +2238,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
