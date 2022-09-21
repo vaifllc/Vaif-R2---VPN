@@ -3,10 +3,128 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */; };
+		1E403011B1073B2886139601 /* Pods_Vaif_R2___VPN_Tunnel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */; };
+		2456F40901769747A1568CD8 /* Pods_Vaif_R2___VPNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */; };
+		27C820B0F15886505AC1B4C0 /* Pods-Vaif R2 - VPN Widget-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C0DED633FAF871F86B8DF53 /* Pods-Vaif R2 - VPN Widget-metadata.plist */; };
+		3F00375F34C926AD4516205E /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = F32AB2F64B172F1E3B2D1343 /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist */; };
+		45FDC9D472CCBDEFC0B81467 /* Pods-Vaif R2 - VPN-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BA7A5288829612EF0426219 /* Pods-Vaif R2 - VPN-metadata.plist */; };
+		5334E1A8D3382D884668C2B3 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFD75F4E8BFD4F252F7054 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist */; };
+		5949781C23F932610EB44854 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */; };
+		AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5519B02FDAD4464B31A8CA07 /* Pods-Vaif R2 - VPN-settings-metadata.plist */; };
+		B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */; };
+		B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DD28D7C9940028BE35 /* LoadingCircle.swift */; };
+		B75160E028D7C9BD0028BE35 /* CombinedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */; };
+		B75160E328D7CAF50028BE35 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160E228D7CAF50028BE35 /* StoreKit.framework */; };
+		B75160E728D7CCF30028BE35 /* privacyBlockList.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160E628D7CCF30028BE35 /* privacyBlockList.json */; };
+		B75160E828D7CCF30028BE35 /* privacyBlockList.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160E628D7CCF30028BE35 /* privacyBlockList.json */; };
+		B75160EA28D7CD100028BE35 /* socialBlockList.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160E928D7CD100028BE35 /* socialBlockList.json */; };
+		B75160EB28D7CD100028BE35 /* socialBlockList.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160E928D7CD100028BE35 /* socialBlockList.json */; };
+		B75160ED28D7CD290028BE35 /* adBlockList.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160EC28D7CD290028BE35 /* adBlockList.json */; };
+		B75160EE28D7CD290028BE35 /* adBlockList.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160EC28D7CD290028BE35 /* adBlockList.json */; };
+		B75160F028D7CD510028BE35 /* adBlockListTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160EF28D7CD510028BE35 /* adBlockListTwo.json */; };
+		B75160F128D7CD510028BE35 /* adBlockListTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160EF28D7CD510028BE35 /* adBlockListTwo.json */; };
+		B75160F328D7CD850028BE35 /* adBlockListThree.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160F228D7CD840028BE35 /* adBlockListThree.json */; };
+		B75160F428D7CD850028BE35 /* adBlockListThree.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160F228D7CD840028BE35 /* adBlockListThree.json */; };
+		B75160FA28D7CFB90028BE35 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160F928D7CFB90028BE35 /* CloudKit.framework */; };
+		B75160FB28D7CFCA0028BE35 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
+		B75160FD28D7CFD00028BE35 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */; };
+		B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = B75160FF28D7D5440028BE35 /* CocoaLumberjack */; };
+		B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B751610128D7D5440028BE35 /* CocoaLumberjackSwift */; };
+		B751610428D7D57F0028BE35 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = B751610328D7D57F0028BE35 /* CocoaLumberjack */; };
+		B751610628D7D57F0028BE35 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B751610528D7D57F0028BE35 /* CocoaLumberjackSwift */; };
+		B751610828D7D5920028BE35 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = B751610728D7D5920028BE35 /* CocoaLumberjack */; };
+		B751610A28D7D5920028BE35 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B751610928D7D5920028BE35 /* CocoaLumberjackSwift */; };
+		B751610C28D7D59E0028BE35 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = B751610B28D7D59E0028BE35 /* CocoaLumberjack */; };
+		B751610E28D7D59E0028BE35 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B751610D28D7D59E0028BE35 /* CocoaLumberjackSwift */; };
+		B751611028D7D5D90028BE35 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = B751610F28D7D5D90028BE35 /* CocoaLumberjack */; };
+		B751611228D7D5D90028BE35 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B751611128D7D5D90028BE35 /* CocoaLumberjackSwift */; };
+		B751611328D7D6F90028BE35 /* WhitelistUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */; };
+		B751611B28D7F3260028BE35 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751611A28D7F3260028BE35 /* Loader.swift */; };
+		B751611D28D7F33F0028BE35 /* LocalLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751611C28D7F33E0028BE35 /* LocalLogger.swift */; };
+		B751611F28D7F3640028BE35 /* TrackerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751611E28D7F3640028BE35 /* TrackerInfo.swift */; };
+		B751612128D8B1C60028BE35 /* Mailto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751612028D8B1C60028BE35 /* Mailto.swift */; };
+		B751612328D8B8220028BE35 /* FirewallRepair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751612228D8B8220028BE35 /* FirewallRepair.swift */; };
+		B751612728D8BACB0028BE35 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751612628D8BACB0028BE35 /* UIKit+Extensions.swift */; };
+		B751612928D8BB2B0028BE35 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751612828D8BB2B0028BE35 /* Align.swift */; };
+		B751617228D8FB260028BE35 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751612E28D8FB260028BE35 /* SpinerLayer.swift */; };
+		B751617328D8FB260028BE35 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751612F28D8FB260028BE35 /* CGRectEx.swift */; };
+		B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613028D8FB260028BE35 /* TransitionSubmitButton.swift */; };
+		B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613128D8FB260028BE35 /* FadeTransition.swift */; };
+		B751617628D8FB260028BE35 /* TimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613228D8FB260028BE35 /* TimerEx.swift */; };
+		B751617728D8FB260028BE35 /* M13CheckboxPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613428D8FB260028BE35 /* M13CheckboxPathGenerator.swift */; };
+		B751617828D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613528D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift */; };
+		B751617928D8FB260028BE35 /* M13CheckboxDisclosurePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613628D8FB260028BE35 /* M13CheckboxDisclosurePathGenerator.swift */; };
+		B751617A28D8FB260028BE35 /* M13CheckboxExpandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613728D8FB260028BE35 /* M13CheckboxExpandController.swift */; };
+		B751617B28D8FB260028BE35 /* M13CheckboxSpiralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613828D8FB260028BE35 /* M13CheckboxSpiralController.swift */; };
+		B751617C28D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613928D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift */; };
+		B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613A28D8FB260028BE35 /* M13CheckboxFadeController.swift */; };
+		B751617E28D8FB260028BE35 /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613B28D8FB260028BE35 /* M13Checkbox.swift */; };
+		B751617F28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613C28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift */; };
+		B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613D28D8FB260028BE35 /* M13CheckboxFlatController.swift */; };
+		B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613E28D8FB260028BE35 /* M13CheckboxFillController.swift */; };
+		B751618228D8FB260028BE35 /* M13CheckboxStrokeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751613F28D8FB260028BE35 /* M13CheckboxStrokeController.swift */; };
+		B751618328D8FB260028BE35 /* M13CheckboxBounceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614028D8FB260028BE35 /* M13CheckboxBounceController.swift */; };
+		B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614128D8FB260028BE35 /* DefaultValues.swift */; };
+		B751618528D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614228D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift */; };
+		B751618628D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614328D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift */; };
+		B751618728D8FB260028BE35 /* M13CheckboxDotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614428D8FB260028BE35 /* M13CheckboxDotController.swift */; };
+		B751618828D8FB260028BE35 /* M13CheckboxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614528D8FB260028BE35 /* M13CheckboxController.swift */; };
+		B751618928D8FB260028BE35 /* M13Checkbox+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614628D8FB260028BE35 /* M13Checkbox+IB.swift */; };
+		B751618A28D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614828D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift */; };
+		B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614A28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift */; };
+		B751618C28D8FB260028BE35 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614B28D8FB260028BE35 /* NVActivityIndicatorViewable.swift */; };
+		B751618D28D8FB260028BE35 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614D28D8FB260028BE35 /* NVActivityIndicatorShape.swift */; };
+		B751618E28D8FB260028BE35 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751614E28D8FB260028BE35 /* NVActivityIndicatorView.swift */; };
+		B751618F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615028D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift */; };
+		B751619028D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615128D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift */; };
+		B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
+		B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615328D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */; };
+		B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615428D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift */; };
+		B751619428D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615528D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift */; };
+		B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615628D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */; };
+		B751619628D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615728D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */; };
+		B751619728D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615828D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */; };
+		B751619828D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615928D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift */; };
+		B751619928D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift */; };
+		B751619A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615B28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift */; };
+		B751619B28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615C28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */; };
+		B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift */; };
+		B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615E28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */; };
+		B751619E28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751615F28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift */; };
+		B751619F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616028D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift */; };
+		B75161A028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616128D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift */; };
+		B75161A128D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616228D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift */; };
+		B75161A228D8FB270028BE35 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616328D8FB260028BE35 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift */; };
+		B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616428D8FB260028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift */; };
+		B75161A428D8FB270028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616528D8FB260028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */; };
+		B75161A528D8FB270028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616628D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift */; };
+		B75161A628D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616728D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */; };
+		B75161A728D8FB270028BE35 /* NVActivityIndicatorAnimationLineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616828D8FB260028BE35 /* NVActivityIndicatorAnimationLineScale.swift */; };
+		B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616928D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */; };
+		B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616A28D8FB260028BE35 /* NVActivityIndicatorAnimationPacman.swift */; };
+		B75161AA28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616B28D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift */; };
+		B75161AB28D8FB270028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616C28D8FB260028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift */; };
+		B75161AC28D8FB270028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		B75161AD28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616E28D8FB260028BE35 /* NVActivityIndicatorAnimationLineScaleParty.swift */; };
+		B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751616F28D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */; };
+		B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751617028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift */; };
+		B75161B028D8FB270028BE35 /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751617128D8FB260028BE35 /* NVActivityIndicatorAnimationOrbit.swift */; };
+		B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75161B328D900A60028BE35 /* PopupDialogButtonExt.swift */; };
+		B75161D528D906230028BE35 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75161CB28D906200028BE35 /* Montserrat-Thin.ttf */; };
+		B75161D628D906230028BE35 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75161CC28D906200028BE35 /* Montserrat-Light.ttf */; };
+		B75161D728D906230028BE35 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75161CD28D906200028BE35 /* Montserrat-Medium.ttf */; };
+		B75161D828D906230028BE35 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75161CE28D906210028BE35 /* Montserrat-Bold.ttf */; };
+		B75161D928D906230028BE35 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75161CF28D906210028BE35 /* Montserrat-Regular.ttf */; };
+		B75161DA28D906230028BE35 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D028D906210028BE35 /* Montserrat-SemiBold.ttf */; };
+		B75161DB28D906230028BE35 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D128D906220028BE35 /* SF-Pro-Rounded-Medium.otf */; };
+		B75161DC28D906230028BE35 /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D228D906220028BE35 /* SF-Pro-Rounded-Bold.otf */; };
+		B75161DD28D906230028BE35 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D328D906220028BE35 /* SF-Pro-Rounded-Regular.otf */; };
+		B75161DE28D906230028BE35 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D428D906230028BE35 /* SF-Pro-Rounded-Semibold.otf */; };
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
 		B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1A28D6502A004CDB79 /* ViewController.swift */; };
@@ -14,9 +132,286 @@
 		B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */; };
 		B7948D2328D6502C004CDB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2228D6502C004CDB79 /* Assets.xcassets */; };
 		B7948D2628D6502C004CDB79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2428D6502C004CDB79 /* LaunchScreen.storyboard */; };
+		B7948D2F28D7B8C6004CDB79 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2E28D7B8C6004CDB79 /* Settings.bundle */; };
+		B7948D3728D7B8FB004CDB79 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = B7948D3628D7B8FB004CDB79 /* blockerList.json */; };
+		B7948D3928D7B8FB004CDB79 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D3828D7B8FB004CDB79 /* ContentBlockerRequestHandler.swift */; };
+		B7948D3D28D7B8FB004CDB79 /* Vaif R2 - VPN Blocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7948D3428D7B8FB004CDB79 /* Vaif R2 - VPN Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7948D6028D7B9BE004CDB79 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
+		B7948D6328D7B9BE004CDB79 /* FirewallTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D6228D7B9BE004CDB79 /* FirewallTodayViewController.swift */; };
+		B7948D6828D7B9BE004CDB79 /* Vaif R2 - VPN Widget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7948D5E28D7B9BE004CDB79 /* Vaif R2 - VPN Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7948D7128D7B9DB004CDB79 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
+		B7948D7428D7B9DB004CDB79 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D7328D7B9DB004CDB79 /* PacketTunnelProvider.swift */; };
+		B7948D7928D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7948D7028D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7948D8228D7B9FA004CDB79 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
+		B7948D8528D7B9FA004CDB79 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D8428D7B9FA004CDB79 /* PacketTunnelProvider.swift */; };
+		B7948D8A28D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7948D8128D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7948D9528D7BA18004CDB79 /* Vaif_R2___VPNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D9428D7BA18004CDB79 /* Vaif_R2___VPNTests.swift */; };
+		B7948DA028D7BA4C004CDB79 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D4728D7B939004CDB79 /* WidgetKit.framework */; };
+		B7948DA128D7BA4C004CDB79 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D4928D7B939004CDB79 /* SwiftUI.framework */; };
+		B7948DA728D7BA4F004CDB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7948DA628D7BA4F004CDB79 /* Assets.xcassets */; };
+		B7948DAD28D7BA4F004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B7948D9F28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B7948DB928D7C032004CDB79 /* FirewallUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */; };
+		B7948DBA28D7C045004CDB79 /* FirewallUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */; };
+		B7948DBB28D7C046004CDB79 /* FirewallUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */; };
+		B7948DBC28D7C047004CDB79 /* FirewallUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */; };
+		B7948DBD28D7C048004CDB79 /* FirewallUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */; };
+		B7948DBF28D7C06A004CDB79 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DBE28D7C06A004CDB79 /* Client.swift */; };
+		B7948DC028D7C0DD004CDB79 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DBE28D7C06A004CDB79 /* Client.swift */; };
+		B7948DC128D7C0DF004CDB79 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DBE28D7C06A004CDB79 /* Client.swift */; };
+		B7948DC228D7C0DF004CDB79 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DBE28D7C06A004CDB79 /* Client.swift */; };
+		B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC328D7C255004CDB79 /* ClientModels.swift */; };
+		B7948DC528D7C257004CDB79 /* ClientModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC328D7C255004CDB79 /* ClientModels.swift */; };
+		B7948DC628D7C258004CDB79 /* ClientModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC328D7C255004CDB79 /* ClientModels.swift */; };
+		B7948DC728D7C258004CDB79 /* ClientModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC328D7C255004CDB79 /* ClientModels.swift */; };
+		B7948DC928D7C276004CDB79 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC828D7C276004CDB79 /* Environment.swift */; };
+		B7948DCA28D7C27C004CDB79 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC828D7C276004CDB79 /* Environment.swift */; };
+		B7948DCC28D7C27E004CDB79 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC828D7C276004CDB79 /* Environment.swift */; };
+		B7948DCD28D7C27F004CDB79 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DC828D7C276004CDB79 /* Environment.swift */; };
+		B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DCE28D7C2B7004CDB79 /* FirewallController.swift */; };
+		B7948DD028D7C2B7004CDB79 /* FirewallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DCE28D7C2B7004CDB79 /* FirewallController.swift */; };
+		B7948DD128D7C2B7004CDB79 /* FirewallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DCE28D7C2B7004CDB79 /* FirewallController.swift */; };
+		B7948DD328D7C2F5004CDB79 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD228D7C2F5004CDB79 /* Shared.swift */; };
+		B7948DD428D7C307004CDB79 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD228D7C2F5004CDB79 /* Shared.swift */; };
+		B7948DD528D7C310004CDB79 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD228D7C2F5004CDB79 /* Shared.swift */; };
+		B7948DD628D7C311004CDB79 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD228D7C2F5004CDB79 /* Shared.swift */; };
+		B7948DD828D7C379004CDB79 /* SpeedTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD728D7C379004CDB79 /* SpeedTest.swift */; };
+		B7948DDA28D7C3BB004CDB79 /* VPNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD928D7C3BB004CDB79 /* VPNController.swift */; };
+		B7948DDB28D7C3BB004CDB79 /* VPNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD928D7C3BB004CDB79 /* VPNController.swift */; };
+		B7948DDC28D7C3BB004CDB79 /* VPNController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DD928D7C3BB004CDB79 /* VPNController.swift */; };
+		B7948DDE28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DDD28D7C3E5004CDB79 /* VPNSubscription.swift */; };
+		B7948DDF28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DDD28D7C3E5004CDB79 /* VPNSubscription.swift */; };
+		B7948DE028D7C3E5004CDB79 /* VPNSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DDD28D7C3E5004CDB79 /* VPNSubscription.swift */; };
+		B7948DE228D7C493004CDB79 /* WhitelistUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */; };
+		B7948DE328D7C493004CDB79 /* WhitelistUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */; };
+		B7948DE428D7C493004CDB79 /* WhitelistUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */; };
+		B7948DE528D7C493004CDB79 /* WhitelistUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */; };
+		B7948DE728D7C4E7004CDB79 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */; };
+		B7948DE828D7C4E7004CDB79 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */; };
+		B7948DE928D7C4E7004CDB79 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */; };
+		B7948DEA28D7C4E7004CDB79 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */; };
+		B7948DEB28D7C4E7004CDB79 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */; };
+		B7948DED28D7C50D004CDB79 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DEC28D7C50D004CDB79 /* Metrics.swift */; };
+		B7948DEE28D7C50D004CDB79 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DEC28D7C50D004CDB79 /* Metrics.swift */; };
+		B7948DEF28D7C50D004CDB79 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DEC28D7C50D004CDB79 /* Metrics.swift */; };
+		B7948DF028D7C50D004CDB79 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DEC28D7C50D004CDB79 /* Metrics.swift */; };
+		B7948DF128D7C50D004CDB79 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DEC28D7C50D004CDB79 /* Metrics.swift */; };
+		B7948DF328D7C54C004CDB79 /* VPNRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DF228D7C54C004CDB79 /* VPNRegion.swift */; };
+		B7948DF428D7C54C004CDB79 /* VPNRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DF228D7C54C004CDB79 /* VPNRegion.swift */; };
+		B7948DF528D7C54C004CDB79 /* VPNRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DF228D7C54C004CDB79 /* VPNRegion.swift */; };
+		B7948DF628D7C54C004CDB79 /* VPNRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DF228D7C54C004CDB79 /* VPNRegion.swift */; };
+		B7948DF728D7C54C004CDB79 /* VPNRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DF228D7C54C004CDB79 /* VPNRegion.swift */; };
+		B7948DFB28D7C59C004CDB79 /* DomainNameValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DFA28D7C59C004CDB79 /* DomainNameValidator.swift */; };
+		B7948DFD28D7C5D8004CDB79 /* BlockDayLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */; };
+		B7948DFE28D7C5DF004CDB79 /* BlockDayLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */; };
+		B7948DFF28D7C5E0004CDB79 /* BlockDayLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */; };
+		B7948E0028D7C5E0004CDB79 /* BlockDayLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */; };
+		B7948E0128D7C5E1004CDB79 /* BlockDayLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */; };
+		B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0228D7C633004CDB79 /* PushNotifications.swift */; };
+		B7948E0428D7C63B004CDB79 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0228D7C633004CDB79 /* PushNotifications.swift */; };
+		B7948E0528D7C63C004CDB79 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0228D7C633004CDB79 /* PushNotifications.swift */; };
+		B7948E0628D7C63C004CDB79 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0228D7C633004CDB79 /* PushNotifications.swift */; };
+		B7948E0728D7C63D004CDB79 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0228D7C633004CDB79 /* PushNotifications.swift */; };
+		B7948E0928D7C671004CDB79 /* PushNotificationsAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */; };
+		B7948E0A28D7C674004CDB79 /* PushNotificationsAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */; };
+		B7948E0B28D7C675004CDB79 /* PushNotificationsAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */; };
+		B7948E0C28D7C676004CDB79 /* PushNotificationsAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */; };
+		B7948E0D28D7C677004CDB79 /* PushNotificationsAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */; };
+		B7948E0F28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E0E28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift */; };
+		B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1428D7C760004CDB79 /* OneTimeActions.swift */; };
+		B7948E1628D7C769004CDB79 /* OneTimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1428D7C760004CDB79 /* OneTimeActions.swift */; };
+		B7948E1828D7C76B004CDB79 /* OneTimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1428D7C760004CDB79 /* OneTimeActions.swift */; };
+		B7948E1A28D7C76E004CDB79 /* OneTimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1428D7C760004CDB79 /* OneTimeActions.swift */; };
+		B7948E1B28D7C76F004CDB79 /* OneTimeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1428D7C760004CDB79 /* OneTimeActions.swift */; };
+		B7948E1D28D7C79B004CDB79 /* ProtectedFileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */; };
+		B7948E1E28D7C7A2004CDB79 /* ProtectedFileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */; };
+		B7948E1F28D7C7A2004CDB79 /* ProtectedFileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */; };
+		B7948E2028D7C7A3004CDB79 /* ProtectedFileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */; };
+		CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */; };
+		E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */; };
+		EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */; };
+		F765EE8D8B61F53D8EB6272A /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF2C61ECE42AC1C34720D41E /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist */; };
+		F84636DE1893416176121865 /* Pods_Vaif_R2___VPN_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A6BA3FE4645AC6C115DAEE /* Pods_Vaif_R2___VPN_Widget.framework */; };
+		FDFC8FFAE0A1D281BF0E8F02 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBE70399C29011824348D432 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B7948D3B28D7B8FB004CDB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7948D0B28D6502A004CDB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7948D3328D7B8FB004CDB79;
+			remoteInfo = "Vaif R2 - VPN Blocker";
+		};
+		B7948D6628D7B9BE004CDB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7948D0B28D6502A004CDB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7948D5D28D7B9BE004CDB79;
+			remoteInfo = "Vaif R2 - VPN Widget";
+		};
+		B7948D7728D7B9DB004CDB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7948D0B28D6502A004CDB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7948D6F28D7B9DB004CDB79;
+			remoteInfo = "Vaif R2 - VPN Tunnel";
+		};
+		B7948D8828D7B9FA004CDB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7948D0B28D6502A004CDB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7948D8028D7B9FA004CDB79;
+			remoteInfo = "Vaif R2 - VPN Firewall Widget";
+		};
+		B7948D9628D7BA18004CDB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7948D0B28D6502A004CDB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7948D1228D6502A004CDB79;
+			remoteInfo = "Vaif R2 - VPN";
+		};
+		B7948DAB28D7BA4F004CDB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7948D0B28D6502A004CDB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7948D9E28D7BA4C004CDB79;
+			remoteInfo = "Vaif R2 - VPN FirewallWidget ExtensionExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B7948D8A28D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex in Embed Foundation Extensions */,
+				B7948D3D28D7B8FB004CDB79 /* Vaif R2 - VPN Blocker.appex in Embed Foundation Extensions */,
+				B7948DAD28D7BA4F004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex in Embed Foundation Extensions */,
+				B7948D7928D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex in Embed Foundation Extensions */,
+				B7948D6828D7B9BE004CDB79 /* Vaif R2 - VPN Widget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0B31E65A931BDE3FA98ABFD7 /* Pods-Vaif R2 - VPN Tunnel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Tunnel.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Tunnel/Pods-Vaif R2 - VPN Tunnel.release.xcconfig"; sourceTree = "<group>"; };
+		1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPNTests-metadata.plist"; sourceTree = "<group>"; };
+		220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPNTests-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPNTests-settings-metadata.plist"; sourceTree = "<group>"; };
+		262BC164466AEEA4B3569355 /* Pods-Vaif R2 - VPN Tunnel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Tunnel.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Tunnel/Pods-Vaif R2 - VPN Tunnel.debug.xcconfig"; sourceTree = "<group>"; };
+		2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN Tunnel-metadata.plist"; sourceTree = "<group>"; };
+		32E390893B668960263CB23C /* Pods-Vaif R2 - VPN Firewall Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Firewall Widget.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Firewall Widget/Pods-Vaif R2 - VPN Firewall Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		4CAFD75F4E8BFD4F252F7054 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist"; sourceTree = "<group>"; };
+		5137DCAF2251264C7579D794 /* Pods-Vaif R2 - VPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN.release.xcconfig"; sourceTree = "<group>"; };
+		5519B02FDAD4464B31A8CA07 /* Pods-Vaif R2 - VPN-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPN-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPN-settings-metadata.plist"; sourceTree = "<group>"; };
+		5C0DED633FAF871F86B8DF53 /* Pods-Vaif R2 - VPN Widget-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN Widget-metadata.plist"; sourceTree = "<group>"; };
+		712336C654457D3E928E61DC /* Pods-Vaif R2 - VPNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPNTests.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist"; sourceTree = "<group>"; };
+		744990F5DB0E2401020D0912 /* Pods-Vaif R2 - VPN Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Widget.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Widget/Pods-Vaif R2 - VPN Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		82A6BA3FE4645AC6C115DAEE /* Pods_Vaif_R2___VPN_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA7A5288829612EF0426219 /* Pods-Vaif R2 - VPN-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN-metadata.plist"; sourceTree = "<group>"; };
+		9FB5E13EA1D28ECBCB43944F /* Pods-Vaif R2 - VPN Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Widget.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Widget/Pods-Vaif R2 - VPN Widget.release.xcconfig"; sourceTree = "<group>"; };
+		B1D1E7CD97109801950CCA55 /* Pods-Vaif R2 - VPNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPNTests.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests.release.xcconfig"; sourceTree = "<group>"; };
+		B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaifR2VPNFirewallWidget.swift; sourceTree = "<group>"; };
+		B75160DD28D7C9940028BE35 /* LoadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircle.swift; sourceTree = "<group>"; };
+		B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedProvider.swift; sourceTree = "<group>"; };
+		B75160E128D7CA0B0028BE35 /* Vaif R2 - VPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif R2 - VPN.entitlements"; sourceTree = "<group>"; };
+		B75160E228D7CAF50028BE35 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B75160E428D7CB4A0028BE35 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements"; sourceTree = "<group>"; };
+		B75160E528D7CC0E0028BE35 /* Vaif R2 - VPN Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif R2 - VPN Blocker.entitlements"; sourceTree = "<group>"; };
+		B75160E628D7CCF30028BE35 /* privacyBlockList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = privacyBlockList.json; sourceTree = "<group>"; };
+		B75160E928D7CD100028BE35 /* socialBlockList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = socialBlockList.json; sourceTree = "<group>"; };
+		B75160EC28D7CD290028BE35 /* adBlockList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adBlockList.json; sourceTree = "<group>"; };
+		B75160EF28D7CD510028BE35 /* adBlockListTwo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adBlockListTwo.json; sourceTree = "<group>"; };
+		B75160F228D7CD840028BE35 /* adBlockListThree.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = adBlockListThree.json; sourceTree = "<group>"; };
+		B75160F528D7CFAC0028BE35 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75160F928D7CFB90028BE35 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B751611A28D7F3260028BE35 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		B751611C28D7F33E0028BE35 /* LocalLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLogger.swift; sourceTree = "<group>"; };
+		B751611E28D7F3640028BE35 /* TrackerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerInfo.swift; sourceTree = "<group>"; };
+		B751612028D8B1C60028BE35 /* Mailto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mailto.swift; sourceTree = "<group>"; };
+		B751612228D8B8220028BE35 /* FirewallRepair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallRepair.swift; sourceTree = "<group>"; };
+		B751612628D8BACB0028BE35 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		B751612828D8BB2B0028BE35 /* Align.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Align.swift; sourceTree = "<group>"; };
+		B751612E28D8FB260028BE35 /* SpinerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		B751612F28D8FB260028BE35 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		B751613028D8FB260028BE35 /* TransitionSubmitButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionSubmitButton.swift; sourceTree = "<group>"; };
+		B751613128D8FB260028BE35 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		B751613228D8FB260028BE35 /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
+		B751613428D8FB260028BE35 /* M13CheckboxPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxPathGenerator.swift; sourceTree = "<group>"; };
+		B751613528D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxCheckPathGenerator.swift; sourceTree = "<group>"; };
+		B751613628D8FB260028BE35 /* M13CheckboxDisclosurePathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxDisclosurePathGenerator.swift; sourceTree = "<group>"; };
+		B751613728D8FB260028BE35 /* M13CheckboxExpandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxExpandController.swift; sourceTree = "<group>"; };
+		B751613828D8FB260028BE35 /* M13CheckboxSpiralController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxSpiralController.swift; sourceTree = "<group>"; };
+		B751613928D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxAddRemovePathGenerator.swift; sourceTree = "<group>"; };
+		B751613A28D8FB260028BE35 /* M13CheckboxFadeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFadeController.swift; sourceTree = "<group>"; };
+		B751613B28D8FB260028BE35 /* M13Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13Checkbox.swift; sourceTree = "<group>"; };
+		B751613C28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxAnimationGenerator.swift; sourceTree = "<group>"; };
+		B751613D28D8FB260028BE35 /* M13CheckboxFlatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFlatController.swift; sourceTree = "<group>"; };
+		B751613E28D8FB260028BE35 /* M13CheckboxFillController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxFillController.swift; sourceTree = "<group>"; };
+		B751613F28D8FB260028BE35 /* M13CheckboxStrokeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxStrokeController.swift; sourceTree = "<group>"; };
+		B751614028D8FB260028BE35 /* M13CheckboxBounceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxBounceController.swift; sourceTree = "<group>"; };
+		B751614128D8FB260028BE35 /* DefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
+		B751614228D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxRadioPathGenerator.swift; sourceTree = "<group>"; };
+		B751614328D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxGestureRecognizer.swift; sourceTree = "<group>"; };
+		B751614428D8FB260028BE35 /* M13CheckboxDotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxDotController.swift; sourceTree = "<group>"; };
+		B751614528D8FB260028BE35 /* M13CheckboxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13CheckboxController.swift; sourceTree = "<group>"; };
+		B751614628D8FB260028BE35 /* M13Checkbox+IB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "M13Checkbox+IB.swift"; sourceTree = "<group>"; };
+		B751614828D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationDelegate.swift; sourceTree = "<group>"; };
+		B751614A28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		B751614B28D8FB260028BE35 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
+		B751614C28D8FB260028BE35 /* NVActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVActivityIndicatorView.h; sourceTree = "<group>"; };
+		B751614D28D8FB260028BE35 /* NVActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		B751614E28D8FB260028BE35 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
+		B751615028D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallRotate.swift; sourceTree = "<group>"; };
+		B751615128D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallGridPulse.swift; sourceTree = "<group>"; };
+		B751615228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallClipRotate.swift; sourceTree = "<group>"; };
+		B751615328D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallClipRotateMultiple.swift; sourceTree = "<group>"; };
+		B751615428D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallTrianglePath.swift; sourceTree = "<group>"; };
+		B751615528D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallDoubleBounce.swift; sourceTree = "<group>"; };
+		B751615628D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScalePulseOut.swift; sourceTree = "<group>"; };
+		B751615728D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineSpinFadeLoader.swift; sourceTree = "<group>"; };
+		B751615828D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallZigZagDeflect.swift; sourceTree = "<group>"; };
+		B751615928D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScale.swift; sourceTree = "<group>"; };
+		B751615A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallZigZag.swift; sourceTree = "<group>"; };
+		B751615B28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
+		B751615C28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationSemiCircleSpin.swift; sourceTree = "<group>"; };
+		B751615D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleRipple.swift; sourceTree = "<group>"; };
+		B751615E28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallClipRotatePulse.swift; sourceTree = "<group>"; };
+		B751615F28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationSquareSpin.swift; sourceTree = "<group>"; };
+		B751616028D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		B751616128D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallPulse.swift; sourceTree = "<group>"; };
+		B751616228D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBlank.swift; sourceTree = "<group>"; };
+		B751616328D8FB260028BE35 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationCircleStrokeSpin.swift; sourceTree = "<group>"; };
+		B751616428D8FB260028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
+		B751616528D8FB260028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationTriangleSkewSpin.swift; sourceTree = "<group>"; };
+		B751616628D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallGridBeat.swift; sourceTree = "<group>"; };
+		B751616728D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleMultiple.swift; sourceTree = "<group>"; };
+		B751616828D8FB260028BE35 /* NVActivityIndicatorAnimationLineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScale.swift; sourceTree = "<group>"; };
+		B751616928D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallScaleRippleMultiple.swift; sourceTree = "<group>"; };
+		B751616A28D8FB260028BE35 /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
+		B751616B28D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
+		B751616C28D8FB260028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationCubeTransition.swift; sourceTree = "<group>"; };
+		B751616D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		B751616E28D8FB260028BE35 /* NVActivityIndicatorAnimationLineScaleParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScaleParty.swift; sourceTree = "<group>"; };
+		B751616F28D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationLineScalePulseOutRapid.swift; sourceTree = "<group>"; };
+		B751617028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallPulseRise.swift; sourceTree = "<group>"; };
+		B751617128D8FB260028BE35 /* NVActivityIndicatorAnimationOrbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationOrbit.swift; sourceTree = "<group>"; };
+		B75161B328D900A60028BE35 /* PopupDialogButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDialogButtonExt.swift; sourceTree = "<group>"; };
+		B75161CB28D906200028BE35 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		B75161CC28D906200028BE35 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		B75161CD28D906200028BE35 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		B75161CE28D906210028BE35 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		B75161CF28D906210028BE35 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		B75161D028D906210028BE35 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		B75161D128D906220028BE35 /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
+		B75161D228D906220028BE35 /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
+		B75161D328D906220028BE35 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		B75161D428D906230028BE35 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
 		B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaif R2 - VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +421,59 @@
 		B7948D2228D6502C004CDB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7948D2528D6502C004CDB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7948D2728D6502C004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7948D2E28D7B8C6004CDB79 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		B7948D3428D7B8FB004CDB79 /* Vaif R2 - VPN Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN Blocker.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7948D3628D7B8FB004CDB79 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		B7948D3828D7B8FB004CDB79 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		B7948D3A28D7B8FB004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7948D4728D7B939004CDB79 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B7948D4928D7B939004CDB79 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B7948D5E28D7B9BE004CDB79 /* Vaif R2 - VPN Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		B7948D6228D7B9BE004CDB79 /* FirewallTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallTodayViewController.swift; sourceTree = "<group>"; };
+		B7948D6428D7B9BE004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7948D6528D7B9BE004CDB79 /* Vaif_R2___VPN_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif_R2___VPN_Widget.entitlements"; sourceTree = "<group>"; };
+		B7948D7028D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN Tunnel.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7948D7328D7B9DB004CDB79 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		B7948D7528D7B9DB004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7948D7628D7B9DB004CDB79 /* Vaif_R2___VPN_Tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif_R2___VPN_Tunnel.entitlements"; sourceTree = "<group>"; };
+		B7948D8128D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN Firewall Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7948D8428D7B9FA004CDB79 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		B7948D8628D7B9FA004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7948D8728D7B9FA004CDB79 /* Vaif_R2___VPN_Firewall_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif_R2___VPN_Firewall_Widget.entitlements"; sourceTree = "<group>"; };
+		B7948D9228D7BA18004CDB79 /* Vaif R2 - VPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vaif R2 - VPNTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7948D9428D7BA18004CDB79 /* Vaif_R2___VPNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vaif_R2___VPNTests.swift"; sourceTree = "<group>"; };
+		B7948D9F28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN FirewallWidget ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7948DA628D7BA4F004CDB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7948DA828D7BA4F004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallUtilities.swift; sourceTree = "<group>"; };
+		B7948DBE28D7C06A004CDB79 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B7948DC328D7C255004CDB79 /* ClientModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModels.swift; sourceTree = "<group>"; };
+		B7948DC828D7C276004CDB79 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		B7948DCE28D7C2B7004CDB79 /* FirewallController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallController.swift; sourceTree = "<group>"; };
+		B7948DD228D7C2F5004CDB79 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		B7948DD728D7C379004CDB79 /* SpeedTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTest.swift; sourceTree = "<group>"; };
+		B7948DD928D7C3BB004CDB79 /* VPNController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNController.swift; sourceTree = "<group>"; };
+		B7948DDD28D7C3E5004CDB79 /* VPNSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNSubscription.swift; sourceTree = "<group>"; };
+		B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistUtilities.swift; sourceTree = "<group>"; };
+		B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		B7948DEC28D7C50D004CDB79 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
+		B7948DF228D7C54C004CDB79 /* VPNRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNRegion.swift; sourceTree = "<group>"; };
+		B7948DFA28D7C59C004CDB79 /* DomainNameValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainNameValidator.swift; sourceTree = "<group>"; };
+		B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockDayLog.swift; sourceTree = "<group>"; };
+		B7948E0228D7C633004CDB79 /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsAuthorization.swift; sourceTree = "<group>"; };
+		B7948E0E28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsAuthorizationUI.swift; sourceTree = "<group>"; };
+		B7948E1428D7C760004CDB79 /* OneTimeActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeActions.swift; sourceTree = "<group>"; };
+		B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedFileAccess.swift; sourceTree = "<group>"; };
+		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9343BD28718035550B13583 /* Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Firewall Widget/Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig"; sourceTree = "<group>"; };
+		EBE70399C29011824348D432 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Firewall_Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2C61ECE42AC1C34720D41E /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPN Widget-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPN Widget-settings-metadata.plist"; sourceTree = "<group>"; };
+		F32AB2F64B172F1E3B2D1343 /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN Firewall Widget-metadata.plist"; sourceTree = "<group>"; };
+		F76A74237E3FD102F6C0B81A /* Pods-Vaif R2 - VPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +481,321 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */,
+				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
+				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				B75160E328D7CAF50028BE35 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D3128D7B8FB004CDB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D5B28D7B9BE004CDB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B751610428D7D57F0028BE35 /* CocoaLumberjack in Frameworks */,
+				B75160FD28D7CFD00028BE35 /* NotificationCenter.framework in Frameworks */,
+				B7948D6028D7B9BE004CDB79 /* NetworkExtension.framework in Frameworks */,
+				B75160FA28D7CFB90028BE35 /* CloudKit.framework in Frameworks */,
+				B751610628D7D57F0028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				B75160FB28D7CFCA0028BE35 /* NetworkExtension.framework in Frameworks */,
+				F84636DE1893416176121865 /* Pods_Vaif_R2___VPN_Widget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D6D28D7B9DB004CDB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B751610828D7D5920028BE35 /* CocoaLumberjack in Frameworks */,
+				B7948D7128D7B9DB004CDB79 /* NetworkExtension.framework in Frameworks */,
+				B751610A28D7D5920028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				1E403011B1073B2886139601 /* Pods_Vaif_R2___VPN_Tunnel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D7E28D7B9FA004CDB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B751610C28D7D59E0028BE35 /* CocoaLumberjack in Frameworks */,
+				B7948D8228D7B9FA004CDB79 /* NetworkExtension.framework in Frameworks */,
+				B751610E28D7D59E0028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				FDFC8FFAE0A1D281BF0E8F02 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D8F28D7BA18004CDB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2456F40901769747A1568CD8 /* Pods_Vaif_R2___VPNTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D9C28D7BA4C004CDB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B751611028D7D5D90028BE35 /* CocoaLumberjack in Frameworks */,
+				B7948DA128D7BA4C004CDB79 /* SwiftUI.framework in Frameworks */,
+				B751611228D7D5D90028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				B7948DA028D7BA4C004CDB79 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2F108CEA20A6402FFA013A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */,
+				B75160F928D7CFB90028BE35 /* CloudKit.framework */,
+				B75160F528D7CFAC0028BE35 /* CocoaLumberjack.framework */,
+				B75160E228D7CAF50028BE35 /* StoreKit.framework */,
+				E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */,
+				B7948D4728D7B939004CDB79 /* WidgetKit.framework */,
+				B7948D4928D7B939004CDB79 /* SwiftUI.framework */,
+				B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */,
+				EBE70399C29011824348D432 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework */,
+				D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */,
+				82A6BA3FE4645AC6C115DAEE /* Pods_Vaif_R2___VPN_Widget.framework */,
+				E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "R2 UI Scenes";
+			sourceTree = "<group>";
+		};
+		B751611528D7DF520028BE35 /* R2 Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "R2 Extensions";
+			sourceTree = "<group>";
+		};
+		B751611728D7DF680028BE35 /* R2 Config */ = {
+			isa = PBXGroup;
+			children = (
+				B7948D1628D6502A004CDB79 /* AppDelegate.swift */,
+				B7948D1828D6502A004CDB79 /* SceneDelegate.swift */,
+			);
+			path = "R2 Config";
+			sourceTree = "<group>";
+		};
+		B751611828D7DF6E0028BE35 /* R2 UI Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B7948D2428D6502C004CDB79 /* LaunchScreen.storyboard */,
+				B7948D1C28D6502A004CDB79 /* Main.storyboard */,
+			);
+			path = "R2 UI Storyboards";
+			sourceTree = "<group>";
+		};
+		B751611928D7E7EB0028BE35 /* R2 Services */ = {
+			isa = PBXGroup;
+			children = (
+				B751611A28D7F3260028BE35 /* Loader.swift */,
+				B751611C28D7F33E0028BE35 /* LocalLogger.swift */,
+				B751611E28D7F3640028BE35 /* TrackerInfo.swift */,
+				B751612028D8B1C60028BE35 /* Mailto.swift */,
+				B751612228D8B8220028BE35 /* FirewallRepair.swift */,
+			);
+			path = "R2 Services";
+			sourceTree = "<group>";
+		};
+		B751612428D8B9220028BE35 /* Block Lists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Block Lists";
+			sourceTree = "<group>";
+		};
+		B751612528D8BAAA0028BE35 /* R2 Base Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B75161B228D9008A0028BE35 /* Button Extensions */,
+				B75161B128D9007D0028BE35 /* Base Extensions */,
+			);
+			path = "R2 Base Extensions";
+			sourceTree = "<group>";
+		};
+		B751612C28D8FB260028BE35 /* Modified Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B751612D28D8FB260028BE35 /* TKSubmit */,
+				B751613328D8FB260028BE35 /* M13Checkbox */,
+				B751614728D8FB260028BE35 /* NVActivityIndicatorView */,
+			);
+			path = "Modified Pods";
+			sourceTree = "<group>";
+		};
+		B751612D28D8FB260028BE35 /* TKSubmit */ = {
+			isa = PBXGroup;
+			children = (
+				B751612E28D8FB260028BE35 /* SpinerLayer.swift */,
+				B751612F28D8FB260028BE35 /* CGRectEx.swift */,
+				B751613028D8FB260028BE35 /* TransitionSubmitButton.swift */,
+				B751613128D8FB260028BE35 /* FadeTransition.swift */,
+				B751613228D8FB260028BE35 /* TimerEx.swift */,
+			);
+			path = TKSubmit;
+			sourceTree = "<group>";
+		};
+		B751613328D8FB260028BE35 /* M13Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				B751613428D8FB260028BE35 /* M13CheckboxPathGenerator.swift */,
+				B751613528D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift */,
+				B751613628D8FB260028BE35 /* M13CheckboxDisclosurePathGenerator.swift */,
+				B751613728D8FB260028BE35 /* M13CheckboxExpandController.swift */,
+				B751613828D8FB260028BE35 /* M13CheckboxSpiralController.swift */,
+				B751613928D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift */,
+				B751613A28D8FB260028BE35 /* M13CheckboxFadeController.swift */,
+				B751613B28D8FB260028BE35 /* M13Checkbox.swift */,
+				B751613C28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift */,
+				B751613D28D8FB260028BE35 /* M13CheckboxFlatController.swift */,
+				B751613E28D8FB260028BE35 /* M13CheckboxFillController.swift */,
+				B751613F28D8FB260028BE35 /* M13CheckboxStrokeController.swift */,
+				B751614028D8FB260028BE35 /* M13CheckboxBounceController.swift */,
+				B751614128D8FB260028BE35 /* DefaultValues.swift */,
+				B751614228D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift */,
+				B751614328D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift */,
+				B751614428D8FB260028BE35 /* M13CheckboxDotController.swift */,
+				B751614528D8FB260028BE35 /* M13CheckboxController.swift */,
+				B751614628D8FB260028BE35 /* M13Checkbox+IB.swift */,
+			);
+			path = M13Checkbox;
+			sourceTree = "<group>";
+		};
+		B751614728D8FB260028BE35 /* NVActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				B751614828D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift */,
+				B751614928D8FB260028BE35 /* Presenter */,
+				B751614C28D8FB260028BE35 /* NVActivityIndicatorView.h */,
+				B751614D28D8FB260028BE35 /* NVActivityIndicatorShape.swift */,
+				B751614E28D8FB260028BE35 /* NVActivityIndicatorView.swift */,
+				B751614F28D8FB260028BE35 /* Animations */,
+			);
+			path = NVActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		B751614928D8FB260028BE35 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B751614A28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift */,
+				B751614B28D8FB260028BE35 /* NVActivityIndicatorViewable.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B751614F28D8FB260028BE35 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B751615028D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift */,
+				B751615128D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift */,
+				B751615228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift */,
+				B751615328D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift */,
+				B751615428D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift */,
+				B751615528D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift */,
+				B751615628D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift */,
+				B751615728D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift */,
+				B751615828D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift */,
+				B751615928D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift */,
+				B751615A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift */,
+				B751615B28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift */,
+				B751615C28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift */,
+				B751615D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift */,
+				B751615E28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift */,
+				B751615F28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift */,
+				B751616028D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift */,
+				B751616128D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift */,
+				B751616228D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift */,
+				B751616328D8FB260028BE35 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift */,
+				B751616428D8FB260028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift */,
+				B751616528D8FB260028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift */,
+				B751616628D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift */,
+				B751616728D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift */,
+				B751616828D8FB260028BE35 /* NVActivityIndicatorAnimationLineScale.swift */,
+				B751616928D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift */,
+				B751616A28D8FB260028BE35 /* NVActivityIndicatorAnimationPacman.swift */,
+				B751616B28D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift */,
+				B751616C28D8FB260028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift */,
+				B751616D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift */,
+				B751616E28D8FB260028BE35 /* NVActivityIndicatorAnimationLineScaleParty.swift */,
+				B751616F28D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift */,
+				B751617028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift */,
+				B751617128D8FB260028BE35 /* NVActivityIndicatorAnimationOrbit.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		B75161B128D9007D0028BE35 /* Base Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B751612628D8BACB0028BE35 /* UIKit+Extensions.swift */,
+				B751612828D8BB2B0028BE35 /* Align.swift */,
+			);
+			path = "Base Extensions";
+			sourceTree = "<group>";
+		};
+		B75161B228D9008A0028BE35 /* Button Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B75161B328D900A60028BE35 /* PopupDialogButtonExt.swift */,
+			);
+			path = "Button Extensions";
+			sourceTree = "<group>";
+		};
+		B75161CA28D905FF0028BE35 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B75161CE28D906210028BE35 /* Montserrat-Bold.ttf */,
+				B75161CC28D906200028BE35 /* Montserrat-Light.ttf */,
+				B75161CD28D906200028BE35 /* Montserrat-Medium.ttf */,
+				B75161CF28D906210028BE35 /* Montserrat-Regular.ttf */,
+				B75161D028D906210028BE35 /* Montserrat-SemiBold.ttf */,
+				B75161CB28D906200028BE35 /* Montserrat-Thin.ttf */,
+				B75161D228D906220028BE35 /* SF-Pro-Rounded-Bold.otf */,
+				B75161D128D906220028BE35 /* SF-Pro-Rounded-Medium.otf */,
+				B75161D328D906220028BE35 /* SF-Pro-Rounded-Regular.otf */,
+				B75161D428D906230028BE35 /* SF-Pro-Rounded-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		B7948D0A28D6502A004CDB79 = {
 			isa = PBXGroup;
 			children = (
+				B75160E428D7CB4A0028BE35 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements */,
+				B7948D2E28D7B8C6004CDB79 /* Settings.bundle */,
+				B7948DB328D7BFDA004CDB79 /* Shared */,
+				B751612428D8B9220028BE35 /* Block Lists */,
+				B75161CA28D905FF0028BE35 /* Fonts */,
 				B7948D1528D6502A004CDB79 /* Vaif R2 - VPN */,
+				B7948D3528D7B8FB004CDB79 /* Vaif R2 - VPN Blocker */,
+				B7948D6128D7B9BE004CDB79 /* Vaif R2 - VPN Widget */,
+				B7948D7228D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel */,
+				B7948D8328D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget */,
+				B7948D9328D7BA18004CDB79 /* Vaif R2 - VPNTests */,
+				B7948DA228D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget Extension */,
 				B7948D1428D6502A004CDB79 /* Products */,
+				C01C6274F32B807A421E8FBC /* Pods */,
+				B751612C28D8FB260028BE35 /* Modified Pods */,
+				0A2F108CEA20A6402FFA013A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +803,12 @@
 			isa = PBXGroup;
 			children = (
 				B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */,
+				B7948D3428D7B8FB004CDB79 /* Vaif R2 - VPN Blocker.appex */,
+				B7948D5E28D7B9BE004CDB79 /* Vaif R2 - VPN Widget.appex */,
+				B7948D7028D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex */,
+				B7948D8128D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex */,
+				B7948D9228D7BA18004CDB79 /* Vaif R2 - VPNTests.xctest */,
+				B7948D9F28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,16 +816,155 @@
 		B7948D1528D6502A004CDB79 /* Vaif R2 - VPN */ = {
 			isa = PBXGroup;
 			children = (
-				B7948D1628D6502A004CDB79 /* AppDelegate.swift */,
-				B7948D1828D6502A004CDB79 /* SceneDelegate.swift */,
+				B751612528D8BAAA0028BE35 /* R2 Base Extensions */,
+				B751611928D7E7EB0028BE35 /* R2 Services */,
+				B751611728D7DF680028BE35 /* R2 Config */,
+				B751611528D7DF520028BE35 /* R2 Extensions */,
+				B751611828D7DF6E0028BE35 /* R2 UI Storyboards */,
+				B751611428D7DF440028BE35 /* R2 UI Scenes */,
+				B75160E128D7CA0B0028BE35 /* Vaif R2 - VPN.entitlements */,
 				B7948D1A28D6502A004CDB79 /* ViewController.swift */,
-				B7948D1C28D6502A004CDB79 /* Main.storyboard */,
 				B7948D2228D6502C004CDB79 /* Assets.xcassets */,
-				B7948D2428D6502C004CDB79 /* LaunchScreen.storyboard */,
 				B7948D2728D6502C004CDB79 /* Info.plist */,
 				B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */,
 			);
 			path = "Vaif R2 - VPN";
+			sourceTree = "<group>";
+		};
+		B7948D3528D7B8FB004CDB79 /* Vaif R2 - VPN Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				B75160E628D7CCF30028BE35 /* privacyBlockList.json */,
+				B75160E928D7CD100028BE35 /* socialBlockList.json */,
+				B75160EC28D7CD290028BE35 /* adBlockList.json */,
+				B75160EF28D7CD510028BE35 /* adBlockListTwo.json */,
+				B75160F228D7CD840028BE35 /* adBlockListThree.json */,
+				B7948D3628D7B8FB004CDB79 /* blockerList.json */,
+				B75160E528D7CC0E0028BE35 /* Vaif R2 - VPN Blocker.entitlements */,
+				B7948D3828D7B8FB004CDB79 /* ContentBlockerRequestHandler.swift */,
+				B7948D3A28D7B8FB004CDB79 /* Info.plist */,
+			);
+			path = "Vaif R2 - VPN Blocker";
+			sourceTree = "<group>";
+		};
+		B7948D6128D7B9BE004CDB79 /* Vaif R2 - VPN Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B7948D6228D7B9BE004CDB79 /* FirewallTodayViewController.swift */,
+				B7948D6428D7B9BE004CDB79 /* Info.plist */,
+				B7948D6528D7B9BE004CDB79 /* Vaif_R2___VPN_Widget.entitlements */,
+			);
+			path = "Vaif R2 - VPN Widget";
+			sourceTree = "<group>";
+		};
+		B7948D7228D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				B7948D7328D7B9DB004CDB79 /* PacketTunnelProvider.swift */,
+				B7948D7528D7B9DB004CDB79 /* Info.plist */,
+				B7948D7628D7B9DB004CDB79 /* Vaif_R2___VPN_Tunnel.entitlements */,
+			);
+			path = "Vaif R2 - VPN Tunnel";
+			sourceTree = "<group>";
+		};
+		B7948D8328D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B7948D8428D7B9FA004CDB79 /* PacketTunnelProvider.swift */,
+				B7948D8628D7B9FA004CDB79 /* Info.plist */,
+				B7948D8728D7B9FA004CDB79 /* Vaif_R2___VPN_Firewall_Widget.entitlements */,
+			);
+			path = "Vaif R2 - VPN Firewall Widget";
+			sourceTree = "<group>";
+		};
+		B7948D9328D7BA18004CDB79 /* Vaif R2 - VPNTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7948D9428D7BA18004CDB79 /* Vaif_R2___VPNTests.swift */,
+			);
+			path = "Vaif R2 - VPNTests";
+			sourceTree = "<group>";
+		};
+		B7948DA228D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B7948DA628D7BA4F004CDB79 /* Assets.xcassets */,
+				B7948DA828D7BA4F004CDB79 /* Info.plist */,
+				B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */,
+				B75160DD28D7C9940028BE35 /* LoadingCircle.swift */,
+				B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */,
+			);
+			path = "Vaif R2 - VPN FirewallWidget Extension";
+			sourceTree = "<group>";
+		};
+		B7948DB328D7BFDA004CDB79 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B7948DF928D7C575004CDB79 /* Required */,
+				B7948DF828D7C565004CDB79 /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B7948DF828D7C565004CDB79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7948DFA28D7C59C004CDB79 /* DomainNameValidator.swift */,
+				B7948DFC28D7C5D8004CDB79 /* BlockDayLog.swift */,
+				B7948E0228D7C633004CDB79 /* PushNotifications.swift */,
+				B7948E0828D7C671004CDB79 /* PushNotificationsAuthorization.swift */,
+				B7948E0E28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift */,
+				B7948E1428D7C760004CDB79 /* OneTimeActions.swift */,
+				B7948E1C28D7C79B004CDB79 /* ProtectedFileAccess.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B7948DF928D7C575004CDB79 /* Required */ = {
+			isa = PBXGroup;
+			children = (
+				B7948DB828D7C032004CDB79 /* FirewallUtilities.swift */,
+				B7948DBE28D7C06A004CDB79 /* Client.swift */,
+				B7948DC328D7C255004CDB79 /* ClientModels.swift */,
+				B7948DC828D7C276004CDB79 /* Environment.swift */,
+				B7948DCE28D7C2B7004CDB79 /* FirewallController.swift */,
+				B7948DD228D7C2F5004CDB79 /* Shared.swift */,
+				B7948DD728D7C379004CDB79 /* SpeedTest.swift */,
+				B7948DD928D7C3BB004CDB79 /* VPNController.swift */,
+				B7948DDD28D7C3E5004CDB79 /* VPNSubscription.swift */,
+				B7948DE128D7C493004CDB79 /* WhitelistUtilities.swift */,
+				B7948DE628D7C4E7004CDB79 /* UserDefaults.swift */,
+				B7948DEC28D7C50D004CDB79 /* Metrics.swift */,
+				B7948DF228D7C54C004CDB79 /* VPNRegion.swift */,
+			);
+			path = Required;
+			sourceTree = "<group>";
+		};
+		C01C6274F32B807A421E8FBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F76A74237E3FD102F6C0B81A /* Pods-Vaif R2 - VPN.debug.xcconfig */,
+				5137DCAF2251264C7579D794 /* Pods-Vaif R2 - VPN.release.xcconfig */,
+				32E390893B668960263CB23C /* Pods-Vaif R2 - VPN Firewall Widget.debug.xcconfig */,
+				E9343BD28718035550B13583 /* Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig */,
+				262BC164466AEEA4B3569355 /* Pods-Vaif R2 - VPN Tunnel.debug.xcconfig */,
+				0B31E65A931BDE3FA98ABFD7 /* Pods-Vaif R2 - VPN Tunnel.release.xcconfig */,
+				744990F5DB0E2401020D0912 /* Pods-Vaif R2 - VPN Widget.debug.xcconfig */,
+				9FB5E13EA1D28ECBCB43944F /* Pods-Vaif R2 - VPN Widget.release.xcconfig */,
+				712336C654457D3E928E61DC /* Pods-Vaif R2 - VPNTests.debug.xcconfig */,
+				B1D1E7CD97109801950CCA55 /* Pods-Vaif R2 - VPNTests.release.xcconfig */,
+				9BA7A5288829612EF0426219 /* Pods-Vaif R2 - VPN-metadata.plist */,
+				5519B02FDAD4464B31A8CA07 /* Pods-Vaif R2 - VPN-settings-metadata.plist */,
+				2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */,
+				71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */,
+				5C0DED633FAF871F86B8DF53 /* Pods-Vaif R2 - VPN Widget-metadata.plist */,
+				EF2C61ECE42AC1C34720D41E /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist */,
+				F32AB2F64B172F1E3B2D1343 /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist */,
+				4CAFD75F4E8BFD4F252F7054 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist */,
+				1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */,
+				220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,18 +974,154 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7948D2A28D6502C004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN" */;
 			buildPhases = (
+				A0D2861E5EBDF387F6920741 /* [CP] Check Pods Manifest.lock */,
 				B7948D0F28D6502A004CDB79 /* Sources */,
 				B7948D1028D6502A004CDB79 /* Frameworks */,
 				B7948D1128D6502A004CDB79 /* Resources */,
+				46D8B1F47987A19D7815B0F8 /* [CP] Embed Pods Frameworks */,
+				B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7948D3C28D7B8FB004CDB79 /* PBXTargetDependency */,
+				B7948D6728D7B9BE004CDB79 /* PBXTargetDependency */,
+				B7948D7828D7B9DB004CDB79 /* PBXTargetDependency */,
+				B7948D8928D7B9FA004CDB79 /* PBXTargetDependency */,
+				B7948DAC28D7BA4F004CDB79 /* PBXTargetDependency */,
+			);
+			name = "Vaif R2 - VPN";
+			packageProductDependencies = (
+				B75160FF28D7D5440028BE35 /* CocoaLumberjack */,
+				B751610128D7D5440028BE35 /* CocoaLumberjackSwift */,
+			);
+			productName = "Vaif R2 - VPN";
+			productReference = B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7948D3328D7B8FB004CDB79 /* Vaif R2 - VPN Blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7948D3E28D7B8FB004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Blocker" */;
+			buildPhases = (
+				B7948D3028D7B8FB004CDB79 /* Sources */,
+				B7948D3128D7B8FB004CDB79 /* Frameworks */,
+				B7948D3228D7B8FB004CDB79 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Vaif R2 - VPN";
-			productName = "Vaif R2 - VPN";
-			productReference = B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */;
-			productType = "com.apple.product-type.application";
+			name = "Vaif R2 - VPN Blocker";
+			productName = "Vaif R2 - VPN Blocker";
+			productReference = B7948D3428D7B8FB004CDB79 /* Vaif R2 - VPN Blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B7948D5D28D7B9BE004CDB79 /* Vaif R2 - VPN Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7948D6928D7B9BE004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Widget" */;
+			buildPhases = (
+				A9E1BE9B4595FF209EE312A8 /* [CP] Check Pods Manifest.lock */,
+				B7948D5A28D7B9BE004CDB79 /* Sources */,
+				B7948D5B28D7B9BE004CDB79 /* Frameworks */,
+				B7948D5C28D7B9BE004CDB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vaif R2 - VPN Widget";
+			packageProductDependencies = (
+				B751610328D7D57F0028BE35 /* CocoaLumberjack */,
+				B751610528D7D57F0028BE35 /* CocoaLumberjackSwift */,
+			);
+			productName = "Vaif R2 - VPN Widget";
+			productReference = B7948D5E28D7B9BE004CDB79 /* Vaif R2 - VPN Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B7948D6F28D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7948D7A28D7B9DB004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Tunnel" */;
+			buildPhases = (
+				BEE5E4A4F828AF3C2B9C0832 /* [CP] Check Pods Manifest.lock */,
+				B7948D6C28D7B9DB004CDB79 /* Sources */,
+				B7948D6D28D7B9DB004CDB79 /* Frameworks */,
+				B7948D6E28D7B9DB004CDB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vaif R2 - VPN Tunnel";
+			packageProductDependencies = (
+				B751610728D7D5920028BE35 /* CocoaLumberjack */,
+				B751610928D7D5920028BE35 /* CocoaLumberjackSwift */,
+			);
+			productName = "Vaif R2 - VPN Tunnel";
+			productReference = B7948D7028D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B7948D8028D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7948D8B28D7B9FA004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Firewall Widget" */;
+			buildPhases = (
+				83F0101875C752A8079DB7D3 /* [CP] Check Pods Manifest.lock */,
+				B7948D7D28D7B9FA004CDB79 /* Sources */,
+				B7948D7E28D7B9FA004CDB79 /* Frameworks */,
+				B7948D7F28D7B9FA004CDB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vaif R2 - VPN Firewall Widget";
+			packageProductDependencies = (
+				B751610B28D7D59E0028BE35 /* CocoaLumberjack */,
+				B751610D28D7D59E0028BE35 /* CocoaLumberjackSwift */,
+			);
+			productName = "Vaif R2 - VPN Firewall Widget";
+			productReference = B7948D8128D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B7948D9128D7BA18004CDB79 /* Vaif R2 - VPNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7948D9828D7BA18004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPNTests" */;
+			buildPhases = (
+				03F27178D504A69DF09B0670 /* [CP] Check Pods Manifest.lock */,
+				B7948D8E28D7BA18004CDB79 /* Sources */,
+				B7948D8F28D7BA18004CDB79 /* Frameworks */,
+				B7948D9028D7BA18004CDB79 /* Resources */,
+				82944D3B711E3EBD4A2E534E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7948D9728D7BA18004CDB79 /* PBXTargetDependency */,
+			);
+			name = "Vaif R2 - VPNTests";
+			productName = "Vaif R2 - VPNTests";
+			productReference = B7948D9228D7BA18004CDB79 /* Vaif R2 - VPNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7948D9E28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7948DAE28D7BA4F004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN FirewallWidget ExtensionExtension" */;
+			buildPhases = (
+				B7948D9B28D7BA4C004CDB79 /* Sources */,
+				B7948D9C28D7BA4C004CDB79 /* Frameworks */,
+				B7948D9D28D7BA4C004CDB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vaif R2 - VPN FirewallWidget ExtensionExtension";
+			packageProductDependencies = (
+				B751610F28D7D5D90028BE35 /* CocoaLumberjack */,
+				B751611128D7D5D90028BE35 /* CocoaLumberjackSwift */,
+			);
+			productName = "Vaif R2 - VPN FirewallWidget ExtensionExtension";
+			productReference = B7948D9F28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -103,10 +1136,29 @@
 					B7948D1228D6502A004CDB79 = {
 						CreatedOnToolsVersion = 14.0;
 					};
+					B7948D3328D7B8FB004CDB79 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B7948D5D28D7B9BE004CDB79 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B7948D6F28D7B9DB004CDB79 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B7948D8028D7B9FA004CDB79 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B7948D9128D7BA18004CDB79 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B7948D1228D6502A004CDB79;
+					};
+					B7948D9E28D7BA4C004CDB79 = {
+						CreatedOnToolsVersion = 14.0;
+					};
 				};
 			};
 			buildConfigurationList = B7948D0E28D6502A004CDB79 /* Build configuration list for PBXProject "Vaif R2 - VPN" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -114,11 +1166,20 @@
 				Base,
 			);
 			mainGroup = B7948D0A28D6502A004CDB79;
+			packageReferences = (
+				B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+			);
 			productRefGroup = B7948D1428D6502A004CDB79 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B7948D1228D6502A004CDB79 /* Vaif R2 - VPN */,
+				B7948D3328D7B8FB004CDB79 /* Vaif R2 - VPN Blocker */,
+				B7948D5D28D7B9BE004CDB79 /* Vaif R2 - VPN Widget */,
+				B7948D6F28D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel */,
+				B7948D8028D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget */,
+				B7948D9128D7BA18004CDB79 /* Vaif R2 - VPNTests */,
+				B7948D9E28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,27 +1189,480 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75161D928D906230028BE35 /* Montserrat-Regular.ttf in Resources */,
+				B75161DD28D906230028BE35 /* SF-Pro-Rounded-Regular.otf in Resources */,
+				B7948D2F28D7B8C6004CDB79 /* Settings.bundle in Resources */,
+				B75160ED28D7CD290028BE35 /* adBlockList.json in Resources */,
 				B7948D2628D6502C004CDB79 /* LaunchScreen.storyboard in Resources */,
+				B75160F028D7CD510028BE35 /* adBlockListTwo.json in Resources */,
 				B7948D2328D6502C004CDB79 /* Assets.xcassets in Resources */,
+				B75161D828D906230028BE35 /* Montserrat-Bold.ttf in Resources */,
 				B7948D1E28D6502A004CDB79 /* Main.storyboard in Resources */,
+				B75160F328D7CD850028BE35 /* adBlockListThree.json in Resources */,
+				B75161DB28D906230028BE35 /* SF-Pro-Rounded-Medium.otf in Resources */,
+				B75161DC28D906230028BE35 /* SF-Pro-Rounded-Bold.otf in Resources */,
+				B75160E728D7CCF30028BE35 /* privacyBlockList.json in Resources */,
+				45FDC9D472CCBDEFC0B81467 /* Pods-Vaif R2 - VPN-metadata.plist in Resources */,
+				B75160EA28D7CD100028BE35 /* socialBlockList.json in Resources */,
+				B75161D728D906230028BE35 /* Montserrat-Medium.ttf in Resources */,
+				B75161DA28D906230028BE35 /* Montserrat-SemiBold.ttf in Resources */,
+				B75161D528D906230028BE35 /* Montserrat-Thin.ttf in Resources */,
+				AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */,
+				B75161DE28D906230028BE35 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				B75161D628D906230028BE35 /* Montserrat-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D3228D7B8FB004CDB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B75160EE28D7CD290028BE35 /* adBlockList.json in Resources */,
+				B75160E828D7CCF30028BE35 /* privacyBlockList.json in Resources */,
+				B7948D3728D7B8FB004CDB79 /* blockerList.json in Resources */,
+				B75160F128D7CD510028BE35 /* adBlockListTwo.json in Resources */,
+				B75160EB28D7CD100028BE35 /* socialBlockList.json in Resources */,
+				B75160F428D7CD850028BE35 /* adBlockListThree.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D5C28D7B9BE004CDB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27C820B0F15886505AC1B4C0 /* Pods-Vaif R2 - VPN Widget-metadata.plist in Resources */,
+				F765EE8D8B61F53D8EB6272A /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D6E28D7B9DB004CDB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */,
+				5949781C23F932610EB44854 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D7F28D7B9FA004CDB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F00375F34C926AD4516205E /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist in Resources */,
+				5334E1A8D3382D884668C2B3 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D9028D7BA18004CDB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */,
+				CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D9D28D7BA4C004CDB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948DA728D7BA4F004CDB79 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03F27178D504A69DF09B0670 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vaif R2 - VPNTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46D8B1F47987A19D7815B0F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82944D3B711E3EBD4A2E534E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83F0101875C752A8079DB7D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vaif R2 - VPN Firewall Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0D2861E5EBDF387F6920741 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vaif R2 - VPN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E1BE9B4595FF209EE312A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vaif R2 - VPN Widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE5E4A4F828AF3C2B9C0832 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vaif R2 - VPN Tunnel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7948D0F28D6502A004CDB79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B751618728D8FB260028BE35 /* M13CheckboxDotController.swift in Sources */,
+				B751618E28D8FB260028BE35 /* NVActivityIndicatorView.swift in Sources */,
+				B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
+				B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */,
+				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
+				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
+				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */,
+				B75161AA28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				B7948DDA28D7C3BB004CDB79 /* VPNController.swift in Sources */,
+				B751618328D8FB260028BE35 /* M13CheckboxBounceController.swift in Sources */,
+				B751618928D8FB260028BE35 /* M13Checkbox+IB.swift in Sources */,
+				B75161AC28D8FB270028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				B751618F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
+				B751617628D8FB260028BE35 /* TimerEx.swift in Sources */,
+				B751617C28D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
+				B75161AD28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				B75161A228D8FB270028BE35 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
+				B7948DB928D7C032004CDB79 /* FirewallUtilities.swift in Sources */,
+				B75161A428D8FB270028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
+				B7948DFB28D7C59C004CDB79 /* DomainNameValidator.swift in Sources */,
+				B75161A628D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				B751618828D8FB260028BE35 /* M13CheckboxController.swift in Sources */,
+				B751617928D8FB260028BE35 /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
+				B751618C28D8FB260028BE35 /* NVActivityIndicatorViewable.swift in Sources */,
+				B7948DE728D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
+				B751611F28D7F3640028BE35 /* TrackerInfo.swift in Sources */,
+				B751612728D8BACB0028BE35 /* UIKit+Extensions.swift in Sources */,
+				B751611D28D7F33F0028BE35 /* LocalLogger.swift in Sources */,
+				B7948DBF28D7C06A004CDB79 /* Client.swift in Sources */,
+				B751618228D8FB260028BE35 /* M13CheckboxStrokeController.swift in Sources */,
+				B751617828D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift in Sources */,
+				B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */,
+				B7948DE228D7C493004CDB79 /* WhitelistUtilities.swift in Sources */,
+				B7948DDE28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */,
+				B7948E0F28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift in Sources */,
+				B75161AB28D8FB270028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				B751617E28D8FB260028BE35 /* M13Checkbox.swift in Sources */,
+				B75161B028D8FB270028BE35 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
+				B7948DF328D7C54C004CDB79 /* VPNRegion.swift in Sources */,
+				B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
+				B7948E1D28D7C79B004CDB79 /* ProtectedFileAccess.swift in Sources */,
+				B75161A128D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				B751619628D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */,
+				B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				B751617F28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift in Sources */,
+				B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */,
+				B7948DFD28D7C5D8004CDB79 /* BlockDayLog.swift in Sources */,
+				B751619928D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
+				B75161A528D8FB270028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				B751619F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				B751612128D8B1C60028BE35 /* Mailto.swift in Sources */,
+				B751617A28D8FB260028BE35 /* M13CheckboxExpandController.swift in Sources */,
+				B751617328D8FB260028BE35 /* CGRectEx.swift in Sources */,
+				B7948DC928D7C276004CDB79 /* Environment.swift in Sources */,
+				B751612328D8B8220028BE35 /* FirewallRepair.swift in Sources */,
+				B751617728D8FB260028BE35 /* M13CheckboxPathGenerator.swift in Sources */,
+				B751618A28D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				B751619E28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				B751618D28D8FB260028BE35 /* NVActivityIndicatorShape.swift in Sources */,
+				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
 				B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */,
+				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */,
+				B751619B28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
+				B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */,
+				B751618628D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift in Sources */,
+				B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */,
+				B751611B28D7F3260028BE35 /* Loader.swift in Sources */,
+				B7948E0928D7C671004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
+				B75161A728D8FB270028BE35 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				B751617228D8FB260028BE35 /* SpinerLayer.swift in Sources */,
 				B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */,
+				B751617B28D8FB260028BE35 /* M13CheckboxSpiralController.swift in Sources */,
+				B7948DED28D7C50D004CDB79 /* Metrics.swift in Sources */,
+				B751619028D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				B751618528D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift in Sources */,
+				B751619728D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				B75161A028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
+				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
+				B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				B7948DD328D7C2F5004CDB79 /* Shared.swift in Sources */,
+				B751619A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				B751619828D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				B7948DD828D7C379004CDB79 /* SpeedTest.swift in Sources */,
+				B751619428D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */,
+				B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */,
+				B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
+				B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D3028D7B8FB004CDB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948D3928D7B8FB004CDB79 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D5A28D7B9BE004CDB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948DE328D7C493004CDB79 /* WhitelistUtilities.swift in Sources */,
+				B7948DD428D7C307004CDB79 /* Shared.swift in Sources */,
+				B7948DC528D7C257004CDB79 /* ClientModels.swift in Sources */,
+				B7948DE828D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
+				B7948DDF28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */,
+				B7948E1628D7C769004CDB79 /* OneTimeActions.swift in Sources */,
+				B7948E1E28D7C7A2004CDB79 /* ProtectedFileAccess.swift in Sources */,
+				B7948DBA28D7C045004CDB79 /* FirewallUtilities.swift in Sources */,
+				B7948D6328D7B9BE004CDB79 /* FirewallTodayViewController.swift in Sources */,
+				B7948DEE28D7C50D004CDB79 /* Metrics.swift in Sources */,
+				B7948DC028D7C0DD004CDB79 /* Client.swift in Sources */,
+				B7948DFE28D7C5DF004CDB79 /* BlockDayLog.swift in Sources */,
+				B7948E0A28D7C674004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
+				B7948DCA28D7C27C004CDB79 /* Environment.swift in Sources */,
+				B7948DF428D7C54C004CDB79 /* VPNRegion.swift in Sources */,
+				B7948DDB28D7C3BB004CDB79 /* VPNController.swift in Sources */,
+				B7948DD028D7C2B7004CDB79 /* FirewallController.swift in Sources */,
+				B7948E0728D7C63D004CDB79 /* PushNotifications.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D6C28D7B9DB004CDB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948E1B28D7C76F004CDB79 /* OneTimeActions.swift in Sources */,
+				B7948DD528D7C310004CDB79 /* Shared.swift in Sources */,
+				B7948E0628D7C63C004CDB79 /* PushNotifications.swift in Sources */,
+				B7948DFF28D7C5E0004CDB79 /* BlockDayLog.swift in Sources */,
+				B7948DC628D7C258004CDB79 /* ClientModels.swift in Sources */,
+				B751611328D7D6F90028BE35 /* WhitelistUtilities.swift in Sources */,
+				B7948DBB28D7C046004CDB79 /* FirewallUtilities.swift in Sources */,
+				B7948D7428D7B9DB004CDB79 /* PacketTunnelProvider.swift in Sources */,
+				B7948E0B28D7C675004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
+				B7948E1F28D7C7A2004CDB79 /* ProtectedFileAccess.swift in Sources */,
+				B7948DC128D7C0DF004CDB79 /* Client.swift in Sources */,
+				B7948DE928D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
+				B7948DCC28D7C27E004CDB79 /* Environment.swift in Sources */,
+				B7948DEF28D7C50D004CDB79 /* Metrics.swift in Sources */,
+				B7948DF528D7C54C004CDB79 /* VPNRegion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D7D28D7B9FA004CDB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948DE428D7C493004CDB79 /* WhitelistUtilities.swift in Sources */,
+				B7948DD628D7C311004CDB79 /* Shared.swift in Sources */,
+				B7948DC728D7C258004CDB79 /* ClientModels.swift in Sources */,
+				B7948DEA28D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
+				B7948DE028D7C3E5004CDB79 /* VPNSubscription.swift in Sources */,
+				B7948E1828D7C76B004CDB79 /* OneTimeActions.swift in Sources */,
+				B7948E2028D7C7A3004CDB79 /* ProtectedFileAccess.swift in Sources */,
+				B7948DBC28D7C047004CDB79 /* FirewallUtilities.swift in Sources */,
+				B7948D8528D7B9FA004CDB79 /* PacketTunnelProvider.swift in Sources */,
+				B7948DF028D7C50D004CDB79 /* Metrics.swift in Sources */,
+				B7948DC228D7C0DF004CDB79 /* Client.swift in Sources */,
+				B7948E0028D7C5E0004CDB79 /* BlockDayLog.swift in Sources */,
+				B7948E0C28D7C676004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
+				B7948DCD28D7C27F004CDB79 /* Environment.swift in Sources */,
+				B7948DF628D7C54C004CDB79 /* VPNRegion.swift in Sources */,
+				B7948DDC28D7C3BB004CDB79 /* VPNController.swift in Sources */,
+				B7948DD128D7C2B7004CDB79 /* FirewallController.swift in Sources */,
+				B7948E0528D7C63C004CDB79 /* PushNotifications.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D8E28D7BA18004CDB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948D9528D7BA18004CDB79 /* Vaif_R2___VPNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7948D9B28D7BA4C004CDB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7948DE528D7C493004CDB79 /* WhitelistUtilities.swift in Sources */,
+				B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */,
+				B7948DF728D7C54C004CDB79 /* VPNRegion.swift in Sources */,
+				B7948E1A28D7C76E004CDB79 /* OneTimeActions.swift in Sources */,
+				B7948E0428D7C63B004CDB79 /* PushNotifications.swift in Sources */,
+				B7948DF128D7C50D004CDB79 /* Metrics.swift in Sources */,
+				B7948DEB28D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
+				B7948DBD28D7C048004CDB79 /* FirewallUtilities.swift in Sources */,
+				B7948E0D28D7C677004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
+				B75160E028D7C9BD0028BE35 /* CombinedProvider.swift in Sources */,
+				B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */,
+				B7948E0128D7C5E1004CDB79 /* BlockDayLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7948D3C28D7B8FB004CDB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7948D3328D7B8FB004CDB79 /* Vaif R2 - VPN Blocker */;
+			targetProxy = B7948D3B28D7B8FB004CDB79 /* PBXContainerItemProxy */;
+		};
+		B7948D6728D7B9BE004CDB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7948D5D28D7B9BE004CDB79 /* Vaif R2 - VPN Widget */;
+			targetProxy = B7948D6628D7B9BE004CDB79 /* PBXContainerItemProxy */;
+		};
+		B7948D7828D7B9DB004CDB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7948D6F28D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel */;
+			targetProxy = B7948D7728D7B9DB004CDB79 /* PBXContainerItemProxy */;
+		};
+		B7948D8928D7B9FA004CDB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7948D8028D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget */;
+			targetProxy = B7948D8828D7B9FA004CDB79 /* PBXContainerItemProxy */;
+		};
+		B7948D9728D7BA18004CDB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7948D1228D6502A004CDB79 /* Vaif R2 - VPN */;
+			targetProxy = B7948D9628D7BA18004CDB79 /* PBXContainerItemProxy */;
+		};
+		B7948DAC28D7BA4F004CDB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7948D9E28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension */;
+			targetProxy = B7948DAB28D7BA4F004CDB79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B7948D1C28D6502A004CDB79 /* Main.storyboard */ = {
@@ -220,7 +1734,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +1788,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,19 +1800,25 @@
 		};
 		B7948D2B28D6502C004CDB79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F76A74237E3FD102F6C0B81A /* Pods-Vaif R2 - VPN.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,27 +1826,36 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B7948D2C28D6502C004CDB79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5137DCAF2251264C7579D794 /* Pods-Vaif R2 - VPN.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +1863,322 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B7948D3F28D7B8FB004CDB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Blocker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7948D4028D7B8FB004CDB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Blocker";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B7948D6A28D7B9BE004CDB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744990F5DB0E2401020D0912 /* Pods-Vaif R2 - VPN Widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7948D6B28D7B9BE004CDB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FB5E13EA1D28ECBCB43944F /* Pods-Vaif R2 - VPN Widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B7948D7B28D7B9DB004CDB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 262BC164466AEEA4B3569355 /* Pods-Vaif R2 - VPN Tunnel.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Tunnel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Tunnel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7948D7C28D7B9DB004CDB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B31E65A931BDE3FA98ABFD7 /* Pods-Vaif R2 - VPN Tunnel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Tunnel";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Tunnel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B7948D8C28D7B9FA004CDB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E390893B668960263CB23C /* Pods-Vaif R2 - VPN Firewall Widget.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Firewall Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Firewall-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7948D8D28D7B9FA004CDB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9343BD28718035550B13583 /* Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN Firewall Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-Firewall-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B7948D9928D7BA18004CDB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 712336C654457D3E928E61DC /* Pods-Vaif R2 - VPNTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPNTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vaif R2 - VPN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vaif R2 - VPN";
+			};
+			name = Debug;
+		};
+		B7948D9A28D7BA18004CDB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D1E7CD97109801950CCA55 /* Pods-Vaif R2 - VPNTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPNTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vaif R2 - VPN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vaif R2 - VPN";
+			};
+			name = Release;
+		};
+		B7948DAF28D7BA4F004CDB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN FirewallWidget Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-FirewallWidget-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7948DB028D7BA4F004CDB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN FirewallWidget Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN.Vaif-R2---VPN-FirewallWidget-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,7 +2203,125 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		B7948D3E28D7B8FB004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7948D3F28D7B8FB004CDB79 /* Debug */,
+				B7948D4028D7B8FB004CDB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7948D6928D7B9BE004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7948D6A28D7B9BE004CDB79 /* Debug */,
+				B7948D6B28D7B9BE004CDB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7948D7A28D7B9DB004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7948D7B28D7B9DB004CDB79 /* Debug */,
+				B7948D7C28D7B9DB004CDB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7948D8B28D7B9FA004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN Firewall Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7948D8C28D7B9FA004CDB79 /* Debug */,
+				B7948D8D28D7B9FA004CDB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7948D9828D7BA18004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7948D9928D7BA18004CDB79 /* Debug */,
+				B7948D9A28D7BA18004CDB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7948DAE28D7BA4F004CDB79 /* Build configuration list for PBXNativeTarget "Vaif R2 - VPN FirewallWidget ExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7948DAF28D7BA4F004CDB79 /* Debug */,
+				B7948DB028D7BA4F004CDB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B75160FF28D7D5440028BE35 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		B751610128D7D5440028BE35 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		B751610328D7D57F0028BE35 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		B751610528D7D57F0028BE35 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		B751610728D7D5920028BE35 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		B751610928D7D5920028BE35 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		B751610B28D7D59E0028BE35 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		B751610D28D7D59E0028BE35 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+		B751610F28D7D5D90028BE35 /* CocoaLumberjack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjack;
+		};
+		B751611128D7D5D90028BE35 /* CocoaLumberjackSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
+			productName = CocoaLumberjackSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */ = {
