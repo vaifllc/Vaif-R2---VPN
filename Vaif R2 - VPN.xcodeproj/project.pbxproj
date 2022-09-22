@@ -1156,12 +1156,12 @@
 		B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */ = {
 			isa = PBXGroup;
 			children = (
-				B7EA1A8B28DBEADD008D8D3E /* R2 Auth Ext */,
+				B7EA1A8B28DBEADD008D8D3E /* R2 Auth Extensions */,
 			);
 			path = "R2 Auth";
 			sourceTree = "<group>";
 		};
-		B7EA1A8B28DBEADD008D8D3E /* R2 Auth Ext */ = {
+		B7EA1A8B28DBEADD008D8D3E /* R2 Auth Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B7EA1C8F28DC0041008D8D3E /* Result+Extensions */,
@@ -1184,7 +1184,7 @@
 				B7EA1BAC28DBED8F008D8D3E /* V5 */,
 				B7EA1C6428DBFDB7008D8D3E /* Assets-V5.xcassets */,
 			);
-			path = "R2 Auth Ext";
+			path = "R2 Auth Extensions";
 			sourceTree = "<group>";
 		};
 		B7EA1BAC28DBED8F008D8D3E /* V5 */ = {
