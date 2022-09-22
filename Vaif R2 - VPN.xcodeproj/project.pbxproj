@@ -16,6 +16,29 @@
 		5334E1A8D3382D884668C2B3 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFD75F4E8BFD4F252F7054 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist */; };
 		5949781C23F932610EB44854 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */; };
 		AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5519B02FDAD4464B31A8CA07 /* Pods-Vaif R2 - VPN-settings-metadata.plist */; };
+		B7468A6A28DCA88200D8E0C3 /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A6928DCA88200D8E0C3 /* SubtitleLabel.swift */; };
+		B7468A6D28DCA8A200D8E0C3 /* UILabel+Extensions2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A6C28DCA8A200D8E0C3 /* UILabel+Extensions2.swift */; };
+		B7468A7028DCA8D000D8E0C3 /* ExternalLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A6F28DCA8D000D8E0C3 /* ExternalLinks.swift */; };
+		B7468A7328DCA91000D8E0C3 /* HelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A7228DCA91000D8E0C3 /* HelpItem.swift */; };
+		B7468A7628DCA93F00D8E0C3 /* LongTermTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A7528DCA93F00D8E0C3 /* LongTermTask.swift */; };
+		B7468A7928DCA97300D8E0C3 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A7828DCA97300D8E0C3 /* UIStoryboard+Extensions.swift */; };
+		B7468A7C28DCA9B300D8E0C3 /* WindowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A7B28DCA9B300D8E0C3 /* WindowService.swift */; };
+		B7468A7F28DCA9E700D8E0C3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A7E28DCA9E700D8E0C3 /* Dictionary+Extension.swift */; };
+		B7468A8228DCAA1E00D8E0C3 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8128DCAA1E00D8E0C3 /* Key.swift */; };
+		B7468A8428DCAA3E00D8E0C3 /* Key+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8328DCAA3E00D8E0C3 /* Key+Codable.swift */; };
+		B7468A8628DCAA5500D8E0C3 /* Key+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8528DCAA5500D8E0C3 /* Key+Extensions.swift */; };
+		B7468A8828DCAA6900D8E0C3 /* Key+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8728DCAA6900D8E0C3 /* Key+NSCoding.swift */; };
+		B7468A8A28DCAA8600D8E0C3 /* Key+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8928DCAA8600D8E0C3 /* Key+Response.swift */; };
+		B7468A8C28DCAA9800D8E0C3 /* KeySalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8B28DCAA9800D8E0C3 /* KeySalt.swift */; };
+		B7468A8F28DCAAB400D8E0C3 /* ShowImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A8E28DCAAB400D8E0C3 /* ShowImages.swift */; };
+		B7468A9228DCAAD600D8E0C3 /* LinkOpeningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A9128DCAAD600D8E0C3 /* LinkOpeningMode.swift */; };
+		B7468A9528DCAB1500D8E0C3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A9428DCAB1500D8E0C3 /* Address.swift */; };
+		B7468A9728DCAB3600D8E0C3 /* Address+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A9628DCAB3600D8E0C3 /* Address+Codable.swift */; };
+		B7468A9928DCAB4800D8E0C3 /* Address+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A9828DCAB4800D8E0C3 /* Address+Extensions.swift */; };
+		B7468A9B28DCAB5D00D8E0C3 /* Address+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A9A28DCAB5D00D8E0C3 /* Address+NSCoding.swift */; };
+		B7468A9E28DCAB7D00D8E0C3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468A9D28DCAB7D00D8E0C3 /* Response.swift */; };
+		B7468AA128DCABB300D8E0C3 /* NSCoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468AA028DCABB300D8E0C3 /* NSCoder+Extensions.swift */; };
+		B7468AA428DCABD200D8E0C3 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7468AA328DCABD200D8E0C3 /* AlertService.swift */; };
 		B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */; };
 		B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DD28D7C9940028BE35 /* LoadingCircle.swift */; };
 		B75160E028D7C9BD0028BE35 /* CombinedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */; };
@@ -418,6 +441,29 @@
 		9BA7A5288829612EF0426219 /* Pods-Vaif R2 - VPN-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN-metadata.plist"; sourceTree = "<group>"; };
 		9FB5E13EA1D28ECBCB43944F /* Pods-Vaif R2 - VPN Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Widget.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Widget/Pods-Vaif R2 - VPN Widget.release.xcconfig"; sourceTree = "<group>"; };
 		B1D1E7CD97109801950CCA55 /* Pods-Vaif R2 - VPNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPNTests.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7468A6928DCA88200D8E0C3 /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
+		B7468A6C28DCA8A200D8E0C3 /* UILabel+Extensions2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions2.swift"; sourceTree = "<group>"; };
+		B7468A6F28DCA8D000D8E0C3 /* ExternalLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinks.swift; sourceTree = "<group>"; };
+		B7468A7228DCA91000D8E0C3 /* HelpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpItem.swift; sourceTree = "<group>"; };
+		B7468A7528DCA93F00D8E0C3 /* LongTermTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermTask.swift; sourceTree = "<group>"; };
+		B7468A7828DCA97300D8E0C3 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		B7468A7B28DCA9B300D8E0C3 /* WindowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowService.swift; sourceTree = "<group>"; };
+		B7468A7E28DCA9E700D8E0C3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		B7468A8128DCAA1E00D8E0C3 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		B7468A8328DCAA3E00D8E0C3 /* Key+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Codable.swift"; sourceTree = "<group>"; };
+		B7468A8528DCAA5500D8E0C3 /* Key+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Extensions.swift"; sourceTree = "<group>"; };
+		B7468A8728DCAA6900D8E0C3 /* Key+NSCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+NSCoding.swift"; sourceTree = "<group>"; };
+		B7468A8928DCAA8600D8E0C3 /* Key+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Response.swift"; sourceTree = "<group>"; };
+		B7468A8B28DCAA9800D8E0C3 /* KeySalt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySalt.swift; sourceTree = "<group>"; };
+		B7468A8E28DCAAB400D8E0C3 /* ShowImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImages.swift; sourceTree = "<group>"; };
+		B7468A9128DCAAD600D8E0C3 /* LinkOpeningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkOpeningMode.swift; sourceTree = "<group>"; };
+		B7468A9428DCAB1500D8E0C3 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		B7468A9628DCAB3600D8E0C3 /* Address+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Codable.swift"; sourceTree = "<group>"; };
+		B7468A9828DCAB4800D8E0C3 /* Address+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Extensions.swift"; sourceTree = "<group>"; };
+		B7468A9A28DCAB5D00D8E0C3 /* Address+NSCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+NSCoding.swift"; sourceTree = "<group>"; };
+		B7468A9D28DCAB7D00D8E0C3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B7468AA028DCABB300D8E0C3 /* NSCoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoder+Extensions.swift"; sourceTree = "<group>"; };
+		B7468AA328DCABD200D8E0C3 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaifR2VPNFirewallWidget.swift; sourceTree = "<group>"; };
 		B75160DD28D7C9940028BE35 /* LoadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircle.swift; sourceTree = "<group>"; };
 		B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedProvider.swift; sourceTree = "<group>"; };
@@ -773,6 +819,134 @@
 				E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7468A6828DCA87B00D8E0C3 /* SubtitleLabel */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A6928DCA88200D8E0C3 /* SubtitleLabel.swift */,
+			);
+			path = SubtitleLabel;
+			sourceTree = "<group>";
+		};
+		B7468A6B28DCA89B00D8E0C3 /* UILabel+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A6C28DCA8A200D8E0C3 /* UILabel+Extensions2.swift */,
+			);
+			path = "UILabel+Extensions";
+			sourceTree = "<group>";
+		};
+		B7468A6E28DCA8C600D8E0C3 /* ExternalLinks */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A6F28DCA8D000D8E0C3 /* ExternalLinks.swift */,
+			);
+			path = ExternalLinks;
+			sourceTree = "<group>";
+		};
+		B7468A7128DCA90B00D8E0C3 /* HelpItem */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A7228DCA91000D8E0C3 /* HelpItem.swift */,
+			);
+			path = HelpItem;
+			sourceTree = "<group>";
+		};
+		B7468A7428DCA93A00D8E0C3 /* LongTermTask */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A7528DCA93F00D8E0C3 /* LongTermTask.swift */,
+			);
+			path = LongTermTask;
+			sourceTree = "<group>";
+		};
+		B7468A7728DCA96A00D8E0C3 /* UIStoryboard+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A7828DCA97300D8E0C3 /* UIStoryboard+Extensions.swift */,
+			);
+			path = "UIStoryboard+Extensions";
+			sourceTree = "<group>";
+		};
+		B7468A7A28DCA9AE00D8E0C3 /* WindowService */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A7B28DCA9B300D8E0C3 /* WindowService.swift */,
+			);
+			path = WindowService;
+			sourceTree = "<group>";
+		};
+		B7468A7D28DCA9E100D8E0C3 /* Dictionary+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A7E28DCA9E700D8E0C3 /* Dictionary+Extension.swift */,
+			);
+			path = "Dictionary+Extension";
+			sourceTree = "<group>";
+		};
+		B7468A8028DCAA0800D8E0C3 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A8128DCAA1E00D8E0C3 /* Key.swift */,
+				B7468A8328DCAA3E00D8E0C3 /* Key+Codable.swift */,
+				B7468A8528DCAA5500D8E0C3 /* Key+Extensions.swift */,
+				B7468A8728DCAA6900D8E0C3 /* Key+NSCoding.swift */,
+				B7468A8928DCAA8600D8E0C3 /* Key+Response.swift */,
+				B7468A8B28DCAA9800D8E0C3 /* KeySalt.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		B7468A8D28DCAAAC00D8E0C3 /* ShowImages */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A8E28DCAAB400D8E0C3 /* ShowImages.swift */,
+			);
+			path = ShowImages;
+			sourceTree = "<group>";
+		};
+		B7468A9028DCAAD100D8E0C3 /* LinkOpeningMode */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A9128DCAAD600D8E0C3 /* LinkOpeningMode.swift */,
+			);
+			path = LinkOpeningMode;
+			sourceTree = "<group>";
+		};
+		B7468A9328DCAAFB00D8E0C3 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A9428DCAB1500D8E0C3 /* Address.swift */,
+				B7468A9628DCAB3600D8E0C3 /* Address+Codable.swift */,
+				B7468A9828DCAB4800D8E0C3 /* Address+Extensions.swift */,
+				B7468A9A28DCAB5D00D8E0C3 /* Address+NSCoding.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		B7468A9C28DCAB7700D8E0C3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B7468A9D28DCAB7D00D8E0C3 /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B7468A9F28DCABAD00D8E0C3 /* NSCoder+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B7468AA028DCABB300D8E0C3 /* NSCoder+Extensions.swift */,
+			);
+			path = "NSCoder+Extensions";
+			sourceTree = "<group>";
+		};
+		B7468AA228DCABCC00D8E0C3 /* AlertService */ = {
+			isa = PBXGroup;
+			children = (
+				B7468AA328DCABD200D8E0C3 /* AlertService.swift */,
+			);
+			path = AlertService;
 			sourceTree = "<group>";
 		};
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
@@ -1164,6 +1338,21 @@
 		B7EA1A8B28DBEADD008D8D3E /* R2 Auth Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B7468AA228DCABCC00D8E0C3 /* AlertService */,
+				B7468A9F28DCABAD00D8E0C3 /* NSCoder+Extensions */,
+				B7468A9C28DCAB7700D8E0C3 /* Response */,
+				B7468A9328DCAAFB00D8E0C3 /* Address */,
+				B7468A9028DCAAD100D8E0C3 /* LinkOpeningMode */,
+				B7468A8D28DCAAAC00D8E0C3 /* ShowImages */,
+				B7468A8028DCAA0800D8E0C3 /* Key */,
+				B7468A7D28DCA9E100D8E0C3 /* Dictionary+Extension */,
+				B7468A7A28DCA9AE00D8E0C3 /* WindowService */,
+				B7468A7728DCA96A00D8E0C3 /* UIStoryboard+Extensions */,
+				B7468A7428DCA93A00D8E0C3 /* LongTermTask */,
+				B7468A7128DCA90B00D8E0C3 /* HelpItem */,
+				B7468A6E28DCA8C600D8E0C3 /* ExternalLinks */,
+				B7468A6B28DCA89B00D8E0C3 /* UILabel+Extensions */,
+				B7468A6828DCA87B00D8E0C3 /* SubtitleLabel */,
 				B7EA1C8F28DC0041008D8D3E /* Result+Extensions */,
 				B7EA1C8C28DC000E008D8D3E /* Observable */,
 				B7EA1C8928DBFFE4008D8D3E /* TemporaryHacks */,
@@ -2084,13 +2273,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7468A6D28DCA8A200D8E0C3 /* UILabel+Extensions2.swift in Sources */,
 				B7EA1C6828DBFE2B008D8D3E /* AccessibleView.swift in Sources */,
+				B7468A8828DCAA6900D8E0C3 /* Key+NSCoding.swift in Sources */,
 				B7EA1BBB28DBEE1C008D8D3E /* Reusable.swift in Sources */,
 				B7EA1C7028DBFEA8008D8D3E /* ChallengeProtocol.swift in Sources */,
 				B7EA1C7928DBFF0C008D8D3E /* LoginUIImages.swift in Sources */,
 				B7EA1BBF28DBEE7F008D8D3E /* IconProvider.swift in Sources */,
 				B751618728D8FB260028BE35 /* M13CheckboxDotController.swift in Sources */,
 				B751618E28D8FB260028BE35 /* NVActivityIndicatorView.swift in Sources */,
+				B7468A9228DCAAD600D8E0C3 /* LinkOpeningMode.swift in Sources */,
 				B7EA1C7F28DBFF64008D8D3E /* Bundle.swift in Sources */,
 				B7EA1BCE28DBF09C008D8D3E /* CountryCodeTableViewCell.swift in Sources */,
 				B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
@@ -2099,15 +2291,18 @@
 				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B7EA1BFC28DBF464008D8D3E /* PMTabBarController.swift in Sources */,
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
+				B7468A7328DCA91000D8E0C3 /* HelpItem.swift in Sources */,
 				B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */,
 				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
 				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				B7468A9B28DCAB5D00D8E0C3 /* Address+NSCoding.swift in Sources */,
 				B7EA1C7C28DBFF2E008D8D3E /* LoginAndSignup+DataTypes.swift in Sources */,
 				B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */,
 				B7EA1C4A28DBFAE0008D8D3E /* UIView+helper.swift in Sources */,
 				B7EA1C3828DBF88A008D8D3E /* UIDevice+info.swift in Sources */,
 				B75161AA28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				B7468AA128DCABB300D8E0C3 /* NSCoder+Extensions.swift in Sources */,
 				B7948DDA28D7C3BB004CDB79 /* VPNController.swift in Sources */,
 				B7EA1C7328DBFEC9008D8D3E /* UIViewController+Extensions.swift in Sources */,
 				B7EA1C8128DBFF7D008D8D3E /* Bundle_V5.swift in Sources */,
@@ -2132,6 +2327,7 @@
 				B7EA1BE828DBF2A4008D8D3E /* PMTextField.swift in Sources */,
 				B75161A428D8FB270028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				B7EA1C6D28DBFE73008D8D3E /* UIApplication+Shared.swift in Sources */,
+				B7468A7F28DCA9E700D8E0C3 /* Dictionary+Extension.swift in Sources */,
 				B7EA1C0328DBF51A008D8D3E /* PMBannerNewStyle.swift in Sources */,
 				B7EA1C1B28DBF711008D8D3E /* PMActionSheetPlainCellHeaderHeader.swift in Sources */,
 				B7EA1C4028DBF8F7008D8D3E /* NSColor+Helper.swift in Sources */,
@@ -2154,6 +2350,7 @@
 				B751612728D8BACB0028BE35 /* UIKit+Extensions.swift in Sources */,
 				B751611D28D7F33F0028BE35 /* LocalLogger.swift in Sources */,
 				B7948DBF28D7C06A004CDB79 /* Client.swift in Sources */,
+				B7468A8428DCAA3E00D8E0C3 /* Key+Codable.swift in Sources */,
 				B7EA1C1428DBF6C1008D8D3E /* PMActionSheetDragBarView.swift in Sources */,
 				B7EA1BE628DBF23D008D8D3E /* PMTextFieldCombo.swift in Sources */,
 				B751618228D8FB260028BE35 /* M13CheckboxStrokeController.swift in Sources */,
@@ -2170,7 +2367,9 @@
 				B751617E28D8FB260028BE35 /* M13Checkbox.swift in Sources */,
 				B7EA1C1228DBF69F008D8D3E /* PMActionSheetVM.swift in Sources */,
 				B7EA1BB628DBEDBB008D8D3E /* ProtonColorPaletteiOSV5.swift in Sources */,
+				B7468A6A28DCA88200D8E0C3 /* SubtitleLabel.swift in Sources */,
 				B75161B028D8FB270028BE35 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
+				B7468A8228DCAA1E00D8E0C3 /* Key.swift in Sources */,
 				B7948DF328D7C54C004CDB79 /* VPNRegion.swift in Sources */,
 				B7EA1C2828DBF7B5008D8D3E /* PMActionSheetHeaderModel.swift in Sources */,
 				B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -2184,6 +2383,7 @@
 				B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				B751617F28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				B7468A9528DCAB1500D8E0C3 /* Address.swift in Sources */,
 				B7EA1BEA28DBF2C4008D8D3E /* PMInternalTextField.swift in Sources */,
 				B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */,
 				B7EA1C0728DBF550008D8D3E /* PMBannerPosition.swift in Sources */,
@@ -2193,7 +2393,9 @@
 				B7EA1C1928DBF6F9008D8D3E /* PMActionSheetGridCell.swift in Sources */,
 				B7EA1C4E28DBFB0E008D8D3E /* NSMutableAttributedString.swift in Sources */,
 				B7EA1C5B28DBFC4C008D8D3E /* ColorProvider.swift in Sources */,
+				B7468A8A28DCAA8600D8E0C3 /* Key+Response.swift in Sources */,
 				B751619F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				B7468A8F28DCAAB400D8E0C3 /* ShowImages.swift in Sources */,
 				B751612128D8B1C60028BE35 /* Mailto.swift in Sources */,
 				B7EA1C1D28DBF729008D8D3E /* PMActionSheetToggleCell.swift in Sources */,
 				B7EA1C2628DBF79E008D8D3E /* PMActionSheetItem.swift in Sources */,
@@ -2205,10 +2407,12 @@
 				B751612328D8B8220028BE35 /* FirewallRepair.swift in Sources */,
 				B7EA1C9128DC0048008D8D3E /* Result+Extensions.swift in Sources */,
 				B751617728D8FB260028BE35 /* M13CheckboxPathGenerator.swift in Sources */,
+				B7468A9928DCAB4800D8E0C3 /* Address+Extensions.swift in Sources */,
 				B751618A28D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				B7EA1BF128DBF3A9008D8D3E /* PMCell.swift in Sources */,
 				B7EA1C2A28DBF7C9008D8D3E /* PMActionSheetError.swift in Sources */,
 				B7EA1BB528DBEDBB008D8D3E /* ProtonIconSetV5.swift in Sources */,
+				B7468A7628DCA93F00D8E0C3 /* LongTermTask.swift in Sources */,
 				B7EA1BF828DBF426008D8D3E /* PMTabBarError.swift in Sources */,
 				B7EA1C8628DBFFAD008D8D3E /* CoreString.swift in Sources */,
 				B7EA1C8B28DBFFF3008D8D3E /* TemporaryHacks.swift in Sources */,
@@ -2220,6 +2424,7 @@
 				B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */,
 				B7EA1C6A28DBFE40008D8D3E /* AccessibleCell.swift in Sources */,
 				B7EA1C4628DBFA7D008D8D3E /* UISearchBar+helper.swift in Sources */,
+				B7468A8C28DCAA9800D8E0C3 /* KeySalt.swift in Sources */,
 				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				B7EA1C5028DBFB26008D8D3E /* NSLayoutConstraint+Helpers.swift in Sources */,
 				B7EA1C5D28DBFC68008D8D3E /* FigmaShadow.swift in Sources */,
@@ -2234,11 +2439,13 @@
 				B751618628D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift in Sources */,
 				B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */,
 				B7EA1BFE28DBF47B008D8D3E /* PMTabBarBuilder.swift in Sources */,
+				B7468AA428DCABD200D8E0C3 /* AlertService.swift in Sources */,
 				B751611B28D7F3260028BE35 /* Loader.swift in Sources */,
 				B7948E0928D7C671004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
 				B75161A728D8FB270028BE35 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				B751617228D8FB260028BE35 /* SpinerLayer.swift in Sources */,
 				B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */,
+				B7468A7C28DCA9B300D8E0C3 /* WindowService.swift in Sources */,
 				B751617B28D8FB260028BE35 /* M13CheckboxSpiralController.swift in Sources */,
 				B7948DED28D7C50D004CDB79 /* Metrics.swift in Sources */,
 				B751619028D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
@@ -2255,15 +2462,20 @@
 				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
 				B7EA1C1628DBF6D6008D8D3E /* PMActionSheetHeaderView.swift in Sources */,
 				B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				B7468A8628DCAA5500D8E0C3 /* Key+Extensions.swift in Sources */,
 				B7948DD328D7C2F5004CDB79 /* Shared.swift in Sources */,
 				B751619A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				B7468A9E28DCAB7D00D8E0C3 /* Response.swift in Sources */,
 				B751619828D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				B7468A9728DCAB3600D8E0C3 /* Address+Codable.swift in Sources */,
 				B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				B7EA1C8328DBFF8E008D8D3E /* PMLogin+Bundle.swift in Sources */,
+				B7468A7028DCA8D000D8E0C3 /* ExternalLinks.swift in Sources */,
 				B7948DD828D7C379004CDB79 /* SpeedTest.swift in Sources */,
 				B751619428D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */,
 				B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */,
 				B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
+				B7468A7928DCA97300D8E0C3 /* UIStoryboard+Extensions.swift in Sources */,
 				B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
