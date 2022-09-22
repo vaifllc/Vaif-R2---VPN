@@ -16,6 +16,9 @@ target 'Vaif R2 - VPN' do
   pod 'KeychainAccess'
   pod 'CocoaLumberjack/Swift'
   pod 'PopupDialog'
+  
+  # External Pods
+  pod 'lottie-ios'
 end
 
 
