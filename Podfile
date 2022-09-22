@@ -19,6 +19,7 @@ target 'Vaif R2 - VPN' do
   
   # External Pods
   pod 'lottie-ios'
+  pod 'GSMessages'
 end
 
 
