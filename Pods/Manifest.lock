@@ -1,4 +1,21 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AwaitKit (5.2.0):
+    - PromiseKit (~> 6)
   - AwesomeSpotlightView (0.1.15)
   - CocoaLumberjack/Core (3.7.4)
   - CocoaLumberjack/Swift (3.7.4):
@@ -26,8 +43,11 @@ PODS:
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
   - SwiftyStoreKit (0.16.1)
+  - TrustKit (2.0.1)
 
 DEPENDENCIES:
+  - AFNetworking
+  - AwaitKit (from `https://github.com/yannickl/AwaitKit.git`, commit `4b725f40dd189f40c0962cba792f06a2073bd977`)
   - AwesomeSpotlightView
   - CocoaLumberjack/Swift
   - GSMessages
@@ -41,9 +61,11 @@ DEPENDENCIES:
   - SnapshotTesting (~> 1.9.0)
   - SwiftMessages
   - SwiftyStoreKit
+  - TrustKit
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - AwesomeSpotlightView
     - CocoaLumberjack
     - DynamicBlurView
@@ -58,8 +80,21 @@ SPEC REPOS:
     - SnapshotTesting
     - SwiftMessages
     - SwiftyStoreKit
+    - TrustKit
+
+EXTERNAL SOURCES:
+  AwaitKit:
+    :commit: 4b725f40dd189f40c0962cba792f06a2073bd977
+    :git: https://github.com/yannickl/AwaitKit.git
+
+CHECKOUT OPTIONS:
+  AwaitKit:
+    :commit: 4b725f40dd189f40c0962cba792f06a2073bd977
+    :git: https://github.com/yannickl/AwaitKit.git
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AwaitKit: 512626cd12c82b1fbffddc8f414d0364cb456004
   AwesomeSpotlightView: 51b2d3a2262f251ed0b7735b73fe658a13e8f14b
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
@@ -74,7 +109,8 @@ SPEC CHECKSUMS:
   SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
 
-PODFILE CHECKSUM: 00699761cc2f4236ecdae08a5196b9732c1e657f
+PODFILE CHECKSUM: 513d85ded1f5094f95cb3d8e4f3b05929fc06541
 
 COCOAPODS: 1.11.3
