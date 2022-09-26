@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="ghX-bz-zxP" id="i4j-lr-QyM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ghX-bz-zxP">
+            <rect key="frame" x="0.0" y="0.0" width="533" height="443"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNS-rd-Pl1" userLabel="Title">
+                    <rect key="frame" x="0.0" y="47" width="533" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NI-pz-Web" userLabel="Error">
+                    <rect key="frame" x="0.0" y="393.33333333333331" width="533" height="15.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-Hf-UpT" userLabel="Assistive text">
+                    <rect key="frame" x="0.0" y="393.33333333333331" width="533" height="15.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nyd-J7-2bu" customClass="PMInternalTextField" customModule="ProtonCore_UIFoundations">
+                    <rect key="frame" x="0.0" y="71" width="533" height="318.33333333333331"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suffix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q62-Sb-E15">
+                    <rect key="frame" x="481" y="219.66666666666666" width="44" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="xdW-cZ-9yc"/>
+            <constraints>
+                <constraint firstItem="xdW-cZ-9yc" firstAttribute="trailing" secondItem="M1m-Hf-UpT" secondAttribute="trailing" id="3ge-Jn-K3c"/>
+                <constraint firstItem="xdW-cZ-9yc" firstAttribute="bottom" secondItem="9NI-pz-Web" secondAttribute="bottom" id="4YN-2K-MPB"/>
+                <constraint firstItem="Q62-Sb-E15" firstAttribute="centerY" secondItem="Nyd-J7-2bu" secondAttribute="centerY" id="5z9-R0-hcg"/>
+                <constraint firstAttribute="trailing" secondItem="PNS-rd-Pl1" secondAttribute="trailing" id="8qy-hC-kTA"/>
+                <constraint firstItem="9NI-pz-Web" firstAttribute="top" secondItem="Nyd-J7-2bu" secondAttribute="bottom" constant="4" id="CjB-r9-eWQ"/>
+                <constraint firstItem="xdW-cZ-9yc" firstAttribute="trailing" secondItem="Nyd-J7-2bu" secondAttribute="trailing" id="GRF-ki-bvZ"/>
+                <constraint firstItem="PNS-rd-Pl1" firstAttribute="top" secondItem="xdW-cZ-9yc" secondAttribute="top" id="Huq-Gr-828"/>
+                <constraint firstItem="Nyd-J7-2bu" firstAttribute="leading" secondItem="xdW-cZ-9yc" secondAttribute="leading" id="J8b-J6-Rxd"/>
+                <constraint firstItem="M1m-Hf-UpT" firstAttribute="top" secondItem="Nyd-J7-2bu" secondAttribute="bottom" constant="4" id="QII-rc-DQ0"/>
+                <constraint firstItem="xdW-cZ-9yc" firstAttribute="trailing" secondItem="9NI-pz-Web" secondAttribute="trailing" id="SzE-WR-2q7"/>
+                <constraint firstItem="Nyd-J7-2bu" firstAttribute="top" secondItem="PNS-rd-Pl1" secondAttribute="bottom" constant="8" id="g3y-cM-ob9"/>
+                <constraint firstItem="M1m-Hf-UpT" firstAttribute="bottom" secondItem="xdW-cZ-9yc" secondAttribute="bottom" id="jdN-z9-62R"/>
+                <constraint firstItem="PNS-rd-Pl1" firstAttribute="leading" secondItem="ghX-bz-zxP" secondAttribute="leading" id="m4B-z4-1ZC"/>
+                <constraint firstItem="xdW-cZ-9yc" firstAttribute="trailing" secondItem="Q62-Sb-E15" secondAttribute="trailing" constant="8" id="rFd-AY-ZEW"/>
+                <constraint firstItem="M1m-Hf-UpT" firstAttribute="leading" secondItem="xdW-cZ-9yc" secondAttribute="leading" id="xyo-eN-6Wf"/>
+                <constraint firstItem="9NI-pz-Web" firstAttribute="leading" secondItem="xdW-cZ-9yc" secondAttribute="leading" id="ynl-hl-IMu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="223.91304347826087" y="-0.33482142857142855"/>
+        </view>
+    </objects>
+</document>

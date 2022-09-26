@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="IFz-kI-ek4" customClass="PMCell" customModule="Vaif_R2___VPN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="436" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFz-kI-ek4" id="doU-vQ-7Le">
+                <rect key="frame" x="0.0" y="0.0" width="436" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGz-bk-aNV">
+                        <rect key="frame" x="26" y="18" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="Kr2-Iy-4FV"/>
+                            <constraint firstAttribute="height" constant="24" id="S3u-jS-IsH"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZFq-Uq-Vu8">
+                        <rect key="frame" x="62" y="16" width="314" height="112"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kl-10-Lvv">
+                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="112"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-HY-fhr">
+                                <rect key="frame" x="0.0" y="112" width="37.333333333333336" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="auJ-Fp-H2B">
+                        <rect key="frame" x="400" y="22" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="HUJ-dd-Hm9"/>
+                            <constraint firstAttribute="height" constant="16" id="QMs-5m-eZo"/>
+                        </constraints>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DOD-Uw-ixf">
+                        <rect key="frame" x="396" y="18" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="7Xg-uo-tlv"/>
+                            <constraint firstAttribute="height" constant="24" id="GuO-uT-Ch3"/>
+                        </constraints>
+                    </activityIndicatorView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="BGz-bk-aNV" firstAttribute="top" secondItem="ZFq-Uq-Vu8" secondAttribute="topMargin" constant="2" id="6PL-Hj-Kd9"/>
+                    <constraint firstItem="ZFq-Uq-Vu8" firstAttribute="leading" secondItem="BGz-bk-aNV" secondAttribute="trailing" constant="12" id="AEA-9V-pk2"/>
+                    <constraint firstItem="BGz-bk-aNV" firstAttribute="leading" secondItem="doU-vQ-7Le" secondAttribute="leadingMargin" constant="6" id="Fcr-ID-Ltu"/>
+                    <constraint firstItem="ZFq-Uq-Vu8" firstAttribute="top" secondItem="doU-vQ-7Le" secondAttribute="top" constant="16" id="O00-er-DdR"/>
+                    <constraint firstAttribute="bottom" secondItem="ZFq-Uq-Vu8" secondAttribute="bottom" constant="16" id="WC6-6J-K4q"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="auJ-Fp-H2B" secondAttribute="trailing" id="ffu-iW-KWl"/>
+                    <constraint firstItem="auJ-Fp-H2B" firstAttribute="leading" secondItem="ZFq-Uq-Vu8" secondAttribute="trailing" constant="24" id="iwq-fL-Tke"/>
+                    <constraint firstItem="auJ-Fp-H2B" firstAttribute="centerY" secondItem="BGz-bk-aNV" secondAttribute="centerY" id="lyd-RT-mrv"/>
+                    <constraint firstItem="DOD-Uw-ixf" firstAttribute="centerY" secondItem="auJ-Fp-H2B" secondAttribute="centerY" id="trI-y7-eZx"/>
+                    <constraint firstItem="DOD-Uw-ixf" firstAttribute="centerX" secondItem="auJ-Fp-H2B" secondAttribute="centerX" id="y4v-ve-yPn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="QCU-5x-B6e"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <accessibility key="accessibilityConfiguration" identifier="HelpItemCell"/>
+            <connections>
+                <outlet property="activityIndicator" destination="DOD-Uw-ixf" id="Uj4-SB-wL4"/>
+                <outlet property="arrowImageView" destination="auJ-Fp-H2B" id="J34-an-QeK"/>
+                <outlet property="iconImageView" destination="BGz-bk-aNV" id="gqH-8g-54u"/>
+                <outlet property="subtitleLabel" destination="wa5-HY-fhr" id="Uf9-vI-7an"/>
+                <outlet property="titleLabel" destination="3kl-10-Lvv" id="sBm-I0-QIx"/>
+            </connections>
+            <point key="canvasLocation" x="221.73913043478262" y="184.82142857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic-arrow-right" width="24" height="24"/>
+    </resources>
+</document>
