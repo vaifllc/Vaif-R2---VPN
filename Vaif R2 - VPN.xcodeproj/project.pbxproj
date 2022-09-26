@@ -213,6 +213,43 @@
 		B790362A28E224C800341087 /* LoginUIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790362928E224C800341087 /* LoginUIImages.swift */; };
 		B790362D28E2251300341087 /* LoginAndSignup+DataTypes1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790362C28E2251300341087 /* LoginAndSignup+DataTypes1.swift */; };
 		B790362F28E2255F00341087 /* LoginAndSignup+DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790362E28E2255F00341087 /* LoginAndSignup+DataTypes.swift */; };
+		B790363328E2264400341087 /* PMLogin+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363228E2264400341087 /* PMLogin+Bundle.swift */; };
+		B790363528E226ED00341087 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363428E226ED00341087 /* Bundle.swift */; };
+		B790363728E226FC00341087 /* CoreString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363628E226FC00341087 /* CoreString.swift */; };
+		B790363928E2271C00341087 /* CoreString+Plurals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363828E2271C00341087 /* CoreString+Plurals.swift */; };
+		B790363B28E2273100341087 /* CoreString_V5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363A28E2273100341087 /* CoreString_V5.swift */; };
+		B790363D28E2274700341087 /* CoreString_V5+Plurals.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363C28E2274700341087 /* CoreString_V5+Plurals.swift */; };
+		B790363F28E2277600341087 /* Bundle_V5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790363E28E2277600341087 /* Bundle_V5.swift */; };
+		B790364228E22D9100341087 /* TemporaryHacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790364128E22D9100341087 /* TemporaryHacks.swift */; };
+		B790364528E22DBB00341087 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790364428E22DBB00341087 /* Observable.swift */; };
+		B790364828E22E5600341087 /* Result+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790364728E22E5600341087 /* Result+Extensions.swift */; };
+		B790364A28E22E7B00341087 /* Result+Extensions2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790364928E22E7B00341087 /* Result+Extensions2.swift */; };
+		B790364D28E22EB400341087 /* SubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790364C28E22EB400341087 /* SubtitleLabel.swift */; };
+		B790364F28E2467700341087 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790364E28E2467600341087 /* UILabel+Extensions.swift */; };
+		B790365328E246BB00341087 /* ExternalLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790365228E246BB00341087 /* ExternalLinks.swift */; };
+		B790365628E246F500341087 /* HelpItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790365528E246F500341087 /* HelpItem.swift */; };
+		B790365928E2472800341087 /* LongTermTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790365828E2472800341087 /* LongTermTask.swift */; };
+		B790365C28E2475D00341087 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790365B28E2475D00341087 /* UIStoryboard+Extensions.swift */; };
+		B790365F28E247AC00341087 /* WindowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790365E28E247AC00341087 /* WindowService.swift */; };
+		B790366228E248A100341087 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366128E248A000341087 /* Dictionary+Extension.swift */; };
+		B790366528E2490100341087 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366428E2490100341087 /* Key.swift */; };
+		B790366728E2491400341087 /* Key+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366628E2491400341087 /* Key+Codable.swift */; };
+		B790366928E2492400341087 /* Key+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366828E2492400341087 /* Key+Extensions.swift */; };
+		B790366B28E2493400341087 /* Key+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366A28E2493400341087 /* Key+NSCoding.swift */; };
+		B790366D28E2494600341087 /* Key+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366C28E2494600341087 /* Key+Response.swift */; };
+		B790366F28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790366E28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift */; };
+		B790367128E249CE00341087 /* KeySalt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367028E249CE00341087 /* KeySalt.swift */; };
+		B790367428E24A3B00341087 /* ShowImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367328E24A3B00341087 /* ShowImages.swift */; };
+		B790367728E24A5900341087 /* LinkOpeningMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367628E24A5900341087 /* LinkOpeningMode.swift */; };
+		B790367A28E24AE500341087 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367928E24AE500341087 /* Address.swift */; };
+		B790367C28E24B1600341087 /* Address+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367B28E24B1600341087 /* Address+Codable.swift */; };
+		B790367E28E24B2B00341087 /* Address+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367D28E24B2B00341087 /* Address+Extensions.swift */; };
+		B790368028E24B4100341087 /* Address+NSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790367F28E24B4100341087 /* Address+NSCoding.swift */; };
+		B790368228E24B5500341087 /* Address_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368128E24B5500341087 /* Address_v2.swift */; };
+		B790368428E24B7000341087 /* AddressKey_v2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368328E24B7000341087 /* AddressKey_v2.swift */; };
+		B790368728E24B8D00341087 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368628E24B8D00341087 /* Response.swift */; };
+		B790368A28E24BBF00341087 /* NSCoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368928E24BBF00341087 /* NSCoder+Extensions.swift */; };
+		B790368D28E24C3300341087 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368C28E24C3300341087 /* AlertService.swift */; };
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
 		B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1A28D6502A004CDB79 /* ViewController.swift */; };
@@ -595,6 +632,43 @@
 		B790362928E224C800341087 /* LoginUIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIImages.swift; sourceTree = "<group>"; };
 		B790362C28E2251300341087 /* LoginAndSignup+DataTypes1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginAndSignup+DataTypes1.swift"; sourceTree = "<group>"; };
 		B790362E28E2255F00341087 /* LoginAndSignup+DataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginAndSignup+DataTypes.swift"; sourceTree = "<group>"; };
+		B790363228E2264400341087 /* PMLogin+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PMLogin+Bundle.swift"; sourceTree = "<group>"; };
+		B790363428E226ED00341087 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		B790363628E226FC00341087 /* CoreString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreString.swift; sourceTree = "<group>"; };
+		B790363828E2271C00341087 /* CoreString+Plurals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreString+Plurals.swift"; sourceTree = "<group>"; };
+		B790363A28E2273100341087 /* CoreString_V5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreString_V5.swift; sourceTree = "<group>"; };
+		B790363C28E2274700341087 /* CoreString_V5+Plurals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreString_V5+Plurals.swift"; sourceTree = "<group>"; };
+		B790363E28E2277600341087 /* Bundle_V5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle_V5.swift; sourceTree = "<group>"; };
+		B790364128E22D9100341087 /* TemporaryHacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryHacks.swift; sourceTree = "<group>"; };
+		B790364428E22DBB00341087 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B790364728E22E5600341087 /* Result+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions.swift"; sourceTree = "<group>"; };
+		B790364928E22E7B00341087 /* Result+Extensions2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extensions2.swift"; sourceTree = "<group>"; };
+		B790364C28E22EB400341087 /* SubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleLabel.swift; sourceTree = "<group>"; };
+		B790364E28E2467600341087 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		B790365228E246BB00341087 /* ExternalLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalLinks.swift; sourceTree = "<group>"; };
+		B790365528E246F500341087 /* HelpItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpItem.swift; sourceTree = "<group>"; };
+		B790365828E2472800341087 /* LongTermTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTermTask.swift; sourceTree = "<group>"; };
+		B790365B28E2475D00341087 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
+		B790365E28E247AC00341087 /* WindowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowService.swift; sourceTree = "<group>"; };
+		B790366128E248A000341087 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		B790366428E2490100341087 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		B790366628E2491400341087 /* Key+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Codable.swift"; sourceTree = "<group>"; };
+		B790366828E2492400341087 /* Key+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Extensions.swift"; sourceTree = "<group>"; };
+		B790366A28E2493400341087 /* Key+NSCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+NSCoding.swift"; sourceTree = "<group>"; };
+		B790366C28E2494600341087 /* Key+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Key+Response.swift"; sourceTree = "<group>"; };
+		B790366E28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+DecodeBoolFromInt.swift"; sourceTree = "<group>"; };
+		B790367028E249CE00341087 /* KeySalt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySalt.swift; sourceTree = "<group>"; };
+		B790367328E24A3B00341087 /* ShowImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImages.swift; sourceTree = "<group>"; };
+		B790367628E24A5900341087 /* LinkOpeningMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkOpeningMode.swift; sourceTree = "<group>"; };
+		B790367928E24AE500341087 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		B790367B28E24B1600341087 /* Address+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Codable.swift"; sourceTree = "<group>"; };
+		B790367D28E24B2B00341087 /* Address+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+Extensions.swift"; sourceTree = "<group>"; };
+		B790367F28E24B4100341087 /* Address+NSCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+NSCoding.swift"; sourceTree = "<group>"; };
+		B790368128E24B5500341087 /* Address_v2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address_v2.swift; sourceTree = "<group>"; };
+		B790368328E24B7000341087 /* AddressKey_v2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressKey_v2.swift; sourceTree = "<group>"; };
+		B790368628E24B8D00341087 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B790368928E24BBF00341087 /* NSCoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoder+Extensions.swift"; sourceTree = "<group>"; };
+		B790368C28E24C3300341087 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaif R2 - VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -808,6 +882,13 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B790368B28E24C2E00341087 /* AlertService */,
+				B790368828E24BBB00341087 /* NSCoder+Extensions */,
+				B790366028E2489600341087 /* Dictionary+Extension */,
+				B790365D28E247A000341087 /* WindowService */,
+				B790365A28E2475400341087 /* UIStoryboard+Extensions */,
+				B790365028E2468700341087 /* UILabel+Extensions */,
+				B790364B28E22EB000341087 /* SubtitleLabel */,
 				B790362528E2249200341087 /* UIScrollView+Extensions */,
 				B790362228E2242B00341087 /* UIViewController+Extensions */,
 				B790361C28E2235F00341087 /* UIApplication+Shared */,
@@ -1024,6 +1105,17 @@
 		B790354D28E2077A00341087 /* Auth Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B790368528E24B8900341087 /* Response */,
+				B790367828E24A8C00341087 /* Address+Ext */,
+				B790367528E24A5400341087 /* LinkOpeningMode */,
+				B790367228E24A3100341087 /* ShowImages */,
+				B790366328E248EB00341087 /* Key */,
+				B790365728E2472200341087 /* LongTermTask */,
+				B790365428E246F100341087 /* HelpItem */,
+				B790365128E246B700341087 /* ExternalLinks */,
+				B790364628E22E5200341087 /* Result+Extensions */,
+				B790364328E22DB600341087 /* Observable */,
+				B790364028E22D8A00341087 /* TemporaryHacks */,
 				B790362828E224C300341087 /* LoginUIImages */,
 				B790361F28E223E200341087 /* ChallengeProtocol */,
 				B790361928E2230C00341087 /* PMSegmentedControl */,
@@ -1453,6 +1545,183 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		B790363028E2261000341087 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				B790363228E2264400341087 /* PMLogin+Bundle.swift */,
+				B790363428E226ED00341087 /* Bundle.swift */,
+				B790363E28E2277600341087 /* Bundle_V5.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		B790363128E2261700341087 /* Corestring */ = {
+			isa = PBXGroup;
+			children = (
+				B790363628E226FC00341087 /* CoreString.swift */,
+				B790363828E2271C00341087 /* CoreString+Plurals.swift */,
+				B790363A28E2273100341087 /* CoreString_V5.swift */,
+				B790363C28E2274700341087 /* CoreString_V5+Plurals.swift */,
+			);
+			path = Corestring;
+			sourceTree = "<group>";
+		};
+		B790364028E22D8A00341087 /* TemporaryHacks */ = {
+			isa = PBXGroup;
+			children = (
+				B790364128E22D9100341087 /* TemporaryHacks.swift */,
+			);
+			path = TemporaryHacks;
+			sourceTree = "<group>";
+		};
+		B790364328E22DB600341087 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				B790364428E22DBB00341087 /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		B790364628E22E5200341087 /* Result+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B790364728E22E5600341087 /* Result+Extensions.swift */,
+				B790364928E22E7B00341087 /* Result+Extensions2.swift */,
+			);
+			path = "Result+Extensions";
+			sourceTree = "<group>";
+		};
+		B790364B28E22EB000341087 /* SubtitleLabel */ = {
+			isa = PBXGroup;
+			children = (
+				B790364C28E22EB400341087 /* SubtitleLabel.swift */,
+			);
+			path = SubtitleLabel;
+			sourceTree = "<group>";
+		};
+		B790365028E2468700341087 /* UILabel+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B790364E28E2467600341087 /* UILabel+Extensions.swift */,
+			);
+			path = "UILabel+Extensions";
+			sourceTree = "<group>";
+		};
+		B790365128E246B700341087 /* ExternalLinks */ = {
+			isa = PBXGroup;
+			children = (
+				B790365228E246BB00341087 /* ExternalLinks.swift */,
+			);
+			path = ExternalLinks;
+			sourceTree = "<group>";
+		};
+		B790365428E246F100341087 /* HelpItem */ = {
+			isa = PBXGroup;
+			children = (
+				B790365528E246F500341087 /* HelpItem.swift */,
+			);
+			path = HelpItem;
+			sourceTree = "<group>";
+		};
+		B790365728E2472200341087 /* LongTermTask */ = {
+			isa = PBXGroup;
+			children = (
+				B790365828E2472800341087 /* LongTermTask.swift */,
+			);
+			path = LongTermTask;
+			sourceTree = "<group>";
+		};
+		B790365A28E2475400341087 /* UIStoryboard+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B790365B28E2475D00341087 /* UIStoryboard+Extensions.swift */,
+			);
+			path = "UIStoryboard+Extensions";
+			sourceTree = "<group>";
+		};
+		B790365D28E247A000341087 /* WindowService */ = {
+			isa = PBXGroup;
+			children = (
+				B790365E28E247AC00341087 /* WindowService.swift */,
+			);
+			path = WindowService;
+			sourceTree = "<group>";
+		};
+		B790366028E2489600341087 /* Dictionary+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B790366128E248A000341087 /* Dictionary+Extension.swift */,
+			);
+			path = "Dictionary+Extension";
+			sourceTree = "<group>";
+		};
+		B790366328E248EB00341087 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				B790366428E2490100341087 /* Key.swift */,
+				B790366628E2491400341087 /* Key+Codable.swift */,
+				B790366828E2492400341087 /* Key+Extensions.swift */,
+				B790366A28E2493400341087 /* Key+NSCoding.swift */,
+				B790366C28E2494600341087 /* Key+Response.swift */,
+				B790366E28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift */,
+				B790367028E249CE00341087 /* KeySalt.swift */,
+			);
+			path = Key;
+			sourceTree = "<group>";
+		};
+		B790367228E24A3100341087 /* ShowImages */ = {
+			isa = PBXGroup;
+			children = (
+				B790367328E24A3B00341087 /* ShowImages.swift */,
+			);
+			path = ShowImages;
+			sourceTree = "<group>";
+		};
+		B790367528E24A5400341087 /* LinkOpeningMode */ = {
+			isa = PBXGroup;
+			children = (
+				B790367628E24A5900341087 /* LinkOpeningMode.swift */,
+			);
+			path = LinkOpeningMode;
+			sourceTree = "<group>";
+		};
+		B790367828E24A8C00341087 /* Address+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				B790367928E24AE500341087 /* Address.swift */,
+				B790367B28E24B1600341087 /* Address+Codable.swift */,
+				B790367D28E24B2B00341087 /* Address+Extensions.swift */,
+				B790367F28E24B4100341087 /* Address+NSCoding.swift */,
+				B790368128E24B5500341087 /* Address_v2.swift */,
+				B790368328E24B7000341087 /* AddressKey_v2.swift */,
+			);
+			path = "Address+Ext";
+			sourceTree = "<group>";
+		};
+		B790368528E24B8900341087 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B790368628E24B8D00341087 /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B790368828E24BBB00341087 /* NSCoder+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B790368928E24BBF00341087 /* NSCoder+Extensions.swift */,
+			);
+			path = "NSCoder+Extensions";
+			sourceTree = "<group>";
+		};
+		B790368B28E24C2E00341087 /* AlertService */ = {
+			isa = PBXGroup;
+			children = (
+				B790368C28E24C3300341087 /* AlertService.swift */,
+			);
+			path = AlertService;
+			sourceTree = "<group>";
+		};
 		B7948D0A28D6502A004CDB79 = {
 			isa = PBXGroup;
 			children = (
@@ -1576,6 +1845,8 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B790363128E2261700341087 /* Corestring */,
+				B790363028E2261000341087 /* Bundle */,
 				B790355728E20B9400341087 /* Brand */,
 				B790355228E2094900341087 /* Icon Set */,
 				B790355128E2094300341087 /* Color Pallete */,
@@ -2131,22 +2402,27 @@
 			files = (
 				B790356528E20DA800341087 /* ProtonColorPalettemacOSV5.swift in Sources */,
 				B751618728D8FB260028BE35 /* M13CheckboxDotController.swift in Sources */,
+				B790364F28E2467700341087 /* UILabel+Extensions.swift in Sources */,
 				B790362128E223FE00341087 /* ChallengeProtocol.swift in Sources */,
 				B790362A28E224C800341087 /* LoginUIImages.swift in Sources */,
+				B790367128E249CE00341087 /* KeySalt.swift in Sources */,
 				B751618E28D8FB260028BE35 /* NVActivityIndicatorView.swift in Sources */,
 				B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				B79035B728E216C000341087 /* UITableView+Reusable.swift in Sources */,
 				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
 				B79035C728E217DE00341087 /* PMActionSheetHeaderView.swift in Sources */,
+				B790367E28E24B2B00341087 /* Address+Extensions.swift in Sources */,
 				B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */,
 				B790361B28E2231500341087 /* PMSegmentedControl.swift in Sources */,
 				B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */,
 				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
 				B79035A828E2158A00341087 /* String+Attributed.swift in Sources */,
+				B790368D28E24C3300341087 /* AlertService.swift in Sources */,
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
 				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */,
+				B790366B28E2493400341087 /* Key+NSCoding.swift in Sources */,
 				B790362D28E2251300341087 /* LoginAndSignup+DataTypes1.swift in Sources */,
 				B790360B28E2205000341087 /* CountryCodeViewModel.swift in Sources */,
 				B75161AA28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
@@ -2163,9 +2439,11 @@
 				B790357828E210F500341087 /* UIButton+helper.swift in Sources */,
 				B751618F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				B79035BA28E216EC00341087 /* UIImage+Text.swift in Sources */,
+				B790366928E2492400341087 /* Key+Extensions.swift in Sources */,
 				B79035A228E2154300341087 /* UISearchBar+helper.swift in Sources */,
 				B751617628D8FB260028BE35 /* TimerEx.swift in Sources */,
 				B751617C28D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
+				B790363928E2271C00341087 /* CoreString+Plurals.swift in Sources */,
 				B790360928E21FE100341087 /* CountryCodeTableViewCell.swift in Sources */,
 				B79035EA28E21BA600341087 /* PMTabBarConfig.swift in Sources */,
 				B79035CB28E2181400341087 /* PMActionSheetPlainCell.swift in Sources */,
@@ -2184,15 +2462,20 @@
 				B790356D28E20E9600341087 /* FigmaShadow.swift in Sources */,
 				B7948DE728D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
 				B751611F28D7F3640028BE35 /* TrackerInfo.swift in Sources */,
+				B790368028E24B4100341087 /* Address+NSCoding.swift in Sources */,
+				B790368728E24B8D00341087 /* Response.swift in Sources */,
 				B751612728D8BACB0028BE35 /* UIKit+Extensions.swift in Sources */,
 				B751611D28D7F33F0028BE35 /* LocalLogger.swift in Sources */,
 				B79035EC28E21BED00341087 /* PMTabBarController.swift in Sources */,
 				B79035E828E21B9100341087 /* PMTabBarBuilder.swift in Sources */,
+				B790366528E2490100341087 /* Key.swift in Sources */,
 				B7948DBF28D7C06A004CDB79 /* Client.swift in Sources */,
 				B751618228D8FB260028BE35 /* M13CheckboxStrokeController.swift in Sources */,
 				B751617828D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */,
 				B79035BD28E2175C00341087 /* PMActionSheet.swift in Sources */,
+				B790363F28E2277600341087 /* Bundle_V5.swift in Sources */,
+				B790367728E24A5900341087 /* LinkOpeningMode.swift in Sources */,
 				B790355B28E20BC800341087 /* ColorProvider.swift in Sources */,
 				B7948DE228D7C493004CDB79 /* WhitelistUtilities.swift in Sources */,
 				B7948DDE28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */,
@@ -2202,17 +2485,22 @@
 				B75161AB28D8FB270028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				B751617E28D8FB260028BE35 /* M13Checkbox.swift in Sources */,
 				B75161B028D8FB270028BE35 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
+				B790366F28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift in Sources */,
 				B7948DF328D7C54C004CDB79 /* VPNRegion.swift in Sources */,
 				B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				B7948E1D28D7C79B004CDB79 /* ProtectedFileAccess.swift in Sources */,
 				B75161A128D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				B790363328E2264400341087 /* PMLogin+Bundle.swift in Sources */,
 				B79035C128E2179F00341087 /* PMActionSheetError.swift in Sources */,
 				B790355928E20B9E00341087 /* Brand.swift in Sources */,
+				B790368A28E24BBF00341087 /* NSCoder+Extensions.swift in Sources */,
 				B751619628D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */,
 				B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				B790364528E22DBB00341087 /* Observable.swift in Sources */,
 				B79035C528E217CC00341087 /* PMActionSheetHeaderModel.swift in Sources */,
 				B790357B28E2113C00341087 /* SettingsV5.swift in Sources */,
+				B790364D28E22EB400341087 /* SubtitleLabel.swift in Sources */,
 				B751617F28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */,
@@ -2237,29 +2525,38 @@
 				B751618A28D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				B751619E28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				B751618D28D8FB260028BE35 /* NVActivityIndicatorShape.swift in Sources */,
+				B790363D28E2274700341087 /* CoreString_V5+Plurals.swift in Sources */,
+				B790367428E24A3B00341087 /* ShowImages.swift in Sources */,
 				B790356828E20DE500341087 /* Reusable.swift in Sources */,
 				B790356B28E20E2900341087 /* PMFontAttributes.swift in Sources */,
 				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
 				B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */,
 				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				B790365C28E2475D00341087 /* UIStoryboard+Extensions.swift in Sources */,
 				B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */,
 				B790359C28E2150400341087 /* UIGestureRecognizer+helper.swift in Sources */,
 				B79035D928E21A9800341087 /* PMActionBar.swift in Sources */,
 				B790358828E213DE00341087 /* UILabel+link.swift in Sources */,
 				B790355028E208F400341087 /* SplashScreenViewControllerFactory.swift in Sources */,
+				B790363B28E2273100341087 /* CoreString_V5.swift in Sources */,
 				B751619B28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B790355628E209BB00341087 /* IconProvider.swift in Sources */,
 				B790357028E20FF300341087 /* ProtonButton.swift in Sources */,
 				B79035AE28E215C100341087 /* NSLayoutConstraint+Helpers.swift in Sources */,
+				B790363728E226FC00341087 /* CoreString.swift in Sources */,
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
 				B790357E28E2122C00341087 /* NavigationBarAdjustingScrollViewDelegate.swift in Sources */,
 				B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */,
+				B790365628E246F500341087 /* HelpItem.swift in Sources */,
 				B790362F28E2255F00341087 /* LoginAndSignup+DataTypes.swift in Sources */,
 				B79035FC28E21DE200341087 /* PMTextFieldCombo.swift in Sources */,
 				B751618628D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift in Sources */,
+				B790363528E226ED00341087 /* Bundle.swift in Sources */,
 				B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */,
+				B790364228E22D9100341087 /* TemporaryHacks.swift in Sources */,
 				B790358D28E2144C00341087 /* UIDevice+info.swift in Sources */,
 				B790359628E214C700341087 /* UIImage+Extensions.swift in Sources */,
+				B790364828E22E5600341087 /* Result+Extensions.swift in Sources */,
 				B790361628E2224500341087 /* PMHeaderView.swift in Sources */,
 				B790357328E2102A00341087 /* AccessibleView.swift in Sources */,
 				B79035CF28E2183F00341087 /* PMActionSheetToggleCell.swift in Sources */,
@@ -2268,12 +2565,15 @@
 				B751611B28D7F3260028BE35 /* Loader.swift in Sources */,
 				B7948E0928D7C671004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
 				B75161A728D8FB270028BE35 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				B790366728E2491400341087 /* Key+Codable.swift in Sources */,
 				B751617228D8FB260028BE35 /* SpinerLayer.swift in Sources */,
 				B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */,
+				B790364A28E22E7B00341087 /* Result+Extensions2.swift in Sources */,
 				B790360728E21FBF00341087 /* CountryCodeTableHeaderView.swift in Sources */,
 				B751617B28D8FB260028BE35 /* M13CheckboxSpiralController.swift in Sources */,
 				B790359928E214DC00341087 /* NSColor+Helper.swift in Sources */,
 				B7948DED28D7C50D004CDB79 /* Metrics.swift in Sources */,
+				B790366D28E2494600341087 /* Key+Response.swift in Sources */,
 				B751619028D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				B79035D128E2185F00341087 /* PMActionSheetVM.swift in Sources */,
 				B790358328E212D200341087 /* UIDevice+Extension.swift in Sources */,
@@ -2281,27 +2581,35 @@
 				B790359028E2147700341087 /* UIViewController+Helper.swift in Sources */,
 				B751618528D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift in Sources */,
 				B79035FA28E21DBF00341087 /* PMTextField.swift in Sources */,
+				B790365928E2472800341087 /* LongTermTask.swift in Sources */,
 				B751619728D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				B790368428E24B7000341087 /* AddressKey_v2.swift in Sources */,
 				B790355D28E20BE100341087 /* ProtonColorPaletteiOSV5.swift in Sources */,
 				B75161A028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				B790359328E2149400341087 /* TableViewCell+helper.swift in Sources */,
 				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
+				B790368228E24B5500341087 /* Address_v2.swift in Sources */,
 				B79035B428E2169A00341087 /* GlobalFunction.swift in Sources */,
 				B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				B79035A528E2157000341087 /* UIView+helper.swift in Sources */,
 				B79035AB28E215A000341087 /* NSMutableAttributedString.swift in Sources */,
 				B7948DD328D7C2F5004CDB79 /* Shared.swift in Sources */,
+				B790367C28E24B1600341087 /* Address+Codable.swift in Sources */,
 				B751619A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				B751619828D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				B7948DD828D7C379004CDB79 /* SpeedTest.swift in Sources */,
 				B751619428D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */,
+				B790365F28E247AC00341087 /* WindowService.swift in Sources */,
+				B790366228E248A100341087 /* Dictionary+Extension.swift in Sources */,
 				B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */,
 				B79035BF28E2177C00341087 /* PMActionSheetDragBarView.swift in Sources */,
 				B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				B790367A28E24AE500341087 /* Address.swift in Sources */,
 				B790360F28E220A200341087 /* PMCountryPicker.swift in Sources */,
 				B790356028E20C3C00341087 /* UIColor+Helper.swift in Sources */,
+				B790365328E246BB00341087 /* ExternalLinks.swift in Sources */,
 				B790359F28E2152300341087 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
