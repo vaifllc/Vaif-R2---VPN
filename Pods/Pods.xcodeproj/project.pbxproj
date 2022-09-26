@@ -261,7 +261,7 @@
 		6DA30034DD1CB6CF4E313B3B0954C636 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F69622CC950A187A527CE45C9D42033 /* TextCompositionLayer.swift */; };
 		6DB244706298D81730C5537279B7B635 /* AFNetworking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19053605C87CB62EC855393EE0973BB6 /* AFNetworking-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0D2F035224C917C89F5CE39CF29FAC /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A78536DF7AB11E7E4992C72CCDEFBA /* AnyPromise.swift */; };
-		6E5BC0F0DF1D4D4C3A81A3B1ABEB2E52 /* SwiftMessages-SwiftMessages in Resources */ = {isa = PBXBuildFile; fileRef = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */; };
+		6E5BC0F0DF1D4D4C3A81A3B1ABEB2E52 /* SwiftMessages.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */; };
 		6E87F520578C1F9D3BB3806840EBFCD6 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 708A8C3A0C1BEE964B60BB9BDD09687C /* DDContextFilterLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6ED06C514240B57C67E8691B110B35D3 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D29C4BF66B19898D34E33649CD34790 /* DDMultiFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F6AF7A08EAC9DDA29F9AEDD8443CF0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 905EFD012591143DFBA425EC3E7CBEC7 /* Foundation.framework */; };
@@ -877,7 +877,7 @@
 		0ECD847AF068B96D61CE8C528C34D4FE /* ShapeLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeLayerModel.swift; path = Sources/Private/Model/Layers/ShapeLayerModel.swift; sourceTree = "<group>"; };
 		0EF7698A532FE4814677B79FEADAE87F /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = Sources/Public/iOS/AnimationSubview.swift; sourceTree = "<group>"; };
 		0FF6595BFD855398EE2B789C38B6E580 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = Sources/Public/ImageProvider/AnimationImageProvider.swift; sourceTree = "<group>"; };
-		101B0649EE5FD772A10F36166718DDDF /* registry_search.c */ = {isa = PBXFileReference; includeInIndex = 1; name = registry_search.c; path = TrustKit/Dependencies/domain_registry/private/registry_search.c; sourceTree = "<group>"; };
+		101B0649EE5FD772A10F36166718DDDF /* registry_search.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = registry_search.c; path = TrustKit/Dependencies/domain_registry/private/registry_search.c; sourceTree = "<group>"; };
 		105B63B8D3B4B6BAD7A9D0AC84E6534B /* CombinedShapeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedShapeAnimation.swift; path = Sources/Private/CoreAnimation/Animations/CombinedShapeAnimation.swift; sourceTree = "<group>"; };
 		111B9F6295512A93C0515AE2C4122871 /* Pods-Vaif R2 - VPNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vaif R2 - VPNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		112AECFA419237528851B4B3B978DE6C /* AccessibleMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessibleMessage.swift; path = SwiftMessages/AccessibleMessage.swift; sourceTree = "<group>"; };
@@ -942,7 +942,7 @@
 		27481E595095A603BDD6CD32703E6BD4 /* PolygonNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/PathNodes/PolygonNode.swift; sourceTree = "<group>"; };
 		27525617EC93C74F48356E0FA2FC5C9C /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = Sources/Private/MainThread/LayerContainers/CompLayers/SolidCompositionLayer.swift; sourceTree = "<group>"; };
 		27C125C6542174879D41F09CDBB004C1 /* GSMessages.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GSMessages.release.xcconfig; sourceTree = "<group>"; };
-		27D7B0FC362ECC6AD592620F7349C690 /* Pods-Vaif R2 - VPN Widget */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN Widget"; path = Pods_Vaif_R2___VPN_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27D7B0FC362ECC6AD592620F7349C690 /* Pods-Vaif R2 - VPN Widget */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN Widget"; path = "Pods_Vaif_R2___VPN_Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28917E38B06FE8E889D135C0A053BB77 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
 		28DA25F0560EF1AC355C49A4EA9835C4 /* MainThreadAnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainThreadAnimationLayer.swift; path = Sources/Private/MainThread/LayerContainers/MainThreadAnimationLayer.swift; sourceTree = "<group>"; };
 		290428A7AC21FE669E2336FD0107923F /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = Sources/Private/Model/Animation.swift; sourceTree = "<group>"; };
@@ -975,7 +975,7 @@
 		3174EB0E171D1ECC55FEAB9364DF57A6 /* lottie-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "lottie-ios.modulemap"; sourceTree = "<group>"; };
 		319D45A9DA648D4EA82DEDA7642EE4AC /* LottieConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieConfiguration.swift; path = Sources/Public/LottieConfiguration.swift; sourceTree = "<group>"; };
 		31DD0C82FDAA1F984945768B2F3C54D2 /* errorIconSubtle@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "errorIconSubtle@3x.png"; path = "SwiftMessages/Resources/errorIconSubtle@3x.png"; sourceTree = "<group>"; };
-		31E0565065E518978FEEB33BBB7FF888 /* Pods-Vaif R2 - VPN Tunnel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN Tunnel"; path = Pods_Vaif_R2___VPN_Tunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E0565065E518978FEEB33BBB7FF888 /* Pods-Vaif R2 - VPN Tunnel */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN Tunnel"; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32122F2FEA7857F04D5A3860E50A4784 /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Async.swift; sourceTree = "<group>"; };
 		3285970650DCF3E18AA7CE1226163CD0 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1019,7 +1019,7 @@
 		3D4168388EDAE7B3A797680A24646B84 /* GSMessages */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GSMessages; path = GSMessages.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E60CE739093AF94B5E2DE44766B4539 /* AnimationTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTime.swift; path = Sources/Public/Primitives/AnimationTime.swift; sourceTree = "<group>"; };
 		3E685686B5554993EFFBCFDB273710A8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		3E704E6D18B7100809DCEA86256C5FA3 /* Pods-Vaif R2 - VPN Firewall Widget */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN Firewall Widget"; path = Pods_Vaif_R2___VPN_Firewall_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E704E6D18B7100809DCEA86256C5FA3 /* Pods-Vaif R2 - VPN Firewall Widget */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN Firewall Widget"; path = "Pods_Vaif_R2___VPN_Firewall_Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EA94E455DE27159FD7B285A6F9FD074 /* NSURLSession+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+Promise.swift"; path = "Extensions/Foundation/Sources/NSURLSession+Promise.swift"; sourceTree = "<group>"; };
 		3EB6CB6F656EBE495576572AB84F6926 /* GSMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GSMessage.swift; path = GSMessages/GSMessage.swift; sourceTree = "<group>"; };
 		3F5B4A304DBAF27768334B730A2E5F8F /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = Sources/SnapshotTesting/Snapshotting/Description.swift; sourceTree = "<group>"; };
@@ -1153,7 +1153,7 @@
 		6F39A78CFF60E5B63D23FD27F13EBAA5 /* GradientFillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/RenderNodes/GradientFillNode.swift; sourceTree = "<group>"; };
 		6F428EF5BBC1E6B61E41DEB6029B1B11 /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
 		6F98EA592279BACD2BDDDA64F2176C7B /* DynamicBlurView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicBlurView.release.xcconfig; sourceTree = "<group>"; };
-		7005BA1B5AB259CAB4C3A472F87A6CC9 /* trie_search.c */ = {isa = PBXFileReference; includeInIndex = 1; name = trie_search.c; path = TrustKit/Dependencies/domain_registry/private/trie_search.c; sourceTree = "<group>"; };
+		7005BA1B5AB259CAB4C3A472F87A6CC9 /* trie_search.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = trie_search.c; path = TrustKit/Dependencies/domain_registry/private/trie_search.c; sourceTree = "<group>"; };
 		708A8C3A0C1BEE964B60BB9BDD09687C /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
 		710F7951A1624C7E69E33916C978F07D /* TSKBackgroundReporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKBackgroundReporter.h; path = TrustKit/Reporting/TSKBackgroundReporter.h; sourceTree = "<group>"; };
 		7140C2305D10C7E19FAA638DE9AAF5E1 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
@@ -1171,7 +1171,7 @@
 		73F1132086439ACC8607D9FB6D37C62A /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = Sources/Private/MainThread/LayerContainers/CompLayers/PreCompositionLayer.swift; sourceTree = "<group>"; };
 		73FAD550D6CCA146093DB07DE78D13AD /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewInitializers.swift; path = Sources/Public/Animation/AnimationViewInitializers.swift; sourceTree = "<group>"; };
 		753218172EED35877AB91F662BF63CFE /* EllipseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/PathNodes/EllipseNode.swift; sourceTree = "<group>"; };
-		753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "SwiftMessages-SwiftMessages"; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMessages.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		75555FB74FC270DBCDDD8EDE477B6062 /* SnapshotTesting-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapshotTesting-prefix.pch"; sourceTree = "<group>"; };
 		75F82BCA25A4191D048EAB150709B023 /* Pods-Vaif R2 - VPN Widget-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN Widget-acknowledgements.plist"; sourceTree = "<group>"; };
 		763CD7D1910C6F13B57A00BF68007D80 /* Pods-Vaif R2 - VPNTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPNTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -1291,7 +1291,7 @@
 		9CD3429578B12E2A65F3BDC2CB395373 /* SwiftMessages-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMessages-prefix.pch"; sourceTree = "<group>"; };
 		9D1B7FC4BCA21DC027E5D91FEEC4896F /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
 		9D7DC893CF32B11F53BC64BEE07CE8A1 /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E54FDA243356538178562074DDB87A9 /* CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
 		9FA8094659BA3E04394A72ECF85E8252 /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIEdgeInsets+Extensions.swift"; path = "SwiftMessages/UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
 		9FC8E23466132B564AA3029DB015DF06 /* AnyValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueProvider.swift; path = Sources/Public/DynamicProperties/AnyValueProvider.swift; sourceTree = "<group>"; };
@@ -1369,7 +1369,7 @@
 		BBCFCD456B66349114A4297A3B38D84B /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift; sourceTree = "<group>"; };
 		BBDC494C74437D2DB921F7958AAA6803 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
 		BBE4CE9A400E9DE837F1A6A693D5E754 /* NSNotificationCenter+Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNotificationCenter+Promise.swift"; path = "Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift"; sourceTree = "<group>"; };
-		BC94C10CAE149251EC2F49C76C0B9D71 /* init_registry_tables.c */ = {isa = PBXFileReference; includeInIndex = 1; name = init_registry_tables.c; path = TrustKit/Dependencies/domain_registry/private/init_registry_tables.c; sourceTree = "<group>"; };
+		BC94C10CAE149251EC2F49C76C0B9D71 /* init_registry_tables.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = init_registry_tables.c; path = TrustKit/Dependencies/domain_registry/private/init_registry_tables.c; sourceTree = "<group>"; };
 		BCDFE245A56F207FC22E4B66665F44E2 /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = Sources/Private/Utility/Interpolatable/KeyframeInterpolator.swift; sourceTree = "<group>"; };
 		BD748E248EBCFE47B4C7FF3E439E6151 /* DynamicBlurView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DynamicBlurView-Info.plist"; sourceTree = "<group>"; };
 		BDC1C94A35BC4F90DE156E20F24C3AAC /* warningIconLight@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "warningIconLight@2x.png"; path = "SwiftMessages/Resources/warningIconLight@2x.png"; sourceTree = "<group>"; };
@@ -1472,7 +1472,7 @@
 		E2FD758152CA9FF9200266681AABF1F4 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Configuration.swift; sourceTree = "<group>"; };
 		E31B391B858C5D3E2A9C8A1637636D44 /* TrustKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TrustKit.debug.xcconfig; sourceTree = "<group>"; };
 		E40F02CE78FE8677B4AE1CA9DDCCF2B8 /* CustomStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomStringConvertible.swift; path = Sources/CustomStringConvertible.swift; sourceTree = "<group>"; };
-		E567D725B3FD64E7A9DCE362C1DC14A0 /* tsk_assert.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tsk_assert.c; path = TrustKit/Dependencies/domain_registry/private/tsk_assert.c; sourceTree = "<group>"; };
+		E567D725B3FD64E7A9DCE362C1DC14A0 /* tsk_assert.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tsk_assert.c; path = TrustKit/Dependencies/domain_registry/private/tsk_assert.c; sourceTree = "<group>"; };
 		E5A5C6E74868CB2CA71E3CA3FBB2094C /* SnapshotTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapshotTesting.debug.xcconfig; sourceTree = "<group>"; };
 		E5C9AED7B06FEAE2C626316DB411F389 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		E5F9EF5034F7D2FC228485D39F36F89E /* Pods-Vaif R2 - VPN Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vaif R2 - VPN Widget.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1501,7 +1501,7 @@
 		ECDB8006B12DBD27B3B5293163BF9115 /* TrustKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TrustKit-Info.plist"; sourceTree = "<group>"; };
 		ED0F5583604828CAF95F5173A51AEF53 /* ShapeItemLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeItemLayer.swift; path = Sources/Private/CoreAnimation/Layers/ShapeItemLayer.swift; sourceTree = "<group>"; };
 		ED1D38A820CB6023DD273190ABB15E0F /* AFNetworking-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AFNetworking-Info.plist"; sourceTree = "<group>"; };
-		EDC5EBF719C604AA31A76B73CE696805 /* Pods-Vaif R2 - VPN */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN"; path = Pods_Vaif_R2___VPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC5EBF719C604AA31A76B73CE696805 /* Pods-Vaif R2 - VPN */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPN"; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE0418FF64792B8BEDE263D2B05A8C7C /* Pods-Vaif R2 - VPN.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Vaif R2 - VPN.modulemap"; sourceTree = "<group>"; };
 		EE74BC78135FE6AE2DB4FF80F9F26D2B /* DataExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataExtension.swift; path = Sources/Private/Utility/Extensions/DataExtension.swift; sourceTree = "<group>"; };
 		EF16CE0DD59B0F7AFED5C29A3B15B354 /* NicoProgress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NicoProgress.debug.xcconfig; sourceTree = "<group>"; };
@@ -1538,7 +1538,7 @@
 		FE6F16C7DC2C9E064F9091D5F1395386 /* DDContextFilterLogFormatter+Deprecated.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDContextFilterLogFormatter+Deprecated.h"; path = "Sources/CocoaLumberjack/include/CocoaLumberjack/DDContextFilterLogFormatter+Deprecated.h"; sourceTree = "<group>"; };
 		FE91479DD74A2217E7A4A755842895F0 /* Presenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presenter.swift; path = SwiftMessages/Presenter.swift; sourceTree = "<group>"; };
 		FEF33292639756C38BE45C914EC0CA8B /* MaskContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskContainerLayer.swift; path = Sources/Private/MainThread/LayerContainers/CompLayers/MaskContainerLayer.swift; sourceTree = "<group>"; };
-		FFA78BE8B125E336BFC86507ECA0B18E /* Pods-Vaif R2 - VPNTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPNTests"; path = Pods_Vaif_R2___VPNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA78BE8B125E336BFC86507ECA0B18E /* Pods-Vaif R2 - VPNTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Vaif R2 - VPNTests"; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1830,7 +1830,6 @@
 				FA46FED11DF275054E544692D6900DCB /* GSMessages.h */,
 				0E3CBAE5E0BFDED43B4BBE8A67E9D08B /* Support Files */,
 			);
-			name = GSMessages;
 			path = GSMessages;
 			sourceTree = "<group>";
 		};
@@ -1865,7 +1864,6 @@
 				984313FAE488E3938029CFA5DF18C1A0 /* SwiftyStoreKit+Types.swift */,
 				A5FE27EEEF991679526BD5DED2F5FABE /* Support Files */,
 			);
-			name = SwiftyStoreKit;
 			path = SwiftyStoreKit;
 			sourceTree = "<group>";
 		};
@@ -1876,7 +1874,6 @@
 				48D8AB3588BA719F1E6000CE6754B2AA /* Support Files */,
 				33B713519CC9FA9523611EC4184E2DFA /* Swift */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -2009,7 +2006,6 @@
 				C6A83D408C16EF93043A315ED3AD73AE /* XCTAttachment.swift */,
 				270753B7930A14929919385FD927767B /* Support Files */,
 			);
-			name = SnapshotTesting;
 			path = SnapshotTesting;
 			sourceTree = "<group>";
 		};
@@ -2374,7 +2370,6 @@
 				646FA9B01BB33BC05BEF3B04F11BF297 /* vendor_identifier.m */,
 				0D52E9DED6A866D24D525C087A66B416 /* Support Files */,
 			);
-			name = TrustKit;
 			path = TrustKit;
 			sourceTree = "<group>";
 		};
@@ -2384,7 +2379,6 @@
 				ABB0FC6BA0EECBBD58A3DB0566832C86 /* Keychain.swift */,
 				890B7913993B98E4ADCE8DCBD0E33AF7 /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -2437,7 +2431,6 @@
 				A14A7EA2F61A02EA766D6E25E475ED5F /* Resources */,
 				9661EA106730F66A1B5A308EB5D822DD /* Support Files */,
 			);
-			name = AwesomeSpotlightView;
 			path = AwesomeSpotlightView;
 			sourceTree = "<group>";
 		};
@@ -2477,7 +2470,6 @@
 				6CA6E2CC3A71B08276330FABA5AFD2A8 /* App */,
 				4B0A2D972765F7B0F6FEF1C38CDC309E /* Support Files */,
 			);
-			name = SwiftMessages;
 			path = SwiftMessages;
 			sourceTree = "<group>";
 		};
@@ -2518,7 +2510,6 @@
 				F921A6F302BDEA6B702FA478F52C0A7A /* RQShineLabel.m */,
 				A5BCBDCD8E021244470CC1E7A880A883 /* Support Files */,
 			);
-			name = RQShineLabel;
 			path = RQShineLabel;
 			sourceTree = "<group>";
 		};
@@ -2528,7 +2519,6 @@
 				AF23875E848DCEC58868E617A75181DF /* Reachability.swift */,
 				98AA2A0836F5DB9CD6666FA9C2B90385 /* Support Files */,
 			);
-			name = ReachabilitySwift;
 			path = ReachabilitySwift;
 			sourceTree = "<group>";
 		};
@@ -2545,7 +2535,6 @@
 				4AA1FF3F623444BFA4B572DC2DB8297A /* UIImage+Blur.swift */,
 				AC040F6FB93A111AAFF2217306ACF9DC /* Support Files */,
 			);
-			name = DynamicBlurView;
 			path = DynamicBlurView;
 			sourceTree = "<group>";
 		};
@@ -2608,7 +2597,7 @@
 				A443C7EE71AC31AF91C90E634D4EAADF /* RQShineLabel */,
 				A037DBBCCACBFACB5C39A80B1C273043 /* SnapshotTesting */,
 				4824F23D80FF9070A5F8A452DB11EB9A /* SwiftMessages */,
-				753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */,
+				753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */,
 				32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit */,
 				B29A6D14F953D27E9C58C9DA8C2D09BA /* TrustKit */,
 			);
@@ -2626,7 +2615,6 @@
 				AAE37A649278A2DB3A5CE828C6D404F2 /* Support Files */,
 				8885A2271AE497A9BA081C6793577907 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -2639,7 +2627,6 @@
 				E12D304C7CB1CC0140095C4B34A95DAF /* DispatchQueue+Await.swift */,
 				4FDFEAD769BF1AF30793CC1E139F2946 /* Support Files */,
 			);
-			name = AwaitKit;
 			path = AwaitKit;
 			sourceTree = "<group>";
 		};
@@ -2697,7 +2684,6 @@
 				032D1358A131CA237E8030AE9FF2F08D /* NicoProgressBar.swift */,
 				1F951F52B2004B555504C2BBDEBB6C99 /* Support Files */,
 			);
-			name = NicoProgress;
 			path = NicoProgress;
 			sourceTree = "<group>";
 		};
@@ -2886,7 +2872,6 @@
 				1E149C78E57A710E0F9193D8F8F138B5 /* VisibilityAnimation.swift */,
 				A38E4019CBB169B03F80DC6BE4987E6E /* Support Files */,
 			);
-			name = "lottie-ios";
 			path = "lottie-ios";
 			sourceTree = "<group>";
 		};
@@ -2898,7 +2883,6 @@
 				1C8E611629B23D210986CEE25FDF6484 /* Support Files */,
 				3BA6058EBF04F5EA65AAE6A53E0E0D47 /* UIKit */,
 			);
-			name = PromiseKit;
 			path = PromiseKit;
 			sourceTree = "<group>";
 		};
@@ -2939,7 +2923,6 @@
 				5823CFEBD1C0017B60E7F92B3F8C1B35 /* UIViewController+Visibility.swift */,
 				6C4F10165F368A356B1079876C301EB0 /* Support Files */,
 			);
-			name = PopupDialog;
 			path = PopupDialog;
 			sourceTree = "<group>";
 		};
@@ -3242,7 +3225,7 @@
 				EF8DCCE027751A41F3AF19913F307324 /* PBXTargetDependency */,
 			);
 			name = "Pods-Vaif R2 - VPN Tunnel";
-			productName = Pods_Vaif_R2___VPN_Tunnel;
+			productName = "Pods_Vaif_R2___VPN_Tunnel";
 			productReference = 31E0565065E518978FEEB33BBB7FF888 /* Pods-Vaif R2 - VPN Tunnel */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -3333,7 +3316,7 @@
 				C5C0FA12EEE1938BBF2E6D3D6749D274 /* PBXTargetDependency */,
 			);
 			name = "Pods-Vaif R2 - VPNTests";
-			productName = Pods_Vaif_R2___VPNTests;
+			productName = "Pods_Vaif_R2___VPNTests";
 			productReference = FFA78BE8B125E336BFC86507ECA0B18E /* Pods-Vaif R2 - VPNTests */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -3483,7 +3466,7 @@
 				686B6F91DB70F2A7EDC36A383B6DC38F /* PBXTargetDependency */,
 			);
 			name = "Pods-Vaif R2 - VPN Firewall Widget";
-			productName = Pods_Vaif_R2___VPN_Firewall_Widget;
+			productName = "Pods_Vaif_R2___VPN_Firewall_Widget";
 			productReference = 3E704E6D18B7100809DCEA86256C5FA3 /* Pods-Vaif R2 - VPN Firewall Widget */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -3517,7 +3500,7 @@
 				6C2526EEF8525C89A6B02B335E511E3E /* PBXTargetDependency */,
 			);
 			name = "Pods-Vaif R2 - VPN";
-			productName = Pods_Vaif_R2___VPN;
+			productName = "Pods_Vaif_R2___VPN";
 			productReference = EDC5EBF719C604AA31A76B73CE696805 /* Pods-Vaif R2 - VPN */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -3554,7 +3537,7 @@
 			);
 			name = "SwiftMessages-SwiftMessages";
 			productName = SwiftMessages;
-			productReference = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages-SwiftMessages */;
+			productReference = 753DD909979478A0C1B33E0524504EF1 /* SwiftMessages.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		ADEAE7CDD604DE4F3072E6021A314487 /* SnapshotTesting */ = {
@@ -3594,7 +3577,7 @@
 				CACD3073DFAFBD8B8B4235C880DD0F60 /* PBXTargetDependency */,
 			);
 			name = "Pods-Vaif R2 - VPN Widget";
-			productName = Pods_Vaif_R2___VPN_Widget;
+			productName = "Pods_Vaif_R2___VPN_Widget";
 			productReference = 27D7B0FC362ECC6AD592620F7349C690 /* Pods-Vaif R2 - VPN Widget */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -3769,7 +3752,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E5BC0F0DF1D4D4C3A81A3B1ABEB2E52 /* SwiftMessages-SwiftMessages in Resources */,
+				6E5BC0F0DF1D4D4C3A81A3B1ABEB2E52 /* SwiftMessages.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5222,6 +5205,7 @@
 			baseConfigurationReference = 531FF1E4AE64665F0D402404BD617889 /* SwiftMessages.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftMessages";
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				IBSC_MODULE = SwiftMessages;
 				INFOPLIST_FILE = "Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -5633,6 +5617,7 @@
 			baseConfigurationReference = B6B4688A8AD2D370CFA2FE3D54BC630B /* SwiftMessages.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwiftMessages";
+				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				IBSC_MODULE = SwiftMessages;
 				INFOPLIST_FILE = "Target Support Files/SwiftMessages/ResourceBundle-SwiftMessages-SwiftMessages-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
