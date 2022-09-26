@@ -125,6 +125,14 @@
 		B75161DC28D906230028BE35 /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D228D906220028BE35 /* SF-Pro-Rounded-Bold.otf */; };
 		B75161DD28D906230028BE35 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D328D906220028BE35 /* SF-Pro-Rounded-Regular.otf */; };
 		B75161DE28D906230028BE35 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B75161D428D906230028BE35 /* SF-Pro-Rounded-Semibold.otf */; };
+		B790355028E208F400341087 /* SplashScreenViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */; };
+		B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355328E2097000341087 /* ProtonIconSetV5.swift */; };
+		B790355628E209BB00341087 /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355528E209BB00341087 /* IconProvider.swift */; };
+		B790355928E20B9E00341087 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355828E20B9E00341087 /* Brand.swift */; };
+		B790355B28E20BC800341087 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355A28E20BC800341087 /* ColorProvider.swift */; };
+		B790355D28E20BE100341087 /* ProtonColorPaletteiOSV5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355C28E20BE100341087 /* ProtonColorPaletteiOSV5.swift */; };
+		B790356028E20C3C00341087 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355F28E20C3C00341087 /* UIColor+Helper.swift */; };
+		B790356328E20C9F00341087 /* PMUIFoundations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790356228E20C9F00341087 /* PMUIFoundations.swift */; };
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
 		B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1A28D6502A004CDB79 /* ViewController.swift */; };
@@ -419,6 +427,14 @@
 		B75161D228D906220028BE35 /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		B75161D328D906220028BE35 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		B75161D428D906230028BE35 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
+		B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewControllerFactory.swift; sourceTree = "<group>"; };
+		B790355328E2097000341087 /* ProtonIconSetV5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonIconSetV5.swift; sourceTree = "<group>"; };
+		B790355528E209BB00341087 /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
+		B790355828E20B9E00341087 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		B790355A28E20BC800341087 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
+		B790355C28E20BE100341087 /* ProtonColorPaletteiOSV5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonColorPaletteiOSV5.swift; sourceTree = "<group>"; };
+		B790355F28E20C3C00341087 /* UIColor+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
+		B790356228E20C9F00341087 /* PMUIFoundations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMUIFoundations.swift; sourceTree = "<group>"; };
 		B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaif R2 - VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -822,8 +838,60 @@
 		B790354D28E2077A00341087 /* Auth Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B790356128E20C9400341087 /* PMUIFoundations */,
+				B790355E28E20C2E00341087 /* UIColor+Helper */,
 			);
 			path = "Auth Extensions";
+			sourceTree = "<group>";
+		};
+		B790354E28E208DC00341087 /* SplashScreen View */ = {
+			isa = PBXGroup;
+			children = (
+				B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */,
+			);
+			path = "SplashScreen View";
+			sourceTree = "<group>";
+		};
+		B790355128E2094300341087 /* Color Pallete */ = {
+			isa = PBXGroup;
+			children = (
+				B790355A28E20BC800341087 /* ColorProvider.swift */,
+				B790355C28E20BE100341087 /* ProtonColorPaletteiOSV5.swift */,
+			);
+			path = "Color Pallete";
+			sourceTree = "<group>";
+		};
+		B790355228E2094900341087 /* Icon Set */ = {
+			isa = PBXGroup;
+			children = (
+				B790355328E2097000341087 /* ProtonIconSetV5.swift */,
+				B790355528E209BB00341087 /* IconProvider.swift */,
+			);
+			path = "Icon Set";
+			sourceTree = "<group>";
+		};
+		B790355728E20B9400341087 /* Brand */ = {
+			isa = PBXGroup;
+			children = (
+				B790355828E20B9E00341087 /* Brand.swift */,
+			);
+			path = Brand;
+			sourceTree = "<group>";
+		};
+		B790355E28E20C2E00341087 /* UIColor+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B790355F28E20C3C00341087 /* UIColor+Helper.swift */,
+			);
+			path = "UIColor+Helper";
+			sourceTree = "<group>";
+		};
+		B790356128E20C9400341087 /* PMUIFoundations */ = {
+			isa = PBXGroup;
+			children = (
+				B790356228E20C9F00341087 /* PMUIFoundations.swift */,
+			);
+			path = PMUIFoundations;
 			sourceTree = "<group>";
 		};
 		B7948D0A28D6502A004CDB79 = {
@@ -949,6 +1017,9 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B790355728E20B9400341087 /* Brand */,
+				B790355228E2094900341087 /* Icon Set */,
+				B790355128E2094300341087 /* Color Pallete */,
 				B7948DF928D7C575004CDB79 /* Required */,
 				B7948DF828D7C565004CDB79 /* Services */,
 			);
@@ -992,9 +1063,10 @@
 		B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B790354E28E208DC00341087 /* SplashScreen View */,
+				B790354928E2049C00341087 /* Welcome View */,
 				B790354B28E204C100341087 /* Login View */,
 				B790354A28E204A900341087 /* Registration View */,
-				B790354928E2049C00341087 /* Welcome View */,
 				B790354828E2045E00341087 /* Summary View */,
 			);
 			path = "R2 Auth";
@@ -1493,6 +1565,7 @@
 				B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
+				B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */,
 				B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */,
 				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
@@ -1523,6 +1596,7 @@
 				B751618228D8FB260028BE35 /* M13CheckboxStrokeController.swift in Sources */,
 				B751617828D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */,
+				B790355B28E20BC800341087 /* ColorProvider.swift in Sources */,
 				B7948DE228D7C493004CDB79 /* WhitelistUtilities.swift in Sources */,
 				B7948DDE28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */,
 				B7948E0F28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift in Sources */,
@@ -1533,6 +1607,7 @@
 				B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				B7948E1D28D7C79B004CDB79 /* ProtectedFileAccess.swift in Sources */,
 				B75161A128D8FB260028BE35 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				B790355928E20B9E00341087 /* Brand.swift in Sources */,
 				B751619628D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */,
 				B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
@@ -1546,6 +1621,7 @@
 				B751612128D8B1C60028BE35 /* Mailto.swift in Sources */,
 				B751617A28D8FB260028BE35 /* M13CheckboxExpandController.swift in Sources */,
 				B751617328D8FB260028BE35 /* CGRectEx.swift in Sources */,
+				B790356328E20C9F00341087 /* PMUIFoundations.swift in Sources */,
 				B7948DC928D7C276004CDB79 /* Environment.swift in Sources */,
 				B751612328D8B8220028BE35 /* FirewallRepair.swift in Sources */,
 				B751617728D8FB260028BE35 /* M13CheckboxPathGenerator.swift in Sources */,
@@ -1556,7 +1632,9 @@
 				B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */,
 				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */,
+				B790355028E208F400341087 /* SplashScreenViewControllerFactory.swift in Sources */,
 				B751619B28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				B790355628E209BB00341087 /* IconProvider.swift in Sources */,
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
 				B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */,
 				B751618628D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift in Sources */,
@@ -1571,6 +1649,7 @@
 				B751619028D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				B751618528D8FB260028BE35 /* M13CheckboxRadioPathGenerator.swift in Sources */,
 				B751619728D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
+				B790355D28E20BE100341087 /* ProtonColorPaletteiOSV5.swift in Sources */,
 				B75161A028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
 				B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
@@ -1583,6 +1662,7 @@
 				B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */,
 				B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				B790356028E20C3C00341087 /* UIColor+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1879,7 +1959,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -1916,7 +1996,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -1950,7 +2030,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -1977,7 +2057,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -2004,7 +2084,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -2031,7 +2111,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -2058,7 +2138,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -2085,7 +2165,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -2112,7 +2192,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -2139,7 +2219,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -2166,7 +2246,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -2185,7 +2265,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -2205,7 +2285,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
@@ -2233,7 +2313,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
