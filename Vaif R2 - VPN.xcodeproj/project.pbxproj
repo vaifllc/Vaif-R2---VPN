@@ -586,7 +586,7 @@
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B7EA1A8A28DBEAC9008D8D3E /* R2 Auth Scenes */,
+				B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */,
 			);
 			path = "R2 UI Scenes";
 			sourceTree = "<group>";
@@ -628,13 +628,13 @@
 			path = "Block Lists";
 			sourceTree = "<group>";
 		};
-		B751612528D8BAAA0028BE35 /* R2 Base Extensions */ = {
+		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B75161B228D9008A0028BE35 /* Button Extensions */,
 				B75161B128D9007D0028BE35 /* Base Extensions */,
 			);
-			path = "R2 Base Extensions";
+			path = "Base Extensions";
 			sourceTree = "<group>";
 		};
 		B751612C28D8FB260028BE35 /* Modified Pods */ = {
@@ -782,6 +782,50 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B790354828E2045E00341087 /* Summary View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Summary View";
+			sourceTree = "<group>";
+		};
+		B790354928E2049C00341087 /* Welcome View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Welcome View";
+			sourceTree = "<group>";
+		};
+		B790354A28E204A900341087 /* Registration View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Registration View";
+			sourceTree = "<group>";
+		};
+		B790354B28E204C100341087 /* Login View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Login View";
+			sourceTree = "<group>";
+		};
+		B790354C28E2075F00341087 /* R2 Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B790354D28E2077A00341087 /* Auth Extensions */,
+				B751612528D8BAAA0028BE35 /* Base Extensions */,
+			);
+			path = "R2 Extension";
+			sourceTree = "<group>";
+		};
+		B790354D28E2077A00341087 /* Auth Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Auth Extensions";
+			sourceTree = "<group>";
+		};
 		B7948D0A28D6502A004CDB79 = {
 			isa = PBXGroup;
 			children = (
@@ -822,7 +866,7 @@
 		B7948D1528D6502A004CDB79 /* Vaif R2 - VPN */ = {
 			isa = PBXGroup;
 			children = (
-				B751612528D8BAAA0028BE35 /* R2 Base Extensions */,
+				B790354C28E2075F00341087 /* R2 Extension */,
 				B751611928D7E7EB0028BE35 /* R2 Services */,
 				B751611728D7DF680028BE35 /* R2 Config */,
 				B751611828D7DF6E0028BE35 /* R2 UI Storyboards */,
@@ -945,11 +989,15 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
-		B7EA1A8A28DBEAC9008D8D3E /* R2 Auth Scenes */ = {
+		B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B790354B28E204C100341087 /* Login View */,
+				B790354A28E204A900341087 /* Registration View */,
+				B790354928E2049C00341087 /* Welcome View */,
+				B790354828E2045E00341087 /* Summary View */,
 			);
-			path = "R2 Auth Scenes";
+			path = "R2 Auth";
 			sourceTree = "<group>";
 		};
 		C01C6274F32B807A421E8FBC /* Pods */ = {
