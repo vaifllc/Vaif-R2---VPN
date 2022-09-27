@@ -52,7 +52,7 @@ struct SignIn: Codable {
     let message: String
 }
 
-struct Signup: Codable {
+struct R2Signup: Codable {
     let code: Int
     let message: String
 }

@@ -250,6 +250,31 @@
 		B790368728E24B8D00341087 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368628E24B8D00341087 /* Response.swift */; };
 		B790368A28E24BBF00341087 /* NSCoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368928E24BBF00341087 /* NSCoder+Extensions.swift */; };
 		B790368D28E24C3300341087 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368C28E24C3300341087 /* AlertService.swift */; };
+		B790368F28E24D3D00341087 /* WelcomeAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790368E28E24D3D00341087 /* WelcomeAnimationViewController.swift */; };
+		B790369128E24D5600341087 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369028E24D5600341087 /* WelcomeView.swift */; };
+		B790369328E24D6D00341087 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369228E24D6D00341087 /* WelcomeViewController.swift */; };
+		B790369528E24D8500341087 /* WelcomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369428E24D8500341087 /* WelcomeViewCoordinator.swift */; };
+		B790369728E24DD500341087 /* SummaryProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369628E24DD500341087 /* SummaryProgressCell.swift */; };
+		B790369928E24E2E00341087 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369828E24E2E00341087 /* SummaryViewController.swift */; };
+		B790369C28E24E4D00341087 /* SummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369B28E24E4D00341087 /* SummaryViewModel.swift */; };
+		B790369F28E24F0D00341087 /* ClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790369E28E24F0D00341087 /* ClientApp.swift */; };
+		B79036A128E24F7000341087 /* LoginAndSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036A028E24F7000341087 /* LoginAndSignup.swift */; };
+		B79036A328E24FA000341087 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036A228E24FA000341087 /* LoginCoordinator.swift */; };
+		B79036A528E24FD100341087 /* LoginValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036A428E24FD100341087 /* LoginValidationError.swift */; };
+		B79036A728E24FFA00341087 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036A628E24FFA00341087 /* LoginViewModel.swift */; };
+		B79036A928E251A300341087 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036A828E251A300341087 /* Login.swift */; };
+		B79036AB28E251BC00341087 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036AA28E251BC00341087 /* LoginService.swift */; };
+		B79036AD28E255AF00341087 /* LoginService+AccountDataAndMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036AC28E255AF00341087 /* LoginService+AccountDataAndMigration.swift */; };
+		B79036AF28E255D800341087 /* LoginService+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036AE28E255D800341087 /* LoginService+Crypto.swift */; };
+		B79036B128E255FB00341087 /* LoginService+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036B028E255FB00341087 /* LoginService+Login.swift */; };
+		B79036B328E256FA00341087 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036B228E256FA00341087 /* Container.swift */; };
+		B79036B528E2586500341087 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036B428E2586500341087 /* LoginViewController.swift */; };
+		B79036B728E25C7F00341087 /* PMLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79036B628E25C7F00341087 /* PMLogin.storyboard */; };
+		B79036BA28E2698200341087 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036B928E2698200341087 /* SignupService.swift */; };
+		B79036BC28E26B9500341087 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036BB28E26B9500341087 /* SignupCoordinator.swift */; };
+		B79036BE28E26BB700341087 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036BD28E26BB700341087 /* SignupViewController.swift */; };
+		B79036C028E26BDB00341087 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036BF28E26BDB00341087 /* SignupViewModel.swift */; };
+		B79036C328E2771D00341087 /* PMLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036C228E2771D00341087 /* PMLog.swift */; };
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
 		B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1A28D6502A004CDB79 /* ViewController.swift */; };
@@ -669,6 +694,31 @@
 		B790368628E24B8D00341087 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B790368928E24BBF00341087 /* NSCoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoder+Extensions.swift"; sourceTree = "<group>"; };
 		B790368C28E24C3300341087 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		B790368E28E24D3D00341087 /* WelcomeAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAnimationViewController.swift; sourceTree = "<group>"; };
+		B790369028E24D5600341087 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		B790369228E24D6D00341087 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		B790369428E24D8500341087 /* WelcomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewCoordinator.swift; sourceTree = "<group>"; };
+		B790369628E24DD500341087 /* SummaryProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryProgressCell.swift; sourceTree = "<group>"; };
+		B790369828E24E2E00341087 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		B790369B28E24E4D00341087 /* SummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewModel.swift; sourceTree = "<group>"; };
+		B790369E28E24F0D00341087 /* ClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientApp.swift; sourceTree = "<group>"; };
+		B79036A028E24F7000341087 /* LoginAndSignup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndSignup.swift; sourceTree = "<group>"; };
+		B79036A228E24FA000341087 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		B79036A428E24FD100341087 /* LoginValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationError.swift; sourceTree = "<group>"; };
+		B79036A628E24FFA00341087 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B79036A828E251A300341087 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B79036AA28E251BC00341087 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B79036AC28E255AF00341087 /* LoginService+AccountDataAndMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginService+AccountDataAndMigration.swift"; sourceTree = "<group>"; };
+		B79036AE28E255D800341087 /* LoginService+Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginService+Crypto.swift"; sourceTree = "<group>"; };
+		B79036B028E255FB00341087 /* LoginService+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginService+Login.swift"; sourceTree = "<group>"; };
+		B79036B228E256FA00341087 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		B79036B428E2586500341087 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B79036B628E25C7F00341087 /* PMLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PMLogin.storyboard; sourceTree = "<group>"; };
+		B79036B928E2698200341087 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
+		B79036BB28E26B9500341087 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		B79036BD28E26BB700341087 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		B79036BF28E26BDB00341087 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		B79036C228E2771D00341087 /* PMLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMLog.swift; sourceTree = "<group>"; };
 		B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaif R2 - VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -856,6 +906,7 @@
 				B7948D2428D6502C004CDB79 /* LaunchScreen.storyboard */,
 				B7948D1C28D6502A004CDB79 /* Main.storyboard */,
 				B790361228E2212C00341087 /* CountryPicker.storyboard */,
+				B79036B628E25C7F00341087 /* PMLogin.storyboard */,
 			);
 			path = "R2 UI Storyboards";
 			sourceTree = "<group>";
@@ -1067,6 +1118,8 @@
 		B790354828E2045E00341087 /* Summary View */ = {
 			isa = PBXGroup;
 			children = (
+				B790369628E24DD500341087 /* SummaryProgressCell.swift */,
+				B790369828E24E2E00341087 /* SummaryViewController.swift */,
 			);
 			path = "Summary View";
 			sourceTree = "<group>";
@@ -1074,6 +1127,10 @@
 		B790354928E2049C00341087 /* Welcome View */ = {
 			isa = PBXGroup;
 			children = (
+				B790368E28E24D3D00341087 /* WelcomeAnimationViewController.swift */,
+				B790369028E24D5600341087 /* WelcomeView.swift */,
+				B790369228E24D6D00341087 /* WelcomeViewController.swift */,
+				B790369428E24D8500341087 /* WelcomeViewCoordinator.swift */,
 			);
 			path = "Welcome View";
 			sourceTree = "<group>";
@@ -1088,7 +1145,15 @@
 		B790354B28E204C100341087 /* Login View */ = {
 			isa = PBXGroup;
 			children = (
+				B79036A228E24FA000341087 /* LoginCoordinator.swift */,
 				B790357F28E2127500341087 /* LoginNavigationViewController.swift */,
+				B79036A428E24FD100341087 /* LoginValidationError.swift */,
+				B79036A828E251A300341087 /* Login.swift */,
+				B79036AA28E251BC00341087 /* LoginService.swift */,
+				B79036AC28E255AF00341087 /* LoginService+AccountDataAndMigration.swift */,
+				B79036AE28E255D800341087 /* LoginService+Crypto.swift */,
+				B79036B028E255FB00341087 /* LoginService+Login.swift */,
+				B79036B428E2586500341087 /* LoginViewController.swift */,
 			);
 			path = "Login View";
 			sourceTree = "<group>";
@@ -1541,6 +1606,8 @@
 			children = (
 				B790362C28E2251300341087 /* LoginAndSignup+DataTypes1.swift */,
 				B790362E28E2255F00341087 /* LoginAndSignup+DataTypes.swift */,
+				B79036A028E24F7000341087 /* LoginAndSignup.swift */,
+				B79036B228E256FA00341087 /* Container.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1722,6 +1789,42 @@
 			path = AlertService;
 			sourceTree = "<group>";
 		};
+		B790369A28E24E4100341087 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				B790369B28E24E4D00341087 /* SummaryViewModel.swift */,
+				B79036A628E24FFA00341087 /* LoginViewModel.swift */,
+				B79036BF28E26BDB00341087 /* SignupViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B790369D28E24EFF00341087 /* AppClients */ = {
+			isa = PBXGroup;
+			children = (
+				B790369E28E24F0D00341087 /* ClientApp.swift */,
+			);
+			path = AppClients;
+			sourceTree = "<group>";
+		};
+		B79036B828E2662100341087 /* Signup View */ = {
+			isa = PBXGroup;
+			children = (
+				B79036B928E2698200341087 /* SignupService.swift */,
+				B79036BB28E26B9500341087 /* SignupCoordinator.swift */,
+				B79036BD28E26BB700341087 /* SignupViewController.swift */,
+			);
+			path = "Signup View";
+			sourceTree = "<group>";
+		};
+		B79036C128E2771500341087 /* PMLog */ = {
+			isa = PBXGroup;
+			children = (
+				B79036C228E2771D00341087 /* PMLog.swift */,
+			);
+			path = PMLog;
+			sourceTree = "<group>";
+		};
 		B7948D0A28D6502A004CDB79 = {
 			isa = PBXGroup;
 			children = (
@@ -1845,6 +1948,8 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B79036C128E2771500341087 /* PMLog */,
+				B790369D28E24EFF00341087 /* AppClients */,
 				B790363128E2261700341087 /* Corestring */,
 				B790363028E2261000341087 /* Bundle */,
 				B790355728E20B9400341087 /* Brand */,
@@ -1893,10 +1998,12 @@
 		B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B790369A28E24E4100341087 /* View Models */,
 				B790362B28E2250600341087 /* Shared */,
 				B790354E28E208DC00341087 /* SplashScreen View */,
 				B790354928E2049C00341087 /* Welcome View */,
 				B790354B28E204C100341087 /* Login View */,
+				B79036B828E2662100341087 /* Signup View */,
 				B790354A28E204A900341087 /* Registration View */,
 				B790354828E2045E00341087 /* Summary View */,
 			);
@@ -2183,6 +2290,7 @@
 				AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */,
 				B75161DE28D906230028BE35 /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				B75161D628D906230028BE35 /* Montserrat-Light.ttf in Resources */,
+				B79036B728E25C7F00341087 /* PMLogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2417,10 +2525,12 @@
 				B790361B28E2231500341087 /* PMSegmentedControl.swift in Sources */,
 				B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */,
 				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
+				B79036A328E24FA000341087 /* LoginCoordinator.swift in Sources */,
 				B79035A828E2158A00341087 /* String+Attributed.swift in Sources */,
 				B790368D28E24C3300341087 /* AlertService.swift in Sources */,
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
 				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				B79036AB28E251BC00341087 /* LoginService.swift in Sources */,
 				B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */,
 				B790366B28E2493400341087 /* Key+NSCoding.swift in Sources */,
 				B790362D28E2251300341087 /* LoginAndSignup+DataTypes1.swift in Sources */,
@@ -2434,6 +2544,7 @@
 				B79035DE28E21B0C00341087 /* PMBanner.swift in Sources */,
 				B75161AC28D8FB270028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				B79035C328E217B800341087 /* PMActionSheetGridCell.swift in Sources */,
+				B79036A528E24FD100341087 /* LoginValidationError.swift in Sources */,
 				B79035DB28E21ABA00341087 /* PMActionBarItem.swift in Sources */,
 				B79035C928E217F900341087 /* PMActionSheetItem.swift in Sources */,
 				B790357828E210F500341087 /* UIButton+helper.swift in Sources */,
@@ -2461,12 +2572,17 @@
 				B751618C28D8FB260028BE35 /* NVActivityIndicatorViewable.swift in Sources */,
 				B790356D28E20E9600341087 /* FigmaShadow.swift in Sources */,
 				B7948DE728D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
+				B79036A928E251A300341087 /* Login.swift in Sources */,
 				B751611F28D7F3640028BE35 /* TrackerInfo.swift in Sources */,
+				B79036AD28E255AF00341087 /* LoginService+AccountDataAndMigration.swift in Sources */,
 				B790368028E24B4100341087 /* Address+NSCoding.swift in Sources */,
 				B790368728E24B8D00341087 /* Response.swift in Sources */,
 				B751612728D8BACB0028BE35 /* UIKit+Extensions.swift in Sources */,
+				B790369C28E24E4D00341087 /* SummaryViewModel.swift in Sources */,
 				B751611D28D7F33F0028BE35 /* LocalLogger.swift in Sources */,
+				B79036C028E26BDB00341087 /* SignupViewModel.swift in Sources */,
 				B79035EC28E21BED00341087 /* PMTabBarController.swift in Sources */,
+				B790369F28E24F0D00341087 /* ClientApp.swift in Sources */,
 				B79035E828E21B9100341087 /* PMTabBarBuilder.swift in Sources */,
 				B790366528E2490100341087 /* Key.swift in Sources */,
 				B7948DBF28D7C06A004CDB79 /* Client.swift in Sources */,
@@ -2474,6 +2590,7 @@
 				B751617828D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */,
 				B79035BD28E2175C00341087 /* PMActionSheet.swift in Sources */,
+				B79036BA28E2698200341087 /* SignupService.swift in Sources */,
 				B790363F28E2277600341087 /* Bundle_V5.swift in Sources */,
 				B790367728E24A5900341087 /* LinkOpeningMode.swift in Sources */,
 				B790355B28E20BC800341087 /* ColorProvider.swift in Sources */,
@@ -2482,10 +2599,12 @@
 				B7948E0F28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift in Sources */,
 				B790358B28E2140F00341087 /* UIStackView+helper.swift in Sources */,
 				B790360D28E2206D00341087 /* CountryPickerViewController.swift in Sources */,
+				B79036AF28E255D800341087 /* LoginService+Crypto.swift in Sources */,
 				B75161AB28D8FB270028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				B751617E28D8FB260028BE35 /* M13Checkbox.swift in Sources */,
 				B75161B028D8FB270028BE35 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
 				B790366F28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift in Sources */,
+				B79036BE28E26BB700341087 /* SignupViewController.swift in Sources */,
 				B7948DF328D7C54C004CDB79 /* VPNRegion.swift in Sources */,
 				B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				B7948E1D28D7C79B004CDB79 /* ProtectedFileAccess.swift in Sources */,
@@ -2502,6 +2621,7 @@
 				B790357B28E2113C00341087 /* SettingsV5.swift in Sources */,
 				B790364D28E22EB400341087 /* SubtitleLabel.swift in Sources */,
 				B751617F28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift in Sources */,
+				B790368F28E24D3D00341087 /* WelcomeAnimationViewController.swift in Sources */,
 				B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */,
 				B7948DFD28D7C5D8004CDB79 /* BlockDayLog.swift in Sources */,
@@ -2509,15 +2629,18 @@
 				B79035E128E21B3000341087 /* PMBannerNewStyle.swift in Sources */,
 				B79035EE28E21C0900341087 /* PMTabBarError.swift in Sources */,
 				B79035CD28E2182B00341087 /* PMActionSheetPlainCellHeaderHeader.swift in Sources */,
+				B79036B528E2586500341087 /* LoginViewController.swift in Sources */,
 				B75161A528D8FB270028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				B751619F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				B79035FE28E21E3F00341087 /* PMInternalTextField.swift in Sources */,
 				B79035B128E2165800341087 /* UILabel+helper.swift in Sources */,
 				B751612128D8B1C60028BE35 /* Mailto.swift in Sources */,
 				B751617A28D8FB260028BE35 /* M13CheckboxExpandController.swift in Sources */,
+				B79036B328E256FA00341087 /* Container.swift in Sources */,
 				B79035E528E21B5E00341087 /* PMBannerStyle.swift in Sources */,
 				B751617328D8FB260028BE35 /* CGRectEx.swift in Sources */,
 				B790356328E20C9F00341087 /* PMUIFoundations.swift in Sources */,
+				B790369528E24D8500341087 /* WelcomeViewCoordinator.swift in Sources */,
 				B7948DC928D7C276004CDB79 /* Environment.swift in Sources */,
 				B751612328D8B8220028BE35 /* FirewallRepair.swift in Sources */,
 				B751617728D8FB260028BE35 /* M13CheckboxPathGenerator.swift in Sources */,
@@ -2535,9 +2658,11 @@
 				B790365C28E2475D00341087 /* UIStoryboard+Extensions.swift in Sources */,
 				B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */,
 				B790359C28E2150400341087 /* UIGestureRecognizer+helper.swift in Sources */,
+				B79036A728E24FFA00341087 /* LoginViewModel.swift in Sources */,
 				B79035D928E21A9800341087 /* PMActionBar.swift in Sources */,
 				B790358828E213DE00341087 /* UILabel+link.swift in Sources */,
 				B790355028E208F400341087 /* SplashScreenViewControllerFactory.swift in Sources */,
+				B790369128E24D5600341087 /* WelcomeView.swift in Sources */,
 				B790363B28E2273100341087 /* CoreString_V5.swift in Sources */,
 				B751619B28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B790355628E209BB00341087 /* IconProvider.swift in Sources */,
@@ -2553,12 +2678,15 @@
 				B751618628D8FB260028BE35 /* M13CheckboxGestureRecognizer.swift in Sources */,
 				B790363528E226ED00341087 /* Bundle.swift in Sources */,
 				B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */,
+				B790369328E24D6D00341087 /* WelcomeViewController.swift in Sources */,
 				B790364228E22D9100341087 /* TemporaryHacks.swift in Sources */,
 				B790358D28E2144C00341087 /* UIDevice+info.swift in Sources */,
 				B790359628E214C700341087 /* UIImage+Extensions.swift in Sources */,
+				B79036BC28E26B9500341087 /* SignupCoordinator.swift in Sources */,
 				B790364828E22E5600341087 /* Result+Extensions.swift in Sources */,
 				B790361628E2224500341087 /* PMHeaderView.swift in Sources */,
 				B790357328E2102A00341087 /* AccessibleView.swift in Sources */,
+				B79036A128E24F7000341087 /* LoginAndSignup.swift in Sources */,
 				B79035CF28E2183F00341087 /* PMActionSheetToggleCell.swift in Sources */,
 				B790360528E21FAA00341087 /* CountryCode.swift in Sources */,
 				B790362728E2249800341087 /* UIScrollView+Extensions.swift in Sources */,
@@ -2587,9 +2715,11 @@
 				B790355D28E20BE100341087 /* ProtonColorPaletteiOSV5.swift in Sources */,
 				B75161A028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				B790359328E2149400341087 /* TableViewCell+helper.swift in Sources */,
+				B790369728E24DD500341087 /* SummaryProgressCell.swift in Sources */,
 				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
 				B790368228E24B5500341087 /* Address_v2.swift in Sources */,
 				B79035B428E2169A00341087 /* GlobalFunction.swift in Sources */,
+				B79036B128E255FB00341087 /* LoginService+Login.swift in Sources */,
 				B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				B79035A528E2157000341087 /* UIView+helper.swift in Sources */,
 				B79035AB28E215A000341087 /* NSMutableAttributedString.swift in Sources */,
@@ -2598,11 +2728,13 @@
 				B751619A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				B751619828D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				B79036C328E2771D00341087 /* PMLog.swift in Sources */,
 				B7948DD828D7C379004CDB79 /* SpeedTest.swift in Sources */,
 				B751619428D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */,
 				B790365F28E247AC00341087 /* WindowService.swift in Sources */,
 				B790366228E248A100341087 /* Dictionary+Extension.swift in Sources */,
 				B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */,
+				B790369928E24E2E00341087 /* SummaryViewController.swift in Sources */,
 				B79035BF28E2177C00341087 /* PMActionSheetDragBarView.swift in Sources */,
 				B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
@@ -2907,7 +3039,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -2944,7 +3076,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -2978,7 +3110,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -3005,7 +3137,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -3032,7 +3164,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -3059,7 +3191,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -3086,7 +3218,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -3113,7 +3245,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -3140,7 +3272,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -3167,7 +3299,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -3194,7 +3326,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -3213,7 +3345,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -3233,7 +3365,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
@@ -3261,7 +3393,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 19;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
