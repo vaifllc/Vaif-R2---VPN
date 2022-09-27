@@ -150,8 +150,8 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         configureAccountType()
         generateAccessibilityIdentifiers()
         
-        try? internalNameTextField.setUpChallenge(viewModel.challenge, type: .username)
-        try? externalEmailTextField.setUpChallenge(viewModel.challenge, type: .username_email)
+        //try? internalNameTextField.setUpChallenge(viewModel.challenge, type: .username)
+        //try? externalEmailTextField.setUpChallenge(viewModel.challenge, type: .username_email)
     }
 
     override func viewDidLayoutSubviews() {
@@ -194,12 +194,13 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
             case .none:
                 assertionFailure("signupAccountType should be configured during the segue")
             }
-        } else {
-            if viewModel.humanVerificationVersion == .v3 {
-                checkEmail(email: currentlyUsedTextField.value)
-            } else {
-                requestValidationToken(email: currentlyUsedTextField.value)
-            }
+            //        } else {
+            //            if viewModel.humanVerificationVersion == .v3 {
+            //                checkEmail(email: currentlyUsedTextField.value)
+            //            } else {
+            //                requestValidationToken(email: currentlyUsedTextField.value)
+            //            }
+            //        }
         }
     }
 
@@ -373,35 +374,35 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         }
     }
     
-    private func checkEmail(email: String) {
-        lockUI()
-        viewModel.checkExternalEmailAccount(email: email) { result in
-            self.unlockUI()
-            self.nextButton.isSelected = false
-            switch result {
-            case .success:
-                self.delegate?.validatedEmail(email: email, signupAccountType: self.signupAccountType)
-            case .failure(let error):
-                switch error {
-                case .generic(let message, let code, _):
-                    if code == APIErrorCode.humanVerificationAddressAlreadyTaken {
-                        self.delegate?.hvEmailAlreadyExists(email: email)
-                    } else if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
-                        self.showError(message: message)
-                    }
-                case .notAvailable(let message):
-                    self.currentlyUsedTextField.isError = true
-                    if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
-                        self.showError(message: message)
-                    }
-                }
-            }
-        } editEmail: {
-            self.unlockUI()
-            self.nextButton.isSelected = false
-            _ = self.currentlyUsedTextField.becomeFirstResponder()
-        }
-    }
+//    private func checkEmail(email: String) {
+//        lockUI()
+//        viewModel.checkExternalEmailAccount(email: email) { result in
+//            self.unlockUI()
+//            self.nextButton.isSelected = false
+//            switch result {
+//            case .success:
+//                self.delegate?.validatedEmail(email: email, signupAccountType: self.signupAccountType)
+//            case .failure(let error):
+//                switch error {
+//                case .generic(let message, let code, _):
+//                    if code == APIErrorCode.humanVerificationAddressAlreadyTaken {
+//                        self.delegate?.hvEmailAlreadyExists(email: email)
+//                    } else if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
+//                        self.showError(message: message)
+//                    }
+//                case .notAvailable(let message):
+//                    self.currentlyUsedTextField.isError = true
+//                    if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
+//                        self.showError(message: message)
+//                    }
+//                }
+//            }
+//        } editEmail: {
+//            self.unlockUI()
+//            self.nextButton.isSelected = false
+//            _ = self.currentlyUsedTextField.becomeFirstResponder()
+//        }
+//    }
 
     private func showError(message: String) {
         showBanner(message: message, position: PMBannerPosition.top)

@@ -50,7 +50,7 @@ public protocol ChallangeParametersProvider {
 public class SignupService: Signup {
 //    private let apiService: APIService
 //    private let authenticator: Authenticator
-    private let challangeParametersProvider: ChallangeParametersProvider
+//    private let challangeParametersProvider: ChallangeParametersProvider
     private let clientApp: ClientApp
 
     // MARK: Public interface
@@ -112,53 +112,53 @@ public class SignupService: Signup {
 //        }
 //    }
     
-    public func createNewUsernameAccount(userName: String, password: String, email: String?, phoneNumber: String?, completion: @escaping (Result<(), SignupError>) -> Void) {
-        getRandomSRPModulus { result in
-            switch result {
-            case .success(let modulus):
-                self.createUser(userName: userName, password: password, email: email, phoneNumber: phoneNumber, modulus: modulus, domain: nil, completion: completion)
-            case .failure(let error):
-                return completion(.failure(error))
-            }
-        }
-    }
+//    public func createNewUsernameAccount(userName: String, password: String, email: String?, phoneNumber: String?, completion: @escaping (Result<(), SignupError>) -> Void) {
+//        getRandomSRPModulus { result in
+//            switch result {
+//            case .success(let modulus):
+//                self.createUser(userName: userName, password: password, email: email, phoneNumber: phoneNumber, modulus: modulus, domain: nil, completion: completion)
+//            case .failure(let error):
+//                return completion(.failure(error))
+//            }
+//        }
+//    }
     
-    public func createNewInternalAccount(userName: String, password: String, email: String?, phoneNumber: String?, domain: String, completion: @escaping (Result<(), SignupError>) -> Void) {
-        getRandomSRPModulus { result in
-            switch result {
-            case .success(let modulus):
-                self.createUser(userName: userName, password: password, email: email, phoneNumber: phoneNumber, modulus: modulus, domain: domain, completion: completion)
-            case .failure(let error):
-                return completion(.failure(error))
-            }
-        }
-    }
+//    public func createNewInternalAccount(userName: String, password: String, email: String?, phoneNumber: String?, domain: String, completion: @escaping (Result<(), SignupError>) -> Void) {
+//        getRandomSRPModulus { result in
+//            switch result {
+//            case .success(let modulus):
+//                self.createUser(userName: userName, password: password, email: email, phoneNumber: phoneNumber, modulus: modulus, domain: domain, completion: completion)
+//            case .failure(let error):
+//                return completion(.failure(error))
+//            }
+//        }
+//    }
 
-    public func createNewExternalAccount(email: String, password: String, verifyToken: String, tokenType: String, completion: @escaping (Result<(), SignupError>) -> Void) {
-        getRandomSRPModulus { result in
-            switch result {
-            case .success(let modulus):
-                self.createExternalUser(email: email, password: password, modulus: modulus, verifyToken: verifyToken, tokenType: tokenType, completion: completion)
-            case .failure(let error):
-                return completion(.failure(error))
-            }
-        }
-    }
+//    public func createNewExternalAccount(email: String, password: String, verifyToken: String, tokenType: String, completion: @escaping (Result<(), SignupError>) -> Void) {
+//        getRandomSRPModulus { result in
+//            switch result {
+//            case .success(let modulus):
+//                self.createExternalUser(email: email, password: password, modulus: modulus, verifyToken: verifyToken, tokenType: tokenType, completion: completion)
+//            case .failure(let error):
+//                return completion(.failure(error))
+//            }
+//        }
+//    }
     
-    public func validateEmailServerSide(email: String, completion: @escaping (Result<Void, SignupError>) -> Void) {
-        let route = UserAPI.Router.validateEmail(email: email)
-        apiService.exec(route: route, responseObject: Response()) { (_, response) in
-            if response.responseCode == APIErrorCode.responseOK {
-                completion(.success(()))
-            } else {
-                if let error = response.error {
-                    completion(.failure(SignupError.generic(message: error.localizedDescription, code: response.responseCode ?? 0, originalError: error)))
-                } else {
-                    completion(.failure(SignupError.default))
-                }
-            }
-        }
-    }
+//    public func validateEmailServerSide(email: String, completion: @escaping (Result<Void, SignupError>) -> Void) {
+//        let route = UserAPI.Router.validateEmail(email: email)
+//        apiService.exec(route: route, responseObject: Response()) { (_, response) in
+//            if response.responseCode == APIErrorCode.responseOK {
+//                completion(.success(()))
+//            } else {
+//                if let error = response.error {
+//                    completion(.failure(SignupError.generic(message: error.localizedDescription, code: response.responseCode ?? 0, originalError: error)))
+//                } else {
+//                    completion(.failure(SignupError.default))
+//                }
+//            }
+//        }
+//    }
 
 
     // MARK: Private interface

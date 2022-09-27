@@ -37,7 +37,7 @@ public struct SignupParameters {
     init(_ separateDomainsButton: Bool,
          _ passwordRestrictions: SignupPasswordRestrictions,
          _ summaryScreenVariant: SummaryScreenVariant) {
-        if let mode = ProtonCore_LoginUI.TemporaryHacks.signupMode {
+        if let mode = TemporaryHacks.signupMode {
             self.mode = mode
         } else {
             self.mode = .internal
@@ -81,17 +81,17 @@ public struct SignupPasswordRestrictions: OptionSet {
     }
 }
 
-public typealias PaymentsAvailability = LoginFeatureAvailability<PaymentsParameters>
+//public typealias PaymentsAvailability = LoginFeatureAvailability<PaymentsParameters>
 
-public struct PaymentsParameters {
-    
-    let listOfIAPIdentifiers: ListOfIAPIdentifiers
-    let listOfShownPlanNames: ListOfShownPlanNames
-    var reportBugAlertHandler: BugAlertHandler
-    
-    public init(listOfIAPIdentifiers: ListOfIAPIdentifiers, listOfShownPlanNames: ListOfShownPlanNames, reportBugAlertHandler: BugAlertHandler) {
-        self.listOfIAPIdentifiers = listOfIAPIdentifiers
-        self.listOfShownPlanNames = listOfShownPlanNames
-        self.reportBugAlertHandler = reportBugAlertHandler
-    }
-}
+//public struct PaymentsParameters {
+//
+//    let listOfIAPIdentifiers: ListOfIAPIdentifiers
+//    let listOfShownPlanNames: ListOfShownPlanNames
+//    var reportBugAlertHandler: BugAlertHandler
+//
+//    public init(listOfIAPIdentifiers: ListOfIAPIdentifiers, listOfShownPlanNames: ListOfShownPlanNames, reportBugAlertHandler: BugAlertHandler) {
+//        self.listOfIAPIdentifiers = listOfIAPIdentifiers
+//        self.listOfShownPlanNames = listOfShownPlanNames
+//        self.reportBugAlertHandler = reportBugAlertHandler
+//    }
+//}

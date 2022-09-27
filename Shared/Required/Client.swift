@@ -167,7 +167,7 @@ class Client {
     }
     
     // For creating email account only - not signing up with IAP receipt
-    static func signup(email: String, password: String) throws -> Promise<Signup> {
+    static func r2signup(email: String, password: String) throws -> Promise<R2Signup> {
         DDLogInfo("API CALL: signup")
         return firstly { () -> Promise<(data: Data, response: URLResponse)> in
                 let parameters:[String : Any] = [
@@ -177,9 +177,9 @@ class Client {
                 ]
                 return URLSession.shared.dataTask(.promise, with: try makePostRequest(urlString: mainURL + "/signup", parameters: parameters))
             }
-            .map { data, response -> Signup in
+            .map { data, response -> R2Signup in
                 try self.validateApiResponse(data: data, response: response)
-                let signup = try JSONDecoder().decode(Signup.self, from: data)
+                let signup = try JSONDecoder().decode(R2Signup.self, from: data)
                 DDLogInfo("API RESULT: signup: \(signup)")
                 return signup
         }

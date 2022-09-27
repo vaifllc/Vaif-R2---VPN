@@ -16,6 +16,7 @@
 		5334E1A8D3382D884668C2B3 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFD75F4E8BFD4F252F7054 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist */; };
 		5949781C23F932610EB44854 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */; };
 		AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5519B02FDAD4464B31A8CA07 /* Pods-Vaif R2 - VPN-settings-metadata.plist */; };
+		B74F87C828E28E5A0012D190 /* BugReport in Frameworks */ = {isa = PBXBuildFile; productRef = B74F87C728E28E5A0012D190 /* BugReport */; };
 		B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */; };
 		B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DD28D7C9940028BE35 /* LoadingCircle.swift */; };
 		B75160E028D7C9BD0028BE35 /* CombinedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */; };
@@ -275,6 +276,16 @@
 		B79036BE28E26BB700341087 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036BD28E26BB700341087 /* SignupViewController.swift */; };
 		B79036C028E26BDB00341087 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036BF28E26BDB00341087 /* SignupViewModel.swift */; };
 		B79036C328E2771D00341087 /* PMLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036C228E2771D00341087 /* PMLog.swift */; };
+		B79036C628E280E900341087 /* UIView+Amination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036C528E280E900341087 /* UIView+Amination.swift */; };
+		B79036C828E2837E00341087 /* PMSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79036C728E2837E00341087 /* PMSignup.storyboard */; };
+		B79036CA28E2869200341087 /* AvailableDomainsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036C928E2869200341087 /* AvailableDomainsRequest.swift */; };
+		B79036CD28E2870400341087 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036CC28E2870400341087 /* Route.swift */; };
+		B79036D028E288C400341087 /* String+HumanVerificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036CF28E288C400341087 /* String+HumanVerificationExtension.swift */; };
+		B79036D328E289D100341087 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036D228E289D100341087 /* UIColor+Extension.swift */; };
+		B79036D628E28A5100341087 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036D528E28A5100341087 /* UIConstants.swift */; };
+		B79036D928E28BC200341087 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036D828E28BC200341087 /* TabBarController.swift */; };
+		B79036DB28E28C0700341087 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036DA28E28C0700341087 /* TabBarViewModel.swift */; };
+		B79036DE28E28C8900341087 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036DD28E28C8900341087 /* NavigationService.swift */; };
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
 		B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1A28D6502A004CDB79 /* ViewController.swift */; };
@@ -719,6 +730,17 @@
 		B79036BD28E26BB700341087 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B79036BF28E26BDB00341087 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		B79036C228E2771D00341087 /* PMLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMLog.swift; sourceTree = "<group>"; };
+		B79036C528E280E900341087 /* UIView+Amination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Amination.swift"; sourceTree = "<group>"; };
+		B79036C728E2837E00341087 /* PMSignup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PMSignup.storyboard; sourceTree = "<group>"; };
+		B79036C928E2869200341087 /* AvailableDomainsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDomainsRequest.swift; sourceTree = "<group>"; };
+		B79036CC28E2870400341087 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		B79036CF28E288C400341087 /* String+HumanVerificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HumanVerificationExtension.swift"; sourceTree = "<group>"; };
+		B79036D228E289D100341087 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B79036D528E28A5100341087 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		B79036D828E28BC200341087 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B79036DA28E28C0700341087 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		B79036DD28E28C8900341087 /* NavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationService.swift; sourceTree = "<group>"; };
+		B79036E028E28CF500341087 /* BugReport */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BugReport; path = libraries/BugReport; sourceTree = "<group>"; };
 		B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaif R2 - VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -792,6 +814,7 @@
 				B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */,
 				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
 				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				B74F87C828E28E5A0012D190 /* BugReport in Frameworks */,
 				B7EA16E428DBC03B008D8D3E /* NetworkExtension.framework in Frameworks */,
 				B75160E328D7CAF50028BE35 /* StoreKit.framework in Frameworks */,
 			);
@@ -907,6 +930,7 @@
 				B7948D1C28D6502A004CDB79 /* Main.storyboard */,
 				B790361228E2212C00341087 /* CountryPicker.storyboard */,
 				B79036B628E25C7F00341087 /* PMLogin.storyboard */,
+				B79036C728E2837E00341087 /* PMSignup.storyboard */,
 			);
 			path = "R2 UI Storyboards";
 			sourceTree = "<group>";
@@ -933,6 +957,10 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B79036D728E28BBB00341087 /* TabBarController */,
+				B79036D128E289CB00341087 /* UIColor+Extension */,
+				B79036CE28E288BD00341087 /* String+HumanVerificationExtension */,
+				B79036C428E280E100341087 /* UIView+Amination */,
 				B790368B28E24C2E00341087 /* AlertService */,
 				B790368828E24BBB00341087 /* NSCoder+Extensions */,
 				B790366028E2489600341087 /* Dictionary+Extension */,
@@ -1170,6 +1198,7 @@
 		B790354D28E2077A00341087 /* Auth Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B79036CB28E286F800341087 /* Alamofire */,
 				B790368528E24B8900341087 /* Response */,
 				B790367828E24A8C00341087 /* Address+Ext */,
 				B790367528E24A5400341087 /* LinkOpeningMode */,
@@ -1608,6 +1637,7 @@
 				B790362E28E2255F00341087 /* LoginAndSignup+DataTypes.swift */,
 				B79036A028E24F7000341087 /* LoginAndSignup.swift */,
 				B79036B228E256FA00341087 /* Container.swift */,
+				B79036C928E2869200341087 /* AvailableDomainsRequest.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1795,6 +1825,7 @@
 				B790369B28E24E4D00341087 /* SummaryViewModel.swift */,
 				B79036A628E24FFA00341087 /* LoginViewModel.swift */,
 				B79036BF28E26BDB00341087 /* SignupViewModel.swift */,
+				B79036DA28E28C0700341087 /* TabBarViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -1825,9 +1856,74 @@
 			path = PMLog;
 			sourceTree = "<group>";
 		};
+		B79036C428E280E100341087 /* UIView+Amination */ = {
+			isa = PBXGroup;
+			children = (
+				B79036C528E280E900341087 /* UIView+Amination.swift */,
+			);
+			path = "UIView+Amination";
+			sourceTree = "<group>";
+		};
+		B79036CB28E286F800341087 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				B79036CC28E2870400341087 /* Route.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		B79036CE28E288BD00341087 /* String+HumanVerificationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B79036CF28E288C400341087 /* String+HumanVerificationExtension.swift */,
+			);
+			path = "String+HumanVerificationExtension";
+			sourceTree = "<group>";
+		};
+		B79036D128E289CB00341087 /* UIColor+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B79036D228E289D100341087 /* UIColor+Extension.swift */,
+			);
+			path = "UIColor+Extension";
+			sourceTree = "<group>";
+		};
+		B79036D428E28A4300341087 /* UIConstants */ = {
+			isa = PBXGroup;
+			children = (
+				B79036D528E28A5100341087 /* UIConstants.swift */,
+			);
+			path = UIConstants;
+			sourceTree = "<group>";
+		};
+		B79036D728E28BBB00341087 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B79036D828E28BC200341087 /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		B79036DC28E28C8000341087 /* NavigationService */ = {
+			isa = PBXGroup;
+			children = (
+				B79036DD28E28C8900341087 /* NavigationService.swift */,
+			);
+			path = NavigationService;
+			sourceTree = "<group>";
+		};
+		B79036DF28E28CF500341087 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B79036E028E28CF500341087 /* BugReport */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		B7948D0A28D6502A004CDB79 = {
 			isa = PBXGroup;
 			children = (
+				B79036DF28E28CF500341087 /* Packages */,
 				B7EA16F128DBD25C008D8D3E /* Localizable.strings */,
 				B75160E428D7CB4A0028BE35 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements */,
 				B7948D2E28D7B8C6004CDB79 /* Settings.bundle */,
@@ -1948,6 +2044,8 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B79036DC28E28C8000341087 /* NavigationService */,
+				B79036D428E28A4300341087 /* UIConstants */,
 				B79036C128E2771500341087 /* PMLog */,
 				B790369D28E24EFF00341087 /* AppClients */,
 				B790363128E2261700341087 /* Corestring */,
@@ -2064,6 +2162,7 @@
 			packageProductDependencies = (
 				B75160FF28D7D5440028BE35 /* CocoaLumberjack */,
 				B751610128D7D5440028BE35 /* CocoaLumberjackSwift */,
+				B74F87C728E28E5A0012D190 /* BugReport */,
 			);
 			productName = "Vaif R2 - VPN";
 			productReference = B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */;
@@ -2264,6 +2363,7 @@
 				B7948D2F28D7B8C6004CDB79 /* Settings.bundle in Resources */,
 				B79035D628E21A1A00341087 /* PMActionSheetPlainCell.xib in Resources */,
 				B75160ED28D7CD290028BE35 /* adBlockList.json in Resources */,
+				B79036C828E2837E00341087 /* PMSignup.storyboard in Resources */,
 				B79035F728E21D7200341087 /* PMCellSectionView.xib in Resources */,
 				B79035D428E218A900341087 /* Assets-V5.xcassets in Resources */,
 				B790360228E21EBD00341087 /* PMTextFieldCombo.xib in Resources */,
@@ -2547,6 +2647,7 @@
 				B79036A528E24FD100341087 /* LoginValidationError.swift in Sources */,
 				B79035DB28E21ABA00341087 /* PMActionBarItem.swift in Sources */,
 				B79035C928E217F900341087 /* PMActionSheetItem.swift in Sources */,
+				B79036D328E289D100341087 /* UIColor+Extension.swift in Sources */,
 				B790357828E210F500341087 /* UIButton+helper.swift in Sources */,
 				B751618F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				B79035BA28E216EC00341087 /* UIImage+Text.swift in Sources */,
@@ -2564,7 +2665,9 @@
 				B75161A428D8FB270028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				B7948DFB28D7C59C004CDB79 /* DomainNameValidator.swift in Sources */,
 				B790361E28E223CA00341087 /* UIApplication+Shared.swift in Sources */,
+				B79036D928E28BC200341087 /* TabBarController.swift in Sources */,
 				B75161A628D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				B79036DE28E28C8900341087 /* NavigationService.swift in Sources */,
 				B79035F328E21D2800341087 /* PMCellSectionView.swift in Sources */,
 				B751618828D8FB260028BE35 /* M13CheckboxController.swift in Sources */,
 				B790357528E2105F00341087 /* AccessibleCell.swift in Sources */,
@@ -2586,6 +2689,7 @@
 				B79035E828E21B9100341087 /* PMTabBarBuilder.swift in Sources */,
 				B790366528E2490100341087 /* Key.swift in Sources */,
 				B7948DBF28D7C06A004CDB79 /* Client.swift in Sources */,
+				B79036CA28E2869200341087 /* AvailableDomainsRequest.swift in Sources */,
 				B751618228D8FB260028BE35 /* M13CheckboxStrokeController.swift in Sources */,
 				B751617828D8FB260028BE35 /* M13CheckboxCheckPathGenerator.swift in Sources */,
 				B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */,
@@ -2629,6 +2733,7 @@
 				B79035E128E21B3000341087 /* PMBannerNewStyle.swift in Sources */,
 				B79035EE28E21C0900341087 /* PMTabBarError.swift in Sources */,
 				B79035CD28E2182B00341087 /* PMActionSheetPlainCellHeaderHeader.swift in Sources */,
+				B79036C628E280E900341087 /* UIView+Amination.swift in Sources */,
 				B79036B528E2586500341087 /* LoginViewController.swift in Sources */,
 				B75161A528D8FB270028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				B751619F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
@@ -2651,6 +2756,7 @@
 				B790363D28E2274700341087 /* CoreString_V5+Plurals.swift in Sources */,
 				B790367428E24A3B00341087 /* ShowImages.swift in Sources */,
 				B790356828E20DE500341087 /* Reusable.swift in Sources */,
+				B79036CD28E2870400341087 /* Route.swift in Sources */,
 				B790356B28E20E2900341087 /* PMFontAttributes.swift in Sources */,
 				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
 				B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */,
@@ -2670,6 +2776,7 @@
 				B79035AE28E215C100341087 /* NSLayoutConstraint+Helpers.swift in Sources */,
 				B790363728E226FC00341087 /* CoreString.swift in Sources */,
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
+				B79036D028E288C400341087 /* String+HumanVerificationExtension.swift in Sources */,
 				B790357E28E2122C00341087 /* NavigationBarAdjustingScrollViewDelegate.swift in Sources */,
 				B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */,
 				B790365628E246F500341087 /* HelpItem.swift in Sources */,
@@ -2683,6 +2790,7 @@
 				B790358D28E2144C00341087 /* UIDevice+info.swift in Sources */,
 				B790359628E214C700341087 /* UIImage+Extensions.swift in Sources */,
 				B79036BC28E26B9500341087 /* SignupCoordinator.swift in Sources */,
+				B79036DB28E28C0700341087 /* TabBarViewModel.swift in Sources */,
 				B790364828E22E5600341087 /* Result+Extensions.swift in Sources */,
 				B790361628E2224500341087 /* PMHeaderView.swift in Sources */,
 				B790357328E2102A00341087 /* AccessibleView.swift in Sources */,
@@ -2703,6 +2811,7 @@
 				B7948DED28D7C50D004CDB79 /* Metrics.swift in Sources */,
 				B790366D28E2494600341087 /* Key+Response.swift in Sources */,
 				B751619028D8FB260028BE35 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				B79036D628E28A5100341087 /* UIConstants.swift in Sources */,
 				B79035D128E2185F00341087 /* PMActionSheetVM.swift in Sources */,
 				B790358328E212D200341087 /* UIDevice+Extension.swift in Sources */,
 				B79035E328E21B4700341087 /* PMBannerPosition.swift in Sources */,
@@ -3039,7 +3148,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -3076,7 +3185,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -3110,7 +3219,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -3137,7 +3246,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -3164,7 +3273,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -3191,7 +3300,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -3218,7 +3327,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -3245,7 +3354,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -3272,7 +3381,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -3299,7 +3408,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -3326,7 +3435,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -3345,7 +3454,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -3365,7 +3474,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
@@ -3393,7 +3502,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
@@ -3503,6 +3612,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B74F87C728E28E5A0012D190 /* BugReport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BugReport;
+		};
 		B75160FF28D7D5440028BE35 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;

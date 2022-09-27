@@ -49,21 +49,21 @@ final class Container {
         return LoginViewModel(login: login)
     }
 
-    func makeCreateAddressViewModel(username: String, data: CreateAddressData, updateUser: @escaping (User) -> Void) -> CreateAddressViewModel {
-        return CreateAddressViewModel(username: username, login: login, data: data, updateUser: updateUser)
-    }
-
-    func makeChooseUsernameViewModel(data: CreateAddressData) -> ChooseUsernameViewModel {
-        return ChooseUsernameViewModel(data: data, login: login, appName: appName)
-    }
-
-    func makeMailboxPasswordViewModel() -> MailboxPasswordViewModel {
-        return MailboxPasswordViewModel(login: login)
-    }
-
-    func makeTwoFactorViewModel() -> TwoFactorViewModel {
-        return TwoFactorViewModel(login: login)
-    }
+//    func makeCreateAddressViewModel(username: String, data: CreateAddressData, updateUser: @escaping (User) -> Void) -> CreateAddressViewModel {
+//        return CreateAddressViewModel(username: username, login: login, data: data, updateUser: updateUser)
+//    }
+//
+//    func makeChooseUsernameViewModel(data: CreateAddressData) -> ChooseUsernameViewModel {
+//        return ChooseUsernameViewModel(data: data, login: login, appName: appName)
+//    }
+//
+//    func makeMailboxPasswordViewModel() -> MailboxPasswordViewModel {
+//        return MailboxPasswordViewModel(login: login)
+//    }
+//
+//    func makeTwoFactorViewModel() -> TwoFactorViewModel {
+//        return TwoFactorViewModel(login: login)
+//    }
 
     // MARK: Signup view models
 
@@ -72,21 +72,21 @@ final class Container {
                                loginService: login)
     }
 
-    func makePasswordViewModel() -> PasswordViewModel {
-        return PasswordViewModel()
-    }
+//    func makePasswordViewModel() -> PasswordViewModel {
+//        return PasswordViewModel()
+//    }
 
-    func makeRecoveryViewModel(initialCountryCode: Int) -> RecoveryViewModel {
-        return RecoveryViewModel(signupService: signupService, initialCountryCode: initialCountryCode, challenge: challenge)
-    }
+//    func makeRecoveryViewModel(initialCountryCode: Int) -> RecoveryViewModel {
+//        return RecoveryViewModel(signupService: signupService, initialCountryCode: initialCountryCode, challenge: challenge)
+//    }
 
-    func makeCompleteViewModel(initDisplaySteps: [DisplayProgressStep]) -> CompleteViewModel {
-        return CompleteViewModel(signupService: signupService, loginService: login, initDisplaySteps: initDisplaySteps)
-    }
+//    func makeCompleteViewModel(initDisplaySteps: [DisplayProgressStep]) -> CompleteViewModel {
+//        return CompleteViewModel(signupService: signupService, loginService: login, initDisplaySteps: initDisplaySteps)
+//    }
 
-    func makeEmailVerificationViewModel() -> EmailVerificationViewModel {
-        return EmailVerificationViewModel(apiService: api, signupService: signupService)
-    }
+//    func makeEmailVerificationViewModel() -> EmailVerificationViewModel {
+//        return EmailVerificationViewModel(apiService: api, signupService: signupService)
+//    }
     
     func makeSummaryViewModel(planName: String?, screenVariant: SummaryScreenVariant) -> SummaryViewModel {
         return SummaryViewModel(planName: planName, screenVariant: screenVariant, clientApp: clientApp)
