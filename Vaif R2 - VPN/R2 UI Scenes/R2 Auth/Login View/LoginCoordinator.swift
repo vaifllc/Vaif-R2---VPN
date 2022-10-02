@@ -92,7 +92,7 @@ final class LoginCoordinator {
             return navigationController
         case .inside(let navigationViewController):
             self.navigationController = navigationViewController
-            container.setupHumanVerification(viewController: navigationViewController)
+           // container.setupHumanVerification(viewController: navigationViewController)
             navigationController?.setViewControllers([initialViewController], animated: true)
             return navigationViewController
         }
@@ -103,7 +103,7 @@ final class LoginCoordinator {
         let navigationController = LoginNavigationViewController(rootViewController: initialViewController,
                                                                  navigationBarHidden: navigationBarHidden)
         self.navigationController = navigationController
-        container.setupHumanVerification(viewController: navigationController)
+      // container.setupHumanVerification(viewController: navigationController)
         return navigationController
     }
 
@@ -115,19 +115,19 @@ final class LoginCoordinator {
     }
 
     private func showTwoFactorCode() {
-        let twoFactorViewController = UIStoryboard.instantiate(TwoFactorViewController.self)
-        twoFactorViewController.viewModel = container.makeTwoFactorViewModel()
-        twoFactorViewController.customErrorPresenter = customization.customErrorPresenter
-        twoFactorViewController.delegate = self
-        navigationController?.pushViewController(twoFactorViewController, animated: true)
+//        let twoFactorViewController = UIStoryboard.instantiate(TwoFactorViewController.self)
+//        twoFactorViewController.viewModel = container.makeTwoFactorViewModel()
+//        twoFactorViewController.customErrorPresenter = customization.customErrorPresenter
+//        twoFactorViewController.delegate = self
+//        navigationController?.pushViewController(twoFactorViewController, animated: true)
     }
 
     private func showMailboxPassword() {
-        let mailboxPasswordViewController = UIStoryboard.instantiate(MailboxPasswordViewController.self)
-        mailboxPasswordViewController.viewModel = container.makeMailboxPasswordViewModel()
-        mailboxPasswordViewController.customErrorPresenter = customization.customErrorPresenter
-        mailboxPasswordViewController.delegate = self
-        navigationController?.pushViewController(mailboxPasswordViewController, animated: true)
+//        let mailboxPasswordViewController = UIStoryboard.instantiate(MailboxPasswordViewController.self)
+//        mailboxPasswordViewController.viewModel = container.makeMailboxPasswordViewModel()
+//        mailboxPasswordViewController.customErrorPresenter = customization.customErrorPresenter
+//        mailboxPasswordViewController.delegate = self
+//        navigationController?.pushViewController(mailboxPasswordViewController, animated: true)
     }
 
     private func showCreateAddress(data: CreateAddressData) {
@@ -135,13 +135,13 @@ final class LoginCoordinator {
             fatalError("Invalid call")
         }
 
-        let coordinator = CreateAddressCoordinator(
-            container: container, navigationController: navigationController,
-            data: data, customErrorPresenter: customization.customErrorPresenter
-        )
-        coordinator.delegate = self
-        childCoordinators[.createAddress] = coordinator
-        coordinator.start()
+//        let coordinator = CreateAddressCoordinator(
+//            container: container, navigationController: navigationController,
+//            data: data, customErrorPresenter: customization.customErrorPresenter
+//        )
+//        coordinator.delegate = self
+//        childCoordinators[.createAddress] = coordinator
+//        coordinator.start()
     }
 
     private func finish(endLoading: @escaping () -> Void, data: LoginData) {
@@ -190,11 +190,11 @@ extension LoginCoordinator: LoginStepsDelegate {
     }
 
     func twoFactorCodeNeeded() {
-        showTwoFactorCode()
+       // showTwoFactorCode()
     }
 
     func mailboxPasswordNeeded() {
-        showMailboxPassword()
+        //showMailboxPassword()
     }
 
     func createAddressNeeded(data: CreateAddressData) {
@@ -257,58 +257,58 @@ extension LoginCoordinator: HelpViewControllerDelegate {
 
 // MARK: - Create address delegate
 
-extension LoginCoordinator: CreateAddressCoordinatorDelegate {
-    func createAddressCoordinatorDidFinish(endLoading: @escaping () -> Void, createAddressCoordinator: CreateAddressCoordinator, data: LoginData) {
-        childCoordinators[.createAddress] = nil
-        finish(endLoading: endLoading, data: data)
-    }
-}
+//extension LoginCoordinator: CreateAddressCoordinatorDelegate {
+//    func createAddressCoordinatorDidFinish(endLoading: @escaping () -> Void, createAddressCoordinator: CreateAddressCoordinator, data: LoginData) {
+//        childCoordinators[.createAddress] = nil
+//        finish(endLoading: endLoading, data: data)
+//    }
+//}
 
 // MARK: - LoginCoordinator delegate
 
-extension LoginCoordinator: NavigationDelegate {
-    func userDidRequestGoBack() {
-
-        guard navigationController?.viewControllers.contains(where: { $0 is TwoFactorViewController }) == false else {
-            // Special case for situation in which we've already sent a valid 2FA code to server.
-            // Once we do it, the user auth session on the backend is past the 2FA step and doesn't allow sending another 2FA code again.
-            // The technical details are: the access token contains `twofactor` scope before `POST /auth/2fa` and doesn't contain it after.
-            // It makes navigating back to two factor screen useless (user cannot send another code), so we navigate back to root screen instead.
-            navigationController?.popToRootViewController(animated: true)
-            return
-        }
-
-        navigationController?.popViewController(animated: true)
-    }
-}
+//extension LoginCoordinator: NavigationDelegate {
+//    func userDidRequestGoBack() {
+//
+//        guard navigationController?.viewControllers.contains(where: { $0 is TwoFactorViewController }) == false else {
+//            // Special case for situation in which we've already sent a valid 2FA code to server.
+//            // Once we do it, the user auth session on the backend is past the 2FA step and doesn't allow sending another 2FA code again.
+//            // The technical details are: the access token contains `twofactor` scope before `POST /auth/2fa` and doesn't contain it after.
+//            // It makes navigating back to two factor screen useless (user cannot send another code), so we navigate back to root screen instead.
+//            navigationController?.popToRootViewController(animated: true)
+//            return
+//        }
+//
+//        navigationController?.popViewController(animated: true)
+//    }
+//}
 
 // MARK: - Mailbox password delegate
 
-extension LoginCoordinator: MailboxPasswordViewControllerDelegate {
-    func mailboxPasswordViewControllerDidFail(error: LoginError) {
-        popAndShowError(error: error)
-    }
-
-    func mailboxPasswordViewControllerDidFinish(endLoading: @escaping () -> Void, data: LoginData) {
-        finish(endLoading: endLoading, data: data)
-    }
-
-    func userDidRequestPasswordReset() {
-        UIApplication.openURLIfPossible(externalLinks.passwordReset)
-    }
-}
+//extension LoginCoordinator: MailboxPasswordViewControllerDelegate {
+//    func mailboxPasswordViewControllerDidFail(error: LoginError) {
+//        popAndShowError(error: error)
+//    }
+//
+//    func mailboxPasswordViewControllerDidFinish(endLoading: @escaping () -> Void, data: LoginData) {
+//        finish(endLoading: endLoading, data: data)
+//    }
+//
+//    func userDidRequestPasswordReset() {
+//        UIApplication.openURLIfPossible(externalLinks.passwordReset)
+//    }
+//}
 
 // MARK: - TwoFactor delegate
 
-extension LoginCoordinator: TwoFactorViewControllerDelegate {
-    func twoFactorViewControllerDidFail(error: LoginError) {
-        popAndShowError(error: error)
-    }
-
-    func twoFactorViewControllerDidFinish(endLoading: @escaping () -> Void, data: LoginData) {
-        finish(endLoading: endLoading, data: data)
-    }
-}
+//extension LoginCoordinator: TwoFactorViewControllerDelegate {
+//    func twoFactorViewControllerDidFail(error: LoginError) {
+//        popAndShowError(error: error)
+//    }
+//
+//    func twoFactorViewControllerDidFinish(endLoading: @escaping () -> Void, data: LoginData) {
+//        finish(endLoading: endLoading, data: data)
+//    }
+//}
 
 private extension UIStoryboard {
     static func instantiate<T: UIViewController>(_ controllerType: T.Type) -> T {

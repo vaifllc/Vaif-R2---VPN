@@ -18,7 +18,7 @@ public protocol Package {
 }
 
 ///
-public enum HTTPMethod {
+public enum HTTPMethod2 {
     case delete
     case get
     case post
@@ -43,7 +43,7 @@ public protocol Request: Package {
     // those functions shdould be overrided
     var path: String { get }
     var header: [String: Any] { get }
-    var method: HTTPMethod { get }
+    var method: HTTPMethod2 { get }
     var nonDefaultTimeout: TimeInterval? { get }
 
     var isAuth: Bool { get }
@@ -65,11 +65,11 @@ extension Request {
         return [:]
     }
 
-//    public var authCredential: AuthCredential? {
-//        return nil
-//    }
+    public var authCredential: AuthCredential? {
+        return nil
+    }
 
-    public var method: HTTPMethod {
+    public var method: HTTPMethod2 {
         return .get
     }
 

@@ -23,6 +23,7 @@ PODS:
   - DynamicBlurView (4.1.0)
   - GSMessages (1.7.5)
   - KeychainAccess (4.2.2)
+  - Logging (1.4.0)
   - lottie-ios (3.4.3)
   - NicoProgress (0.4.0)
   - PopupDialog (1.1.1):
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift
   - GSMessages
   - KeychainAccess
+  - Logging
   - lottie-ios
   - NicoProgress
   - PopupDialog
@@ -71,6 +73,7 @@ SPEC REPOS:
     - DynamicBlurView
     - GSMessages
     - KeychainAccess
+    - Logging
     - lottie-ios
     - NicoProgress
     - PopupDialog
@@ -100,6 +103,7 @@ SPEC CHECKSUMS:
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   GSMessages: ff0397d30b804fa38c6026fb080b8ad6f7454ab6
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Logging: beeb016c9c80cf77042d62e83495816847ef108b
   lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
   NicoProgress: 8e26d401623a1ba9456748b04b30183d5e212d25
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
@@ -111,6 +115,6 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
 
-PODFILE CHECKSUM: 513d85ded1f5094f95cb3d8e4f3b05929fc06541
+PODFILE CHECKSUM: 7f6d4849f4d879084e8612ae70f4fd7b5871390f
 
 COCOAPODS: 1.11.3

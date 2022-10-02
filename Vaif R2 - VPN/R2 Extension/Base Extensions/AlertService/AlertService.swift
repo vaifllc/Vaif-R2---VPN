@@ -600,20 +600,20 @@ public class MaxSessionsAlert: UserAccountUpdateAlert {
     public var actions: [AlertAction] = []
     public var isError: Bool = false
     public var dismiss: (() -> Void)?
-    public var accountPlan: AccountPlan
+    //public var accountPlan: AccountPlan
     
-    public init(accountPlan: AccountPlan) {
-        self.accountPlan = accountPlan
-        switch accountPlan {
-        case .free, .basic:
-            message = LocalizedString.maximumDevicePlanLimitPart1(LocalizedString.tierPlus) + LocalizedString.maximumDevicePlanLimitPart2(AccountPlan.plus.devicesCount)
-        default:
-            message = LocalizedString.maximumDeviceReachedDescription
-        }
-        
-        actions.append(AlertAction(title: LocalizedString.upgrade, style: .confirmative, handler: nil))
-        actions.append(AlertAction(title: LocalizedString.noThanks, style: .cancel, handler: nil))
-    }
+//    public init(accountPlan: AccountPlan) {
+//        self.accountPlan = accountPlan
+//        switch accountPlan {
+//        case .free, .basic:
+//            message = LocalizedString.maximumDevicePlanLimitPart1(LocalizedString.tierPlus) + LocalizedString.maximumDevicePlanLimitPart2(AccountPlan.plus.devicesCount)
+//        default:
+//            message = LocalizedString.maximumDeviceReachedDescription
+//        }
+//
+//        actions.append(AlertAction(title: LocalizedString.upgrade, style: .confirmative, handler: nil))
+//        actions.append(AlertAction(title: LocalizedString.noThanks, style: .cancel, handler: nil))
+//    }
 }
 
 public class UserPlanDowngradedAlert: UserAccountUpdateAlert {
@@ -829,28 +829,28 @@ public class ProtonUnreachableAlert: SystemAlert {
     }
 }
 
-public class LocalAgentSystemErrorAlert: SystemAlert {
-    public var title: String?
-    public var message: String?
-    public var actions = [AlertAction]()
-    public let isError: Bool = true
-    public var dismiss: (() -> Void)?
-
-    init(error: LocalAgentErrorSystemError) {
-        switch error {
-        case .splitTcp:
-            title = LocalizedString.vpnAcceleratorTitle
-            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.vpnAcceleratorTitle)
-        case .netshield:
-            title = LocalizedString.netshieldTitle
-            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.netshieldTitle)
-        case .nonRandomizedNat:
-            title = LocalizedString.moderateNatTitle
-            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.moderateNatTitle)
-        case .safeMode:
-            title = LocalizedString.nonStandardPortsTitle
-            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.nonStandardPortsTitle)
-        }
-    }
-}
+//public class LocalAgentSystemErrorAlert: SystemAlert {
+//    public var title: String?
+//    public var message: String?
+//    public var actions = [AlertAction]()
+//    public let isError: Bool = true
+//    public var dismiss: (() -> Void)?
+//
+//    init(error: LocalAgentErrorSystemError) {
+//        switch error {
+//        case .splitTcp:
+//            title = LocalizedString.vpnAcceleratorTitle
+//            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.vpnAcceleratorTitle)
+//        case .netshield:
+//            title = LocalizedString.netshieldTitle
+//            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.netshieldTitle)
+//        case .nonRandomizedNat:
+//            title = LocalizedString.moderateNatTitle
+//            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.moderateNatTitle)
+//        case .safeMode:
+//            title = LocalizedString.nonStandardPortsTitle
+//            message = LocalizedString.vpnFeatureCannotBeSetError(LocalizedString.nonStandardPortsTitle)
+//        }
+//    }
+//}
 

@@ -368,7 +368,7 @@ class Client {
         if let resp = response as? HTTPURLResponse {
             DDLogInfo("response is HTTPURLResponse: \(resp)")
             // see if there's a non-zero code returned
-            if let apiError = try? JSONDecoder().decode(ApiError.self, from: data) {
+            if let apiError = try? JSONDecoder().decode(R2ApiError.self, from: data) {
                 if apiError.code == kApiCodeNoError {
                     DDLogError("zero (non-error) API code received, validated OK: \(apiError)")
                     return;

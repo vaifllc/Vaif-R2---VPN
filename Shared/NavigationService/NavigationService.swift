@@ -14,33 +14,33 @@ import BugReport
 // MARK: Country Service
 
 protocol CountryService {
-    func makeCountriesViewController() -> CountriesViewController
-    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController
+//    func makeCountriesViewController() -> CountriesViewController
+//    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController
 }
 
 // MARK: Map Service
 
 protocol MapService {
-    func makeMapViewController() -> MapViewController
+    //func makeMapViewController() -> MapViewController
 }
 
 // MARK: Profile Service
 
 protocol ProfileService {
-    func makeProfilesViewController() -> ProfilesViewController
-    func makeCreateProfileViewController(for profile: Profile?) -> CreateProfileViewController?
-    func makeSelectionViewController(dataSet: SelectionDataSet, dataSelected: @escaping (Any) -> Void) -> SelectionViewController
+//    func makeProfilesViewController() -> ProfilesViewController
+//    func makeCreateProfileViewController(for profile: Profile?) -> CreateProfileViewController?
+//    func makeSelectionViewController(dataSet: SelectionDataSet, dataSelected: @escaping (Any) -> Void) -> SelectionViewController
 }
 
 // MARK: Settings Service
 
 protocol SettingsService {
-    func makeSettingsViewController() -> SettingsViewController?
-    func makeSettingsAccountViewController() -> SettingsAccountViewController?
-    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
-    func makeLogSelectionViewController() -> LogSelectionViewController
-    func makeBatteryUsageViewController() -> BatteryUsageViewController
-    func makeLogsViewController(logSource: LogSource) -> LogsViewController
+//    func makeSettingsViewController() -> SettingsViewController?
+//    func makeSettingsAccountViewController() -> SettingsAccountViewController?
+//    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
+//    func makeLogSelectionViewController() -> LogSelectionViewController
+//    func makeBatteryUsageViewController() -> BatteryUsageViewController
+//    func makeLogsViewController(logSource: LogSource) -> LogsViewController
     func presentReportBug()
 }
 
@@ -51,7 +51,7 @@ protocol SettingsServiceFactory {
 // MARK: Protocol Service
 
 protocol ProtocolService {
-    func makeVpnProtocolViewController(viewModel: VpnProtocolViewModel) -> VpnProtocolViewController
+   // func makeVpnProtocolViewController(viewModel: VpnProtocolViewModel) -> VpnProtocolViewController
 }
 
 // MARK: Connection status Service
@@ -90,16 +90,16 @@ final class NavigationService {
     // MARK: Properties
     private lazy var propertiesManager: PropertiesManagerProtocol = factory.makePropertiesManager()
     lazy var windowService: WindowService = factory.makeWindowService()
-    private lazy var vpnKeychain: VpnKeychainProtocol = factory.makeVpnKeychain()
-    private lazy var vpnApiService: VpnApiService = factory.makeVpnApiService()
-    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
-    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
-    lazy var authKeychain: AuthKeychainHandle = factory.makeAuthKeychainHandle()
+//    private lazy var vpnKeychain: VpnKeychainProtocol = factory.makeVpnKeychain()
+//    private lazy var vpnApiService: VpnApiService = factory.makeVpnApiService()
+//    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
+//    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
+//    lazy var authKeychain: AuthKeychainHandle = factory.makeAuthKeychainHandle()
     private lazy var alertService: CoreAlertService = factory.makeCoreAlertService()
-    private lazy var vpnManager: VpnManagerProtocol = factory.makeVpnManager()
+//    private lazy var vpnManager: VpnManagerProtocol = factory.makeVpnManager()
     private lazy var uiAlertService: UIAlertService = factory.makeUIAlertService()
-    private lazy var vpnStateConfiguration: VpnStateConfiguration = factory.makeVpnStateConfiguration()
-    private lazy var loginService: LoginService = {
+//    private lazy var vpnStateConfiguration: VpnStateConfiguration = factory.makeVpnStateConfiguration()
+    private lazy var loginService: LoginService2 = {
         let loginService = factory.makeLoginService()
         loginService.delegate = self
         return loginService
@@ -141,14 +141,14 @@ final class NavigationService {
             windowService.show(viewController: launchViewController)
         }
         
-        loginService.attemptSilentLogIn { [weak self] result in
-            switch result {
-            case .loggedIn:
-                self?.presentMainInterface()
-            case .notLoggedIn:
-                self?.presentWelcome(initialError: nil)
-            }
-        }
+//        loginService.attemptSilentLogIn { [weak self] result in
+//            switch result {
+//            case .loggedIn:
+//                self?.presentMainInterface()
+//            case .notLoggedIn:
+//                self?.presentWelcome(initialError: nil)
+//            }
+//        }
     }
 
     func presentWelcome(initialError: String?) {

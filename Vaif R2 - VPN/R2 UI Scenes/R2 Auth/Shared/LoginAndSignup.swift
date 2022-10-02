@@ -104,10 +104,10 @@ public protocol LoginAndSignupInterface {
                                         updateBlock: @escaping (LoginAndSignupResult) -> Void) -> UIViewController
     
     // helper API
-
-    func presentMailboxPasswordFlow(over viewController: UIViewController, completion: @escaping (String) -> Void)
-    
-    func logout(credential: AuthCredential, completion: @escaping (Result<Void, Error>) -> Void)
+//
+//    func presentMailboxPasswordFlow(over viewController: UIViewController, completion: @escaping (String) -> Void)
+//
+//    func logout(credential: AuthCredential, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 extension LoginAndSignupInterface {
@@ -143,9 +143,9 @@ public final class LoginAndSignup {
     private let minimumAccountType: AccountType
     private var loginCoordinator: LoginCoordinator?
     private var signupCoordinator: SignupCoordinator?
-    private var mailboxPasswordCoordinator: MailboxPasswordCoordinator?
+    //private var mailboxPasswordCoordinator: MailboxPasswordCoordinator?
     private var viewController: UIViewController?
-    private var paymentsAvailability: PaymentsAvailability
+    //private var paymentsAvailability: PaymentsAvailability
     private var signupAvailability: SignupAvailability
     private var customization: LoginCustomizationOptions = .empty
     private var loginAndSignupCompletion: (LoginAndSignupResult) -> Void = { _ in }
@@ -156,21 +156,21 @@ public final class LoginAndSignup {
                 clientApp: ClientApp,
                 doh: DoH & ServerConfig,
                 apiServiceDelegate: APIServiceDelegate,
-                forceUpgradeDelegate: ForceUpgradeDelegate,
+                //forceUpgradeDelegate: ForceUpgradeDelegate,
                 humanVerificationVersion: HumanVerificationVersion,
                 minimumAccountType: AccountType,
                 isCloseButtonAvailable: Bool = true,
-                paymentsAvailability: PaymentsAvailability,
+                //paymentsAvailability: PaymentsAvailability,
                 signupAvailability: SignupAvailability = .notAvailable) {
         container = Container(appName: appName,
                               clientApp: clientApp,
                               doh: doh,
                               apiServiceDelegate: apiServiceDelegate,
-                              forceUpgradeDelegate: forceUpgradeDelegate,
+                              //forceUpgradeDelegate: forceUpgradeDelegate,
                               humanVerificationVersion: humanVerificationVersion,
                               minimumAccountType: minimumAccountType)
         self.isCloseButtonAvailable = isCloseButtonAvailable
-        self.paymentsAvailability = paymentsAvailability
+        //self.paymentsAvailability = paymentsAvailability
         self.signupAvailability = signupAvailability
         self.minimumAccountType = minimumAccountType
     }
@@ -212,7 +212,7 @@ public final class LoginAndSignup {
     private func presentSignup(_ start: FlowStartKind, customization: LoginCustomizationOptions, completion: @escaping (LoginAndSignupResult) -> Void) {
         signupCoordinator = SignupCoordinator(container: container,
                                               isCloseButton: isCloseButtonAvailable,
-                                              paymentsAvailability: paymentsAvailability,
+                                             // paymentsAvailability: paymentsAvailability,
                                               signupAvailability: signupAvailability,
                                               performBeforeFlow: customization.performBeforeFlow,
                                               customErrorPresenter: customization.customErrorPresenter)
@@ -238,13 +238,13 @@ extension LoginAndSignup: LoginAndSignupInterface {
         presentSignup(.over(viewController, .coverVertical), customization: customization, completion: updateBlock)
     }
     
-    public func presentMailboxPasswordFlow(over viewController: UIViewController,
-                                           completion: @escaping (String) -> Void) {
-        self.viewController = viewController
-        self.mailboxPasswordCompletion = completion
-        mailboxPasswordCoordinator = MailboxPasswordCoordinator(container: container, delegate: self)
-        mailboxPasswordCoordinator?.start(viewController: viewController)
-    }
+//    public func presentMailboxPasswordFlow(over viewController: UIViewController,
+//                                           completion: @escaping (String) -> Void) {
+//        self.viewController = viewController
+//        self.mailboxPasswordCompletion = completion
+//        mailboxPasswordCoordinator = MailboxPasswordCoordinator(container: container, delegate: self)
+//        mailboxPasswordCoordinator?.start(viewController: viewController)
+//    }
     
     public func presentFlowFromWelcomeScreen(over viewController: UIViewController,
                                              welcomeScreen: WelcomeScreenVariant,
@@ -259,9 +259,9 @@ extension LoginAndSignup: LoginAndSignupInterface {
         presentLogin(over: nil, welcomeScreen: welcomeScreen, customization: customization, completion: updateBlock)
     }
     
-    public func logout(credential: AuthCredential, completion: @escaping (Result<Void, Error>) -> Void) {
-        container.login.logout(credential: credential, completion: completion)
-    }
+//    public func logout(credential: AuthCredential, completion: @escaping (Result<Void, Error>) -> Void) {
+//        container.login.logout(credential: credential, completion: completion)
+//    }
     
     // backwards compatibility
     
@@ -349,11 +349,11 @@ extension LoginAndSignup: SignupCoordinatorDelegate {
     }
 }
 
-extension LoginAndSignup: MailboxPasswordCoordinatorDelegate {
-    func mailboxPasswordCoordinatorDidFinish(mailboxPasswordCoordinator: MailboxPasswordCoordinator, mailboxPassword: String) {
-        mailboxPasswordCompletion?(mailboxPassword)
-    }
-}
+//extension LoginAndSignup: MailboxPasswordCoordinatorDelegate {
+//    func mailboxPasswordCoordinatorDidFinish(mailboxPasswordCoordinator: MailboxPasswordCoordinator, mailboxPassword: String) {
+//        mailboxPasswordCompletion?(mailboxPassword)
+//    }
+//}
 
 // MARK: - Deprecations
 
@@ -462,12 +462,19 @@ extension LoginAndSignup {
                             clientApp: ClientApp,
                             doh: DoH & ServerConfig,
                             apiServiceDelegate: APIServiceDelegate,
-                            forceUpgradeDelegate: ForceUpgradeDelegate,
+                            //forceUpgradeDelegate: ForceUpgradeDelegate,
                             minimumAccountType: AccountType,
                             isCloseButtonAvailable: Bool = true,
                             isPlanSelectorAvailable: Bool,
                             signupAvailability: SignupAvailability = .notAvailable) {
-        self.init(appName: appName, clientApp: clientApp, doh: doh, apiServiceDelegate: apiServiceDelegate, forceUpgradeDelegate: forceUpgradeDelegate, minimumAccountType: minimumAccountType, isCloseButtonAvailable: isCloseButtonAvailable, paymentsAvailability: isPlanSelectorAvailable ? .available(parameters: .init(listOfIAPIdentifiers: [], listOfShownPlanNames: [], reportBugAlertHandler: nil)) : .notAvailable)
+        self.init(appName: appName,
+                  clientApp: clientApp,
+                  doh: doh,
+                  apiServiceDelegate: apiServiceDelegate,
+                  //forceUpgradeDelegate: forceUpgradeDelegate,
+                  minimumAccountType: minimumAccountType,
+                  isCloseButtonAvailable: isCloseButtonAvailable
+                  /*paymentsAvailability: isPlanSelectorAvailable ? .available(parameters: .init(listOfIAPIdentifiers: [], listOfShownPlanNames: [], reportBugAlertHandler: nil)) : .notAvailable*/)
     }
 
     @available(*, deprecated, message: "Use the initializer that specifies the human verification version")
@@ -475,11 +482,20 @@ extension LoginAndSignup {
                             clientApp: ClientApp,
                             doh: DoH & ServerConfig,
                             apiServiceDelegate: APIServiceDelegate,
-                            forceUpgradeDelegate: ForceUpgradeDelegate,
+                            //forceUpgradeDelegate: ForceUpgradeDelegate,
                             minimumAccountType: AccountType,
                             isCloseButtonAvailable: Bool = true,
-                            paymentsAvailability: PaymentsAvailability,
+                            //paymentsAvailability: PaymentsAvailability,
                             signupAvailability: SignupAvailability = .notAvailable) {
-        self.init(appName: appName, clientApp: clientApp, doh: doh, apiServiceDelegate: apiServiceDelegate, forceUpgradeDelegate: forceUpgradeDelegate, humanVerificationVersion: .v2, minimumAccountType: minimumAccountType, isCloseButtonAvailable: isCloseButtonAvailable, paymentsAvailability: paymentsAvailability, signupAvailability: signupAvailability)
+        self.init(appName: appName,
+                  clientApp: clientApp,
+                  doh: doh,
+                  apiServiceDelegate: apiServiceDelegate,
+                  //forceUpgradeDelegate: forceUpgradeDelegate,
+                  humanVerificationVersion: .v2,
+                  minimumAccountType: minimumAccountType,
+                  isCloseButtonAvailable: isCloseButtonAvailable,
+                  //paymentsAvailability: paymentsAvailability,
+                  signupAvailability: signupAvailability)
     }
 }

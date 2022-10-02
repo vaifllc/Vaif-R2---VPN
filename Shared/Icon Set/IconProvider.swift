@@ -131,34 +131,34 @@ extension ProtonIcon {
 #endif
 
 #if canImport(SwiftUI)
-import SwiftUI
-
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-extension IconProviderBase {
-
-    public subscript(dynamicMember keypath: KeyPath<ProtonIconSet, ProtonIcon>) -> Image {
-        ProtonIconSet.instance[keyPath: keypath].image
-    }
-    
-    public func flag(forCountryCode countryCode: String) -> Image? {
-        #if canImport(UIKit)
-        let uiImage: UIImage? = flag(forCountryCode: countryCode)
-        guard let image = uiImage else { return nil }
-        return Image(uiImage: image)
-        #elseif canImport(AppKit)
-        let nsImage: NSImage? = flag(forCountryCode: countryCode)
-        guard let image = nsImage else { return nil }
-        return Image(nsImage: image)
-        #else
-        return ProtonIconSet.instance.flag(forCountryCode: countryCode).image
-        #endif
-    }
-}
-
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-extension ProtonIcon {
-    var image: Image { Image(name, bundle: PMUIFoundations.bundle) }
-}
+//import SwiftUI
+//
+//@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+//extension IconProviderBase {
+//
+////    public subscript(dynamicMember keypath: KeyPath<ProtonIconSet, ProtonIcon>) -> Image {
+////        ProtonIconSet.instance[keyPath: keypath].image
+////    }
+//    
+//    public func flag(forCountryCode countryCode: String) -> Image? {
+//        #if canImport(UIKit)
+//        let uiImage: UIImage? = flag(forCountryCode: countryCode)
+//        guard let image = uiImage else { return nil }
+//        return Image(uiImage: image)
+//        #elseif canImport(AppKit)
+//        let nsImage: NSImage? = flag(forCountryCode: countryCode)
+//        guard let image = nsImage else { return nil }
+//        return Image(nsImage: image)
+//        #else
+//        return ProtonIconSet.instance.flag(forCountryCode: countryCode).image
+//        #endif
+//    }
+//}
+//
+//@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+//extension ProtonIcon {
+//    var image: Image { Image(name, bundle: PMUIFoundations.bundle) }
+//}
 #endif
 
 public let IconProvider = IconProviderBase()

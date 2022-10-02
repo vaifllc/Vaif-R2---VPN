@@ -10,19 +10,19 @@ import Foundation
 
 public struct CreateAddressData {
     public let email: String
-    public let credential: AuthCredential
+   // public let credential: AuthCredential
     public let user: User
     public let mailboxPassword: String
     
-    public init(email: String, credential: AuthCredential, user: User, mailboxPassword: String) {
+    public init(email: String, /*credential: AuthCredential,*/ user: User, mailboxPassword: String) {
         self.email = email
-        self.credential = credential
+        //self.credential = credential
         self.user = user
         self.mailboxPassword = mailboxPassword
     }
 
     public func withUpdatedUser(_ user: User) -> CreateAddressData {
-        CreateAddressData(email: email, credential: credential, user: user, mailboxPassword: mailboxPassword)
+        CreateAddressData(email: email, /*credential: credential,*/ user: user, mailboxPassword: mailboxPassword)
     }
 }
 
@@ -246,7 +246,7 @@ public protocol Login {
     func login(username: String, password: String, challenge: [String: Any]?, completion: @escaping (Result<LoginStatus, LoginError>) -> Void)
     func provide2FACode(_ code: String, completion: @escaping (Result<LoginStatus, LoginError>) -> Void)
     func finishLoginFlow(mailboxPassword: String, completion: @escaping (Result<LoginStatus, LoginError>) -> Void)
-    func logout(credential: AuthCredential?, completion: @escaping (Result<Void, Error>) -> Void)
+   // func logout(credential: AuthCredential?, completion: @escaping (Result<Void, Error>) -> Void)
 
     func checkAvailabilityForUsernameAccount(username: String, completion: @escaping (Result<(), AvailabilityError>) -> Void)
     func checkAvailabilityForInternalAccount(username: String, completion: @escaping (Result<(), AvailabilityError>) -> Void)
@@ -258,8 +258,8 @@ public protocol Login {
     func createAddress(completion: @escaping (Result<Address, CreateAddressError>) -> Void)
     func createAddressKeys(user: User, address: Address, mailboxPassword: String, completion: @escaping (Result<Key, CreateAddressKeysError>) -> Void)
     
-    func refreshCredentials(completion: @escaping (Result<Credential, LoginError>) -> Void)
-    func refreshUserInfo(completion: @escaping (Result<User, LoginError>) -> Void)
+    //func refreshCredentials(completion: @escaping (Result<Credential, LoginError>) -> Void)
+    //func refreshUserInfo(completion: @escaping (Result<User, LoginError>) -> Void)
 
     var minimumAccountType: AccountType { get }
     func updateAccountType(accountType: AccountType)

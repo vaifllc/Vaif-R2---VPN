@@ -57,7 +57,7 @@ struct R2Signup: Codable {
     let message: String
 }
 
-struct ApiError: Codable, Error {
+struct R2ApiError: Codable, Error {
     let code: Int
     let message: String
 }

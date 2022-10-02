@@ -8,9 +8,9 @@
 import Foundation
 
 
-public final class LoginService: Login {
+public final class `LoginService`: Login {
 
-    public typealias AuthenticationManager = AuthenticatorInterface & AuthenticatorKeyGenerationInterface
+   // public typealias AuthenticationManager = AuthenticatorInterface & AuthenticatorKeyGenerationInterface
     
     static let sessionId = "LoginModuleSessionId"
 
@@ -19,12 +19,12 @@ public final class LoginService: Login {
     let apiService: APIService
     let clientApp: ClientApp
     let sessionId: String
-    let manager: AuthenticationManager
-    var context: TwoFactorContext?
+   // let manager: AuthenticationManager
+   // var context: TwoFactorContext?
     var mailboxPassword: String?
     public private(set) var minimumAccountType: AccountType
     var username: String?
-    let authManager: AuthManager
+    //let authManager: AuthManager
 
     var defaultSignUpDomain = "protonmail.com"
     var updatedSignUpDomains: [String]?
@@ -46,26 +46,26 @@ public final class LoginService: Login {
     public var startGeneratingKeys: (() -> Void)?
 
     public init(
-        api: APIService, authManager: AuthManager, clientApp: ClientApp, sessionId: String, minimumAccountType: AccountType, authenticator: AuthenticationManager? = nil
+        api: APIService, /*authManager: AuthManager,*/ clientApp: ClientApp, sessionId: String, minimumAccountType: AccountType/*, authenticator: AuthenticationManager? = nil*/
     ) {
         self.apiService = api
         self.minimumAccountType = minimumAccountType
-        self.authManager = authManager
+       // self.authManager = authManager
         self.clientApp = clientApp
         self.sessionId = sessionId
-        manager = authenticator ?? Authenticator(api: api)
+      //  manager = authenticator ?? Authenticator(api: api)
     }
     
     @available(*, deprecated, message: "this will be removed. use the function with clientApp")
     public convenience init(
-        api: APIService, authManager: AuthManager, sessionId: String, minimumAccountType: AccountType, authenticator: AuthenticationManager? = nil
+       api: APIService,  /*authManager: AuthManager,*/ sessionId: String, minimumAccountType: AccountType/*, authenticator: AuthenticationManager? = nil*/
     ) {
         self.init(api: api,
-                  authManager: authManager,
+                  //authManager: authManager,
                   clientApp: .other(named: "Unknown"),
                   sessionId: sessionId,
-                  minimumAccountType: minimumAccountType,
-                  authenticator: authenticator)
+                  minimumAccountType: minimumAccountType)
+                 // authenticator: authenticator)
     }
 
     // MARK: - Configuration
@@ -91,73 +91,73 @@ public final class LoginService: Login {
     private func availableDomains(type: AvailableDomainsType, completion: @escaping (Result<([String]), LoginError>) -> Void) {
         let route = AvailableDomainsRequest(type: type)
 
-        apiService.exec(route: route) { (result: Result<AvailableDomainResponse, ResponseError>) in
-            switch result {
-            case .failure(let error):
-                completion(.failure(LoginError.generic(message: error.networkResponseMessageForTheUser,
-                                                       code: error.bestShotAtReasonableErrorCode,
-                                                       originalError: error)))
-            case .success(let response):
-                completion(.success(response.domains))
-            }
-        }
+//        apiService.exec(route: route) { (result: Result<AvailableDomainResponse, ResponseError>) in
+//            switch result {
+//            case .failure(let error):
+//                completion(.failure(LoginError.generic(message: error.networkResponseMessageForTheUser,
+//                                                       code: error.bestShotAtReasonableErrorCode,
+//                                                       originalError: error)))
+//            case .success(let response):
+//                completion(.success(response.domains))
+//            }
+//        }
     }
     
-    public func refreshCredentials(completion: @escaping (Result<Credential, LoginError>) -> Void) {
-        let authCredential = authManager.getToken(bySessionUID: sessionId)!
-        let old = Credential(authCredential, scope: authManager.scopes ?? [])
-        manager.refreshCredential(old) { [weak self] result in
-            switch result {
-            case .failure(let error):
-                completion(.failure(error.asLoginError()))
-            case .success(.ask2FA):
-                completion(.failure(.invalidState))
-            case .success(.newCredential(let credential, _)), .success(.updatedCredential(let credential)):
-                self?.authManager.setCredential(auth: credential)
-                completion(.success(credential))
-            }
-        }
-    }
+//    public func refreshCredentials(completion: @escaping (Result<Credential, LoginError>) -> Void) {
+//        let authCredential = authManager.getToken(bySessionUID: sessionId)!
+//        let old = Credential(authCredential, scope: authManager.scopes ?? [])
+//        manager.refreshCredential(old) { [weak self] result in
+//            switch result {
+//            case .failure(let error):
+//                completion(.failure(error.asLoginError()))
+//            case .success(.ask2FA):
+//                completion(.failure(.invalidState))
+//            case .success(.newCredential(let credential, _)), .success(.updatedCredential(let credential)):
+//                self?.authManager.setCredential(auth: credential)
+//                completion(.success(credential))
+//            }
+//        }
+//    }
     
-    public func refreshUserInfo(completion: @escaping (Result<User, LoginError>) -> Void) {
-        let authCredential = authManager.getToken(bySessionUID: sessionId)!
-        let credential = Credential(authCredential, scope: authManager.scopes ?? [])
-        manager.getUserInfo(credential) {
-            completion($0.mapError { $0.asLoginError() })
-        }
-    }
+//    public func refreshUserInfo(completion: @escaping (Result<User, LoginError>) -> Void) {
+//        let authCredential = authManager.getToken(bySessionUID: sessionId)!
+//        let credential = Credential(authCredential, scope: authManager.scopes ?? [])
+//        manager.getUserInfo(credential) {
+//            completion($0.mapError { $0.asLoginError() })
+//        }
+//    }
 
     // MARK: - Data gathering entry point
 
-    func handleValidCredentials(credential: Credential, passwordMode: PasswordMode, mailboxPassword: String, completion: @escaping (Result<LoginStatus, LoginError>) -> Void) {
-        self.mailboxPassword = mailboxPassword
-        authManager.setCredential(auth: credential)
-
-        switch passwordMode {
-        case .one:
-            PMLog.debug("No mailbox password required, finishing up")
-            getAccountDataPerformingAccountMigrationIfNeeded(user: nil, mailboxPassword: mailboxPassword, completion: completion)
-        case .two:
-            if minimumAccountType == .username {
-                completion(.success(.finished(LoginData.credential(credential))))
-                return
-            }
-            
-            manager.getUserInfo(credential) { result in
-                switch result {
-                case let .success(user):
-                    // This is because of a bug on the API, where accounts with no keys return PasswordMode = 2. (according to Android code)
-                    guard user.keys.isEmpty else {
-                        completion(.success(.askSecondPassword))
-                        return
-                    }
-                    self.getAccountDataPerformingAccountMigrationIfNeeded(user: user, mailboxPassword: mailboxPassword, completion: completion)
-                case let .failure(error):
-                    PMLog.debug("Getting user info failed with \(error)")
-                    completion(.failure(error.asLoginError()))
-                }
-            }
-        }
-    }
+//    func handleValidCredentials(credential: Credential, passwordMode: PasswordMode, mailboxPassword: String, completion: @escaping (Result<LoginStatus, LoginError>) -> Void) {
+//        self.mailboxPassword = mailboxPassword
+//        authManager.setCredential(auth: credential)
+//
+//        switch passwordMode {
+//        case .one:
+//            PMLog.debug("No mailbox password required, finishing up")
+//            getAccountDataPerformingAccountMigrationIfNeeded(user: nil, mailboxPassword: mailboxPassword, completion: completion)
+//        case .two:
+//            if minimumAccountType == .username {
+//                completion(.success(.finished(LoginData.credential(credential))))
+//                return
+//            }
+//
+//            manager.getUserInfo(credential) { result in
+//                switch result {
+//                case let .success(user):
+//                    // This is because of a bug on the API, where accounts with no keys return PasswordMode = 2. (according to Android code)
+//                    guard user.keys.isEmpty else {
+//                        completion(.success(.askSecondPassword))
+//                        return
+//                    }
+//                    self.getAccountDataPerformingAccountMigrationIfNeeded(user: user, mailboxPassword: mailboxPassword, completion: completion)
+//                case let .failure(error):
+//                    PMLog.debug("Getting user info failed with \(error)")
+//                    completion(.failure(error.asLoginError()))
+//                }
+//            }
+//        }
+//    }
 }
 

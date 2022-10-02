@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TroubleshootingSwitchCell" selectionStyle="default" indentationWidth="10" rowHeight="136" id="4cv-Ru-Og0" customClass="TroubleshootingSwitchCell" customModule="Vaif_R2___VPN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4cv-Ru-Og0" id="obQ-VO-nDO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-Gy-fcx">
+                        <rect key="frame" x="16" y="27" width="231" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SI-8a-tvT">
+                        <rect key="frame" x="16" y="47.333333333333336" width="231" height="84.666666666666657"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="RjZ-Y0-N8I"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naG-as-YpT">
+                        <rect key="frame" x="255" y="52.666666666666657" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5SI-8a-tvT" firstAttribute="leading" secondItem="IUx-Gy-fcx" secondAttribute="leading" id="5Td-uL-w1j"/>
+                    <constraint firstItem="IUx-Gy-fcx" firstAttribute="top" secondItem="obQ-VO-nDO" secondAttribute="topMargin" constant="16" id="Iin-zx-VFE"/>
+                    <constraint firstItem="naG-as-YpT" firstAttribute="centerY" secondItem="obQ-VO-nDO" secondAttribute="centerY" id="IvX-7o-icZ"/>
+                    <constraint firstItem="IUx-Gy-fcx" firstAttribute="leading" secondItem="obQ-VO-nDO" secondAttribute="leadingMargin" id="Ygn-6i-mkP"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="naG-as-YpT" secondAttribute="trailing" id="cQ4-R5-uKf"/>
+                    <constraint firstItem="naG-as-YpT" firstAttribute="leading" secondItem="5SI-8a-tvT" secondAttribute="trailing" constant="8" id="eXT-6p-WCl"/>
+                    <constraint firstItem="5SI-8a-tvT" firstAttribute="trailing" secondItem="IUx-Gy-fcx" secondAttribute="trailing" id="iHt-zn-duK"/>
+                    <constraint firstAttribute="bottom" secondItem="5SI-8a-tvT" secondAttribute="bottom" constant="4" id="sW2-Hq-FZZ"/>
+                    <constraint firstItem="5SI-8a-tvT" firstAttribute="top" secondItem="IUx-Gy-fcx" secondAttribute="bottom" id="vHn-Xs-hix"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="5nx-US-FqI"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="5SI-8a-tvT" id="hJK-b1-efR"/>
+                <outlet property="titleLabel" destination="IUx-Gy-fcx" id="vYj-rL-X84"/>
+                <outlet property="toggleSwitch" destination="naG-as-YpT" id="7UO-e2-RvR"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
