@@ -12,7 +12,7 @@ import UIKit
 final class PMTitleCell: UITableViewCell {
 
     static let reuseIdentifier = "PMTitleCell"
-    static let nib = UINib(nibName: "PMTitleCell", bundle: LoginAndSignup.bundle)
+    //static let nib = UINib(nibName: "PMTitleCell", bundle: LoginAndSignup.bundle)
 
     // MARK: - Outlets
 

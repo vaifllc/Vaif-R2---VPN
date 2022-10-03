@@ -11,7 +11,7 @@ import UIKit
 public final class PMCell: UITableViewCell, AccessibleView {
 
     public static let reuseIdentifier = "PMCell"
-    public static let nib = UINib(nibName: "PMCell", bundle: PMUIFoundations.bundle)
+   // public static let nib = UINib(nibName: "PMCell", bundle: PMUIFoundations.bundle)
 
     // MARK: - Outlets
 
