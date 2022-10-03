@@ -34,8 +34,8 @@ final class LoginViewModel {
        
         isLoading.value = true
 
-        let userFrame = ["name": "username"]
-            .first(where: { $0["frame"] as? [String: String] == userFrame })
+        //let userFrame = ["name": "username"]
+           // .first(where: { $0["frame"] as? [String: String] == userFrame })
 
         login.login(username: username, password: password) { [weak self] result in
             switch result {

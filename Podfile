@@ -53,5 +53,24 @@ end
 target :'Vaif R2 - VPNTests' do
   # see https://github.com/pointfreeco/swift-snapshot-testing/pull/308
   #pod 'SnapshotTesting', :git => 'https://github.com/pointfreeco/swift-snapshot-testing.git', :commit => '8e9f685'
-  pod 'SnapshotTesting', '~> 1.9.0'
+  pod 'SnapshotTesting'
+end
+
+post_install do |installer|
+
+  # Create plist with info about used frameworks
+  plugin 'cocoapods-acknowledgements'
+  require 'fileutils'
+  FileUtils.cp_r('Pods/Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN-acknowledgements.markdown', 'ACKNOWLEDGEMENTS.md')
+
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      
+      # Reset deployment targets to use the one we have on the main project
+      config.build_settings.delete 'MACOSX_DEPLOYMENT_TARGET'
+      
+    end
+  end
 end

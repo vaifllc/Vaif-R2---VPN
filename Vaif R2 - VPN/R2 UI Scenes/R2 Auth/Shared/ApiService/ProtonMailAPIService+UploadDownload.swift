@@ -123,7 +123,7 @@ extension PMAPIService {
     }
     
     private func performNetworkOperation(url: String,
-                                         method: HTTPMethod,
+                                         method: HTTPMethod2,
                                          parameters: Any?,
                                          headers: [String: Any]?,
                                          authenticated: Bool,

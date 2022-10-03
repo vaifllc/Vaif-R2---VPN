@@ -60,7 +60,7 @@ DEPENDENCIES:
   - PromiseKit
   - ReachabilitySwift
   - RQShineLabel
-  - SnapshotTesting (~> 1.9.0)
+  - SnapshotTesting
   - SwiftMessages
   - SwiftyStoreKit
   - TrustKit
@@ -115,6 +115,6 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
 
-PODFILE CHECKSUM: 7f6d4849f4d879084e8612ae70f4fd7b5871390f
+PODFILE CHECKSUM: 87431fdf214e7490892c3f5a1e19ec6dc51dc7a4
 
 COCOAPODS: 1.11.3
