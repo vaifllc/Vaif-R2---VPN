@@ -1,0 +1,33 @@
+/* ReportBug 2nd step (Quick fixes) cancel button */
+"_br_2_button_cancel" = "Poništi";
+
+/* ReportBug 2nd step (Quick fixes) button to go to the next step */
+"_br_2_button_next" = "Kontaktirajte nas";
+
+/* ReportBug 3rd step (form) send button */
+"_br_3_button_send" = "Pošaljite izvještaj pogreške";
+
+/* ReportBug 3rd step (form) send button */
+"_br_3_button_sending" = "Slanje";
+
+/* ReportBug 3rd step (form) email field name */
+"_br_3_email" = "E-pošta";
+
+/* ReportBug 3rd step (form) username field name */
+"_br_3_username" = "Korisničko ime";
+
+/* ReportBug success window: retry button */
+"_br_failure_button_retry" = "Pokušaj ponovno";
+
+/* ReportBug success window: troubleshoot button */
+"_br_failure_button_troubleshoot" = "Rješavanje problema";
+
+/* ReportBug success window: button */
+"_br_success_button" = "Shvaćam";
+
+/* ReportBug success window: title text */
+"_br_success_title" = "Hvala vam na povratnim informacijama";
+
+/* Action button of the view nudging users to update before filling Bug Report */
+"_update_view_button" = "Ažuriraj";
+

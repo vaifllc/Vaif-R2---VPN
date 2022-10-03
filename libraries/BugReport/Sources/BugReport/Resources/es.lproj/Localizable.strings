@@ -1,0 +1,30 @@
+/* ReportBug 2nd step (Quick fixes) cancel button */
+"_br_2_button_cancel" = "Cancelar";
+
+/* ReportBug 2nd step (Quick fixes) button to go to the next step */
+"_br_2_button_next" = "Contáctenos";
+
+/* ReportBug 3rd step (form) send button */
+"_br_3_button_send" = "Enviar informe";
+
+/* ReportBug 3rd step (form) send button */
+"_br_3_button_sending" = "Enviando";
+
+/* ReportBug 3rd step (form) email field name */
+"_br_3_email" = "Correo electrónico";
+
+/* ReportBug 3rd step (form) username field name */
+"_br_3_username" = "Nombre de usuario";
+
+/* ReportBug success window: retry button */
+"_br_failure_button_retry" = "Vuelva a intentarlo";
+
+/* ReportBug success window: troubleshoot button */
+"_br_failure_button_troubleshoot" = "Resolución de problemas";
+
+/* ReportBug success window: button */
+"_br_success_button" = "Entendido";
+
+/* Action button of the view nudging users to update before filling Bug Report */
+"_update_view_button" = "Actualizar";
+

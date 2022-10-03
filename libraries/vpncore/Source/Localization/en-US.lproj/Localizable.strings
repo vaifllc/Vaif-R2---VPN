@@ -1,0 +1,9 @@
+/* MacOS: killswitch blocking alert */
+"_kill_switch_blocking_body" = "Kill switch is protecting your IP\n\nYour internet connection will resume as soon as Proton VPN reconnects to a server. To resume without VPN protection, disable the kill switch.";
+
+/* (No Comment) */
+"_neks_t2_connect" = "Enable anyway";
+
+/* Description shown together with server info icon */
+"_tor_description" = "Connects to Tor network";
+

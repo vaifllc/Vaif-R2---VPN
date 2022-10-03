@@ -1,0 +1,63 @@
+/* Description of user account update screen */
+"delinquent_description" = "Poderá voltar a aceder a funcionalidades especiais após liquidar as facturas pendentes.";
+
+/* Title of user account update screen */
+"delinquent_title" = "A sua conta VPN tem facturas pendentes";
+
+/* Header of the view containing information about the server, from which the user will be disconnected */
+"from_server_title" = "Do servidor:";
+
+/* Title of user account update screen */
+"maximum_device_title" = "Atingiu o seu limite máximo de dispositivos";
+
+/* Common button title */
+"modals_common_cancel" = "Cancelar";
+
+/* Common button title */
+"modals_common_learn_more" = "Saiba mais";
+
+/* Common button title */
+"modals_common_next" = "Seguinte";
+
+/* Upgrade plan button title */
+"modals_get_plus" = "Actualizar";
+
+/* Feature of the All Countries upsell screen */
+"modals_upsell_all_countries_feature_netshield" = "Bloqueie publicidades e malware com o NetShield";
+
+/* Learn more button title of the Safe Mode upsell screen */
+"modals_upsell_safe_mode_learn_more" = "Saiba mais";
+
+/* Dismiss upsell screen button title */
+"modals_upsell_stay_free" = "Agora não";
+
+/* Title of "done" button in New Brand screen */
+"new_plans_brand_got_it" = "Percebi";
+
+/* Title of the New Brand screen */
+"new_plans_brand_title" = "Proton atualizado, proteção unificada";
+
+/* Description of user account update screen */
+"subscription_expired_description" = "A sua subscrição regrediu.";
+
+/* Description of user account update screen */
+"subscription_expired_reconnection_description" = "A sua subscrição regrediu, estamos a ligar ao servidor mais rápido disponível.";
+
+/* Title of user account update screen */
+"subscription_expired_title" = "O seu plano de subscrição VPN expirou";
+
+/* Feature list element in user account update screen */
+"subscription_upgrade_option3" = "Funcionalidades avançadas: NetShield, Secure Core, Tor, P2P";
+
+/* Header of the view containing information about the server, to which the user will be connected */
+"to_server_title" = "Para o servidor:";
+
+/* Button action title in user account update screen */
+"update_billing" = "Actualizar a minha facturação";
+
+/* Button action title in user account update screen */
+"upgrade_again" = "Actualizar novamente";
+
+/* Button action title in user account update screen */
+"upgrade_no_thanks" = "Não, obrigado";
+

@@ -1,0 +1,42 @@
+/* ReportBug 2nd step (Quick fixes) cancel button */
+"_br_2_button_cancel" = "لغو";
+
+/* ReportBug 2nd step (Quick fixes) button to go to the next step */
+"_br_2_button_next" = "تماس با ما";
+
+/* ReportBug 2nd step (Quick fixes) text under the list of suggestions */
+"_br_2_footer" = "کار نکرد؟";
+
+/* ReportBug 2nd step (Quick fixes) title */
+"_br_2_title" = "راه‌حل‌های سریع";
+
+/* ReportBug 3rd step (form) send button */
+"_br_3_button_send" = "ارسال گزارش";
+
+/* ReportBug 3rd step (form) send button */
+"_br_3_button_sending" = "درحال ارسال";
+
+/* ReportBug 3rd step (form) email field name */
+"_br_3_email" = "ایمیل";
+
+/* ReportBug 3rd step (form) field to ask for includeing logs */
+"_br_3_logs_field" = "ارسال لاگ خطا";
+
+/* ReportBug 3rd step (form) username field name */
+"_br_3_username" = "نام کاربری";
+
+/* ReportBug success window: retry button */
+"_br_failure_button_retry" = "تلاش دوباره";
+
+/* ReportBug success window: troubleshoot button */
+"_br_failure_button_troubleshoot" = "عیب یابی";
+
+/* ReportBug success window: button */
+"_br_success_button" = "فهمیدم";
+
+/* ReportBug success window: title text */
+"_br_success_title" = "از بازخوردتان سپاس گزاریم";
+
+/* Action button of the view nudging users to update before filling Bug Report */
+"_update_view_button" = "بروزرسانی";
+
