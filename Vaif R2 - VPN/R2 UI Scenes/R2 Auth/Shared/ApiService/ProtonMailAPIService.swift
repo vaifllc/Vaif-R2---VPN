@@ -87,7 +87,7 @@ public class PMAPIService: APIService {
         
         self.session.setChallenge(noTrustKit: trustKitProvider.noTrustKit, trustKit: trustKitProvider.trustKit)
         
-        doh.setUpCookieSynchronization(storage: self.session.sessionConfiguration.httpCookieStorage)
+       // doh.setUpCookieSynchronization(storage: self.session.sessionConfiguration.httpCookieStorage)
     }
     
     public func getSession() -> Session? {

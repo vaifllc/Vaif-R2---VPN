@@ -154,7 +154,7 @@ extension DependencyContainer: NavigationServiceFactory {
 // MARK: SettingsServiceFactory
 extension DependencyContainer: SettingsServiceFactory {
     func makeSettingsService() -> SettingsService {
-        return navigationService
+        return navigationService as! SettingsService
     }
 }
 

@@ -181,8 +181,8 @@ extension IosAlertService: CoreAlertService {
 //            let allCountriesUpsell = UpsellType.allCountries(numberOfDevices: plus.devicesCount, numberOfServers: plus.serversCount, numberOfCountries: planService.countriesCount)
 //            show(upsellType: allCountriesUpsell)
             
-        case is LocalAgentSystemErrorAlert:
-            showDefaultSystemAlert(alert)
+//        case is LocalAgentSystemErrorAlert:
+//            showDefaultSystemAlert(alert)
             
         default:
             #if DEBUG

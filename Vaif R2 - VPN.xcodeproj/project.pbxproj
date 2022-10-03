@@ -16,6 +16,13 @@
 		5334E1A8D3382D884668C2B3 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CAFD75F4E8BFD4F252F7054 /* Pods-Vaif R2 - VPN Firewall Widget-settings-metadata.plist */; };
 		5949781C23F932610EB44854 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */; };
 		AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5519B02FDAD4464B31A8CA07 /* Pods-Vaif R2 - VPN-settings-metadata.plist */; };
+		B72A852128EB5F9600CB115E /* LaunchViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852028EB5F9600CB115E /* LaunchViewControler.swift */; };
+		B72A852328EB647F00CB115E /* CompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852228EB647F00CB115E /* CompleteViewModel.swift */; };
+		B72A852528EB679800CB115E /* ReportsBugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852428EB679800CB115E /* ReportsBugs.swift */; };
+		B72A852728EB683200CB115E /* DynamicBugReportConfigRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852628EB683200CB115E /* DynamicBugReportConfigRequest.swift */; };
+		B72A852928EB68FB00CB115E /* Session2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852828EB68FB00CB115E /* Session2.swift */; };
+		B72A852C28EB6AD900CB115E /* UIView+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852B28EB6AD900CB115E /* UIView+nib.swift */; };
+		B72A852F28EB6B2C00CB115E /* UIKitString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */; };
 		B74F87C828E28E5A0012D190 /* BugReport in Frameworks */ = {isa = PBXBuildFile; productRef = B74F87C728E28E5A0012D190 /* BugReport */; };
 		B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */; };
 		B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DD28D7C9940028BE35 /* LoadingCircle.swift */; };
@@ -32,7 +39,6 @@
 		B75160F328D7CD850028BE35 /* adBlockListThree.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160F228D7CD840028BE35 /* adBlockListThree.json */; };
 		B75160F428D7CD850028BE35 /* adBlockListThree.json in Resources */ = {isa = PBXBuildFile; fileRef = B75160F228D7CD840028BE35 /* adBlockListThree.json */; };
 		B75160FA28D7CFB90028BE35 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160F928D7CFB90028BE35 /* CloudKit.framework */; };
-		B75160FB28D7CFCA0028BE35 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
 		B75160FD28D7CFD00028BE35 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */; };
 		B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = B75160FF28D7D5440028BE35 /* CocoaLumberjack */; };
 		B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B751610128D7D5440028BE35 /* CocoaLumberjackSwift */; };
@@ -173,7 +179,7 @@
 		B77262AB28E61B1C0016540C /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262AA28E61B1C0016540C /* HTTPHeaders.swift */; };
 		B77262AD28E61D3C0016540C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262AC28E61D3C0016540C /* HTTPMethod.swift */; };
 		B77262B028E64A290016540C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262AE28E649CA0016540C /* APIService.swift */; };
-		B77262B528E653F70016540C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262B428E653F70016540C /* LoginService.swift */; };
+		B77262B528E653F70016540C /* LoginService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262B428E653F70016540C /* LoginService2.swift */; };
 		B77262B828E796CC0016540C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262B728E796CC0016540C /* Networking.swift */; };
 		B77262BA28E79A050016540C /* AuthKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262B928E79A050016540C /* AuthKeychain.swift */; };
 		B77262BC28E79A300016540C /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262BB28E79A300016540C /* AuthCredentials.swift */; };
@@ -592,6 +598,13 @@
 		9BA7A5288829612EF0426219 /* Pods-Vaif R2 - VPN-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN-metadata.plist"; sourceTree = "<group>"; };
 		9FB5E13EA1D28ECBCB43944F /* Pods-Vaif R2 - VPN Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Widget.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Widget/Pods-Vaif R2 - VPN Widget.release.xcconfig"; sourceTree = "<group>"; };
 		B1D1E7CD97109801950CCA55 /* Pods-Vaif R2 - VPNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPNTests.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests.release.xcconfig"; sourceTree = "<group>"; };
+		B72A852028EB5F9600CB115E /* LaunchViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewControler.swift; sourceTree = "<group>"; };
+		B72A852228EB647F00CB115E /* CompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewModel.swift; sourceTree = "<group>"; };
+		B72A852428EB679800CB115E /* ReportsBugs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsBugs.swift; sourceTree = "<group>"; };
+		B72A852628EB683200CB115E /* DynamicBugReportConfigRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBugReportConfigRequest.swift; sourceTree = "<group>"; };
+		B72A852828EB68FB00CB115E /* Session2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session2.swift; sourceTree = "<group>"; };
+		B72A852B28EB6AD900CB115E /* UIView+nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+nib.swift"; path = "Vaif R2 - VPN/R2 UI Scenes/R2 Auth/Shared/UIView+nib.swift"; sourceTree = SOURCE_ROOT; };
+		B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKitString+Extension.swift"; sourceTree = "<group>"; };
 		B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaifR2VPNFirewallWidget.swift; sourceTree = "<group>"; };
 		B75160DD28D7C9940028BE35 /* LoadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircle.swift; sourceTree = "<group>"; };
 		B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedProvider.swift; sourceTree = "<group>"; };
@@ -736,7 +749,7 @@
 		B77262AA28E61B1C0016540C /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
 		B77262AC28E61D3C0016540C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B77262AE28E649CA0016540C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		B77262B428E653F70016540C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B77262B428E653F70016540C /* LoginService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService2.swift; sourceTree = "<group>"; };
 		B77262B728E796CC0016540C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		B77262B928E79A050016540C /* AuthKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKeychain.swift; sourceTree = "<group>"; };
 		B77262BB28E79A300016540C /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
@@ -1057,7 +1070,6 @@
 				B7948D6028D7B9BE004CDB79 /* NetworkExtension.framework in Frameworks */,
 				B75160FA28D7CFB90028BE35 /* CloudKit.framework in Frameworks */,
 				B751610628D7D57F0028BE35 /* CocoaLumberjackSwift in Frameworks */,
-				B75160FB28D7CFCA0028BE35 /* NetworkExtension.framework in Frameworks */,
 				F84636DE1893416176121865 /* Pods_Vaif_R2___VPN_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1127,9 +1139,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B72A851F28EB5DBE00CB115E /* R2 Launch */ = {
+			isa = PBXGroup;
+			children = (
+				B72A852028EB5F9600CB115E /* LaunchViewControler.swift */,
+			);
+			path = "R2 Launch";
+			sourceTree = "<group>";
+		};
+		B72A852A28EB6AD200CB115E /* UIView+nib */ = {
+			isa = PBXGroup;
+			children = (
+				B72A852B28EB6AD900CB115E /* UIView+nib.swift */,
+			);
+			path = "UIView+nib";
+			sourceTree = "<group>";
+		};
+		B72A852D28EB6B2300CB115E /* UIKitString+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */,
+			);
+			path = "UIKitString+Extension";
+			sourceTree = "<group>";
+		};
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B72A851F28EB5DBE00CB115E /* R2 Launch */,
 				B77262D228E7D4390016540C /* R2 Report Bug */,
 				B772623928E50EAF0016540C /* Extra Cells */,
 				B772623428E50D600016540C /* R2 HelpView */,
@@ -1182,6 +1219,8 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B72A852D28EB6B2300CB115E /* UIKitString+Extension */,
+				B72A852A28EB6AD200CB115E /* UIView+nib */,
 				B77262F228EA55FD0016540C /* String+Extension */,
 				B77262A928E61B170016540C /* HTTP */,
 				B77262A028E6197C0016540C /* URLConvertible+URLRequestConvertible */,
@@ -1556,7 +1595,7 @@
 		B77262B128E64D6D0016540C /* LoginService */ = {
 			isa = PBXGroup;
 			children = (
-				B77262B428E653F70016540C /* LoginService.swift */,
+				B77262B428E653F70016540C /* LoginService2.swift */,
 			);
 			path = LoginService;
 			sourceTree = "<group>";
@@ -1592,6 +1631,8 @@
 				B77262D928E7D56E0016540C /* URLArray+Extension.swift */,
 				B77262D528E7D4CF0016540C /* ReportsAPI.swift */,
 				B77262DB28E7D5AB0016540C /* ReportsBugResponse.swift */,
+				B72A852428EB679800CB115E /* ReportsBugs.swift */,
+				B72A852628EB683200CB115E /* DynamicBugReportConfigRequest.swift */,
 			);
 			path = "R2 Report Bug";
 			sourceTree = "<group>";
@@ -1626,6 +1667,7 @@
 			children = (
 				B790369628E24DD500341087 /* SummaryProgressCell.swift */,
 				B790369828E24E2E00341087 /* SummaryViewController.swift */,
+				B72A852228EB647F00CB115E /* CompleteViewModel.swift */,
 			);
 			path = "Summary View";
 			sourceTree = "<group>";
@@ -2138,6 +2180,7 @@
 				B77262A328E619BB0016540C /* AFError.swift */,
 				B77262A528E61A3C0016540C /* ServerTrustEvaluation.swift */,
 				B77262A728E61A680016540C /* AlamofireExtended.swift */,
+				B72A852828EB68FB00CB115E /* Session2.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -3325,7 +3368,7 @@
 				B75161AA28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				B79035F128E21D1500341087 /* PMCell.swift in Sources */,
 				B772623128E507BD0016540C /* Image+Flag.swift in Sources */,
-				B77262B528E653F70016540C /* LoginService.swift in Sources */,
+				B77262B528E653F70016540C /* LoginService2.swift in Sources */,
 				B7948DDA28D7C3BB004CDB79 /* VPNController.swift in Sources */,
 				B751618328D8FB260028BE35 /* M13CheckboxBounceController.swift in Sources */,
 				B790362428E2244800341087 /* UIViewController+Extensions.swift in Sources */,
@@ -3341,6 +3384,7 @@
 				B7BAFCD928E37821000CDCD9 /* Threading.swift in Sources */,
 				B79036D328E289D100341087 /* UIColor+Extension.swift in Sources */,
 				B790357828E210F500341087 /* UIButton+helper.swift in Sources */,
+				B72A852528EB679800CB115E /* ReportsBugs.swift in Sources */,
 				B77262F128EA55B00016540C /* LogFileManager.swift in Sources */,
 				B751618F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				B79035BA28E216EC00341087 /* UIImage+Text.swift in Sources */,
@@ -3348,6 +3392,7 @@
 				B77262C028E79B7D0016540C /* Authenticator.swift in Sources */,
 				B790366928E2492400341087 /* Key+Extensions.swift in Sources */,
 				B77262F428EA56070016540C /* String+Extension.swift in Sources */,
+				B72A852328EB647F00CB115E /* CompleteViewModel.swift in Sources */,
 				B79035A228E2154300341087 /* UISearchBar+helper.swift in Sources */,
 				B751617628D8FB260028BE35 /* TimerEx.swift in Sources */,
 				B772628E28E615250016540C /* DoHProviderGoogle.swift in Sources */,
@@ -3378,6 +3423,7 @@
 				B751617928D8FB260028BE35 /* M13CheckboxDisclosurePathGenerator.swift in Sources */,
 				B751618C28D8FB260028BE35 /* NVActivityIndicatorViewable.swift in Sources */,
 				B790356D28E20E9600341087 /* FigmaShadow.swift in Sources */,
+				B72A852F28EB6B2C00CB115E /* UIKitString+Extension.swift in Sources */,
 				B7948DE728D7C4E7004CDB79 /* UserDefaults.swift in Sources */,
 				B79036A928E251A300341087 /* Login.swift in Sources */,
 				B751611F28D7F3640028BE35 /* TrackerInfo.swift in Sources */,
@@ -3451,6 +3497,7 @@
 				B790368F28E24D3D00341087 /* WelcomeAnimationViewController.swift in Sources */,
 				B772629C28E617910016540C /* UserAgent.swift in Sources */,
 				B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				B72A852728EB683200CB115E /* DynamicBugReportConfigRequest.swift in Sources */,
 				B77262BE28E79A6B0016540C /* KeychainConstants.swift in Sources */,
 				B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */,
 				B7948DFD28D7C5D8004CDB79 /* BlockDayLog.swift in Sources */,
@@ -3550,6 +3597,7 @@
 				B77262C928E7C4440016540C /* NetworkError.swift in Sources */,
 				B790360528E21FAA00341087 /* CountryCode.swift in Sources */,
 				B7B65EDF28E49A5700F30E84 /* Logger+Callers.swift in Sources */,
+				B72A852C28EB6AD900CB115E /* UIView+nib.swift in Sources */,
 				B772627528E5F79D0016540C /* APIService+Error.swift in Sources */,
 				B790362728E2249800341087 /* UIScrollView+Extensions.swift in Sources */,
 				B772629928E617600016540C /* DateParser.swift in Sources */,
@@ -3611,7 +3659,9 @@
 				B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				B772623B28E50EB60016540C /* PMTitleCell.swift in Sources */,
 				B79036C328E2771D00341087 /* PMLog.swift in Sources */,
+				B72A852128EB5F9600CB115E /* LaunchViewControler.swift in Sources */,
 				B7948DD828D7C379004CDB79 /* SpeedTest.swift in Sources */,
+				B72A852928EB68FB00CB115E /* Session2.swift in Sources */,
 				B772624628E512270016540C /* ErrorCodes.swift in Sources */,
 				B7B65EC528E3B82100F30E84 /* TroubleshootingSwitchCell.swift in Sources */,
 				B751619428D8FB260028BE35 /* NVActivityIndicatorAnimationBallDoubleBounce.swift in Sources */,
@@ -3930,7 +3980,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -3967,7 +4017,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -3998,10 +4048,9 @@
 		B7948D3F28D7B8FB004CDB79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -4025,10 +4074,9 @@
 		B7948D4028D7B8FB004CDB79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Blocker/Vaif R2 - VPN Blocker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Blocker/Info.plist";
@@ -4055,7 +4103,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -4082,7 +4130,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Widget/Vaif_R2___VPN_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Widget/Info.plist";
@@ -4109,7 +4157,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -4136,7 +4184,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Tunnel/Vaif_R2___VPN_Tunnel.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Tunnel/Info.plist";
@@ -4163,7 +4211,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -4190,7 +4238,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN Firewall Widget/Vaif_R2___VPN_Firewall_Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN Firewall Widget/Info.plist";
@@ -4217,7 +4265,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -4236,7 +4284,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -4256,7 +4304,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";
@@ -4284,7 +4332,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN FirewallWidget ExtensionExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN FirewallWidget Extension/Info.plist";

@@ -51,9 +51,11 @@ public struct ReportsBugsResponse: Codable {
 public final class ReportsBugs: Request {
     
     public let bug: ReportBug
-    
-    public init( _ bug: ReportBug) {
+    private let authKeychain: AuthKeychainHandle
+
+    public init( _ bug: ReportBug, authKeychain: AuthKeychainHandle) {
         self.bug = bug
+        self.authKeychain = authKeychain
     }
 
     public var path: String {

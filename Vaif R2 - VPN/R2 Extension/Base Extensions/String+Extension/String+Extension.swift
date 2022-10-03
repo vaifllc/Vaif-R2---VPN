@@ -20,7 +20,7 @@ public extension String {
             let results = regex.matches(in: self, range: NSRange(location: 0, length: nsString.length))
             return results.map { nsString.substring(with: $0.range) }
         } catch let error {
-            log.error("Invalid regex", category: .app, metadata: ["error": "\(error)"])
+            //log.error("Invalid regex", category: .app, metadata: ["error": "\(error)"])
             return []
         }
     }
@@ -42,7 +42,8 @@ public extension String {
                 return replacedString
             }
         } catch let error as NSError {
-            log.error("Invalid regex", category: .app, metadata: ["error": "\(error)"])
+            print("Invalid regex \(error)")
+            //log.error("Invalid regex", category: .app, metadata: ["error": "\(error)"])
         }
         return self
     }

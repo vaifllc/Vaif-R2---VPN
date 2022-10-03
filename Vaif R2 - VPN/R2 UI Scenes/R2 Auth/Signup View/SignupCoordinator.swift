@@ -51,7 +51,7 @@ final class SignupCoordinator {
 
     init(container: Container,
          isCloseButton: Bool,
-         paymentsAvailability: PaymentsAvailability,
+         //paymentsAvailability: PaymentsAvailability,
          signupAvailability: SignupAvailability,
          performBeforeFlow: WorkBeforeFlow?,
          customErrorPresenter: LoginErrorPresenter?) {
@@ -196,14 +196,14 @@ final class SignupCoordinator {
 //        navigationController?.pushViewController(completeViewController, animated: true)
 //    }
     
-    private func showCountryPickerViewController() {
-        let countryPickerViewController = countryPicker.getCountryPickerViewController()
-        countryPickerViewController.delegate = self
-        countryPickerViewController.modalTransitionStyle = .coverVertical
-        self.countryPickerViewController = countryPickerViewController
-        
-        navigationController?.present(countryPickerViewController, animated: true)
-    }
+//    private func showCountryPickerViewController() {
+//        let countryPickerViewController = countryPicker.getCountryPickerViewController()
+//        countryPickerViewController.delegate = self
+//        countryPickerViewController.modalTransitionStyle = .coverVertical
+//        self.countryPickerViewController = countryPickerViewController
+//        
+//        navigationController?.present(countryPickerViewController, animated: true)
+//    }
     
 //    private func showTermsAndConditionsViewController() {
 //        let tcViewController = UIStoryboard.instantiate(TCViewController.self)

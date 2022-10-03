@@ -52,7 +52,8 @@ public func handleAuthenticationChallenge(
 
 public protocol Session {
     
-    func generate(with method: HTTPMethod, urlString: String, parameters: Any?, timeout: TimeInterval?) throws -> SessionRequest
+    
+    func generate(with method: HTTPMethod2, urlString: String, parameters: Any?, timeout: TimeInterval?) throws -> SessionRequest
     
     func request(with request: SessionRequest, completion: @escaping ResponseCompletion) throws
     
@@ -89,12 +90,12 @@ public protocol Session {
     
     func failsTLS(request: SessionRequest) -> String?
     
-    var sessionConfiguration: URLSessionConfiguration { get }
+    //var sessionConfiguration: URLSessionConfiguration { get }
 }
 
 extension Session {
     
-    public func generate(with method: HTTPMethod, urlString: String, parameters: Any? = nil, timeout: TimeInterval? = nil) throws -> SessionRequest {
+    public func generate(with method: HTTPMethod2, urlString: String, parameters: Any? = nil, timeout: TimeInterval? = nil) throws -> SessionRequest {
         return SessionRequest.init(parameters: parameters,
                                    urlString: urlString,
                                    method: method,
@@ -127,7 +128,7 @@ extension Session {
 
 public protocol SessionFactoryInterface {
     func createSessionInstance(url apiHostUrl: String) -> Session
-    func createSessionRequest(parameters: Any?, urlString: String, method: HTTPMethod, timeout: TimeInterval) -> SessionRequest
+    func createSessionRequest(parameters: Any?, urlString: String, method: HTTPMethod2, timeout: TimeInterval) -> SessionRequest
 }
 
 public final class SessionFactory: SessionFactoryInterface {
@@ -141,7 +142,7 @@ public final class SessionFactory: SessionFactoryInterface {
     }
     
     public static func createSessionRequest(
-        parameters: Any?, urlString: String, method: HTTPMethod, timeout: TimeInterval
+        parameters: Any?, urlString: String, method: HTTPMethod2, timeout: TimeInterval
     ) -> SessionRequest {
         instance.createSessionRequest(parameters: parameters, urlString: urlString, method: method, timeout: timeout)
     }
@@ -155,7 +156,7 @@ public final class SessionFactory: SessionFactoryInterface {
     }
     
     public func createSessionRequest(
-        parameters: Any?, urlString: String, method: HTTPMethod, timeout: TimeInterval
+        parameters: Any?, urlString: String, method: HTTPMethod2, timeout: TimeInterval
     ) -> SessionRequest {
         #if canImport(Alamofire)
         AlamofireRequest(parameters: parameters, urlString: urlString, method: method, timeout: timeout)
@@ -166,7 +167,7 @@ public final class SessionFactory: SessionFactoryInterface {
 }
 
 public class SessionRequest {
-    init(parameters: Any?, urlString: String, method: HTTPMethod, timeout: TimeInterval) {
+    init(parameters: Any?, urlString: String, method: HTTPMethod2, timeout: TimeInterval) {
         self.parameters = parameters
         self.method = method
         self.urlString = urlString
@@ -186,7 +187,7 @@ public class SessionRequest {
     
     let parameters: Any?
     let urlString: String
-    let method: HTTPMethod
+    let method: HTTPMethod2
     let timeout: TimeInterval
     
     // in the future this dict may have race condition issue. fix it later

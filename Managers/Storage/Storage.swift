@@ -44,7 +44,7 @@ public class Storage {
     
     public func setValue(_ value: Any?, forKey key: String) {
         defaults.setValue(value, forKey: key)
-        log.info("Setting was changed", category: .settings, event: .change, metadata: ["key": "\(key)", "value": "\(value.stringForLog)"])
+       // log.info("Setting was changed", category: .settings, event: .change, metadata: ["key": "\(key)", "value": "\(value.stringForLog)"])
     }
 
     public func getValue(forKey key: String) -> Any? {
@@ -63,13 +63,13 @@ public class Storage {
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            log.warning("Can't decode value from JSON", category: .settings, metadata: ["error": "\(error)"])
+            //log.warning("Can't decode value from JSON", category: .settings, metadata: ["error": "\(error)"])
         }
         // Backup for data saved in older app versions (ios: <=2.7.1, macos: <=2.2.2)
         do {
             return try PropertyListDecoder().decode(T.self, from: data)
         } catch {
-            log.warning("Can't decode value from PropertyList", category: .settings, metadata: ["error": "\(error)"])
+            //log.warning("Can't decode value from PropertyList", category: .settings, metadata: ["error": "\(error)"])
         }
         return nil
     }

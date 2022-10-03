@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
     private var quickConnectButtonConnecting = false
     private let quickConnectButton = UIButton()
@@ -88,28 +88,28 @@ extension TabBarController: TabBarViewModelDelegate {
     }
     
     func disconnectedQuickConnect() {
-        quickConnectButtonConnecting = false
-        guard self.tabBar.items?.count > 2 else { return }
-        self.tabBar.items?[2].setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.weakTextColor()], for: .normal)
-        self.tabBar.items?[2].title = LocalizedString.quickConnect
-        self.quickConnectButton.setImage(UIImage(named: "quick-connect-inactive-button"), for: .normal)
+//        quickConnectButtonConnecting = false
+//        guard self.tabBar.items?.count > 2 else { return }
+//        self.tabBar.items?[2].setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.weakTextColor()], for: .normal)
+//        self.tabBar.items?[2].title = LocalizedString.quickConnect
+//        self.quickConnectButton.setImage(UIImage(named: "quick-connect-inactive-button"), for: .normal)
     }
 }
 
-extension TabBarController: UITabBarControllerDelegate {
-    
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        // to help with data updating and easier to understand navigation, pop nvc to root
-        if let navigationViewController = viewController as? UINavigationController, navigationViewController != self.selectedViewController {
-            navigationViewController.popToRootViewController(animated: false)
-        }
-        
-        if viewController is ProtonQCViewController {
-            return false
-        } else if let viewModel = viewModel, viewController == viewControllers?.last { // settings
-            return viewModel.settingShouldBeSelected()
-        } else {
-            return true
-        }
-    }
-}
+//extension TabBarController: UITabBarControllerDelegate {
+//
+//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//        // to help with data updating and easier to understand navigation, pop nvc to root
+//        if let navigationViewController = viewController as? UINavigationController, navigationViewController != self.selectedViewController {
+//            navigationViewController.popToRootViewController(animated: false)
+//        }
+//
+//        if viewController is ProtonQCViewController {
+//            return false
+//        } else if let viewModel = viewModel, viewController == viewControllers?.last { // settings
+//            return viewModel.settingShouldBeSelected()
+//        } else {
+//            return true
+//        }
+//    }
+//}

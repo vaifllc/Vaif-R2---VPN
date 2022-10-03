@@ -39,7 +39,7 @@ internal class AlamofireSessionDelegate: SessionDelegate {
 
 public class AlamofireSession: Session {
     
-    public var sessionConfiguration: URLSessionConfiguration { session.sessionConfiguration }
+    //public var sessionConfiguration: URLSessionConfiguration { session.sessionConfiguration }
     
     typealias AfSession = Alamofire.Session
     var session: AfSession
@@ -376,7 +376,7 @@ public class AlamofireSession: Session {
             }
     }
     
-    public func generate(with method: HTTPMethod, urlString: String, parameters: Any? = nil, timeout: TimeInterval? = nil) -> SessionRequest {
+    public func generate(with method: HTTPMethod2, urlString: String, parameters: Any? = nil, timeout: TimeInterval? = nil) -> SessionRequest {
         return AlamofireRequest.init(parameters: parameters, urlString: urlString, method: method, timeout: timeout ?? defaultTimeout)
     }
     

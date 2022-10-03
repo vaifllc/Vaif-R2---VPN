@@ -19,7 +19,7 @@ enum SilentLoginResult {
 
 protocol LoginServiceDelegate: AnyObject {
     func userDidLogIn()
-    func userDidSignUp(onboardingShowFirstConnection: Bool)
+    //func userDidSignUp(onboardingShowFirstConnection: Bool)
 }
 
 protocol LoginService2: AnyObject {
@@ -133,7 +133,8 @@ final class CoreLoginService {
         case .loginStateChanged(.loginFinished):
             delegate?.userDidLogIn()
         case .signupStateChanged(.signupFinished):
-            delegate?.userDidSignUp(onboardingShowFirstConnection: onboardingShowFirstConnection)
+            break
+            //delegate?.userDidSignUp(onboardingShowFirstConnection: onboardingShowFirstConnection)
         case .loginStateChanged(.dataIsAvailable), .signupStateChanged(.dataIsAvailable):
             print("Login or signup process in progress")
             //log.debug("Login or signup process in progress")

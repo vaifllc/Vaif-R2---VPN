@@ -12,6 +12,8 @@ import AFNetworking
 
 public class AFNetworkingSession: Session {
     
+    
+    
     var trustKit: TrustKit?
     var noTrustKit: Bool = false
     var sessionManager: AFHTTPSessionManager
