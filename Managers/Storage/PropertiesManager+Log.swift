@@ -17,7 +17,7 @@ public extension PropertiesManager {
             let value = Storage.userDefaults().value(forKeyPath: key.rawValue)
             message += "\n \(key)=\(value.stringForLog);"
         }
-        log.info("\(message)", category: .settings, event: .current)
+        //log.info("\(message)", category: .settings, event: .current)
     }
     
 }

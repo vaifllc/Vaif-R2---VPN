@@ -12,7 +12,7 @@ import Foundation
 
 extension PMAPIService {
     
-    public func request(method: HTTPMethod,
+    public func request2(method: HTTPMethod2,
                         path: String,
                         parameters: Any?,
                         headers: [String: Any]?,
@@ -32,7 +32,7 @@ extension PMAPIService {
     // TODO:: the retry count need to improved
     //         -- retry count should depends on what error you receive.
     //         -- auth retry should seperate from normal retry.
-    func request(method: HTTPMethod,
+    func request(method: HTTPMethod2,
                  path: String,
                  parameters: Any?,
                  headers: [String: Any]?,
@@ -81,7 +81,7 @@ extension PMAPIService {
         }
     }
     
-    private func performRequestHavingFetchedCredentials(method: HTTPMethod,
+    private func performRequestHavingFetchedCredentials(method: HTTPMethod2,
                                                         path: String,
                                                         parameters: Any?,
                                                         headers: [String: Any]?,
@@ -174,7 +174,7 @@ extension PMAPIService {
     private func handleNetworkRequestBeingFinished(_ task: URLSessionDataTask?,
                                                    _ response: Any?,
                                                    _ error: Error?,
-                                                   method: HTTPMethod,
+                                                   method: HTTPMethod2,
                                                    path: String,
                                                    parameters: Any?,
                                                    headers: [String: Any]?,
@@ -193,7 +193,7 @@ extension PMAPIService {
     
     private func handleNetworkRequestFailing(
         _ error: NSError, _ task: URLSessionDataTask?, _ authenticated: Bool, _ authRetry: Bool,
-        _ authCredential: AuthCredential?, _ method: HTTPMethod, _ path: String, _ parameters: Any?, _ authRetryRemains: Int,
+        _ authCredential: AuthCredential?, _ method: HTTPMethod2, _ path: String, _ parameters: Any?, _ authRetryRemains: Int,
         _ nonDefaultTimeout: TimeInterval?, _ completion: CompletionBlock?, _ response: Any?, _ headers: [String: Any]?
     ) {
         self.debugError(error)
@@ -226,7 +226,7 @@ extension PMAPIService {
     
     func handleNetworkRequestSucceeding(
         _ error: Error?, _ task: URLSessionDataTask?, _ authenticated: Bool, _ authRetry: Bool,
-        _ authCredential: AuthCredential?, _ method: HTTPMethod, _ path: String, _ parameters: Any?, _ authRetryRemains: Int,
+        _ authCredential: AuthCredential?, _ method: HTTPMethod2, _ path: String, _ parameters: Any?, _ authRetryRemains: Int,
         _ nonDefaultTimeout: TimeInterval?, _ completion: CompletionBlock?, _ response: Any?, _ headers: [String: Any]?
     ) {
         
@@ -265,7 +265,7 @@ extension PMAPIService {
     }
     
     private func handleRefreshingCredentials(
-        _ authCredential: AuthCredential, _ method: HTTPMethod, _ path: String, _ parameters: Any?, _ authenticated: Bool,
+        _ authCredential: AuthCredential, _ method: HTTPMethod2, _ path: String, _ parameters: Any?, _ authenticated: Bool,
         _ authRetry: Bool, _ authRetryRemains: Int, _ nonDefaultTimeout: TimeInterval?, _ completion: CompletionBlock?,
         _ error: NSError?, _ task: URLSessionDataTask?
     ) {
@@ -343,7 +343,7 @@ extension PMAPIService {
 extension PMAPIService {
     
     func createRequest(url: String,
-                       method: HTTPMethod,
+                       method: HTTPMethod2,
                        parameters: Any?,
                        nonDefaultTimeout: TimeInterval?,
                        headers: [String: Any]?,

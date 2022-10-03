@@ -352,26 +352,26 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     
     private func checkUsernameWithinDomain(userName: String) {
         lockUI()
-        viewModel.checkInternalAccount(username: userName) { result in
-            self.unlockUI()
-            self.nextButton.isSelected = false
-            switch result {
-            case .success:
-                self.delegate?.validatedName(name: userName, signupAccountType: self.signupAccountType)
-            case .failure(let error):
-                switch error {
-                case .generic(let message, _, _):
-                    if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
-                        self.showError(message: message)
-                    }
-                case .notAvailable(let message):
-                    self.currentlyUsedTextField.isError = true
-                    if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
-                        self.showError(message: message)
-                    }
-                }
-            }
-        }
+//        viewModel.checkInternalAccount(username: userName) { result in
+//            self.unlockUI()
+//            self.nextButton.isSelected = false
+//            switch result {
+//            case .success:
+//                self.delegate?.validatedName(name: userName, signupAccountType: self.signupAccountType)
+//            case .failure(let error):
+//                switch error {
+//                case .generic(let message, _, _):
+//                    if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
+//                        self.showError(message: message)
+//                    }
+//                case .notAvailable(let message):
+//                    self.currentlyUsedTextField.isError = true
+//                    if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else {
+//                        self.showError(message: message)
+//                    }
+//                }
+//            }
+//        }
     }
     
 //    private func checkEmail(email: String) {
@@ -410,17 +410,17 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
 
     private func requestValidationToken(email: String) {
         lockUI()
-        viewModel?.requestValidationToken(email: email, completion: { result in
-            self.unlockUI()
-            self.nextButton.isSelected = false
-            switch result {
-            case .success:
-                self.delegate?.validatedName(name: email, signupAccountType: self.signupAccountType)
-            case .failure(let error):
-                if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else { self.showError(error: error) }
-                self.currentlyUsedTextField.isError = true
-            }
-        })
+//        viewModel?.requestValidationToken(email: email, completion: { result in
+//            self.unlockUI()
+//            self.nextButton.isSelected = false
+//            switch result {
+//            case .success:
+//                self.delegate?.validatedName(name: email, signupAccountType: self.signupAccountType)
+//            case .failure(let error):
+//                if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else { self.showError(error: error) }
+//                self.currentlyUsedTextField.isError = true
+//            }
+//        })
     }
 
     // MARK: - Keyboard
