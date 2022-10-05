@@ -19,7 +19,7 @@ public protocol CoreAlertServiceFactory {
     func makeCoreAlertService() -> CoreAlertService
 }
 
-public protocol CoreAlertService: class {
+public protocol CoreAlertService: AnyObject {
     func push(alert: SystemAlert)
 }
 
@@ -27,7 +27,7 @@ public protocol UIAlertServiceFactory {
     func makeUIAlertService() -> UIAlertService
 }
 
-public protocol UIAlertService: class {
+public protocol UIAlertService: AnyObject {
     func displayAlert(_ alert: SystemAlert)
     func displayAlert(_ alert: SystemAlert, message: NSAttributedString)
     func displayNotificationStyleAlert(message: String, type: NotificationStyleAlertType, accessibilityIdentifier: String?)

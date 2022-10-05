@@ -16,13 +16,16 @@ import Logging
 
 class IosAlertService {
         
-    typealias Factory = UIAlertServiceFactory & WindowServiceFactory & SettingsServiceFactory & TroubleshootCoordinatorFactory
+    typealias Factory = UIAlertServiceFactory
+    & WindowServiceFactory
+    //& SettingsServiceFactory
+    & TroubleshootCoordinatorFactory
     private let factory: Factory
     
     private lazy var uiAlertService: UIAlertService = factory.makeUIAlertService()
    // private lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
     private lazy var windowService: WindowService = factory.makeWindowService()
-    private lazy var settingsService: SettingsService = factory.makeSettingsService()
+    //private lazy var settingsService: SettingsService = factory.makeSettingsService()
    // private lazy var safariService: SafariServiceProtocol = factory.makeSafariService()
 
    // private lazy var planService: PlanService = factory.makePlanService()
@@ -280,7 +283,7 @@ extension IosAlertService: CoreAlertService {
     }
     
     private func show(_ alert: ReportBugAlert) {
-        settingsService.presentReportBug()
+        //settingsService.presentReportBug()
     }
     
     private func showDefaultSystemAlert(_ alert: SystemAlert) {

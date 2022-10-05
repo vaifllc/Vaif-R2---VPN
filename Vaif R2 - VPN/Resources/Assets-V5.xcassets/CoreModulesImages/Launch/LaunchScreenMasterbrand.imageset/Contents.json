@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "WelcomeMasterbrand_light.svg",
+      "filename" : "126.svg",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "WelcomeMasterbrand_dark.svg",
+      "filename" : "126 1.svg",
       "idiom" : "universal"
     }
   ],

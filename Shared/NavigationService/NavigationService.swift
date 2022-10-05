@@ -34,19 +34,19 @@ protocol ProfileService {
 
 // MARK: Settings Service
 
-protocol SettingsService {
+//protocol SettingsService {
 //    func makeSettingsViewController() -> SettingsViewController?
 //    func makeSettingsAccountViewController() -> SettingsAccountViewController?
 //    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
 //    func makeLogSelectionViewController() -> LogSelectionViewController
 //    func makeBatteryUsageViewController() -> BatteryUsageViewController
 //    func makeLogsViewController(logSource: LogSource) -> LogsViewController
-    func presentReportBug()
-}
+//    func presentReportBug()
+//}
 
-protocol SettingsServiceFactory {
-    func makeSettingsService() -> SettingsService
-}
+//protocol SettingsServiceFactory {
+//    func makeSettingsService() -> SettingsService
+//}
 
 // MARK: Protocol Service
 
@@ -92,8 +92,8 @@ final class NavigationService {
     lazy var windowService: WindowService = factory.makeWindowService()
 //    private lazy var vpnKeychain: VpnKeychainProtocol = factory.makeVpnKeychain()
 //    private lazy var vpnApiService: VpnApiService = factory.makeVpnApiService()
-//    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
-//    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
+    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
+    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
 //    lazy var authKeychain: AuthKeychainHandle = factory.makeAuthKeychainHandle()
     private lazy var alertService: CoreAlertService = factory.makeCoreAlertService()
 //    private lazy var vpnManager: VpnManagerProtocol = factory.makeVpnManager()
@@ -133,22 +133,16 @@ final class NavigationService {
     }
     
     func launched() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(sessionChanged(_:)),
-//                                               name: appSessionManager.sessionChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionChanged(_:)),
+                                               name: appSessionManager.sessionChanged, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(refreshVpnManager(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
         
         if let launchViewController = makeLaunchViewController() {
             windowService.show(viewController: launchViewController)
         }
         
-//        loginService.attemptSilentLogIn { [weak self] result in
-//            switch result {
-//            case .loggedIn:
-//                self?.presentMainInterface()
-//            case .notLoggedIn:
-//                self?.presentWelcome(initialError: nil)
-//            }
-//        }
+        
+
     }
 
     func presentWelcome(initialError: String?) {
@@ -160,17 +154,17 @@ final class NavigationService {
         showNewBrandModal()
     }
     
-//    @objc private func sessionChanged(_ notification: Notification) {
-//        guard appSessionManager.sessionStatus == .notEstablished else {
-//            return
-//        }
-//        guard let reasonForSessionChange = notification.object as? String else {
-//            presentWelcome(initialError: nil)
-//            return
-//        }
-//
-//        presentWelcome(initialError: reasonForSessionChange)
-//    }
+    @objc private func sessionChanged(_ notification: Notification) {
+        guard appSessionManager.sessionStatus == .notEstablished else {
+            return
+        }
+        guard let reasonForSessionChange = notification.object as? String else {
+            presentWelcome(initialError: nil)
+            return
+        }
+
+        presentWelcome(initialError: reasonForSessionChange)
+    }
     
 //    @objc private func refreshVpnManager(_ notification: Notification) {
 //        vpnManager.refreshManagers()
@@ -212,6 +206,7 @@ final class NavigationService {
     
     func makeLaunchViewController() -> LaunchViewController? {
         if let launchViewController = launchStoryboard.instantiateViewController(withIdentifier: "LaunchViewController") as? LaunchViewController {
+            launchViewController.mode = .delayed
             return launchViewController
         }
         return nil
@@ -404,10 +399,10 @@ extension NavigationService: LoginServiceDelegate {
         presentMainInterface()
     }
 
-//    func userDidSignUp(onboardingShowFirstConnection: Bool) {
-//        propertiesManager.newBrandModalShown = true
-//        onboardingService.showOnboarding(showFirstConnection: onboardingShowFirstConnection)
-//    }
+    func userDidSignUp(onboardingShowFirstConnection: Bool) {
+        propertiesManager.newBrandModalShown = true
+        //onboardingService.showOnboarding(showFirstConnection: onboardingShowFirstConnection)
+    }
 }
 
 // MARK: Onboarding delegate

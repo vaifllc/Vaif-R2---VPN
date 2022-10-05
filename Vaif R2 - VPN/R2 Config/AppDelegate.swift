@@ -27,7 +27,12 @@ let kHasShownTitlePage: String = "kHasShownTitlePage"
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let noInternetMessageView = MessageView.viewFromNib(layout: .statusLine)
-    
+    private let container = DependencyContainer()
+//    private lazy var vpnManager: VpnManagerProtocol = container.makeVpnManager()
+    private lazy var navigationService: NavigationService = container.makeNavigationService()
+    private lazy var propertiesManager: PropertiesManagerProtocol = container.makePropertiesManager()
+//    private lazy var appStateManager: AppStateManager = container.makeAppStateManager()
+//    private lazy var planService: PlanService = container.makePlanService()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //setupLocalTestRomoval()
@@ -41,8 +46,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupIAP()
         setupFirewallPeriodicCheck()
         setupWidgetToggleVPN()
+        //setupLaunchScreen()
+//        setupLogsForApp()
+//        setupDebugHelpers()
+        
+        // Force all encoded objects to be decoded and recoded using the ProtonVPN module name
+        //setUpNSCoding(withModuleName: "ProtonVPN")
+        // Use shared defaults
+        Storage.setSpecificDefaults(defaults: UserDefaults(suiteName: AppConstants.AppGroups.main)!)
+
+        //setupCoreIntegration()
+        
+//        Waiting for https://github.com/getsentry/sentry-cocoa/issues/1892 to be fixed
+//        SentryHelper.setupSentry(dsn: ObfuscatedConstants.sentryDsniOS)
+        
+       // AnnouncementButtonViewModel.shared = container.makeAnnouncementButtonViewModel()
+
+        //setupCoreIntegration()
+
+//        vpnManager.whenReady(queue: DispatchQueue.main) {
+//            self.navigationService.launched()
+//        }
+        
+       // container.makeMaintenanceManagerHelper().startMaintenanceManager()
+                
+       // _ = container.makeDynamicBugReportManager() // Loads initial bug report config and sets up a timer to refresh it daily.
         
         return true
+    }
+    func setupLaunchScreen(){
+        
+            self.navigationService.launched()
+        
+            
     }
     
     private func setupLocalTestRomoval(){

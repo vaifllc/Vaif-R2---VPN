@@ -437,4 +437,3 @@ public extension AuthErrors {
         return localizedDescription
     }
 }
-
