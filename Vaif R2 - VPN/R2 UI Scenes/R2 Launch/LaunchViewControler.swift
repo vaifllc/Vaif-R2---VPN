@@ -18,6 +18,9 @@ final class LaunchViewController: UIViewController {
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
 
     var mode: AnimationMode = .delayed
+    var splashPresenter: SplashPresenterDescription? = SplashPresenter()
+    private let container = DependencyContainer()
+    private lazy var navigationService: NavigationService = container.makeNavigationService()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,9 +33,15 @@ final class LaunchViewController: UIViewController {
 
         switch mode {
         case .delayed:
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { [weak self] _ in
-                self?.loadingIndicator.isHidden = false
-            }
+//            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
+//                self?.loadingIndicator.isHidden = false
+//            }
+            self.loadingIndicator.isHidden = false
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
+                self.loadingIndicator.isHidden = true
+                self.navigationService.launched()
+                print("Done!") }
+            
         case .immediate:
             loadingIndicator.isHidden = false
         }

@@ -41,7 +41,12 @@
 		B74BC11D28EC983600441353 /* CoreApiFeatureRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC11C28EC983600441353 /* CoreApiFeatureRequest.swift */; };
 		B74BC11F28EC985500441353 /* CoreNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC11E28EC985500441353 /* CoreNewsRequest.swift */; };
 		B74BC12128EC98CF00441353 /* CoreApiFeatureRespone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC12028EC98CF00441353 /* CoreApiFeatureRespone.swift */; };
-		B74BC12428ED343B00441353 /* VPNLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74BC12328ED343B00441353 /* VPNLaunchScreen.storyboard */; };
+		B74BC12728EDDC4B00441353 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC12628EDDC4B00441353 /* SplashViewController.swift */; };
+		B74BC12A28EDDC8300441353 /* UILabel+change.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC12928EDDC8300441353 /* UILabel+change.swift */; };
+		B74BC12D28EDDCB100441353 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC12C28EDDCB100441353 /* String+Localized.swift */; };
+		B74BC12F28EDDCD200441353 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC12E28EDDCD100441353 /* SplashPresenter.swift */; };
+		B74BC13128EDDD6700441353 /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC13028EDDD6700441353 /* SplashAnimator.swift */; };
+		B74BC13328EDDD9E00441353 /* SplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74BC13228EDDD9E00441353 /* SplashView.storyboard */; };
 		B74F87C828E28E5A0012D190 /* BugReport in Frameworks */ = {isa = PBXBuildFile; productRef = B74F87C728E28E5A0012D190 /* BugReport */; };
 		B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */; };
 		B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DD28D7C9940028BE35 /* LoadingCircle.swift */; };
@@ -388,7 +393,6 @@
 		B79036DE28E28C8900341087 /* NavigationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79036DD28E28C8900341087 /* NavigationService.swift */; };
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
-		B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1A28D6502A004CDB79 /* ViewController.swift */; };
 		B7948D1E28D6502A004CDB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7948D1C28D6502A004CDB79 /* Main.storyboard */; };
 		B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */; };
 		B7948D2328D6502C004CDB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2228D6502C004CDB79 /* Assets.xcassets */; };
@@ -642,7 +646,12 @@
 		B74BC11C28EC983600441353 /* CoreApiFeatureRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreApiFeatureRequest.swift; sourceTree = "<group>"; };
 		B74BC11E28EC985500441353 /* CoreNewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNewsRequest.swift; sourceTree = "<group>"; };
 		B74BC12028EC98CF00441353 /* CoreApiFeatureRespone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreApiFeatureRespone.swift; sourceTree = "<group>"; };
-		B74BC12328ED343B00441353 /* VPNLaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VPNLaunchScreen.storyboard; sourceTree = "<group>"; };
+		B74BC12628EDDC4B00441353 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B74BC12928EDDC8300441353 /* UILabel+change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+change.swift"; sourceTree = "<group>"; };
+		B74BC12C28EDDCB100441353 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		B74BC12E28EDDCD100441353 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		B74BC13028EDDD6700441353 /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
+		B74BC13228EDDD9E00441353 /* SplashView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashView.storyboard; sourceTree = "<group>"; };
 		B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaifR2VPNFirewallWidget.swift; sourceTree = "<group>"; };
 		B75160DD28D7C9940028BE35 /* LoadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircle.swift; sourceTree = "<group>"; };
 		B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedProvider.swift; sourceTree = "<group>"; };
@@ -979,7 +988,6 @@
 		B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vaif R2 - VPN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7948D1A28D6502A004CDB79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7948D1D28D6502A004CDB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Vaif_R2___VPN.xcdatamodel"; sourceTree = "<group>"; };
 		B7948D2228D6502C004CDB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1251,9 +1259,36 @@
 			path = CoreApiService;
 			sourceTree = "<group>";
 		};
+		B74BC12528EDDC2500441353 /* R2 SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC12628EDDC4B00441353 /* SplashViewController.swift */,
+				B74BC12E28EDDCD100441353 /* SplashPresenter.swift */,
+				B74BC13028EDDD6700441353 /* SplashAnimator.swift */,
+			);
+			path = "R2 SplashScreen";
+			sourceTree = "<group>";
+		};
+		B74BC12828EDDC7B00441353 /* UILabel+change */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC12928EDDC8300441353 /* UILabel+change.swift */,
+			);
+			path = "UILabel+change";
+			sourceTree = "<group>";
+		};
+		B74BC12B28EDDCAC00441353 /* String+Localized */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC12C28EDDCB100441353 /* String+Localized.swift */,
+			);
+			path = "String+Localized";
+			sourceTree = "<group>";
+		};
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B74BC12528EDDC2500441353 /* R2 SplashScreen */,
 				B74BC0F828EBAB8200441353 /* EnvironmentsView */,
 				B72A851F28EB5DBE00CB115E /* R2 Launch */,
 				B77262D228E7D4390016540C /* R2 Report Bug */,
@@ -1283,7 +1318,7 @@
 				B79036B628E25C7F00341087 /* PMLogin.storyboard */,
 				B79036C728E2837E00341087 /* PMSignup.storyboard */,
 				B74BC0FB28EBABEB00441353 /* Environments.storyboard */,
-				B74BC12328ED343B00441353 /* VPNLaunchScreen.storyboard */,
+				B74BC13228EDDD9E00441353 /* SplashView.storyboard */,
 			);
 			path = "R2 UI Storyboards";
 			sourceTree = "<group>";
@@ -1310,6 +1345,8 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B74BC12B28EDDCAC00441353 /* String+Localized */,
+				B74BC12828EDDC7B00441353 /* UILabel+change */,
 				B74BC11028EC891300441353 /* Date+Misc */,
 				B72A852D28EB6B2300CB115E /* UIKitString+Extension */,
 				B72A852A28EB6AD200CB115E /* UIView+nib */,
@@ -2618,7 +2655,6 @@
 				B751611828D7DF6E0028BE35 /* R2 UI Storyboards */,
 				B751611428D7DF440028BE35 /* R2 UI Scenes */,
 				B75160E128D7CA0B0028BE35 /* Vaif R2 - VPN.entitlements */,
-				B7948D1A28D6502A004CDB79 /* ViewController.swift */,
 				B7948D2728D6502C004CDB79 /* Info.plist */,
 				B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */,
 			);
@@ -3185,6 +3221,7 @@
 				B79036C828E2837E00341087 /* PMSignup.storyboard in Resources */,
 				B79035F728E21D7200341087 /* PMCellSectionView.xib in Resources */,
 				B79035D428E218A900341087 /* Assets-V5.xcassets in Resources */,
+				B74BC13328EDDD9E00441353 /* SplashView.storyboard in Resources */,
 				B790360228E21EBD00341087 /* PMTextFieldCombo.xib in Resources */,
 				B7948D2628D6502C004CDB79 /* LaunchScreen.storyboard in Resources */,
 				B74BC0FC28EBABEB00441353 /* Environments.storyboard in Resources */,
@@ -3194,7 +3231,6 @@
 				B790361828E2228B00341087 /* PMHeaderView.xib in Resources */,
 				B75161D828D906230028BE35 /* Montserrat-Bold.ttf in Resources */,
 				B7948D1E28D6502A004CDB79 /* Main.storyboard in Resources */,
-				B74BC12428ED343B00441353 /* VPNLaunchScreen.storyboard in Resources */,
 				B75160F328D7CD850028BE35 /* adBlockListThree.json in Resources */,
 				B75161DB28D906230028BE35 /* SF-Pro-Rounded-Medium.otf in Resources */,
 				B75161DC28D906230028BE35 /* SF-Pro-Rounded-Bold.otf in Resources */,
@@ -3448,6 +3484,7 @@
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
 				B79035C728E217DE00341087 /* PMActionSheetHeaderView.swift in Sources */,
 				B790367E28E24B2B00341087 /* Address+Extensions.swift in Sources */,
+				B74BC12F28EDDCD200441353 /* SplashPresenter.swift in Sources */,
 				B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */,
 				B7B65ED428E3BDDA00F30E84 /* TroubleshootItem.swift in Sources */,
 				B790361B28E2231500341087 /* PMSegmentedControl.swift in Sources */,
@@ -3565,6 +3602,7 @@
 				B790358B28E2140F00341087 /* UIStackView+helper.swift in Sources */,
 				B790360D28E2206D00341087 /* CountryPickerViewController.swift in Sources */,
 				B75161AB28D8FB270028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				B74BC13128EDDD6700441353 /* SplashAnimator.swift in Sources */,
 				B772627F28E6118C0016540C /* ProtonMailAPIService+Credentials.swift in Sources */,
 				B751617E28D8FB260028BE35 /* M13Checkbox.swift in Sources */,
 				B75161B028D8FB270028BE35 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
@@ -3620,6 +3658,7 @@
 				B7B65EBF28E3B5E300F30E84 /* TroubleshootViewController.swift in Sources */,
 				B79035FE28E21E3F00341087 /* PMInternalTextField.swift in Sources */,
 				B79035B128E2165800341087 /* UILabel+helper.swift in Sources */,
+				B74BC12728EDDC4B00441353 /* SplashViewController.swift in Sources */,
 				B74BC10528EBB44600441353 /* AnnouncementRefresher.swift in Sources */,
 				B751612128D8B1C60028BE35 /* Mailto.swift in Sources */,
 				B77262CB28E7C5AE0016540C /* iOSNetworkingDelegate.swift in Sources */,
@@ -3640,6 +3679,7 @@
 				B772628828E614810016540C /* DoH.swift in Sources */,
 				B790358028E2127500341087 /* LoginNavigationViewController.swift in Sources */,
 				B751618A28D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				B74BC12D28EDDCB100441353 /* String+Localized.swift in Sources */,
 				B77262DA28E7D56E0016540C /* URLArray+Extension.swift in Sources */,
 				B751619E28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				B751618D28D8FB260028BE35 /* NVActivityIndicatorShape.swift in Sources */,
@@ -3652,7 +3692,6 @@
 				B74BC0FA28EBAB8E00441353 /* EnvironmentsViewController.swift in Sources */,
 				B790356B28E20E2900341087 /* PMFontAttributes.swift in Sources */,
 				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
-				B7948D1B28D6502A004CDB79 /* ViewController.swift in Sources */,
 				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				B7B65EE128E49B2000F30E84 /* Logger+Categories.swift in Sources */,
 				B790365C28E2475D00341087 /* UIStoryboard+Extensions.swift in Sources */,
@@ -3677,6 +3716,7 @@
 				B772626F28E5F20F0016540C /* Error+Extensions.swift in Sources */,
 				B7BAFCD128E37684000CDCD9 /* TimerFactory.swift in Sources */,
 				B77262D628E7D4CF0016540C /* ReportsAPI.swift in Sources */,
+				B74BC12A28EDDC8300441353 /* UILabel+change.swift in Sources */,
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
 				B79036D028E288C400341087 /* String+HumanVerificationExtension.swift in Sources */,
 				B77262ED28E7D7E80016540C /* OSLogContent.swift in Sources */,
@@ -4094,17 +4134,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -4113,7 +4155,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -4121,7 +4163,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -4134,17 +4176,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 31;
+				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Vaif R2 - VPN";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -4153,7 +4197,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -4161,7 +4205,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

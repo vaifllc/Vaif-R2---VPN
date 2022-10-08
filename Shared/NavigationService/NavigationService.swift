@@ -34,19 +34,19 @@ protocol ProfileService {
 
 // MARK: Settings Service
 
-//protocol SettingsService {
+protocol SettingsService {
 //    func makeSettingsViewController() -> SettingsViewController?
 //    func makeSettingsAccountViewController() -> SettingsAccountViewController?
 //    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
 //    func makeLogSelectionViewController() -> LogSelectionViewController
 //    func makeBatteryUsageViewController() -> BatteryUsageViewController
 //    func makeLogsViewController(logSource: LogSource) -> LogsViewController
-//    func presentReportBug()
-//}
+    func presentReportBug()
+}
 
-//protocol SettingsServiceFactory {
-//    func makeSettingsService() -> SettingsService
-//}
+protocol SettingsServiceFactory {
+    func makeSettingsService() -> SettingsService
+}
 
 // MARK: Protocol Service
 
@@ -76,7 +76,44 @@ protocol NavigationServiceFactory {
     func makeNavigationService() -> NavigationService
 }
 
-final class NavigationService {
+final class NavigationService: LoginErrorPresenter {
+    func willPresentError(error: LoginError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: SignupError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: AvailabilityError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: SetUsernameError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: CreateAddressError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: CreateAddressKeysError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: StoreKitManagerErrors, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: ResponseError, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    func willPresentError(error: Error, from: UIViewController) -> Bool {
+        return false
+    }
+    
+    
     typealias Factory = DependencyContainer
     private let factory: Factory
     
@@ -92,8 +129,8 @@ final class NavigationService {
     lazy var windowService: WindowService = factory.makeWindowService()
 //    private lazy var vpnKeychain: VpnKeychainProtocol = factory.makeVpnKeychain()
 //    private lazy var vpnApiService: VpnApiService = factory.makeVpnApiService()
-    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
-    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
+//    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
+//    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
 //    lazy var authKeychain: AuthKeychainHandle = factory.makeAuthKeychainHandle()
     private lazy var alertService: CoreAlertService = factory.makeCoreAlertService()
 //    private lazy var vpnManager: VpnManagerProtocol = factory.makeVpnManager()
@@ -105,44 +142,66 @@ final class NavigationService {
         return loginService
     }()
     private lazy var networking: Networking = factory.makeNetworking()
-   // private lazy var planService: PlanService = factory.makePlanService()
-   // private lazy var profileManager = factory.makeProfileManager()
-//    private lazy var onboardingService: OnboardingService = {
-//        let onboardingService = factory.makeOnboardingService()
-//        onboardingService.delegate = self
-//        return onboardingService
-//    }()
 
     private lazy var bugReportCreator: BugReportCreator = factory.makeBugReportCreator()
-
-//    private lazy var connectionBarViewController = {
-//        return makeConnectionBarViewController()
-//    }()
-
-//    private lazy var tabBarController = {
-//        return makeTabBarController()
-//    }()
     
-//    var vpnGateway: VpnGatewayProtocol? {
-//        return appSessionManager.vpnGateway
-//    }
+
+    private let networkingDelegate: NetworkingDelegate // swiftlint:disable:this weak_delegate
+    private let networking2: Networking
+    private let doh: DoHVPN
+    private var login: LoginAndSignupInterface?
+    weak var delegate: LoginServiceDelegate?
+
     
     // MARK: Initializers
     init(_ factory: Factory) {
         self.factory = factory
+        networkingDelegate = factory.makeNetworkingDelegate()
+        networking2 = factory.makeNetworking()
+        doh = factory.makeDoHVPN()
     }
     
     func launched() {
-        NotificationCenter.default.addObserver(self, selector: #selector(sessionChanged(_:)),
-                                               name: appSessionManager.sessionChanged, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(refreshVpnManager(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
-        
-        if let launchViewController = makeLaunchViewController() {
-            windowService.show(viewController: launchViewController)
-        }
-        
-        
+        let signupAvailability = SignupAvailability.available(parameters: SignupParameters(passwordRestrictions: SignupPasswordRestrictions.default, summaryScreenVariant: SummaryScreenVariant.noSummaryScreen))
+        let login = LoginAndSignup(appName: "Proton VPN",
+                                   clientApp: .vpn,
+                                   doh: doh,
+                                   apiServiceDelegate: networking,
+                                  // forceUpgradeDelegate: networkingDelegate,
+                                   humanVerificationVersion: networkingDelegate.version,
+                                   minimumAccountType: AccountType.username,
+                                   isCloseButtonAvailable: false)
+        self.login = login
 
+        var onboardingShowFirstConnection = true
+
+        let variant = WelcomeScreenVariant.vpn(WelcomeScreenTexts(body: "Decentralized Virtual Privacy. An all new way to embrace online privacy."))
+        let customization = LoginCustomizationOptions(username: nil, performBeforeFlow: nil, customErrorPresenter: self, helpDecorator: { input in
+            let reportBugItem = HelpItem.custom(icon: UIImage(named: "ic-bug")!, title: "Report", behaviour: { [weak self] viewController in
+                //self?.settingsService.presentReportBug()
+            })
+            var result = input
+            if !result.isEmpty {
+                result[0].append(reportBugItem)
+            } else {
+                result = [[reportBugItem]]
+            }
+            return result
+        })
+        let welcomeViewController = login.welcomeScreenForPresentingFlow(variant: variant, customization: customization) { [weak self] (result: LoginResult) -> Void in
+            switch result {
+            case .dismissed:
+                print("Dismissing the Welcome screen without login or signup should not be possible")
+            case .loggedIn:
+                self?.delegate?.userDidLogIn()
+            case .signedUp:
+                self?.delegate?.userDidSignUp(onboardingShowFirstConnection: onboardingShowFirstConnection)
+            }
+
+            self?.login = nil
+        }
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(welcomeViewController)
+        //windowService.show(viewController: welcomeViewController)
     }
 
     func presentWelcome(initialError: String?) {
@@ -154,17 +213,17 @@ final class NavigationService {
         showNewBrandModal()
     }
     
-    @objc private func sessionChanged(_ notification: Notification) {
-        guard appSessionManager.sessionStatus == .notEstablished else {
-            return
-        }
-        guard let reasonForSessionChange = notification.object as? String else {
-            presentWelcome(initialError: nil)
-            return
-        }
-
-        presentWelcome(initialError: reasonForSessionChange)
-    }
+//    @objc private func sessionChanged(_ notification: Notification) {
+//        guard appSessionManager.sessionStatus == .notEstablished else {
+//            return
+//        }
+//        guard let reasonForSessionChange = notification.object as? String else {
+//            presentWelcome(initialError: nil)
+//            return
+//        }
+//
+//        presentWelcome(initialError: reasonForSessionChange)
+//    }
     
 //    @objc private func refreshVpnManager(_ notification: Notification) {
 //        vpnManager.refreshManagers()

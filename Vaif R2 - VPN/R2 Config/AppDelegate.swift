@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var propertiesManager: PropertiesManagerProtocol = container.makePropertiesManager()
 //    private lazy var appStateManager: AppStateManager = container.makeAppStateManager()
 //    private lazy var planService: PlanService = container.makePlanService()
+    var splashPresenter: SplashPresenterDescription? = SplashPresenter()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //setupLocalTestRomoval()
@@ -46,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupIAP()
         setupFirewallPeriodicCheck()
         setupWidgetToggleVPN()
-        //setupLaunchScreen()
+       // setupLaunchScreen()
 //        setupLogsForApp()
 //        setupDebugHelpers()
         
@@ -75,9 +76,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func setupLaunchScreen(){
-        
-            self.navigationService.launched()
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+           self.navigationService.launched()
+            self.splashPresenter?.present()
+        }
             
     }
     

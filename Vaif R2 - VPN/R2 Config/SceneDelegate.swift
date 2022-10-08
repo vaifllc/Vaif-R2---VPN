@@ -10,6 +10,9 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private let container = DependencyContainer()
+//    private lazy var vpnManager: VpnManagerProtocol = container.makeVpnManager()
+    private lazy var navigationService: NavigationService = container.makeNavigationService()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +20,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        self.window = UIWindow(windowScene: windowScene)
+        //self.window =  UIWindow(frame: UIScreen.main.bounds)
+//        let storyboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
+//
+//        if let rootVC = storyboard.instantiateViewController(identifier: "LaunchViewController") as? LaunchViewController{
+//            let rootNC = UINavigationController(rootViewController: rootVC)
+//            self.window?.rootViewController = rootNC
+//            self.window?.makeKeyAndVisible()
+//        }
+        self.window?.overrideUserInterfaceStyle = .dark
+        setupLaunchScreen()
+    }
+    
+    func setupLaunchScreen(){
+        let storyboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
+        if let launchViewController = storyboard.instantiateViewController(withIdentifier: "LaunchViewController") as? LaunchViewController {
+            launchViewController.mode = .delayed
+            
+            self.window?.rootViewController = launchViewController
+            self.window?.makeKeyAndVisible()
+//            return launchViewController
+        }
+        
+            
     }
     
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
@@ -61,4 +89,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
 

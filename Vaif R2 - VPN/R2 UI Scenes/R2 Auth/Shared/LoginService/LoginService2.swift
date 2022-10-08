@@ -154,7 +154,8 @@ final class CoreLoginService {
         let welcomeViewController = loginInterface.welcomeScreenForPresentingFlow(variant: variant,
                                                                                   customization: customization,
                                                                                   updateBlock: loginResultCompletion)
-        windowService.show(viewController: welcomeViewController)
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(welcomeViewController)
+       // windowService.show(viewController: welcomeViewController)
         if initialError != nil {
             loginInterface.presentLoginFlow(over: welcomeViewController, customization: customization, updateBlock: loginResultCompletion)
         }
