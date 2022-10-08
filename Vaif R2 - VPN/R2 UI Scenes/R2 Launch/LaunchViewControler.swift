@@ -21,6 +21,7 @@ final class LaunchViewController: UIViewController {
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
     private let container = DependencyContainer()
     private lazy var navigationService: NavigationService = container.makeNavigationService()
+    public var readyGroup: DispatchGroup? = DispatchGroup()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,11 +40,20 @@ final class LaunchViewController: UIViewController {
             self.loadingIndicator.isHidden = false
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
                 self.loadingIndicator.isHidden = true
-                self.navigationService.launched()
+                self.whenReady(queue: DispatchQueue.main) {
+                    self.navigationService.launched()
+                }
                 print("Done!") }
             
         case .immediate:
             loadingIndicator.isHidden = false
+        }
+    }
+    
+    public func whenReady(queue: DispatchQueue, completion: @escaping () -> Void) {
+        self.readyGroup?.notify(queue: queue) {
+            completion()
+            self.readyGroup = nil
         }
     }
     

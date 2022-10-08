@@ -33,7 +33,7 @@
                                                             <constraint firstAttribute="width" constant="80" id="BV5-Ti-Wwz"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-Lj-DsT" customClass="TitleLabel" customModule="ProtonCore_LoginUI">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-Lj-DsT" customClass="TitleLabel" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="26.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                         <nil key="textColor"/>
@@ -47,13 +47,13 @@
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8me-HC-43f" customClass="PMTextField" customModule="ProtonCore_UIFoundations">
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8me-HC-43f" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="84.333333333333343" width="358" height="80"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email or username"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="2in-N6-Hxk" customClass="PMTextField" customModule="ProtonCore_UIFoundations">
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="2in-N6-Hxk" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="172.33333333333334" width="358" height="80"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
@@ -63,14 +63,14 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vby-LA-nzX">
                                                 <rect key="frame" x="8" y="270.33333333333331" width="358" height="76"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reM-YD-5Pw" customClass="ProtonButton" customModule="ProtonCore_UIFoundations">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reM-YD-5Pw" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="358" height="34"/>
                                                         <state key="normal" title="Sign in"/>
                                                         <connections>
                                                             <action selector="signInPressed:" destination="tcT-5H-Lzx" eventType="touchUpInside" id="4Qh-8X-5YO"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmX-2q-ILB" customClass="ProtonButton" customModule="ProtonCore_UIFoundations">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmX-2q-ILB" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="42" width="358" height="34"/>
                                                         <state key="normal" title="Create an account"/>
                                                         <connections>
@@ -86,7 +86,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="jD7-vI-f6j"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-km-QY8" customClass="ProtonButton" customModule="ProtonCore_UIFoundations">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-km-QY8" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="367.33333333333331" width="358" height="34"/>
                                                 <state key="normal" title="Need help?"/>
                                                 <connections>

@@ -8,8 +8,8 @@
 import Foundation
 
 
-class Common {
-    public static var bundle: Bundle {
-        return Bundle(path: Bundle(for: Common.self).path(forResource: "Resources-CoreTranslation", ofType: "bundle")!)!
-    }
-}
+//class Common {
+//    public static var bundle: Bundle {
+//        return Bundle(path: Bundle(for: Common.self).path(forResource: "Resources-CoreTranslation", ofType: "bundle")!)!
+//    }
+//}
