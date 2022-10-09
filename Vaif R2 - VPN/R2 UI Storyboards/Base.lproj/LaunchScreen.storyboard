@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +60,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5wx-Qi-27t"/>
-                        <color key="backgroundColor" red="0.090196078430000007" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
                         <constraints>
                             <constraint firstItem="cyf-WM-c2S" firstAttribute="centerY" secondItem="5wx-Qi-27t" secondAttribute="centerY" multiplier="0.8" id="13U-cW-Nr8"/>
                             <constraint firstItem="Axt-0O-M9Y" firstAttribute="centerX" secondItem="DMZ-t7-TMW" secondAttribute="centerX" id="Fpf-7n-yc3"/>
@@ -121,7 +122,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qgf-hJ-5Se"/>
-                        <color key="backgroundColor" red="0.090196078430000007" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
                         <constraints>
                             <constraint firstItem="sBG-No-5Sg" firstAttribute="leading" secondItem="qgf-hJ-5Se" secondAttribute="leading" id="JrP-Zp-12S"/>
                             <constraint firstItem="jlB-Vi-Uru" firstAttribute="centerX" secondItem="qgf-hJ-5Se" secondAttribute="centerX" id="PVi-Ry-mKr"/>
@@ -139,5 +140,8 @@
     <resources>
         <image name="SplashFooterIcon" width="323" height="77"/>
         <image name="SplashIcon" width="80" height="80"/>
+        <namedColor name="MobileBackgroundNorm">
+            <color red="0.46274509803921571" green="0.47058823529411764" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
