@@ -72,8 +72,6 @@
 		B74BC16A28F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16928F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift */; };
 		B74BC16C28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16B28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift */; };
 		B74BC16E28F37F6500441353 /* WKScriptMessageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16D28F37F6500441353 /* WKScriptMessageMock.swift */; };
-		B74BC17028F37FAD00441353 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74BC16F28F37FAD00441353 /* XCTest.framework */; };
-		B74BC17128F37FB000441353 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74BC16F28F37FAD00441353 /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B74BC17428F37FFB00441353 /* FileLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17328F37FFB00441353 /* FileLogFormatter.swift */; };
 		B74BC17728F3806A00441353 /* Level+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17628F3806A00441353 /* Level+Print.swift */; };
 		B74BC17928F3809E00441353 /* LogHandler+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17828F3809E00441353 /* LogHandler+Metadata.swift */; };
@@ -620,17 +618,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B74BC17228F37FB200441353 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B74BC17128F37FB000441353 /* XCTest.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1167,7 +1154,6 @@
 			files = (
 				B7BAFCC628E34A42000CDCD9 /* Review in Frameworks */,
 				B7BAFCE428E37FA5000CDCD9 /* Modals in Frameworks */,
-				B74BC17028F37FAD00441353 /* XCTest.framework in Frameworks */,
 				B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */,
 				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
 				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
@@ -3189,7 +3175,6 @@
 				B7948D1128D6502A004CDB79 /* Resources */,
 				46D8B1F47987A19D7815B0F8 /* [CP] Embed Pods Frameworks */,
 				B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */,
-				B74BC17228F37FB200441353 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -4364,6 +4349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -4379,6 +4365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks\n",
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
@@ -4390,6 +4377,10 @@
 				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -4406,6 +4397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Vaif R2 - VPN/Info.plist";
@@ -4421,6 +4413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks\n",
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
@@ -4432,6 +4425,10 @@
 				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

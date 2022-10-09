@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import XCTest
+
 
 @propertyWrapper
 public final class ThrowingFuncStub<Input, Output, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12> {
@@ -37,11 +37,11 @@ public final class ThrowingStubbedFunction<Input, Output, A1, A2, A3, A4, A5, A6
 
     private lazy var implementation: (UInt, Input) throws -> Output = { [unowned self] _, input in
         guard let initialReturn = initialReturn else {
-            XCTFail("initial return was not provided: \(self.description)")
+            //XCTFail("initial return was not provided: \(self.description)")
             fatalError()
         }
         if self.failOnBeingCalledUnexpectedly {
-            XCTFail("this method should not be called but was: \(self.description)")
+            //XCTFail("this method should not be called but was: \(self.description)")
             return try initialReturn.closure(input)
         }
         return try initialReturn.closure(input)
@@ -80,7 +80,7 @@ public final class ThrowingStubbedFunction<Input, Output, A1, A2, A3, A4, A5, A6
 
     deinit {
         if ensureWasCalled && callCounter == 0 {
-            XCTFail("this method should be called but wasn't: \(description)")
+           // XCTFail("this method should be called but wasn't: \(description)")
         }
     }
 }

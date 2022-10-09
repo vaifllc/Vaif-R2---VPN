@@ -79,7 +79,7 @@ public class MaintenanceManager: MaintenanceManagerProtocol {
         case .connected, .connecting:
             break
         default:
-          //  log.info("VPN Not connected", category: .app)
+            log.info("VPN Not connected", category: .app)
             completion?(false)
             return
         }

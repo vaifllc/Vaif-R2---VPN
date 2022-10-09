@@ -5,7 +5,7 @@
 //  Created by VAIF on 10/9/22.
 //
 
-import XCTest
+import Foundation
 
 @propertyWrapper
 public final class PropertyStub<Property> {
