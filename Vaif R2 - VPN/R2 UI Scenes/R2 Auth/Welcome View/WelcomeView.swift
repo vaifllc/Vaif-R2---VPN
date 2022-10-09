@@ -159,8 +159,8 @@ final class WelcomeView: UIView {
             topImage.widthAnchor.constraint(equalTo: topImage.heightAnchor, multiplier: image.size.width / image.size.height),
 
             logo.centerYAnchor.constraint(equalTo: top.bottomAnchor, constant: -8),
-            logo.widthAnchor.constraint(equalToConstant: 106),
-            logo.heightAnchor.constraint(equalToConstant: 106),
+            logo.widthAnchor.constraint(equalToConstant: 136),
+            logo.heightAnchor.constraint(equalToConstant: 136),
 
             wordmark.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 16),
             body.topAnchor.constraint(equalTo: wordmark.bottomAnchor, constant: bodyOffset),
@@ -231,7 +231,7 @@ final class WelcomeView: UIView {
         case .custom(let data): text = data.body
         }
         var attributes = PMFontAttributes.DefaultSmall
-        let foregroundColor: UIColor = ColorProvider.TextWeak
+        let foregroundColor: UIColor = ColorProvider.TextNorm
         attributes[.foregroundColor] = foregroundColor
         body.attributedText = NSAttributedString(string: text, attributes: attributes)
         body.textAlignment = .center

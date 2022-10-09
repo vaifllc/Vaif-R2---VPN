@@ -18,7 +18,7 @@ public class LocalizedString_V5 {
     // Login / Signup
     
     // Welcome screen footer
-    public lazy var _ls_welcome_footer = NSLocalizedString("Privacy by default", comment: "Welcome screen footer label")
+    public lazy var _ls_welcome_footer = NSLocalizedString("Powered by VAIF R2©.", comment: "Welcome screen footer label")
 
     // New_Plans
     

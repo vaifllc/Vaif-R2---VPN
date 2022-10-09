@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "WelcomeMasterbrand_dark-1.svg",
+      "filename" : "Untitled design.svg",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "WelcomeMasterbrand_light-1.svg",
+      "filename" : "Untitled design 1.svg",
       "idiom" : "universal"
     },
     {
@@ -21,7 +21,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "WelcomeMasterbrand_dark.svg",
+      "filename" : "Untitled design 2.svg",
       "idiom" : "universal"
     }
   ],

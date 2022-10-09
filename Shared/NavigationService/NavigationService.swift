@@ -162,7 +162,9 @@ final class NavigationService: LoginErrorPresenter {
     }
     
     func launched() {
-        let signupAvailability = SignupAvailability.available(parameters: SignupParameters(passwordRestrictions: SignupPasswordRestrictions.default, summaryScreenVariant: SummaryScreenVariant.noSummaryScreen))
+//        let signupAvailability = SignupAvailability.available(parameters: SignupParameters(passwordRestrictions: SignupPasswordRestrictions.default, summaryScreenVariant: SummaryScreenVariant.noSummaryScreen))
+        let signupParameters = SignupParameters(passwordRestrictions: .default, summaryScreenVariant: .noSummaryScreen)
+        let signupAvailability = SignupAvailability.available(parameters: signupParameters)
         let login = LoginAndSignup(appName: "Proton VPN",
                                    clientApp: .vpn,
                                    doh: doh,
@@ -170,7 +172,8 @@ final class NavigationService: LoginErrorPresenter {
                                   // forceUpgradeDelegate: networkingDelegate,
                                    humanVerificationVersion: networkingDelegate.version,
                                    minimumAccountType: AccountType.username,
-                                   isCloseButtonAvailable: false)
+                                   isCloseButtonAvailable: false,
+                                   signupAvailability: signupAvailability)
         self.login = login
 
         var onboardingShowFirstConnection = true
