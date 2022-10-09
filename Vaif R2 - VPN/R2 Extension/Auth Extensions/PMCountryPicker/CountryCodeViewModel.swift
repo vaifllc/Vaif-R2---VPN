@@ -19,13 +19,13 @@ public class CountryCodeViewModel {
     // MARK: Public interface
     
     public init() {
-        countryCodes = getCountryCodes()
+       // countryCodes = getCountryCodes()
         prepareData()
     }
 
     init(searchBarPlaceholderText: String) {
         self.searchBarPlaceholderText = searchBarPlaceholderText
-        countryCodes = getCountryCodes()
+      //  countryCodes = getCountryCodes()
         prepareData()
     }
 

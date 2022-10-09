@@ -47,6 +47,40 @@
 		B74BC12F28EDDCD200441353 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC12E28EDDCD100441353 /* SplashPresenter.swift */; };
 		B74BC13128EDDD6700441353 /* SplashAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC13028EDDD6700441353 /* SplashAnimator.swift */; };
 		B74BC13328EDDD9E00441353 /* SplashView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74BC13228EDDD9E00441353 /* SplashView.storyboard */; };
+		B74BC13628F26A5300441353 /* MaintenanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC13528F26A5300441353 /* MaintenanceManager.swift */; };
+		B74BC13828F26A6700441353 /* MaintenanceManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC13728F26A6700441353 /* MaintenanceManagerHelper.swift */; };
+		B74BC13B28F26AB800441353 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC13A28F26AB800441353 /* FeatureFlags.swift */; };
+		B74BC13E28F26AE000441353 /* Codable+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC13D28F26AE000441353 /* Codable+Default.swift */; };
+		B74BC14128F37C6000441353 /* AppProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC14028F37C6000441353 /* AppProtocol.swift */; };
+		B74BC14428F37C9100441353 /* FileLogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC14328F37C9100441353 /* FileLogHandler.swift */; };
+		B74BC14628F37CDA00441353 /* PMLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC14528F37CDA00441353 /* PMLogFormatter.swift */; };
+		B74BC14B28F37D6500441353 /* FileSystemMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC14A28F37D6500441353 /* FileSystemMock.swift */; };
+		B74BC14D28F37D7800441353 /* FileHandleMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC14C28F37D7800441353 /* FileHandleMock.swift */; };
+		B74BC14F28F37DA700441353 /* FileHandleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC14E28F37DA700441353 /* FileHandleWrapper.swift */; };
+		B74BC15128F37DBC00441353 /* FileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15028F37DBC00441353 /* FileManagerMock.swift */; };
+		B74BC15328F37DE900441353 /* FileManagerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15228F37DE900441353 /* FileManagerWrapper.swift */; };
+		B74BC15628F37E2800441353 /* BasicFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15528F37E2800441353 /* BasicFixtures.swift */; };
+		B74BC15828F37E4500441353 /* CapturedArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15728F37E4500441353 /* CapturedArguments.swift */; };
+		B74BC15A28F37E7600441353 /* Codable+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15928F37E7600441353 /* Codable+Ergonomics.swift */; };
+		B74BC15C28F37E9500441353 /* FuncStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15B28F37E9500441353 /* FuncStub.swift */; };
+		B74BC15E28F37EBB00441353 /* FuncStub+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15D28F37EBB00441353 /* FuncStub+Ergonomics.swift */; };
+		B74BC16028F37ED300441353 /* InitialReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC15F28F37ED200441353 /* InitialReturn.swift */; };
+		B74BC16228F37EE400441353 /* PerformConcurrently.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16128F37EE400441353 /* PerformConcurrently.swift */; };
+		B74BC16428F37EF400441353 /* PropertyStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16328F37EF400441353 /* PropertyStub.swift */; };
+		B74BC16628F37F0F00441353 /* Stabbing+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16528F37F0F00441353 /* Stabbing+Ergonomics.swift */; };
+		B74BC16828F37F2500441353 /* ThrowingFuncStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16728F37F2500441353 /* ThrowingFuncStub.swift */; };
+		B74BC16A28F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16928F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift */; };
+		B74BC16C28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16B28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift */; };
+		B74BC16E28F37F6500441353 /* WKScriptMessageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC16D28F37F6500441353 /* WKScriptMessageMock.swift */; };
+		B74BC17028F37FAD00441353 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74BC16F28F37FAD00441353 /* XCTest.framework */; };
+		B74BC17128F37FB000441353 /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74BC16F28F37FAD00441353 /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B74BC17428F37FFB00441353 /* FileLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17328F37FFB00441353 /* FileLogFormatter.swift */; };
+		B74BC17728F3806A00441353 /* Level+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17628F3806A00441353 /* Level+Print.swift */; };
+		B74BC17928F3809E00441353 /* LogHandler+Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17828F3809E00441353 /* LogHandler+Metadata.swift */; };
+		B74BC17C28F3810C00441353 /* LocalAgentNativeClientImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17B28F3810C00441353 /* LocalAgentNativeClientImplementation.swift */; };
+		B74BC17E28F3814000441353 /* Logger+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17D28F3814000441353 /* Logger+Main.swift */; };
+		B74BC18028F3818000441353 /* FileHandler+New.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC17F28F3818000441353 /* FileHandler+New.swift */; };
+		B74BC18328F381F900441353 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC18228F381F900441353 /* Atomic.swift */; };
 		B74F87C828E28E5A0012D190 /* BugReport in Frameworks */ = {isa = PBXBuildFile; productRef = B74F87C728E28E5A0012D190 /* BugReport */; };
 		B75160DC28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */; };
 		B75160DE28D7C9940028BE35 /* LoadingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75160DD28D7C9940028BE35 /* LoadingCircle.swift */; };
@@ -586,6 +620,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B74BC17228F37FB200441353 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B74BC17128F37FB000441353 /* XCTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -652,6 +697,39 @@
 		B74BC12E28EDDCD100441353 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		B74BC13028EDDD6700441353 /* SplashAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAnimator.swift; sourceTree = "<group>"; };
 		B74BC13228EDDD9E00441353 /* SplashView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashView.storyboard; sourceTree = "<group>"; };
+		B74BC13528F26A5300441353 /* MaintenanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceManager.swift; sourceTree = "<group>"; };
+		B74BC13728F26A6700441353 /* MaintenanceManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceManagerHelper.swift; sourceTree = "<group>"; };
+		B74BC13A28F26AB800441353 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
+		B74BC13D28F26AE000441353 /* Codable+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Default.swift"; sourceTree = "<group>"; };
+		B74BC14028F37C6000441353 /* AppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocol.swift; sourceTree = "<group>"; };
+		B74BC14328F37C9100441353 /* FileLogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLogHandler.swift; sourceTree = "<group>"; };
+		B74BC14528F37CDA00441353 /* PMLogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMLogFormatter.swift; sourceTree = "<group>"; };
+		B74BC14A28F37D6500441353 /* FileSystemMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemMock.swift; sourceTree = "<group>"; };
+		B74BC14C28F37D7800441353 /* FileHandleMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandleMock.swift; sourceTree = "<group>"; };
+		B74BC14E28F37DA700441353 /* FileHandleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandleWrapper.swift; sourceTree = "<group>"; };
+		B74BC15028F37DBC00441353 /* FileManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerMock.swift; sourceTree = "<group>"; };
+		B74BC15228F37DE900441353 /* FileManagerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerWrapper.swift; sourceTree = "<group>"; };
+		B74BC15528F37E2800441353 /* BasicFixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFixtures.swift; sourceTree = "<group>"; };
+		B74BC15728F37E4500441353 /* CapturedArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedArguments.swift; sourceTree = "<group>"; };
+		B74BC15928F37E7600441353 /* Codable+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Ergonomics.swift"; sourceTree = "<group>"; };
+		B74BC15B28F37E9500441353 /* FuncStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncStub.swift; sourceTree = "<group>"; };
+		B74BC15D28F37EBB00441353 /* FuncStub+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FuncStub+Ergonomics.swift"; sourceTree = "<group>"; };
+		B74BC15F28F37ED200441353 /* InitialReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialReturn.swift; sourceTree = "<group>"; };
+		B74BC16128F37EE400441353 /* PerformConcurrently.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformConcurrently.swift; sourceTree = "<group>"; };
+		B74BC16328F37EF400441353 /* PropertyStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStub.swift; sourceTree = "<group>"; };
+		B74BC16528F37F0F00441353 /* Stabbing+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stabbing+Ergonomics.swift"; sourceTree = "<group>"; };
+		B74BC16728F37F2500441353 /* ThrowingFuncStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThrowingFuncStub.swift; sourceTree = "<group>"; };
+		B74BC16928F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThrowingFuncStub+Ergonomics.swift"; sourceTree = "<group>"; };
+		B74BC16B28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+SimulateTap.swift"; sourceTree = "<group>"; };
+		B74BC16D28F37F6500441353 /* WKScriptMessageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKScriptMessageMock.swift; sourceTree = "<group>"; };
+		B74BC16F28F37FAD00441353 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B74BC17328F37FFB00441353 /* FileLogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLogFormatter.swift; sourceTree = "<group>"; };
+		B74BC17628F3806A00441353 /* Level+Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Level+Print.swift"; sourceTree = "<group>"; };
+		B74BC17828F3809E00441353 /* LogHandler+Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogHandler+Metadata.swift"; sourceTree = "<group>"; };
+		B74BC17B28F3810C00441353 /* LocalAgentNativeClientImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAgentNativeClientImplementation.swift; sourceTree = "<group>"; };
+		B74BC17D28F3814000441353 /* Logger+Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Main.swift"; sourceTree = "<group>"; };
+		B74BC17F28F3818000441353 /* FileHandler+New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileHandler+New.swift"; sourceTree = "<group>"; };
+		B74BC18228F381F900441353 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		B75160DB28D7C9650028BE35 /* VaifR2VPNFirewallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaifR2VPNFirewallWidget.swift; sourceTree = "<group>"; };
 		B75160DD28D7C9940028BE35 /* LoadingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCircle.swift; sourceTree = "<group>"; };
 		B75160DF28D7C9BD0028BE35 /* CombinedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedProvider.swift; sourceTree = "<group>"; };
@@ -1089,6 +1167,7 @@
 			files = (
 				B7BAFCC628E34A42000CDCD9 /* Review in Frameworks */,
 				B7BAFCE428E37FA5000CDCD9 /* Modals in Frameworks */,
+				B74BC17028F37FAD00441353 /* XCTest.framework in Frameworks */,
 				B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */,
 				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
 				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
@@ -1169,6 +1248,7 @@
 		0A2F108CEA20A6402FFA013A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B74BC16F28F37FAD00441353 /* XCTest.framework */,
 				B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */,
 				B75160F928D7CFB90028BE35 /* CloudKit.framework */,
 				B75160F528D7CFAC0028BE35 /* CocoaLumberjack.framework */,
@@ -1285,6 +1365,106 @@
 			path = "String+Localized";
 			sourceTree = "<group>";
 		};
+		B74BC13428F26A4500441353 /* MaintenanceManager */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC13528F26A5300441353 /* MaintenanceManager.swift */,
+				B74BC13728F26A6700441353 /* MaintenanceManagerHelper.swift */,
+			);
+			path = MaintenanceManager;
+			sourceTree = "<group>";
+		};
+		B74BC13928F26AB200441353 /* FeatureFlags */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC13A28F26AB800441353 /* FeatureFlags.swift */,
+			);
+			path = FeatureFlags;
+			sourceTree = "<group>";
+		};
+		B74BC13C28F26AD900441353 /* Codable+Default */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC13D28F26AE000441353 /* Codable+Default.swift */,
+			);
+			path = "Codable+Default";
+			sourceTree = "<group>";
+		};
+		B74BC13F28F37C5500441353 /* AppProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC14028F37C6000441353 /* AppProtocol.swift */,
+			);
+			path = AppProtocol;
+			sourceTree = "<group>";
+		};
+		B74BC14228F37C8B00441353 /* FileLogHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC14328F37C9100441353 /* FileLogHandler.swift */,
+				B74BC17328F37FFB00441353 /* FileLogFormatter.swift */,
+			);
+			path = FileLogHandler;
+			sourceTree = "<group>";
+		};
+		B74BC14928F37D5000441353 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC14A28F37D6500441353 /* FileSystemMock.swift */,
+				B74BC14C28F37D7800441353 /* FileHandleMock.swift */,
+				B74BC14E28F37DA700441353 /* FileHandleWrapper.swift */,
+				B74BC15028F37DBC00441353 /* FileManagerMock.swift */,
+				B74BC15228F37DE900441353 /* FileManagerWrapper.swift */,
+				B74BC17F28F3818000441353 /* FileHandler+New.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		B74BC15428F37E2000441353 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC15528F37E2800441353 /* BasicFixtures.swift */,
+				B74BC15728F37E4500441353 /* CapturedArguments.swift */,
+				B74BC15928F37E7600441353 /* Codable+Ergonomics.swift */,
+				B74BC15B28F37E9500441353 /* FuncStub.swift */,
+				B74BC15D28F37EBB00441353 /* FuncStub+Ergonomics.swift */,
+				B74BC15F28F37ED200441353 /* InitialReturn.swift */,
+				B74BC16128F37EE400441353 /* PerformConcurrently.swift */,
+				B74BC16328F37EF400441353 /* PropertyStub.swift */,
+				B74BC16528F37F0F00441353 /* Stabbing+Ergonomics.swift */,
+				B74BC16728F37F2500441353 /* ThrowingFuncStub.swift */,
+				B74BC16928F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift */,
+				B74BC16B28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift */,
+				B74BC16D28F37F6500441353 /* WKScriptMessageMock.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		B74BC17528F3805300441353 /* Level+Print */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC17628F3806A00441353 /* Level+Print.swift */,
+				B74BC17828F3809E00441353 /* LogHandler+Metadata.swift */,
+			);
+			path = "Level+Print";
+			sourceTree = "<group>";
+		};
+		B74BC17A28F3810700441353 /* LocalAgentNativeClientImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC17B28F3810C00441353 /* LocalAgentNativeClientImplementation.swift */,
+			);
+			path = LocalAgentNativeClientImplementation;
+			sourceTree = "<group>";
+		};
+		B74BC18128F381F200441353 /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				B74BC18228F381F900441353 /* Atomic.swift */,
+			);
+			path = Atomic;
+			sourceTree = "<group>";
+		};
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1345,6 +1525,12 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B74BC18128F381F200441353 /* Atomic */,
+				B74BC17A28F3810700441353 /* LocalAgentNativeClientImplementation */,
+				B74BC17528F3805300441353 /* Level+Print */,
+				B74BC14228F37C8B00441353 /* FileLogHandler */,
+				B74BC13F28F37C5500441353 /* AppProtocol */,
+				B74BC13C28F26AD900441353 /* Codable+Default */,
 				B74BC12B28EDDCAC00441353 /* String+Localized */,
 				B74BC12828EDDC7B00441353 /* UILabel+change */,
 				B74BC11028EC891300441353 /* Date+Misc */,
@@ -1845,6 +2031,7 @@
 		B790354D28E2077A00341087 /* Auth Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B74BC13928F26AB200441353 /* FeatureFlags */,
 				B77262DD28E7D6620016540C /* LogContentProvider */,
 				B77262C528E7C4130016540C /* ProtonVpnError */,
 				B772626B28E5EFD70016540C /* KeyDecodingStrategy+Extension */,
@@ -2528,6 +2715,7 @@
 			isa = PBXGroup;
 			children = (
 				B79036C228E2771D00341087 /* PMLog.swift */,
+				B74BC14528F37CDA00441353 /* PMLogFormatter.swift */,
 			);
 			path = PMLog;
 			sourceTree = "<group>";
@@ -2840,6 +3028,9 @@
 		B7B65ED528E4995E00F30E84 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B74BC15428F37E2000441353 /* UnitTests */,
+				B74BC14928F37D5000441353 /* FileManager */,
+				B74BC13428F26A4500441353 /* MaintenanceManager */,
 				B74BC10628EBB5B800441353 /* AppState */,
 				B74BC0FD28EBB3A800441353 /* AppSession */,
 				B772625C28E520670016540C /* BugReport */,
@@ -2863,6 +3054,7 @@
 			children = (
 				B7B65EDE28E49A5700F30E84 /* Logger+Callers.swift */,
 				B7B65EE028E49B2000F30E84 /* Logger+Categories.swift */,
+				B74BC17D28F3814000441353 /* Logger+Main.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -2997,6 +3189,7 @@
 				B7948D1128D6502A004CDB79 /* Resources */,
 				46D8B1F47987A19D7815B0F8 /* [CP] Embed Pods Frameworks */,
 				B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */,
+				B74BC17228F37FB200441353 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3476,6 +3669,7 @@
 				B790362128E223FE00341087 /* ChallengeProtocol.swift in Sources */,
 				B790362A28E224C800341087 /* LoginUIImages.swift in Sources */,
 				B790367128E249CE00341087 /* KeySalt.swift in Sources */,
+				B74BC16828F37F2500441353 /* ThrowingFuncStub.swift in Sources */,
 				B751618E28D8FB260028BE35 /* NVActivityIndicatorView.swift in Sources */,
 				B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				B772626A28E5EF9F0016540C /* Endpoint.swift in Sources */,
@@ -3483,21 +3677,25 @@
 				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
 				B79035C728E217DE00341087 /* PMActionSheetHeaderView.swift in Sources */,
+				B74BC13E28F26AE000441353 /* Codable+Default.swift in Sources */,
 				B790367E28E24B2B00341087 /* Address+Extensions.swift in Sources */,
 				B74BC12F28EDDCD200441353 /* SplashPresenter.swift in Sources */,
 				B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */,
 				B7B65ED428E3BDDA00F30E84 /* TroubleshootItem.swift in Sources */,
 				B790361B28E2231500341087 /* PMSegmentedControl.swift in Sources */,
 				B751617528D8FB260028BE35 /* FadeTransition.swift in Sources */,
+				B74BC16E28F37F6500441353 /* WKScriptMessageMock.swift in Sources */,
 				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
 				B79036A328E24FA000341087 /* LoginCoordinator.swift in Sources */,
 				B79035A828E2158A00341087 /* String+Attributed.swift in Sources */,
 				B77262AD28E61D3C0016540C /* HTTPMethod.swift in Sources */,
 				B790368D28E24C3300341087 /* AlertService.swift in Sources */,
+				B74BC16028F37ED300441353 /* InitialReturn.swift in Sources */,
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
 				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				B79036AB28E251BC00341087 /* LoginService.swift in Sources */,
 				B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */,
+				B74BC16628F37F0F00441353 /* Stabbing+Ergonomics.swift in Sources */,
 				B790366B28E2493400341087 /* Key+NSCoding.swift in Sources */,
 				B790362D28E2251300341087 /* LoginAndSignup+DataTypes1.swift in Sources */,
 				B790360B28E2205000341087 /* CountryCodeViewModel.swift in Sources */,
@@ -3510,24 +3708,30 @@
 				B790362428E2244800341087 /* UIViewController+Extensions.swift in Sources */,
 				B772623D28E50ED80016540C /* PMCell+Extensions.swift in Sources */,
 				B751618928D8FB260028BE35 /* M13Checkbox+IB.swift in Sources */,
+				B74BC16428F37EF400441353 /* PropertyStub.swift in Sources */,
+				B74BC15828F37E4500441353 /* CapturedArguments.swift in Sources */,
 				B79035DE28E21B0C00341087 /* PMBanner.swift in Sources */,
 				B75161AC28D8FB270028BE35 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				B79035C328E217B800341087 /* PMActionSheetGridCell.swift in Sources */,
+				B74BC16C28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift in Sources */,
 				B79036A528E24FD100341087 /* LoginValidationError.swift in Sources */,
 				B77262C428E79F3B0016540C /* DoHVPN.swift in Sources */,
 				B79035DB28E21ABA00341087 /* PMActionBarItem.swift in Sources */,
 				B79035C928E217F900341087 /* PMActionSheetItem.swift in Sources */,
 				B7BAFCD928E37821000CDCD9 /* Threading.swift in Sources */,
 				B79036D328E289D100341087 /* UIColor+Extension.swift in Sources */,
+				B74BC15128F37DBC00441353 /* FileManagerMock.swift in Sources */,
 				B790357828E210F500341087 /* UIButton+helper.swift in Sources */,
 				B72A852528EB679800CB115E /* ReportsBugs.swift in Sources */,
 				B77262F128EA55B00016540C /* LogFileManager.swift in Sources */,
 				B751618F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				B79035BA28E216EC00341087 /* UIImage+Text.swift in Sources */,
+				B74BC15C28F37E9500441353 /* FuncStub.swift in Sources */,
 				B7BAFCC828E34B7F000CDCD9 /* AppConstants.swift in Sources */,
 				B77262C028E79B7D0016540C /* Authenticator.swift in Sources */,
 				B790366928E2492400341087 /* Key+Extensions.swift in Sources */,
 				B77262F428EA56070016540C /* String+Extension.swift in Sources */,
+				B74BC17928F3809E00441353 /* LogHandler+Metadata.swift in Sources */,
 				B72A852328EB647F00CB115E /* CompleteViewModel.swift in Sources */,
 				B79035A228E2154300341087 /* UISearchBar+helper.swift in Sources */,
 				B751617628D8FB260028BE35 /* TimerEx.swift in Sources */,
@@ -3535,6 +3739,7 @@
 				B772624428E512040016540C /* NSError+Extension.swift in Sources */,
 				B751617C28D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
 				B790363928E2271C00341087 /* CoreString+Plurals.swift in Sources */,
+				B74BC14B28F37D6500441353 /* FileSystemMock.swift in Sources */,
 				B7BAFCDC28E37D3E000CDCD9 /* UIAlertService.swift in Sources */,
 				B790360928E21FE100341087 /* CountryCodeTableViewCell.swift in Sources */,
 				B79035EA28E21BA600341087 /* PMTabBarConfig.swift in Sources */,
@@ -3550,6 +3755,7 @@
 				B790361E28E223CA00341087 /* UIApplication+Shared.swift in Sources */,
 				B79036D928E28BC200341087 /* TabBarController.swift in Sources */,
 				B772623828E50D8E0016540C /* HelpViewModel.swift in Sources */,
+				B74BC17E28F3814000441353 /* Logger+Main.swift in Sources */,
 				B75161A628D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				B79036DE28E28C8900341087 /* NavigationService.swift in Sources */,
 				B79035F328E21D2800341087 /* PMCellSectionView.swift in Sources */,
@@ -3575,6 +3781,7 @@
 				B79036C028E26BDB00341087 /* SignupViewModel.swift in Sources */,
 				B79035EC28E21BED00341087 /* PMTabBarController.swift in Sources */,
 				B790369F28E24F0D00341087 /* ClientApp.swift in Sources */,
+				B74BC15E28F37EBB00441353 /* FuncStub+Ergonomics.swift in Sources */,
 				B79035E828E21B9100341087 /* PMTabBarBuilder.swift in Sources */,
 				B790366528E2490100341087 /* Key.swift in Sources */,
 				B7B65ED828E4997D00F30E84 /* PropertiesManager.swift in Sources */,
@@ -3589,6 +3796,7 @@
 				B751618028D8FB260028BE35 /* M13CheckboxFlatController.swift in Sources */,
 				B79035BD28E2175C00341087 /* PMActionSheet.swift in Sources */,
 				B79036BA28E2698200341087 /* SignupService.swift in Sources */,
+				B74BC14F28F37DA700441353 /* FileHandleWrapper.swift in Sources */,
 				B790363F28E2277600341087 /* Bundle_V5.swift in Sources */,
 				B77262A628E61A3C0016540C /* ServerTrustEvaluation.swift in Sources */,
 				B772627D28E6100E0016540C /* ProtonMailAPIService+Request.swift in Sources */,
@@ -3620,11 +3828,13 @@
 				B790363328E2264400341087 /* PMLogin+Bundle.swift in Sources */,
 				B772629028E6153D0016540C /* DoHProviderQuad.swift in Sources */,
 				B74BC10328EBB41F00441353 /* AppSessionRefreshTimer.swift in Sources */,
+				B74BC14D28F37D7800441353 /* FileHandleMock.swift in Sources */,
 				B79035C128E2179F00341087 /* PMActionSheetError.swift in Sources */,
 				B790355928E20B9E00341087 /* Brand.swift in Sources */,
 				B74BC11628EC963F00441353 /* AuthCredentials+vpncore1.swift in Sources */,
 				B790368A28E24BBF00341087 /* NSCoder+Extensions.swift in Sources */,
 				B751619628D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				B74BC17728F3806A00441353 /* Level+Print.swift in Sources */,
 				B7B65EBD28E3B5C600F30E84 /* TroubleshootCoordinator.swift in Sources */,
 				B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */,
 				B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
@@ -3644,6 +3854,7 @@
 				B7948DFD28D7C5D8004CDB79 /* BlockDayLog.swift in Sources */,
 				B77262CF28E7D3010016540C /* HVCommon.swift in Sources */,
 				B751619928D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
+				B74BC14628F37CDA00441353 /* PMLogFormatter.swift in Sources */,
 				B79035E128E21B3000341087 /* PMBannerNewStyle.swift in Sources */,
 				B77262D428E7D4410016540C /* ReportBugViewModel.swift in Sources */,
 				B79035EE28E21C0900341087 /* PMTabBarError.swift in Sources */,
@@ -3664,10 +3875,12 @@
 				B77262CB28E7C5AE0016540C /* iOSNetworkingDelegate.swift in Sources */,
 				B772626828E5EF6A0016540C /* CompletionBlockExecutor.swift in Sources */,
 				B751617A28D8FB260028BE35 /* M13CheckboxExpandController.swift in Sources */,
+				B74BC15328F37DE900441353 /* FileManagerWrapper.swift in Sources */,
 				B772627328E5F66D0016540C /* ProtonMailAPIService.swift in Sources */,
 				B79036B328E256FA00341087 /* Container.swift in Sources */,
 				B79035E528E21B5E00341087 /* PMBannerStyle.swift in Sources */,
 				B751617328D8FB260028BE35 /* CGRectEx.swift in Sources */,
+				B74BC13828F26A6700441353 /* MaintenanceManagerHelper.swift in Sources */,
 				B790356328E20C9F00341087 /* PMUIFoundations.swift in Sources */,
 				B790369528E24D8500341087 /* WelcomeViewCoordinator.swift in Sources */,
 				B7948DC928D7C276004CDB79 /* Environment.swift in Sources */,
@@ -3681,18 +3894,23 @@
 				B751618A28D8FB260028BE35 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				B74BC12D28EDDCB100441353 /* String+Localized.swift in Sources */,
 				B77262DA28E7D56E0016540C /* URLArray+Extension.swift in Sources */,
+				B74BC17428F37FFB00441353 /* FileLogFormatter.swift in Sources */,
 				B751619E28D8FB260028BE35 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				B751618D28D8FB260028BE35 /* NVActivityIndicatorShape.swift in Sources */,
 				B790363D28E2274700341087 /* CoreString_V5+Plurals.swift in Sources */,
+				B74BC13628F26A5300441353 /* MaintenanceManager.swift in Sources */,
 				B790367428E24A3B00341087 /* ShowImages.swift in Sources */,
 				B790356828E20DE500341087 /* Reusable.swift in Sources */,
+				B74BC14428F37C9100441353 /* FileLogHandler.swift in Sources */,
 				B772622E28E5079E0016540C /* ImageAlias.swift in Sources */,
 				B79036CD28E2870400341087 /* Route.swift in Sources */,
 				B77262BA28E79A050016540C /* AuthKeychain.swift in Sources */,
 				B74BC0FA28EBAB8E00441353 /* EnvironmentsViewController.swift in Sources */,
 				B790356B28E20E2900341087 /* PMFontAttributes.swift in Sources */,
 				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
+				B74BC16228F37EE400441353 /* PerformConcurrently.swift in Sources */,
 				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				B74BC17C28F3810C00441353 /* LocalAgentNativeClientImplementation.swift in Sources */,
 				B7B65EE128E49B2000F30E84 /* Logger+Categories.swift in Sources */,
 				B790365C28E2475D00341087 /* UIStoryboard+Extensions.swift in Sources */,
 				B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */,
@@ -3717,9 +3935,11 @@
 				B7BAFCD128E37684000CDCD9 /* TimerFactory.swift in Sources */,
 				B77262D628E7D4CF0016540C /* ReportsAPI.swift in Sources */,
 				B74BC12A28EDDC8300441353 /* UILabel+change.swift in Sources */,
+				B74BC18028F3818000441353 /* FileHandler+New.swift in Sources */,
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
 				B79036D028E288C400341087 /* String+HumanVerificationExtension.swift in Sources */,
 				B77262ED28E7D7E80016540C /* OSLogContent.swift in Sources */,
+				B74BC16A28F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift in Sources */,
 				B790357E28E2122C00341087 /* NavigationBarAdjustingScrollViewDelegate.swift in Sources */,
 				B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */,
 				B790365628E246F500341087 /* HelpItem.swift in Sources */,
@@ -3729,6 +3949,7 @@
 				B77262EF28EA52F80016540C /* LogFilesTemporaryStorage.swift in Sources */,
 				B772628C28E615160016540C /* DoHProvider.swift in Sources */,
 				B790363528E226ED00341087 /* Bundle.swift in Sources */,
+				B74BC18328F381F900441353 /* Atomic.swift in Sources */,
 				B772629228E6162C0016540C /* Session.swift in Sources */,
 				B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */,
 				B790369328E24D6D00341087 /* WelcomeViewController.swift in Sources */,
@@ -3746,10 +3967,13 @@
 				B77262C928E7C4440016540C /* NetworkError.swift in Sources */,
 				B790360528E21FAA00341087 /* CountryCode.swift in Sources */,
 				B7B65EDF28E49A5700F30E84 /* Logger+Callers.swift in Sources */,
+				B74BC15A28F37E7600441353 /* Codable+Ergonomics.swift in Sources */,
 				B72A852C28EB6AD900CB115E /* UIView+nib.swift in Sources */,
+				B74BC14128F37C6000441353 /* AppProtocol.swift in Sources */,
 				B772627528E5F79D0016540C /* APIService+Error.swift in Sources */,
 				B790362728E2249800341087 /* UIScrollView+Extensions.swift in Sources */,
 				B74BC11428EC962200441353 /* AuthCredentials+Login.swift in Sources */,
+				B74BC15628F37E2800441353 /* BasicFixtures.swift in Sources */,
 				B772629928E617600016540C /* DateParser.swift in Sources */,
 				B751611B28D7F3260028BE35 /* Loader.swift in Sources */,
 				B7948E0928D7C671004CDB79 /* PushNotificationsAuthorization.swift in Sources */,
@@ -3807,6 +4031,7 @@
 				B79035AB28E215A000341087 /* NSMutableAttributedString.swift in Sources */,
 				B7948DD328D7C2F5004CDB79 /* Shared.swift in Sources */,
 				B790367C28E24B1600341087 /* Address+Codable.swift in Sources */,
+				B74BC13B28F26AB800441353 /* FeatureFlags.swift in Sources */,
 				B74BC11F28EC985500441353 /* CoreNewsRequest.swift in Sources */,
 				B751619A28D8FB260028BE35 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				B751619828D8FB260028BE35 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,

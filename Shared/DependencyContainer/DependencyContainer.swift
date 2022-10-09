@@ -76,8 +76,8 @@ final class DependencyContainer {
     private lazy var uiAlertService: UIAlertService = IosUiAlertService(windowService: makeWindowService()/*, planService: makePlanService()*/)
     private lazy var iosAlertService: CoreAlertService = IosAlertService(self)
     
-//    private lazy var maintenanceManager: MaintenanceManagerProtocol = MaintenanceManager(factory: self)
-//    private lazy var maintenanceManagerHelper: MaintenanceManagerHelper = MaintenanceManagerHelper(factory: self)
+    private lazy var maintenanceManager: MaintenanceManagerProtocol = MaintenanceManager(factory: self)
+    private lazy var maintenanceManagerHelper: MaintenanceManagerHelper = MaintenanceManagerHelper(factory: self)
     
     // Refreshes app data at predefined time intervals
     private lazy var refreshTimer = AppSessionRefreshTimer(factory: self,
@@ -288,18 +288,18 @@ extension DependencyContainer: AppSessionRefresherFactory {
 }
         
 // MARK: - MaintenanceManagerFactory
-//extension DependencyContainer: MaintenanceManagerFactory {
-//    func makeMaintenanceManager() -> MaintenanceManagerProtocol {
-//        return maintenanceManager
-//    }
-//}
+extension DependencyContainer: MaintenanceManagerFactory {
+    func makeMaintenanceManager() -> MaintenanceManagerProtocol {
+        return maintenanceManager
+    }
+}
 
 // MARK: - MaintenanceManagerHelperFactory
-//extension DependencyContainer: MaintenanceManagerHelperFactory {
-//    func makeMaintenanceManagerHelper() -> MaintenanceManagerHelper {
-//        return maintenanceManagerHelper
-//    }
-//}
+extension DependencyContainer: MaintenanceManagerHelperFactory {
+    func makeMaintenanceManagerHelper() -> MaintenanceManagerHelper {
+        return maintenanceManagerHelper
+    }
+}
 
 // MARK: - ProfileManagerFactory
 //extension DependencyContainer: ProfileManagerFactory {

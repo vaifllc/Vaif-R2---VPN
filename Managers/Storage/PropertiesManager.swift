@@ -61,7 +61,7 @@ public protocol PropertiesManagerProtocol: class {
 //    var openVpnConfig: OpenVpnConfig { get set }
 //    var vpnProtocol: VpnProtocol { get set }
 //
-//    var featureFlags: FeatureFlags { get set }
+    var featureFlags: FeatureFlags { get set }
     var maintenanceServerRefreshIntereval: Int { get set }
     var killSwitch: Bool { get set }
     var excludeLocalNetworks: Bool { get set }
@@ -448,15 +448,15 @@ public class PropertiesManager: PropertiesManagerProtocol {
         }
     }
     
-//    public var featureFlags: FeatureFlags {
-//        get {
-//            return storage.getDecodableValue(FeatureFlags.self, forKey: Keys.featureFlags.rawValue) ?? FeatureFlags()
-//        }
-//        set {
-//            storage.setEncodableValue(newValue, forKey: Keys.featureFlags.rawValue)
-//            postNotificationOnUIThread(type(of: self).featureFlagsNotification, object: newValue)
-//        }
-//    }
+    public var featureFlags: FeatureFlags {
+        get {
+            return storage.getDecodableValue(FeatureFlags.self, forKey: Keys.featureFlags.rawValue) ?? FeatureFlags()
+        }
+        set {
+            storage.setEncodableValue(newValue, forKey: Keys.featureFlags.rawValue)
+            postNotificationOnUIThread(type(of: self).featureFlagsNotification, object: newValue)
+        }
+    }
     
     public var maintenanceServerRefreshIntereval: Int {
         get {

@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            self.navigationService.launched()
 //        }
         
-       // container.makeMaintenanceManagerHelper().startMaintenanceManager()
+        container.makeMaintenanceManagerHelper().startMaintenanceManager()
                 
        // _ = container.makeDynamicBugReportManager() // Loads initial bug report config and sets up a timer to refresh it daily.
         

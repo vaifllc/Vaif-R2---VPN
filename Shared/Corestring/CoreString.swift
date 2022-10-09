@@ -139,10 +139,10 @@ public class LocalizedString {
     public lazy var _ls_screen_title = NSLocalizedString("Sign in", comment: "Login screen title")
 
     /// Login screen subtitle
-    public lazy var _ls_screen_subtitle = NSLocalizedString("Enter your Proton Account details.", comment: "Login screen subtitle")
+    public lazy var _ls_screen_subtitle = NSLocalizedString("Enter your R2 Account information.", comment: "Login screen subtitle")
 
     /// Username field title
-    public lazy var _ls_username_title = NSLocalizedString("Email or username", comment: "Username field title")
+    public lazy var _ls_username_title = NSLocalizedString("Email address", comment: "Username field title")
 
     /// Password field title
     public lazy var _ls_password_title = NSLocalizedString("Password", comment: "Password field title")
@@ -183,10 +183,10 @@ public class LocalizedString {
     // Login validation
 
     /// Invalid username hint
-    public lazy var _ls_validation_invalid_username = NSLocalizedString("Please enter your Proton Account email or username.", comment: "Invalid username hint")
+    public lazy var _ls_validation_invalid_username = NSLocalizedString("Please enter your R2 Account email address.", comment: "Invalid username hint")
 
     /// Invalid password hint
-    public lazy var _ls_validation_invalid_password = NSLocalizedString("Please enter your Proton Account password.", comment: "Invalid password hint")
+    public lazy var _ls_validation_invalid_password = NSLocalizedString("Please enter your R2 Account password.", comment: "Invalid password hint")
 
     // Login errors
 
