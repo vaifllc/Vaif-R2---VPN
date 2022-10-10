@@ -58,6 +58,12 @@
                                     <constraint firstAttribute="height" constant="16" id="heH-dI-5a7"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Configuring..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPQ-13-rAm" userLabel="vAIF R2 - VPN">
+                                <rect key="frame" x="0.0" y="602.33333333333337" width="390" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5wx-Qi-27t"/>
                         <color key="backgroundColor" name="MobileBackgroundNorm"/>
@@ -66,6 +72,9 @@
                             <constraint firstItem="Axt-0O-M9Y" firstAttribute="centerX" secondItem="DMZ-t7-TMW" secondAttribute="centerX" id="Fpf-7n-yc3"/>
                             <constraint firstItem="5wx-Qi-27t" firstAttribute="bottom" secondItem="Axt-0O-M9Y" secondAttribute="bottom" constant="140" id="Qn7-Ll-IUV"/>
                             <constraint firstItem="5wx-Qi-27t" firstAttribute="bottom" secondItem="QuZ-0M-c1B" secondAttribute="bottom" constant="32" id="TMn-Pr-cot"/>
+                            <constraint firstItem="Axt-0O-M9Y" firstAttribute="top" secondItem="tPQ-13-rAm" secondAttribute="bottom" constant="8.6666666666666288" id="gGj-OM-t1x"/>
+                            <constraint firstItem="tPQ-13-rAm" firstAttribute="trailing" secondItem="cyf-WM-c2S" secondAttribute="trailing" id="i8a-IJ-58j"/>
+                            <constraint firstItem="tPQ-13-rAm" firstAttribute="leading" secondItem="cyf-WM-c2S" secondAttribute="leading" id="if4-13-ahG"/>
                             <constraint firstItem="QuZ-0M-c1B" firstAttribute="centerX" secondItem="5wx-Qi-27t" secondAttribute="centerX" id="j3b-jO-1w6"/>
                             <constraint firstItem="5wx-Qi-27t" firstAttribute="trailing" secondItem="cyf-WM-c2S" secondAttribute="trailing" id="nuv-5n-KpA"/>
                             <constraint firstItem="cyf-WM-c2S" firstAttribute="leading" secondItem="DMZ-t7-TMW" secondAttribute="leading" id="pQh-xD-Icw"/>
@@ -73,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="loadingIndicator" destination="Axt-0O-M9Y" id="INE-Yu-4md"/>
+                        <outlet property="loadingLbl" destination="tPQ-13-rAm" id="5i6-wh-K9v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qJ-SP-bLf" userLabel="First Responder" sceneMemberID="firstResponder"/>

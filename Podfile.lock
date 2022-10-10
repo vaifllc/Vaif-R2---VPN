@@ -39,6 +39,7 @@ PODS:
     - PromiseKit/CorePromise
   - ReachabilitySwift (5.0.0)
   - RQShineLabel (1.0.0)
+  - SecurityKit (1.0.2)
   - SnapshotTesting (1.9.0)
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - PromiseKit
   - ReachabilitySwift
   - RQShineLabel
+  - SecurityKit
   - SnapshotTesting
   - SwiftMessages
   - SwiftyStoreKit
@@ -80,6 +82,7 @@ SPEC REPOS:
     - PromiseKit
     - ReachabilitySwift
     - RQShineLabel
+    - SecurityKit
     - SnapshotTesting
     - SwiftMessages
     - SwiftyStoreKit
@@ -110,11 +113,12 @@ SPEC CHECKSUMS:
   PromiseKit: 49d70c53d5d20e346beaea4b276b5dd2ab446bb4
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   RQShineLabel: 17457abf7250d1220ddd99bc61323d57563344cd
+  SecurityKit: e124c056f32c3bc4a1ad89a5f4208ae5f3ce2a8e
   SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
 
-PODFILE CHECKSUM: 87431fdf214e7490892c3f5a1e19ec6dc51dc7a4
+PODFILE CHECKSUM: 723ba217d94745e4dfcf030435b9c57f88706b57
 
 COCOAPODS: 1.11.3

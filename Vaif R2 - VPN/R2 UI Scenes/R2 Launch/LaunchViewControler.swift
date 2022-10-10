@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SecurityKit
 
 
 final class LaunchViewController: UIViewController {
@@ -17,6 +18,7 @@ final class LaunchViewController: UIViewController {
 
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
 
+    @IBOutlet var loadingLbl: UILabel!
     var mode: AnimationMode = .delayed
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
     private let container = DependencyContainer()
@@ -27,6 +29,7 @@ final class LaunchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         loadingIndicator.isHidden = true
+        loadingLbl.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,15 +41,59 @@ final class LaunchViewController: UIViewController {
 //                self?.loadingIndicator.isHidden = false
 //            }
             self.loadingIndicator.isHidden = false
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { _ in
-                self.loadingIndicator.isHidden = true
-                self.whenReady(queue: DispatchQueue.main) {
-                    self.navigationService.launched()
+            self.loadingLbl.isHidden = false
+            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { _ in
+                self.loadingLbl.text = "Configuring..."
+                DispatchQueue.main.async { [weak self] in
+                    self?.jailbreakCheck()
                 }
-                print("Done!") }
+            }
             
         case .immediate:
             loadingIndicator.isHidden = false
+        }
+    }
+    
+    func launchWelcome(){
+        self.whenReady(queue: DispatchQueue.main) {
+            self.navigationService.launched()
+        }
+    }
+    
+    func jailbreakCheck(){
+        self.loadingLbl.text = "Running Jailbreak Check..."
+        if SecurityKit.isDeviceJailBroken() {
+            print(" jailbroken")
+        }else{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.simulatorkCheck()
+                print("not jailbroken")
+            }
+        }
+    }
+    
+    func simulatorkCheck(){
+        self.loadingLbl.text = "Running Device Check..."
+        if SecurityKit.isDeviceSimulator() {
+            print("Is Simulator")
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                print ("Is Not Simulator")
+                self.reverseEGCheck()
+            }
+        }
+    }
+    
+    func reverseEGCheck(){
+        self.loadingLbl.text = "Configuring..."
+        if SecurityKit.isRevereseEngineeringToolsExecuted() {
+            print("RevereseEngineeringToolsExecuted Is True")
+        }else{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                print("isRevereseEngineeringToolsExecuted Is False")
+                self.launchWelcome()
+                self.loadingIndicator.isHidden = true
+            }
         }
     }
     

@@ -6,33 +6,31 @@
 //
 
 import Foundation
-
+import PromiseKit
 
 extension LoginService {
 
-    public func login(username: String, password: String, challenge: [String: Any]?, completion: @escaping (Result<LoginStatus, LoginError>) -> Void) {
+    public func login(username: String, password: String, challenge: [String: Any]?, completion: @escaping (Swift.Result<LoginStatus, LoginError>) -> Void) {
         self.username = username
         self.mailboxPassword = password
-//        var data: ChallengeProperties?
-//        if let challenge = challenge {
-//            data = ChallengeProperties(challengeData: challenge, productPrefix: self.clientApp.name)
-//        }
+        
+
         PMLog.debug("Logging in with username and password")
 
 
     }
 
-    public func provide2FACode(_ code: String, completion: @escaping (Result<LoginStatus, LoginError>) -> Void) {
+    public func provide2FACode(_ code: String, completion: @escaping (Swift.Result<LoginStatus, LoginError>) -> Void) {
         PMLog.debug("Confirming 2FA code")
         
     }
 
-    public func finishLoginFlow(mailboxPassword: String, completion: @escaping (Result<LoginStatus, LoginError>) -> Void) {
+    public func finishLoginFlow(mailboxPassword: String, completion: @escaping (Swift.Result<LoginStatus, LoginError>) -> Void) {
         PMLog.debug("Confirming 2FA code")
         //getAccountDataPerformingAccountMigrationIfNeeded(user: nil, mailboxPassword: mailboxPassword, completion: completion)
     }
 
-    public func logout(credential: AuthCredential? = nil, completion: @escaping (Result<Void, Error>) -> Void) {
+    public func logout(credential: AuthCredential? = nil, completion: @escaping (Swift.Result<Void, Error>) -> Void) {
         PMLog.debug("Logging out")
 
 //        manager.closeSession(credential.map(Credential.init)) { result in
@@ -46,7 +44,7 @@ extension LoginService {
 //        }
     }
 
-    public func checkAvailabilityForUsernameAccount(username: String, completion: @escaping (Result<(), AvailabilityError>) -> Void) {
+    public func checkAvailabilityForUsernameAccount(username: String, completion: @escaping (Swift.Result<(), AvailabilityError>) -> Void) {
         PMLog.debug(#function)
 //
 //        manager.checkAvailableUsernameWithoutSpecifyingDomain(username) { result in
@@ -54,7 +52,7 @@ extension LoginService {
 //        }
     }
     
-    public func checkAvailabilityForInternalAccount(username: String, completion: @escaping (Result<(), AvailabilityError>) -> Void) {
+    public func checkAvailabilityForInternalAccount(username: String, completion: @escaping (Swift.Result<(), AvailabilityError>) -> Void) {
         PMLog.debug(#function)
 //
 //        manager.checkAvailableUsernameWithinDomain(username, domain: currentlyChosenSignUpDomain) { result in
@@ -62,7 +60,7 @@ extension LoginService {
 //        }
     }
     
-    public func checkAvailabilityForExternalAccount(email: String, completion: @escaping (Result<(), AvailabilityError>) -> Void) {
+    public func checkAvailabilityForExternalAccount(email: String, completion: @escaping (Swift.Result<(), AvailabilityError>) -> Void) {
         PMLog.debug(#function)
 
 //        manager.checkAvailableExternal(email) { result in
@@ -70,7 +68,7 @@ extension LoginService {
 //        }
     }
 
-    public func setUsername(username: String, completion: @escaping (Result<(), SetUsernameError>) -> Void) {
+    public func setUsername(username: String, completion: @escaping (Swift.Result<(), SetUsernameError>) -> Void) {
         PMLog.debug("Setting username")
 
 //        manager.setUsername(username: username) { result in
@@ -86,7 +84,7 @@ extension LoginService {
     public func createAccountKeysIfNeeded(user: User,
                                           addresses: [Address]?,
                                           mailboxPassword: String?,
-                                          completion: @escaping (Result<User, LoginError>) -> Void) {
+                                          completion: @escaping (Swift.Result<User, LoginError>) -> Void) {
         PMLog.debug("Creating account keys if needed")
         let isAccountKeyCreationNeeded = user.keys.first(where: { $0.primary == 1 }) == nil
         guard isAccountKeyCreationNeeded else {
@@ -149,7 +147,7 @@ extension LoginService {
 //        }
     }
 
-    public func createAddress(completion: @escaping (Result<Address, CreateAddressError>) -> Void) {
+    public func createAddress(completion: @escaping (Swift.Result<Address, CreateAddressError>) -> Void) {
         PMLog.debug("Creating address with domain \(currentlyChosenSignUpDomain)")
 
         startGeneratingAddress?()
@@ -180,7 +178,7 @@ extension LoginService {
 //        }
     }
 
-    public func createAddressKeys(user: User, address: Address, mailboxPassword: String, completion: @escaping (Result<Key, CreateAddressKeysError>) -> Void) {
+    public func createAddressKeys(user: User, address: Address, mailboxPassword: String, completion: @escaping (Swift.Result<Key, CreateAddressKeysError>) -> Void) {
         PMLog.debug("Creating address keys")
 
         guard address.keys.isEmpty else {
