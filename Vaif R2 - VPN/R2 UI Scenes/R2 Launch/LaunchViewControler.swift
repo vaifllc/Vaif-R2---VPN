@@ -37,9 +37,6 @@ final class LaunchViewController: UIViewController {
 
         switch mode {
         case .delayed:
-//            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
-//                self?.loadingIndicator.isHidden = false
-//            }
             self.loadingIndicator.isHidden = false
             self.loadingLbl.isHidden = false
             Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { _ in
@@ -90,6 +87,43 @@ final class LaunchViewController: UIViewController {
             print("RevereseEngineeringToolsExecuted Is True")
         }else{
             DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                print("isRevereseEngineeringToolsExecuted Is False")
+                self.launchWelcome()
+                self.loadingIndicator.isHidden = true
+            }
+        }
+    }
+    
+    func jailbreakCheck1(){
+        self.loadingLbl.text = "Configuring..."
+        if SecurityKit.isDeviceJailBroken() {
+            print(" jailbroken")
+        }else{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.simulatorkCheck1()
+                print("not jailbroken")
+            }
+        }
+    }
+    
+    func simulatorkCheck1(){
+        self.loadingLbl.text = "Configuring..."
+        if SecurityKit.isDeviceSimulator() {
+            print("Is Simulator")
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                print ("Is Not Simulator")
+                self.reverseEGCheck1()
+            }
+        }
+    }
+    
+    func reverseEGCheck1(){
+        self.loadingLbl.text = "Configuring..."
+        if SecurityKit.isRevereseEngineeringToolsExecuted() {
+            print("RevereseEngineeringToolsExecuted Is True")
+        }else{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 print("isRevereseEngineeringToolsExecuted Is False")
                 self.launchWelcome()
                 self.loadingIndicator.isHidden = true

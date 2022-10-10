@@ -23,6 +23,7 @@
 		B72A852928EB68FB00CB115E /* Session2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852828EB68FB00CB115E /* Session2.swift */; };
 		B72A852C28EB6AD900CB115E /* UIView+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852B28EB6AD900CB115E /* UIView+nib.swift */; };
 		B72A852F28EB6B2C00CB115E /* UIKitString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */; };
+		B741AFC628F4C9FF0076DBE1 /* AppStateErrors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B741AFC528F4C9FF0076DBE1 /* AppStateErrors.storyboard */; };
 		B74BC0FA28EBAB8E00441353 /* EnvironmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC0F928EBAB8E00441353 /* EnvironmentsViewController.swift */; };
 		B74BC0FC28EBABEB00441353 /* Environments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74BC0FB28EBABEB00441353 /* Environments.storyboard */; };
 		B74BC0FF28EBB3B500441353 /* AppSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC0FE28EBB3B500441353 /* AppSessionManager.swift */; };
@@ -660,6 +661,7 @@
 		B72A852828EB68FB00CB115E /* Session2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session2.swift; sourceTree = "<group>"; };
 		B72A852B28EB6AD900CB115E /* UIView+nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+nib.swift"; path = "Vaif R2 - VPN/R2 UI Scenes/R2 Auth/Shared/UIView+nib.swift"; sourceTree = SOURCE_ROOT; };
 		B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKitString+Extension.swift"; sourceTree = "<group>"; };
+		B741AFC528F4C9FF0076DBE1 /* AppStateErrors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppStateErrors.storyboard; sourceTree = "<group>"; };
 		B74BC0F928EBAB8E00441353 /* EnvironmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsViewController.swift; sourceTree = "<group>"; };
 		B74BC0FB28EBABEB00441353 /* Environments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Environments.storyboard; sourceTree = "<group>"; };
 		B74BC0FE28EBB3B500441353 /* AppSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSessionManager.swift; sourceTree = "<group>"; };
@@ -1275,6 +1277,13 @@
 			path = "UIKitString+Extension";
 			sourceTree = "<group>";
 		};
+		B741AFC728F4D5E60076DBE1 /* R2 Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "R2 Home";
+			sourceTree = "<group>";
+		};
 		B74BC0F828EBAB8200441353 /* EnvironmentsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1451,16 +1460,25 @@
 			path = Atomic;
 			sourceTree = "<group>";
 		};
+		B74BC18B28F4BF9600441353 /* Error Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Error Pages";
+			sourceTree = "<group>";
+		};
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B741AFC728F4D5E60076DBE1 /* R2 Home */,
 				B74BC12528EDDC2500441353 /* R2 SplashScreen */,
-				B74BC0F828EBAB8200441353 /* EnvironmentsView */,
 				B72A851F28EB5DBE00CB115E /* R2 Launch */,
 				B77262D228E7D4390016540C /* R2 Report Bug */,
-				B772623928E50EAF0016540C /* Extra Cells */,
 				B772623428E50D600016540C /* R2 HelpView */,
 				B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */,
+				B74BC18B28F4BF9600441353 /* Error Pages */,
+				B74BC0F828EBAB8200441353 /* EnvironmentsView */,
+				B772623928E50EAF0016540C /* Extra Cells */,
 			);
 			path = "R2 UI Scenes";
 			sourceTree = "<group>";
@@ -1485,6 +1503,7 @@
 				B79036C728E2837E00341087 /* PMSignup.storyboard */,
 				B74BC0FB28EBABEB00441353 /* Environments.storyboard */,
 				B74BC13228EDDD9E00441353 /* SplashView.storyboard */,
+				B741AFC528F4C9FF0076DBE1 /* AppStateErrors.storyboard */,
 			);
 			path = "R2 UI Storyboards";
 			sourceTree = "<group>";
@@ -3396,6 +3415,7 @@
 				B7B65EC728E3B92300F30E84 /* TroubleshootingCell.xib in Resources */,
 				B79035D628E21A1A00341087 /* PMActionSheetPlainCell.xib in Resources */,
 				B75160ED28D7CD290028BE35 /* adBlockList.json in Resources */,
+				B741AFC628F4C9FF0076DBE1 /* AppStateErrors.storyboard in Resources */,
 				B79036C828E2837E00341087 /* PMSignup.storyboard in Resources */,
 				B79035F728E21D7200341087 /* PMCellSectionView.xib in Resources */,
 				B79035D428E218A900341087 /* Assets-V5.xcassets in Resources */,
