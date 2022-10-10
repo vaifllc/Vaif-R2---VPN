@@ -649,7 +649,7 @@
 		712336C654457D3E928E61DC /* Pods-Vaif R2 - VPNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPNTests.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71C9A73D581FB70A02BA8BE0 /* Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPN Tunnel-settings-metadata.plist"; sourceTree = "<group>"; };
 		744990F5DB0E2401020D0912 /* Pods-Vaif R2 - VPN Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Widget.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Widget/Pods-Vaif R2 - VPN Widget.debug.xcconfig"; sourceTree = "<group>"; };
-		82A6BA3FE4645AC6C115DAEE /* Pods_Vaif_R2___VPN_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vaif_R2___VPN_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82A6BA3FE4645AC6C115DAEE /* Pods_Vaif_R2___VPN_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA7A5288829612EF0426219 /* Pods-Vaif R2 - VPN-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN-metadata.plist"; sourceTree = "<group>"; };
 		9FB5E13EA1D28ECBCB43944F /* Pods-Vaif R2 - VPN Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Widget.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Widget/Pods-Vaif R2 - VPN Widget.release.xcconfig"; sourceTree = "<group>"; };
 		B1D1E7CD97109801950CCA55 /* Pods-Vaif R2 - VPNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPNTests.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPNTests/Pods-Vaif R2 - VPNTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1054,7 +1054,7 @@
 		B7948D1628D6502A004CDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7948D1828D6502A004CDB79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B7948D1D28D6502A004CDB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vaif_R2___VPN.xcdatamodel; sourceTree = "<group>"; };
+		B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Vaif_R2___VPN.xcdatamodel"; sourceTree = "<group>"; };
 		B7948D2228D6502C004CDB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7948D2528D6502C004CDB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7948D2728D6502C004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1069,17 +1069,17 @@
 		B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		B7948D6228D7B9BE004CDB79 /* FirewallTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirewallTodayViewController.swift; sourceTree = "<group>"; };
 		B7948D6428D7B9BE004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7948D6528D7B9BE004CDB79 /* Vaif_R2___VPN_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vaif_R2___VPN_Widget.entitlements; sourceTree = "<group>"; };
+		B7948D6528D7B9BE004CDB79 /* Vaif_R2___VPN_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif_R2___VPN_Widget.entitlements"; sourceTree = "<group>"; };
 		B7948D7028D7B9DB004CDB79 /* Vaif R2 - VPN Tunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN Tunnel.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D7328D7B9DB004CDB79 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		B7948D7528D7B9DB004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7948D7628D7B9DB004CDB79 /* Vaif_R2___VPN_Tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vaif_R2___VPN_Tunnel.entitlements; sourceTree = "<group>"; };
+		B7948D7628D7B9DB004CDB79 /* Vaif_R2___VPN_Tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif_R2___VPN_Tunnel.entitlements"; sourceTree = "<group>"; };
 		B7948D8128D7B9FA004CDB79 /* Vaif R2 - VPN Firewall Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN Firewall Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948D8428D7B9FA004CDB79 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		B7948D8628D7B9FA004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7948D8728D7B9FA004CDB79 /* Vaif_R2___VPN_Firewall_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Vaif_R2___VPN_Firewall_Widget.entitlements; sourceTree = "<group>"; };
+		B7948D8728D7B9FA004CDB79 /* Vaif_R2___VPN_Firewall_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Vaif_R2___VPN_Firewall_Widget.entitlements"; sourceTree = "<group>"; };
 		B7948D9228D7BA18004CDB79 /* Vaif R2 - VPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vaif R2 - VPNTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7948D9428D7BA18004CDB79 /* Vaif_R2___VPNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vaif_R2___VPNTests.swift; sourceTree = "<group>"; };
+		B7948D9428D7BA18004CDB79 /* Vaif_R2___VPNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vaif_R2___VPNTests.swift"; sourceTree = "<group>"; };
 		B7948D9F28D7BA4C004CDB79 /* Vaif R2 - VPN FirewallWidget ExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vaif R2 - VPN FirewallWidget ExtensionExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7948DA628D7BA4F004CDB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7948DA828D7BA4F004CDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1137,11 +1137,11 @@
 		B7BAFCE028E37E55000CDCD9 /* IosAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosAlertService.swift; sourceTree = "<group>"; };
 		B7BAFCE228E37F75000CDCD9 /* Modals */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Modals; path = libraries/Modals; sourceTree = "<group>"; };
 		B7EA16F028DBD25C008D8D3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vaif_R2___VPN_Tunnel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vaif_R2___VPNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vaif_R2___VPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9343BD28718035550B13583 /* Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN Firewall Widget/Pods-Vaif R2 - VPN Firewall Widget.release.xcconfig"; sourceTree = "<group>"; };
-		EBE70399C29011824348D432 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vaif_R2___VPN_Firewall_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE70399C29011824348D432 /* Pods_Vaif_R2___VPN_Firewall_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Firewall_Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF2C61ECE42AC1C34720D41E /* Pods-Vaif R2 - VPN Widget-settings-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "Pods-Vaif R2 - VPN Widget-settings-metadata.plist"; path = "../Settings.bundle/Pods-Vaif R2 - VPN Widget-settings-metadata.plist"; sourceTree = "<group>"; };
 		F32AB2F64B172F1E3B2D1343 /* Pods-Vaif R2 - VPN Firewall Widget-metadata.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Vaif R2 - VPN Firewall Widget-metadata.plist"; sourceTree = "<group>"; };
 		F76A74237E3FD102F6C0B81A /* Pods-Vaif R2 - VPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vaif R2 - VPN.debug.xcconfig"; path = "Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN.debug.xcconfig"; sourceTree = "<group>"; };
@@ -3367,7 +3367,7 @@
 			);
 			mainGroup = B7948D0A28D6502A004CDB79;
 			packageReferences = (
-				B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */,
+				B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 			);
 			productRefGroup = B7948D1428D6502A004CDB79 /* Products */;
 			projectDirPath = "";
@@ -4347,7 +4347,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -4395,7 +4395,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 60;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -4819,7 +4819,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */ = {
+		B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
 			requirement = {
@@ -4836,52 +4836,52 @@
 		};
 		B75160FF28D7D5440028BE35 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjack;
 		};
 		B751610128D7D5440028BE35 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
 		B751610328D7D57F0028BE35 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjack;
 		};
 		B751610528D7D57F0028BE35 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
 		B751610728D7D5920028BE35 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjack;
 		};
 		B751610928D7D5920028BE35 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
 		B751610B28D7D59E0028BE35 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjack;
 		};
 		B751610D28D7D59E0028BE35 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
 		B751610F28D7D5D90028BE35 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjack;
 		};
 		B751611128D7D5D90028BE35 /* CocoaLumberjackSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack.git" */;
+			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
 		B7BAFCC328E34A3D000CDCD9 /* Search */ = {
@@ -4909,7 +4909,7 @@
 				B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */,
 			);
 			currentVersion = B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */;
-			path = Vaif_R2___VPN.xcdatamodeld;
+			path = "Vaif_R2___VPN.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
