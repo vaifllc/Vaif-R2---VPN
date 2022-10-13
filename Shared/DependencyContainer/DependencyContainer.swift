@@ -414,11 +414,11 @@ extension DependencyContainer: NetworkingDelegateFactory {
 //}
 
 // MARK: LogFileManagerFactory
-//extension DependencyContainer: LogFileManagerFactory {
-//    func makeLogFileManager() -> LogFileManager {
-//        return LogFileManagerImplementation()
-//    }
-//}
+extension DependencyContainer: LogFileManagerFactory {
+    func makeLogFileManager() -> LogFileManager {
+        return LogFileManagerImplementation()
+    }
+}
 
 // MARK: AppInfoFactory
 extension DependencyContainer: AppInfoFactory {

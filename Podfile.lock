@@ -20,6 +20,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.4)
   - CocoaLumberjack/Swift (3.7.4):
     - CocoaLumberjack/Core
+  - Connectivity (5.0.0)
   - DynamicBlurView (4.1.0)
   - GSMessages (1.7.5)
   - KeychainAccess (4.2.2)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - AwaitKit (from `https://github.com/yannickl/AwaitKit.git`, commit `4b725f40dd189f40c0962cba792f06a2073bd977`)
   - AwesomeSpotlightView
   - CocoaLumberjack/Swift
+  - Connectivity
   - GSMessages
   - KeychainAccess
   - Logging
@@ -72,6 +74,7 @@ SPEC REPOS:
     - AFNetworking
     - AwesomeSpotlightView
     - CocoaLumberjack
+    - Connectivity
     - DynamicBlurView
     - GSMessages
     - KeychainAccess
@@ -103,6 +106,7 @@ SPEC CHECKSUMS:
   AwaitKit: 512626cd12c82b1fbffddc8f414d0364cb456004
   AwesomeSpotlightView: 51b2d3a2262f251ed0b7735b73fe658a13e8f14b
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  Connectivity: e990703fb8d8db54649ea05facac92000cc0f3eb
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   GSMessages: ff0397d30b804fa38c6026fb080b8ad6f7454ab6
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
@@ -119,6 +123,6 @@ SPEC CHECKSUMS:
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
 
-PODFILE CHECKSUM: 723ba217d94745e4dfcf030435b9c57f88706b57
+PODFILE CHECKSUM: 367ca7477234e42f617c0d41818148a9fc2ae041
 
 COCOAPODS: 1.11.3

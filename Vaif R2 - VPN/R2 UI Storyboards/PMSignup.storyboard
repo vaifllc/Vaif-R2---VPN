@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u67-CR-m0J">
-                                                <rect key="frame" x="8" y="55" width="374" height="496"/>
+                                                <rect key="frame" x="8" y="55" width="374" height="544"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="lew-Zd-g1R">
                                                         <rect key="frame" x="8" y="7.9999999999999982" width="358" height="26.333333333333329"/>
@@ -51,19 +51,37 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="vMx-ix-AF9" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="92.333333333333343" width="358" height="273.66666666666663"/>
+                                                        <rect key="frame" x="8" y="92.333333333333343" width="358" height="321.66666666666663"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Username"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-ha-dmu">
-                                                        <rect key="frame" x="8" y="92.333333333333343" width="358" height="273.66666666666663"/>
+                                                        <rect key="frame" x="8" y="92.333333333333343" width="358" height="321.66666666666663"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="skv-9N-aEU" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="0.0"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" id="ans-KW-6r6" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="8" width="358" height="80"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <viewLayoutGuide key="safeArea" id="FxO-MK-w9P"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" id="Jjq-TH-USl" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="96" width="358" height="80"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <viewLayoutGuide key="safeArea" id="7Mg-Y2-gan"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-oR-ew5">
-                                                                <rect key="frame" x="0.0" y="135.99999999999997" width="358" height="101.66666666666666"/>
+                                                                <rect key="frame" x="0.0" y="183.99999999999997" width="358" height="101.66666666666666"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyr-0S-SaQ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="358" height="14.333333333333334"/>
@@ -91,7 +109,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqk-Xp-67n">
-                                                                <rect key="frame" x="0.0" y="245.66666666666663" width="358" height="28"/>
+                                                                <rect key="frame" x="0.0" y="293.66666666666663" width="358" height="28"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="28" id="bhN-eA-s6p"/>
                                                                 </constraints>
@@ -99,7 +117,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dbg-eh-ee7">
-                                                        <rect key="frame" x="8" y="366" width="358" height="80"/>
+                                                        <rect key="frame" x="8" y="414" width="358" height="80"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13F-0x-DTu" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="30"/>
@@ -119,7 +137,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-bd-bqA" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="454" width="358" height="34"/>
+                                                        <rect key="frame" x="8" y="502" width="358" height="34"/>
                                                         <state key="normal" title="Sign in"/>
                                                         <connections>
                                                             <action selector="onSignInButtonTap:" destination="Z1w-2K-FAK" eventType="touchUpInside" id="C4m-XT-kPb"/>
@@ -192,6 +210,8 @@
                         <outlet property="internalNameTextField" destination="skv-9N-aEU" id="j7x-Q7-vxR"/>
                         <outlet property="nextButton" destination="Mek-oC-76O" id="RXK-E3-RKh"/>
                         <outlet property="otherAccountButton" destination="13F-0x-DTu" id="5Hu-D6-3YU"/>
+                        <outlet property="passwordTextField" destination="ans-KW-6r6" id="btJ-3G-8Yj"/>
+                        <outlet property="repeatPasswordTextField" destination="Jjq-TH-USl" id="xeA-tY-bC2"/>
                         <outlet property="scrollView" destination="24m-aU-2i7" id="MOf-60-gFW"/>
                         <outlet property="signinButton" destination="0Oz-bd-bqA" id="HZW-Nl-Ssj"/>
                         <outlet property="usernameAndDomainsView" destination="Lc6-ha-dmu" id="T4W-cR-A8H"/>

@@ -155,6 +155,9 @@ public class LocalizedString {
 
     /// Sign up button
     public lazy var _ls_create_account_button = NSLocalizedString("Create an account", comment: "Create account button")
+    
+    /// retry button
+    public lazy var _retry_button = NSLocalizedString("Retry", comment: "Retry")
 
     // Login welcome screen
 

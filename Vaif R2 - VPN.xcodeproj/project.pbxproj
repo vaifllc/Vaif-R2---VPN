@@ -24,6 +24,7 @@
 		B72A852C28EB6AD900CB115E /* UIView+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852B28EB6AD900CB115E /* UIView+nib.swift */; };
 		B72A852F28EB6B2C00CB115E /* UIKitString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */; };
 		B741AFC628F4C9FF0076DBE1 /* AppStateErrors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B741AFC528F4C9FF0076DBE1 /* AppStateErrors.storyboard */; };
+		B741AFC928F4DB900076DBE1 /* ConnectionOfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741AFC828F4DB900076DBE1 /* ConnectionOfflineViewController.swift */; };
 		B74BC0FA28EBAB8E00441353 /* EnvironmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC0F928EBAB8E00441353 /* EnvironmentsViewController.swift */; };
 		B74BC0FC28EBABEB00441353 /* Environments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74BC0FB28EBABEB00441353 /* Environments.storyboard */; };
 		B74BC0FF28EBB3B500441353 /* AppSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74BC0FE28EBB3B500441353 /* AppSessionManager.swift */; };
@@ -266,6 +267,12 @@
 		B77262EF28EA52F80016540C /* LogFilesTemporaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262EE28EA52F80016540C /* LogFilesTemporaryStorage.swift */; };
 		B77262F128EA55B00016540C /* LogFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262F028EA55B00016540C /* LogFileManager.swift */; };
 		B77262F428EA56070016540C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262F328EA56070016540C /* String+Extension.swift */; };
+		B78BEEA828F727090039C92A /* OSLogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEA728F727090039C92A /* OSLogHandler.swift */; };
+		B78BEEAA28F727330039C92A /* OSLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEA928F727330039C92A /* OSLogFormatter.swift */; };
+		B78BEEAD28F74D080039C92A /* UIEdgeInsets+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEAC28F74D080039C92A /* UIEdgeInsets+custom.swift */; };
+		B78BEEAF28F76EA00039C92A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEAE28F76EA00039C92A /* PasswordViewController.swift */; };
+		B78BEEB128F771310039C92A /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEB028F771310039C92A /* PasswordViewModel.swift */; };
+		B78BEEB328F773770039C92A /* PasswordNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEB228F773770039C92A /* PasswordNavigationViewController.swift */; };
 		B790355028E208F400341087 /* SplashScreenViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */; };
 		B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355328E2097000341087 /* ProtonIconSetV5.swift */; };
 		B790355628E209BB00341087 /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355528E209BB00341087 /* IconProvider.swift */; };
@@ -662,6 +669,7 @@
 		B72A852B28EB6AD900CB115E /* UIView+nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+nib.swift"; path = "Vaif R2 - VPN/R2 UI Scenes/R2 Auth/Shared/UIView+nib.swift"; sourceTree = SOURCE_ROOT; };
 		B72A852E28EB6B2B00CB115E /* UIKitString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKitString+Extension.swift"; sourceTree = "<group>"; };
 		B741AFC528F4C9FF0076DBE1 /* AppStateErrors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppStateErrors.storyboard; sourceTree = "<group>"; };
+		B741AFC828F4DB900076DBE1 /* ConnectionOfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionOfflineViewController.swift; sourceTree = "<group>"; };
 		B74BC0F928EBAB8E00441353 /* EnvironmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentsViewController.swift; sourceTree = "<group>"; };
 		B74BC0FB28EBABEB00441353 /* Environments.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Environments.storyboard; sourceTree = "<group>"; };
 		B74BC0FE28EBB3B500441353 /* AppSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSessionManager.swift; sourceTree = "<group>"; };
@@ -893,6 +901,12 @@
 		B77262EE28EA52F80016540C /* LogFilesTemporaryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilesTemporaryStorage.swift; sourceTree = "<group>"; };
 		B77262F028EA55B00016540C /* LogFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFileManager.swift; sourceTree = "<group>"; };
 		B77262F328EA56070016540C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B78BEEA728F727090039C92A /* OSLogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogHandler.swift; sourceTree = "<group>"; };
+		B78BEEA928F727330039C92A /* OSLogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogFormatter.swift; sourceTree = "<group>"; };
+		B78BEEAC28F74D080039C92A /* UIEdgeInsets+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+custom.swift"; sourceTree = "<group>"; };
+		B78BEEAE28F76EA00039C92A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		B78BEEB028F771310039C92A /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		B78BEEB228F773770039C92A /* PasswordNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordNavigationViewController.swift; sourceTree = "<group>"; };
 		B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewControllerFactory.swift; sourceTree = "<group>"; };
 		B790355328E2097000341087 /* ProtonIconSetV5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonIconSetV5.swift; sourceTree = "<group>"; };
 		B790355528E209BB00341087 /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
@@ -1463,6 +1477,7 @@
 		B74BC18B28F4BF9600441353 /* Error Pages */ = {
 			isa = PBXGroup;
 			children = (
+				B741AFC828F4DB900076DBE1 /* ConnectionOfflineViewController.swift */,
 			);
 			path = "Error Pages";
 			sourceTree = "<group>";
@@ -1530,6 +1545,8 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B78BEEAB28F74CFA0039C92A /* UIEdgeInsets+custom.swift */,
+				B78BEEA628F727020039C92A /* OSLogHandler */,
 				B74BC18128F381F200441353 /* Atomic */,
 				B74BC17A28F3810700441353 /* LocalAgentNativeClientImplementation */,
 				B74BC17528F3805300441353 /* Level+Print */,
@@ -1982,6 +1999,23 @@
 			path = "String+Extension";
 			sourceTree = "<group>";
 		};
+		B78BEEA628F727020039C92A /* OSLogHandler */ = {
+			isa = PBXGroup;
+			children = (
+				B78BEEA728F727090039C92A /* OSLogHandler.swift */,
+				B78BEEA928F727330039C92A /* OSLogFormatter.swift */,
+			);
+			path = OSLogHandler;
+			sourceTree = "<group>";
+		};
+		B78BEEAB28F74CFA0039C92A /* UIEdgeInsets+custom.swift */ = {
+			isa = PBXGroup;
+			children = (
+				B78BEEAC28F74D080039C92A /* UIEdgeInsets+custom.swift */,
+			);
+			path = "UIEdgeInsets+custom.swift";
+			sourceTree = "<group>";
+		};
 		B790354828E2045E00341087 /* Summary View */ = {
 			isa = PBXGroup;
 			children = (
@@ -2006,6 +2040,9 @@
 		B790354A28E204A900341087 /* Registration View */ = {
 			isa = PBXGroup;
 			children = (
+				B78BEEAE28F76EA00039C92A /* PasswordViewController.swift */,
+				B78BEEB028F771310039C92A /* PasswordViewModel.swift */,
+				B78BEEB228F773770039C92A /* PasswordNavigationViewController.swift */,
 			);
 			path = "Registration View";
 			sourceTree = "<group>";
@@ -3682,6 +3719,7 @@
 				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
 				B79035C728E217DE00341087 /* PMActionSheetHeaderView.swift in Sources */,
+				B78BEEAD28F74D080039C92A /* UIEdgeInsets+custom.swift in Sources */,
 				B74BC13E28F26AE000441353 /* Codable+Default.swift in Sources */,
 				B790367E28E24B2B00341087 /* Address+Extensions.swift in Sources */,
 				B74BC12F28EDDCD200441353 /* SplashPresenter.swift in Sources */,
@@ -3867,6 +3905,7 @@
 				B79036C628E280E900341087 /* UIView+Amination.swift in Sources */,
 				B77262E128E7D6820016540C /* LogContent.swift in Sources */,
 				B79036B528E2586500341087 /* LoginViewController.swift in Sources */,
+				B78BEEB328F773770039C92A /* PasswordNavigationViewController.swift in Sources */,
 				B75161A528D8FB270028BE35 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				B751619F28D8FB260028BE35 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				B77262A828E61A680016540C /* AlamofireExtended.swift in Sources */,
@@ -3915,6 +3954,7 @@
 				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
 				B74BC16228F37EE400441353 /* PerformConcurrently.swift in Sources */,
 				B75161A928D8FB270028BE35 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				B78BEEAF28F76EA00039C92A /* PasswordViewController.swift in Sources */,
 				B74BC17C28F3810C00441353 /* LocalAgentNativeClientImplementation.swift in Sources */,
 				B7B65EE128E49B2000F30E84 /* Logger+Categories.swift in Sources */,
 				B790365C28E2475D00341087 /* UIStoryboard+Extensions.swift in Sources */,
@@ -3944,6 +3984,7 @@
 				B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */,
 				B79036D028E288C400341087 /* String+HumanVerificationExtension.swift in Sources */,
 				B77262ED28E7D7E80016540C /* OSLogContent.swift in Sources */,
+				B78BEEAA28F727330039C92A /* OSLogFormatter.swift in Sources */,
 				B74BC16A28F37F3800441353 /* ThrowingFuncStub+Ergonomics.swift in Sources */,
 				B790357E28E2122C00341087 /* NavigationBarAdjustingScrollViewDelegate.swift in Sources */,
 				B751617D28D8FB260028BE35 /* M13CheckboxFadeController.swift in Sources */,
@@ -3968,6 +4009,7 @@
 				B790361628E2224500341087 /* PMHeaderView.swift in Sources */,
 				B790357328E2102A00341087 /* AccessibleView.swift in Sources */,
 				B79036A128E24F7000341087 /* LoginAndSignup.swift in Sources */,
+				B78BEEA828F727090039C92A /* OSLogHandler.swift in Sources */,
 				B79035CF28E2183F00341087 /* PMActionSheetToggleCell.swift in Sources */,
 				B77262C928E7C4440016540C /* NetworkError.swift in Sources */,
 				B790360528E21FAA00341087 /* CountryCode.swift in Sources */,
@@ -3995,6 +4037,7 @@
 				B790364A28E22E7B00341087 /* Result+Extensions2.swift in Sources */,
 				B7BAFCDE28E37DED000CDCD9 /* TrackedAlertController.swift in Sources */,
 				B790360728E21FBF00341087 /* CountryCodeTableHeaderView.swift in Sources */,
+				B78BEEB128F771310039C92A /* PasswordViewModel.swift in Sources */,
 				B74BC0FF28EBB3B500441353 /* AppSessionManager.swift in Sources */,
 				B751617B28D8FB260028BE35 /* M13CheckboxSpiralController.swift in Sources */,
 				B790359928E214DC00341087 /* NSColor+Helper.swift in Sources */,
@@ -4055,6 +4098,7 @@
 				B790366228E248A100341087 /* Dictionary+Extension.swift in Sources */,
 				B772628428E614390016540C /* CustomServerConfigDoH.swift in Sources */,
 				B77262A428E619BB0016540C /* AFError.swift in Sources */,
+				B741AFC928F4DB900076DBE1 /* ConnectionOfflineViewController.swift in Sources */,
 				B77262B828E796CC0016540C /* Networking.swift in Sources */,
 				B751618128D8FB260028BE35 /* M13CheckboxFillController.swift in Sources */,
 				B772623628E50D6C0016540C /* HelpViewController.swift in Sources */,

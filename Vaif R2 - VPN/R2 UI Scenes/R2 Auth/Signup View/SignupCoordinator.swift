@@ -125,17 +125,17 @@ final class SignupCoordinator {
         }
     }
     
-//    private func showPasswordViewController() {
-//        guard let signupParameters = signupParameters else { return }
-//        let passwordViewController = UIStoryboard.instantiate(PasswordViewController.self)
-//        passwordViewController.viewModel = container.makePasswordViewModel()
-//        passwordViewController.customErrorPresenter = customErrorPresenter
-//        passwordViewController.delegate = self
-//        passwordViewController.signupAccountType = signupAccountType
-//        passwordViewController.signupPasswordRestrictions = signupParameters.passwordRestrictions
-//
-//        navigationController?.pushViewController(passwordViewController, animated: true)
-//    }
+    private func showPasswordViewController() {
+        guard let signupParameters = signupParameters else { return }
+        let passwordViewController = UIStoryboard.instantiate(PasswordViewController.self)
+        passwordViewController.viewModel = container.makePasswordViewModel()
+        passwordViewController.customErrorPresenter = customErrorPresenter
+        passwordViewController.delegate = self
+        passwordViewController.signupAccountType = signupAccountType
+        passwordViewController.signupPasswordRestrictions = signupParameters.passwordRestrictions
+
+        navigationController?.pushViewController(passwordViewController, animated: true)
+    }
     
 //    private func showRecoveryViewController() {
 //        let recoveryViewController = UIStoryboard.instantiate(RecoveryViewController.self)
@@ -401,29 +401,32 @@ extension SignupCoordinator: SignupViewControllerDelegate {
 
 // MARK: PasswordViewControllerDelegate
 
-//extension SignupCoordinator: PasswordViewControllerDelegate {
-//    func passwordIsShown() {
-//
-//        if container.humanVerificationVersion == .v3, signupAccountType == .external {
-//            // if PasswordViewController is presented we need to remove HumanVerifyV3ViewController from the navigation stack to don't allow to come back to it.
-//            HumanCheckHelper.removeHumanVerification(from: navigationController)
-//        }
-//    }
-//
-//    func validatedPassword(password: String, completionHandler: (() -> Void)?) {
-//        self.password = password
-//        if signupAccountType == .internal {
+extension SignupCoordinator: PasswordViewControllerDelegate {
+    func passwordIsShown() {
+
+        if container.humanVerificationVersion == .v3, signupAccountType == .external {
+            // if PasswordViewController is presented we need to remove HumanVerifyV3ViewController from the navigation stack to don't allow to come back to it.
+            print("lol")
+            //HumanCheckHelper.removeHumanVerification(from: navigationController)
+        }
+    }
+
+    func validatedPassword(password: String, completionHandler: (() -> Void)?) {
+        self.password = password
+        if signupAccountType == .internal {
+            print("lol")
 //            showRecoveryViewController()
 //            completionHandler?()
-//        } else {
-//            finishSignupProcess(completionHandler: completionHandler)
-//        }
-//    }
-//
-//    func passwordBackButtonPressed() {
-//        navigationController?.popViewController(animated: true)
-//    }
-//}
+        } else {
+            print("lol")
+            //finishSignupProcess(completionHandler: completionHandler)
+        }
+    }
+
+    func passwordBackButtonPressed() {
+        navigationController?.popViewController(animated: true)
+    }
+}
 
 // MARK: RecoveryViewControllerDelegate
 

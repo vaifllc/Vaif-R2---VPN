@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Reachability
+import Connectivity
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -13,8 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let container = DependencyContainer()
 //    private lazy var vpnManager: VpnManagerProtocol = container.makeVpnManager()
     private lazy var navigationService: NavigationService = container.makeNavigationService()
-
-
+    fileprivate let connectivity = Connectivity()
+    fileprivate var isCheckingConnectivity: Bool = false
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -24,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         self.window?.overrideUserInterfaceStyle = .dark
         setupLaunchScreen()
+        checkInternetConnection()
     }
     
     func setupLaunchScreen(){
@@ -35,8 +40,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window?.makeKeyAndVisible()
 //            return launchViewController
         }
+    }
+    
+     
+    
+    func checkInternetConnection(){
         
-            
+        let connectivity = Connectivity()
+
+        connectivity.checkConnectivity { connectivity in
+
+            switch connectivity.status {
+                case .connected:
+                    break
+                case .connectedViaWiFi:
+                    break
+                case .connectedViaWiFiWithoutInternet:
+                    break
+                case .connectedViaCellular:
+                    break
+                case .connectedViaCellularWithoutInternet:
+                    break
+                case .notConnected:
+                let storyboard = UIStoryboard(name: "AppStateErrors", bundle: nil)
+                if let rootVC = storyboard.instantiateViewController(identifier: "ConnectionOfflineView") as? ConnectionOfflineViewController{
+                    let rootNC = UINavigationController(rootViewController: rootVC)
+                    self.window?.rootViewController = rootNC
+                    self.window?.makeKeyAndVisible()
+                }
+            case .determining:
+                break
+            }
+
+        }
+        
     }
     
     func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {

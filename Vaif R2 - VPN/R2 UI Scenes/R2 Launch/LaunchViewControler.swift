@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SecurityKit
+import Reachability
 
 
 final class LaunchViewController: UIViewController {
@@ -50,6 +51,8 @@ final class LaunchViewController: UIViewController {
             loadingIndicator.isHidden = false
         }
     }
+    
+    
     
     func launchWelcome(){
         self.whenReady(queue: DispatchQueue.main) {

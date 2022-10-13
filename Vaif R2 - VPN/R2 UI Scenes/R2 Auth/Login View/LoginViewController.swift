@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-
+import PromiseKit
+import CocoaLumberjackSwift
 
 protocol LoginStepsDelegate: AnyObject {
     func twoFactorCodeNeeded()
@@ -52,6 +53,9 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
 
     var focusNoMore: Bool = false
     private let navigationBarAdjuster = NavigationBarAdjustingScrollViewDelegate()
+    
+    static let accountStateDidChange = Notification.Name("AccountUIAccountStateDidChangeNotification")
+    private var isBannerShown = false
     
     override var preferredStatusBarStyle: UIStatusBarStyle { darkModeAwarePreferredStatusBarStyle() }
 
@@ -108,7 +112,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
 
         loginTextField.autocorrectionType = .no
         loginTextField.autocapitalizationType = .none
-        loginTextField.textContentType = .username
+        loginTextField.textContentType = .emailAddress
         loginTextField.keyboardType = .emailAddress
         loginTextField.returnKeyType = .next
 
@@ -181,7 +185,62 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         }
 
         clearErrors()
-        viewModel.login(username: loginTextField.value, password: passwordTextField.value)
+        
+        viewModel.isLoading.value = true
+        
+        firstly {
+            try Client.signInWithEmail(email: loginTextField.value, password: passwordTextField.value)
+        }
+        .done { (signin: SignIn) in
+            try setAPICredentials(email: self.loginTextField.value, password: self.passwordTextField.value)
+            setAPICredentialsConfirmed(confirmed: true)
+            self.viewModel.isLoading.value = false
+            NotificationCenter.default.post(name: LoginViewModel.accountStateDidChange, object: self)
+            
+            let banner = PMBanner(message: "Successful Login", style: PMBannerNewStyle.success, icon: IconProvider.checkmarkCircle, dismissDuration: Double.infinity)
+            banner.addButton(text: CoreString._hv_ok_button) { _ in
+                // logged in and confirmed - update this email with the receipt and refresh VPN credentials
+                firstly { () -> Promise<SubscriptionEvent> in
+                    try Client.subscriptionEvent()
+                }
+                .then { (result: SubscriptionEvent) -> Promise<GetKey> in
+                    try Client.getKey()
+                }
+                .done { (getKey: GetKey) in
+                    try setVPNCredentials(id: getKey.id, keyBase64: getKey.b64)
+                    if (getUserWantsVPNEnabled() == true) {
+                        VPNController.shared.restart()
+                    }
+                }
+                .catch { error in
+                    // it's okay for this to error out with "no subscription in receipt"
+                    DDLogError("HomeViewController ConfirmEmail subscriptionevent error (ok for it to be \"no subscription in receipt\"): \(error)")
+                }
+                self.isBannerShown = false
+                banner.dismiss()
+            }
+            banner.show(at: .topCustom(.baner), on: self)
+            self.isBannerShown = true
+
+        }
+        .catch { error in
+            self.viewModel.isLoading.value = false
+            var errorMessage = error.localizedDescription
+            if let apiError = error as? R2ApiError {
+                errorMessage = apiError.message
+            }
+            
+            let banner2 = PMBanner(message: "Login Error: \(errorMessage)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
+            banner2.addButton(text: CoreString._hv_ok_button) { _ in
+                self.isBannerShown = false
+                banner2.dismiss()
+            }
+            banner2.show(at: .topCustom(.baner), on: self)
+            self.isBannerShown = true
+
+        }
+        
+        //viewModel.login(username: loginTextField.value, password: passwordTextField.value)
     }
 
     @IBAction func signUpPressed(_ sender: ProtonButton) {

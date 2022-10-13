@@ -330,7 +330,7 @@ extension LoginCoordinator: WelcomeViewControllerDelegate {
 
     func userWantsToSignUp() {
         guard let navigationController = navigationController else { return }
-        navigationController.modalTransitionStyle = .coverVertical
+        navigationController.modalTransitionStyle = .crossDissolve
         navigationController.autoresettingNextTransitionStyle = .modalLike
         delegate?.userSelectedSignup(navigationController: navigationController)
     }

@@ -20,6 +20,7 @@ import UserNotifications
 import WidgetKit
 import BackgroundTasks
 import Reachability
+import Logging
 
 let fileLogger: DDFileLogger = DDFileLogger()
 let kHasShownTitlePage: String = "kHasShownTitlePage"
@@ -28,15 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let noInternetMessageView = MessageView.viewFromNib(layout: .statusLine)
     private let container = DependencyContainer()
-//    private lazy var vpnManager: VpnManagerProtocol = container.makeVpnManager()
     private lazy var navigationService: NavigationService = container.makeNavigationService()
     private lazy var propertiesManager: PropertiesManagerProtocol = container.makePropertiesManager()
-//    private lazy var appStateManager: AppStateManager = container.makeAppStateManager()
-//    private lazy var planService: PlanService = container.makePlanService()
+    private lazy var appStateManager: AppStateManager = container.makeAppStateManager()
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //setupLocalTestRomoval()
+        setupLocalTestRomoval()
         setupLocalLogger()
         setupSecurityShit()
         setupDialogAppearance()
@@ -47,34 +46,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupIAP()
         setupFirewallPeriodicCheck()
         setupWidgetToggleVPN()
-       // setupLaunchScreen()
-//        setupLogsForApp()
-//        setupDebugHelpers()
-        
-        // Force all encoded objects to be decoded and recoded using the ProtonVPN module name
-        //setUpNSCoding(withModuleName: "ProtonVPN")
-        // Use shared defaults
+        setupLogsForApp()
+        //setupCoreIntegration()
         Storage.setSpecificDefaults(defaults: UserDefaults(suiteName: AppConstants.AppGroups.main)!)
-
-        //setupCoreIntegration()
-        
-//        Waiting for https://github.com/getsentry/sentry-cocoa/issues/1892 to be fixed
-//        SentryHelper.setupSentry(dsn: ObfuscatedConstants.sentryDsniOS)
-        
-       // AnnouncementButtonViewModel.shared = container.makeAnnouncementButtonViewModel()
-
-        //setupCoreIntegration()
-
-//        vpnManager.whenReady(queue: DispatchQueue.main) {
-//            self.navigationService.launched()
-//        }
-        
         container.makeMaintenanceManagerHelper().startMaintenanceManager()
-                
-       // _ = container.makeDynamicBugReportManager() // Loads initial bug report config and sets up a timer to refresh it daily.
-        
         return true
     }
+    
+    
+    
+    private func setupLogsForApp() {
+        LoggingSystem.bootstrap {_ in
+            return MultiplexLogHandler([
+                OSLogHandler(),
+                FileLogHandler(self.container.makeLogFileManager().getFileUrl(named: AppConstants.Filenames.appLogFilename))
+            ])
+        }
+    }
+    
     func setupLaunchScreen(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
            self.navigationService.launched()
@@ -528,3 +517,20 @@ extension PacketTunnelProviderLogs {
     }
 }
 
+extension AppDelegate {
+    private func setupCoreIntegration() {
+        ColorProvider.brand = .vpn
+        let trusKitHelper = container.makeTrustKitHelper()
+        PMAPIService.trustKit = trusKitHelper?.trustKit
+        PMAPIService.noTrustKit = trusKitHelper?.trustKit == nil
+
+        PMLog.callback = { (message, level) in
+            switch level {
+            case .debug, .info, .trace, .warn:
+                log.debug("\(message)", category: .core)
+            case .error, .fatal:
+                log.error("\(message)", category: .core)
+            }
+        }
+    }
+}

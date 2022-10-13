@@ -12,7 +12,7 @@ let vpnSourceID = "-111818" //getEnvironmentVariable(key: "vpnSourceID", default
 let vpnDomain = "vaifvpn.net" //getEnvironmentVariable(key: "vpnDomain", default: "confirmedvpn.com")
 let vpnRemoteIdentifier = "www" + vpnSourceID + "." + vpnDomain
 
-let mainDomain = "confirmedvpn.com" //getEnvironmentVariable(key: "mainDomain", default: "confirmedvpn.com")
+let mainDomain = "vaifvpn.net" //getEnvironmentVariable(key: "mainDomain", default: "confirmedvpn.com")
 let mainURL = "https://www." + mainDomain
 
 let testFirewallDomain = "example.com"

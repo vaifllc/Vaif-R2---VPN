@@ -25,6 +25,8 @@ target 'Vaif R2 - VPN' do
   pod 'AwaitKit', :git => 'https://github.com/yannickl/AwaitKit.git', :commit => '4b725f40dd189f40c0962cba792f06a2073bd977'
   pod 'Logging'
   pod 'SecurityKit'
+  
+  pod 'Connectivity'
 end
 
 

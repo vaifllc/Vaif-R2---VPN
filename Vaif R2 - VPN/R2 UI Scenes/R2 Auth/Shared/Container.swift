@@ -93,9 +93,9 @@ final class Container {
                                humanVerificationVersion: humanVerificationVersion)
     }
 
-//    func makePasswordViewModel() -> PasswordViewModel {
-//        return PasswordViewModel()
-//    }
+    func makePasswordViewModel() -> PasswordViewModel {
+        return PasswordViewModel()
+    }
 //
 //    func makeRecoveryViewModel(initialCountryCode: Int) -> RecoveryViewModel {
 //        return RecoveryViewModel(signupService: signupService, initialCountryCode: initialCountryCode, challenge: challenge)

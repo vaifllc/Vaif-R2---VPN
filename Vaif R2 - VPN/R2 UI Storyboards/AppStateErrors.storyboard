@@ -9,60 +9,79 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
         <array key="SF-Pro-Rounded-Medium.otf">
             <string>SFProRounded-Medium</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Splash View Controller-->
+        <!--Connection Offline View Controller-->
         <scene sceneID="cEq-S4-UP2">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" id="QfZ-jb-C18" customClass="SplashViewController" customModule="Mareshka_VPN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConnectionOfflineView" id="QfZ-jb-C18" customClass="ConnectionOfflineViewController" customModule="Vaif_R2___VPN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Kv-4z-Yk7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zTr-Yd-sl4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18_Router Offline" translatesAutoresizingMaskIntoConstraints="NO" id="zTr-Yd-sl4">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSplash" translatesAutoresizingMaskIntoConstraints="NO" id="MFl-SQ-rLn">
-                                <rect key="frame" x="171" y="342" width="48" height="80"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ускоряем соединение" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wL-c4-nmP">
-                                <rect key="frame" x="24" y="631.33333333333337" width="342" height="28.666666666666629"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It seems there is something  wrong with your internet connection. Please connect to the internet and try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrK-S0-U5K">
+                                <rect key="frame" x="24" y="516" width="342" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Medium" family="SF Pro Rounded" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wL-c4-nmP">
+                                <rect key="frame" x="24" y="471.66666666666669" width="342" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWC-Zt-U5b" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                <rect key="frame" x="115" y="721" width="161" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Retry"/>
+                                <connections>
+                                    <action selector="retryConnection:" destination="QfZ-jb-C18" eventType="touchUpInside" id="wE5-65-fe0"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Syi-Rd-YNy">
+                                <rect key="frame" x="178" y="672" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XdD-d0-0Gu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5wL-c4-nmP" firstAttribute="leading" secondItem="1Kv-4z-Yk7" secondAttribute="leading" constant="24" id="0YC-WW-k3y"/>
-                            <constraint firstItem="XdD-d0-0Gu" firstAttribute="bottom" secondItem="5wL-c4-nmP" secondAttribute="bottom" constant="150" id="7j4-lN-bts"/>
+                            <constraint firstItem="XdD-d0-0Gu" firstAttribute="bottom" secondItem="5wL-c4-nmP" secondAttribute="bottom" constant="309.66666666666663" id="7j4-lN-bts"/>
                             <constraint firstAttribute="bottom" secondItem="zTr-Yd-sl4" secondAttribute="bottom" id="K7W-qj-xL5"/>
                             <constraint firstItem="zTr-Yd-sl4" firstAttribute="trailing" secondItem="XdD-d0-0Gu" secondAttribute="trailing" id="MbG-qB-RDJ"/>
                             <constraint firstItem="5wL-c4-nmP" firstAttribute="centerX" secondItem="1Kv-4z-Yk7" secondAttribute="centerX" id="P3g-dP-0JW"/>
                             <constraint firstAttribute="trailing" secondItem="5wL-c4-nmP" secondAttribute="trailing" constant="24" id="SmT-vf-KL4"/>
                             <constraint firstItem="zTr-Yd-sl4" firstAttribute="leading" secondItem="XdD-d0-0Gu" secondAttribute="leading" id="bB9-wN-hwQ"/>
                             <constraint firstItem="zTr-Yd-sl4" firstAttribute="top" secondItem="1Kv-4z-Yk7" secondAttribute="top" id="bea-d5-kIE"/>
-                            <constraint firstItem="MFl-SQ-rLn" firstAttribute="centerY" secondItem="1Kv-4z-Yk7" secondAttribute="centerY" constant="-40" id="ikc-OS-GbJ"/>
-                            <constraint firstItem="MFl-SQ-rLn" firstAttribute="centerX" secondItem="1Kv-4z-Yk7" secondAttribute="centerX" id="qO0-Sn-CgZ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logoImageView" destination="MFl-SQ-rLn" id="cNC-sA-wUv"/>
-                        <outlet property="textLabel" destination="5wL-c4-nmP" id="GB7-i6-iDZ"/>
+                        <outlet property="errorMsg" destination="UrK-S0-U5K" id="nKg-aw-2e7"/>
+                        <outlet property="loadingIndicator" destination="Syi-Rd-YNy" id="tKQ-Hp-X24"/>
+                        <outlet property="oopsLbl" destination="5wL-c4-nmP" id="bnM-I3-8QZ"/>
+                        <outlet property="retryBtn" destination="wWC-Zt-U5b" id="gxb-me-Q2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJz-nz-BS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-893" y="97"/>
+            <point key="canvasLocation" x="-893.84615384615381" y="96.682464454976298"/>
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="414" height="896"/>
-        <image name="logoSplash" width="48" height="80"/>
+        <image name="18_Router Offline" width="750" height="1334"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
