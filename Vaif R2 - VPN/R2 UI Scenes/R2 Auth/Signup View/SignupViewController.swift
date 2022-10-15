@@ -80,7 +80,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
             passwordTextField.autocapitalizationType = .none
         }
     }
-    
     @IBOutlet weak var repeatPasswordTextField: PMTextField! {
         didSet {
             repeatPasswordTextField.title = CoreString._su_repeat_password_field_title
@@ -144,8 +143,7 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         didSet {
             nextButton.setTitle(CoreString._su_next_button, for: .normal)
             nextButton.isEnabled = false
-            //PMBanner.dismissAll(on: self)
-            //validatePassword()
+
         }
     }
     @IBOutlet weak var signinButton: ProtonButton! {
@@ -180,6 +178,7 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         otherAccountButton.isHidden = !showOtherAccountButton
 
         focusOnce(view: currentlyUsedTextField, delay: .milliseconds(750))
+        internalNameTextField.returnKeyType = .next
         passwordTextField.returnKeyType = .next
 
         setUpCloseButton(showCloseButton: showCloseButton, action: #selector(SignupViewController.onCloseButtonTap(_:)))
@@ -190,6 +189,11 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         
         //try? internalNameTextField.setUpChallenge(viewModel.challenge, type: .username)
         //try? externalEmailTextField.setUpChallenge(viewModel.challenge, type: .username_email)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        focusOnce(view: passwordTextField)
     }
 
     override func viewDidLayoutSubviews() {
@@ -204,11 +208,14 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     // MARK: Actions
     
     private func validatePassword() {
+        _ = internalNameTextField.resignFirstResponder()
         _ = passwordTextField.resignFirstResponder()
         _ = repeatPasswordTextField.resignFirstResponder()
+        internalNameTextField.isError = false
         passwordTextField.isError = false
         repeatPasswordTextField.isError = false
-        let result = passwordViewModel.passwordValidationResult(for: signupPasswordRestrictions,
+        let result =
+        passwordValidationResult(for: signupPasswordRestrictions,
                                                         password: passwordTextField.value,
                                                         repeatParrword: repeatPasswordTextField.value)
         switch result {
@@ -222,6 +229,35 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
                 self.unlockUI()
             }
         }
+    }
+    
+    func passwordValidationResult(for restrictions: SignupPasswordRestrictions,
+                                  password: String,
+                                  repeatParrword: String) -> (Result<(), SignupError>) {
+
+        let passwordFailedRestrictions = restrictions.failedRestrictions(for: password)
+        let repeatPasswordFailedRestrictions = restrictions.failedRestrictions(for: repeatParrword)
+
+        if passwordFailedRestrictions.contains(.notEmpty) && repeatPasswordFailedRestrictions.contains(.notEmpty) {
+            return .failure(SignupError.passwordEmpty)
+        }
+
+        // inform the user
+        if passwordFailedRestrictions.contains(.atLeastEightCharactersLong)
+            && repeatPasswordFailedRestrictions.contains(.notEmpty) {
+            return .failure(SignupError.passwordShouldHaveAtLeastEightCharacters)
+        }
+
+        guard password == repeatParrword else {
+            return .failure(SignupError.passwordNotEqual)
+        }
+
+        if passwordFailedRestrictions.contains(.atLeastEightCharactersLong)
+            && repeatPasswordFailedRestrictions.contains(.atLeastEightCharactersLong) {
+            return .failure(SignupError.passwordShouldHaveAtLeastEightCharacters)
+        }
+
+        return .success
     }
 
     @IBAction func onOtherAccountButtonTap(_ sender: ProtonButton) {
@@ -245,6 +281,7 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     @IBAction func onNextButtonTap(_ sender: ProtonButton) {
         cancelFocus()
         PMBanner.dismissAll(on: self)
+        validatePassword()
         nextButton.isSelected = true
         currentlyUsedTextField.isError = false
         if signupAccountType == .internal {
@@ -377,8 +414,16 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     }
 
     private func dismissKeyboard() {
-        if currentlyUsedTextField.isFirstResponder {
-            _ = currentlyUsedTextField.resignFirstResponder()
+        if internalNameTextField.isFirstResponder {
+            _ = internalNameTextField.resignFirstResponder()
+        }
+        
+        if passwordTextField.isFirstResponder {
+            _ = passwordTextField.resignFirstResponder()
+        }
+
+        if repeatPasswordTextField.isFirstResponder {
+            _ = repeatPasswordTextField.resignFirstResponder()
         }
     }
 
@@ -497,7 +542,10 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     }
 
     @objc private func keyboardWillShow(notification: NSNotification) {
-        adjust(scrollView, notification: notification, topView: currentlyUsedTextField, bottomView: signinButton)
+       // adjust(scrollView, notification: notification, topView: currentlyUsedTextField, bottomView: signinButton)
+        adjust(scrollView, notification: notification,
+               topView: topView(of: internalNameTextField, passwordTextField, repeatPasswordTextField),
+               bottomView: nextButton)
     }
 
     @objc private func keyboardWillHide(notification: NSNotification) {
@@ -515,16 +563,20 @@ extension SignupViewController: PMTextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: PMTextField) -> Bool {
-        _ = currentlyUsedTextField.resignFirstResponder()
-        if textField == passwordTextField {
+       // _ = currentlyUsedTextField.resignFirstResponder()
+        if textField == internalNameTextField {
+            _ = passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
             _ = repeatPasswordTextField.becomeFirstResponder()
         } else {
             _ = textField.resignFirstResponder()
         }
+        
         return true
     }
 
     func didBeginEditing(textField: PMTextField) {
+        internalNameTextField.isError = false
         passwordTextField.isError = false
         repeatPasswordTextField.isError = false
     }

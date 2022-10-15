@@ -221,6 +221,97 @@
             </objects>
             <point key="canvasLocation" x="-391.40625" y="-618.44802342606147"/>
         </scene>
+        <!--Password View Controller-->
+        <scene sceneID="kcJ-HC-Omt">
+            <objects>
+                <viewController storyboardIdentifier="Password" id="cxz-Jm-wtW" customClass="PasswordViewController" customModule="Vaif_R2___VPN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gza-v5-MvG">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="m2s-KJ-fno">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-c5-w25">
+                                        <rect key="frame" x="8" y="55" width="374" height="300.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your password" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5i-Rp-8MZ">
+                                                <rect key="frame" x="8" y="7.9999999999999982" width="358" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="SrR-4K-BkZ" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="58.333333333333329" width="358" height="79.999999999999986"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="N3d-Jl-oSb" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="154.33333333333334" width="358" height="80"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zn0-18-E9o" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="258.33333333333331" width="358" height="34"/>
+                                                <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="onNextButtonTap:" destination="cxz-Jm-wtW" eventType="touchUpInside" id="LRb-Ju-GGW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="zn0-18-E9o" firstAttribute="top" secondItem="N3d-Jl-oSb" secondAttribute="bottom" constant="24" id="7Hy-u3-GVP"/>
+                                            <constraint firstItem="SrR-4K-BkZ" firstAttribute="leading" secondItem="n8B-c5-w25" secondAttribute="leading" constant="8" id="FLh-Sb-Cyw"/>
+                                            <constraint firstItem="zn0-18-E9o" firstAttribute="trailing" secondItem="n8B-c5-w25" secondAttribute="trailing" constant="-8" id="FSb-2B-AO6"/>
+                                            <constraint firstItem="c5i-Rp-8MZ" firstAttribute="trailing" secondItem="n8B-c5-w25" secondAttribute="trailing" constant="-8" id="GfK-dy-dMi"/>
+                                            <constraint firstItem="SrR-4K-BkZ" firstAttribute="trailing" secondItem="n8B-c5-w25" secondAttribute="trailing" constant="-8" id="HxT-vQ-8px"/>
+                                            <constraint firstItem="N3d-Jl-oSb" firstAttribute="top" secondItem="SrR-4K-BkZ" secondAttribute="bottom" constant="16" id="Rge-9d-hfX"/>
+                                            <constraint firstItem="N3d-Jl-oSb" firstAttribute="trailing" secondItem="n8B-c5-w25" secondAttribute="trailing" constant="-8" id="RmG-qt-hAC"/>
+                                            <constraint firstItem="c5i-Rp-8MZ" firstAttribute="leading" secondItem="n8B-c5-w25" secondAttribute="leading" constant="8" id="YWg-kb-Jbo"/>
+                                            <constraint firstItem="zn0-18-E9o" firstAttribute="bottom" secondItem="n8B-c5-w25" secondAttribute="bottom" constant="-8" id="dJJ-J1-VOG"/>
+                                            <constraint firstItem="zn0-18-E9o" firstAttribute="leading" secondItem="n8B-c5-w25" secondAttribute="leading" constant="8" id="meL-Kj-gMP"/>
+                                            <constraint firstItem="c5i-Rp-8MZ" firstAttribute="top" secondItem="n8B-c5-w25" secondAttribute="top" constant="8" id="orl-1Q-YI3"/>
+                                            <constraint firstItem="SrR-4K-BkZ" firstAttribute="top" secondItem="c5i-Rp-8MZ" secondAttribute="bottom" constant="24" id="qow-M2-y4h"/>
+                                            <constraint firstItem="N3d-Jl-oSb" firstAttribute="leading" secondItem="n8B-c5-w25" secondAttribute="leading" constant="8" id="tez-CX-DaF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="n8B-c5-w25" firstAttribute="bottom" secondItem="m2s-KJ-fno" secondAttribute="bottomMargin" id="28b-wL-AOv"/>
+                                    <constraint firstItem="n8B-c5-w25" firstAttribute="leading" secondItem="m2s-KJ-fno" secondAttribute="leadingMargin" id="F4X-ID-Hkw"/>
+                                    <constraint firstItem="n8B-c5-w25" firstAttribute="trailing" secondItem="m2s-KJ-fno" secondAttribute="trailingMargin" id="GCZ-jR-eXY"/>
+                                    <constraint firstItem="n8B-c5-w25" firstAttribute="top" secondItem="m2s-KJ-fno" secondAttribute="topMargin" id="LRJ-oR-ZGV"/>
+                                    <constraint firstItem="n8B-c5-w25" firstAttribute="centerX" secondItem="m2s-KJ-fno" secondAttribute="centerXWithinMargins" priority="999" id="ffu-uv-z3a"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2EX-8l-l8Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m2s-KJ-fno" firstAttribute="trailing" secondItem="gza-v5-MvG" secondAttribute="trailing" id="3Ic-Va-10Z"/>
+                            <constraint firstItem="m2s-KJ-fno" firstAttribute="top" secondItem="gza-v5-MvG" secondAttribute="top" id="9TN-K7-Q5y"/>
+                            <constraint firstItem="m2s-KJ-fno" firstAttribute="bottom" secondItem="gza-v5-MvG" secondAttribute="bottom" id="QN9-nw-fZG"/>
+                            <constraint firstItem="m2s-KJ-fno" firstAttribute="leading" secondItem="gza-v5-MvG" secondAttribute="leading" id="V2a-ry-jWK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createPasswordTitleLabel" destination="c5i-Rp-8MZ" id="ttP-4s-oim"/>
+                        <outlet property="nextButton" destination="zn0-18-E9o" id="QdY-6R-zHt"/>
+                        <outlet property="passwordTextField" destination="SrR-4K-BkZ" id="O1F-qh-o9a"/>
+                        <outlet property="repeatPasswordTextField" destination="N3d-Jl-oSb" id="iib-8W-Ttp"/>
+                        <outlet property="scrollView" destination="m2s-KJ-fno" id="zgY-y9-HHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4l-F4-ntu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027.536231884058" y="-618.08035714285711"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
