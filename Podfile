@@ -25,8 +25,21 @@ target 'Vaif R2 - VPN' do
   pod 'AwaitKit', :git => 'https://github.com/yannickl/AwaitKit.git', :commit => '4b725f40dd189f40c0962cba792f06a2073bd977'
   pod 'Logging'
   pod 'SecurityKit'
-  
   pod 'Connectivity'
+  
+  #Pods For Downgrade
+
+  pod 'DeviceKit', '~> 4.0'
+  pod 'GBDeviceInfo', '~> 6.0'
+  pod 'PureLayout'
+  pod 'SwiftDate'
+  pod 'SideMenu'
+  pod "Macaw", "0.9.7"
+  pod 'Localize-Swift', '~> 3.2'
+  pod 'SVProgressHUD'
+  pod 'TTTAttributedLabel'
+  pod 'SVPullToRefresh'
+  pod 'GoogleUtilities'
 end
 
 

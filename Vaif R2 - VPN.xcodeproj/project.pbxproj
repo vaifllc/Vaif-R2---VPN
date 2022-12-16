@@ -273,6 +273,9 @@
 		B78BEEAF28F76EA00039C92A /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEAE28F76EA00039C92A /* PasswordViewController.swift */; };
 		B78BEEB128F771310039C92A /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEB028F771310039C92A /* PasswordViewModel.swift */; };
 		B78BEEB328F773770039C92A /* PasswordNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEB228F773770039C92A /* PasswordNavigationViewController.swift */; };
+		B78BEEB628FB26020039C92A /* Navajo-Swift in Frameworks */ = {isa = PBXBuildFile; productRef = B78BEEB528FB26020039C92A /* Navajo-Swift */; };
+		B78BEEB928FDE8FC0039C92A /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = B78BEEB828FDE8FC0039C92A /* DeviceKit */; };
+		B78BEEBB290099070039C92A /* R2SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEBA290099070039C92A /* R2SignupViewController.swift */; };
 		B790355028E208F400341087 /* SplashScreenViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */; };
 		B790355428E2097000341087 /* ProtonIconSetV5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355328E2097000341087 /* ProtonIconSetV5.swift */; };
 		B790355628E209BB00341087 /* IconProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B790355528E209BB00341087 /* IconProvider.swift */; };
@@ -572,6 +575,17 @@
 		B7EA16ED28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
 		B7EA16EE28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
 		B7EA16EF28DBD25C008D8D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B7EA16F128DBD25C008D8D3E /* Localizable.strings */; };
+		B7F3FE4C294BF90D008EBA42 /* libVPNManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F3FE4B294BF90C008EBA42 /* libVPNManager.a */; };
+		B7F3FE50294C0077008EBA42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7F3FE4F294C0076008EBA42 /* GoogleService-Info.plist */; };
+		B7F3FE53294CC6B5008EBA42 /* WitWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE52294CC6B5008EBA42 /* WitWork.swift */; };
+		B7F3FE56294CC7B2008EBA42 /* GBDeviceInfo in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE55294CC7B2008EBA42 /* GBDeviceInfo */; };
+		B7F3FE5A294CCF1D008EBA42 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE59294CCF1D008EBA42 /* FirebaseAnalytics */; };
+		B7F3FE5C294CCF1D008EBA42 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE5B294CCF1D008EBA42 /* FirebaseAppCheck */; };
+		B7F3FE5E294CCF1D008EBA42 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE5D294CCF1D008EBA42 /* FirebaseAuth */; };
+		B7F3FE60294CCF1D008EBA42 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE5F294CCF1D008EBA42 /* FirebaseFirestore */; };
+		B7F3FE62294CCF1D008EBA42 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE61294CCF1D008EBA42 /* FirebaseFunctions */; };
+		B7F3FE65294CD53B008EBA42 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE64294CD53B008EBA42 /* ServerModel.swift */; };
+		B7F3FE69294CD639008EBA42 /* iKevServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE68294CD638008EBA42 /* iKevServerModel.swift */; };
 		CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */; };
 		E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */; };
 		EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */; };
@@ -824,6 +838,7 @@
 		B75161D228D906220028BE35 /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		B75161D328D906220028BE35 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		B75161D428D906230028BE35 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
+		B76A56B8294BF22C00E49588 /* VPNManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VPNManager.h; sourceTree = "<group>"; };
 		B772622D28E5079E0016540C /* ImageAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAlias.swift; sourceTree = "<group>"; };
 		B772623028E507BD0016540C /* Image+Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Flag.swift"; sourceTree = "<group>"; };
 		B772623228E50A270016540C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -907,6 +922,7 @@
 		B78BEEAE28F76EA00039C92A /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		B78BEEB028F771310039C92A /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		B78BEEB228F773770039C92A /* PasswordNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordNavigationViewController.swift; sourceTree = "<group>"; };
+		B78BEEBA290099070039C92A /* R2SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2SignupViewController.swift; sourceTree = "<group>"; };
 		B790354F28E208F400341087 /* SplashScreenViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewControllerFactory.swift; sourceTree = "<group>"; };
 		B790355328E2097000341087 /* ProtonIconSetV5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtonIconSetV5.swift; sourceTree = "<group>"; };
 		B790355528E209BB00341087 /* IconProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconProvider.swift; sourceTree = "<group>"; };
@@ -1153,6 +1169,12 @@
 		B7BAFCE028E37E55000CDCD9 /* IosAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosAlertService.swift; sourceTree = "<group>"; };
 		B7BAFCE228E37F75000CDCD9 /* Modals */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Modals; path = libraries/Modals; sourceTree = "<group>"; };
 		B7EA16F028DBD25C008D8D3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B7F3FE4B294BF90C008EBA42 /* libVPNManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVPNManager.a; sourceTree = "<group>"; };
+		B7F3FE4E294BFB7B008EBA42 /* VaifR2VPN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VaifR2VPN-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7F3FE4F294C0076008EBA42 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7F3FE52294CC6B5008EBA42 /* WitWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitWork.swift; sourceTree = "<group>"; };
+		B7F3FE64294CD53B008EBA42 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
+		B7F3FE68294CD638008EBA42 /* iKevServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iKevServerModel.swift; sourceTree = "<group>"; };
 		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1168,16 +1190,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F3FE5C294CCF1D008EBA42 /* FirebaseAppCheck in Frameworks */,
 				B7BAFCC628E34A42000CDCD9 /* Review in Frameworks */,
+				B7F3FE5E294CCF1D008EBA42 /* FirebaseAuth in Frameworks */,
 				B7BAFCE428E37FA5000CDCD9 /* Modals in Frameworks */,
 				B751610028D7D5440028BE35 /* CocoaLumberjack in Frameworks */,
+				B7F3FE60294CCF1D008EBA42 /* FirebaseFirestore in Frameworks */,
 				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
 				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
+				B78BEEB928FDE8FC0039C92A /* DeviceKit in Frameworks */,
 				B74F87C828E28E5A0012D190 /* BugReport in Frameworks */,
+				B7F3FE62294CCF1D008EBA42 /* FirebaseFunctions in Frameworks */,
 				B7BAFCE628E37FA5000CDCD9 /* Modals-iOS in Frameworks */,
+				B7F3FE5A294CCF1D008EBA42 /* FirebaseAnalytics in Frameworks */,
+				B78BEEB628FB26020039C92A /* Navajo-Swift in Frameworks */,
 				B7EA16E428DBC03B008D8D3E /* NetworkExtension.framework in Frameworks */,
 				B75160E328D7CAF50028BE35 /* StoreKit.framework in Frameworks */,
+				B7F3FE56294CC7B2008EBA42 /* GBDeviceInfo in Frameworks */,
 				B7BAFCC428E34A3D000CDCD9 /* Search in Frameworks */,
+				B7F3FE4C294BF90D008EBA42 /* libVPNManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1760,6 +1791,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B76A56B7294BF1B700E49588 /* VPN */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3FE4B294BF90C008EBA42 /* libVPNManager.a */,
+				B76A56B8294BF22C00E49588 /* VPNManager.h */,
+			);
+			path = VPN;
+			sourceTree = "<group>";
+		};
 		B772622C28E507990016540C /* ImageAlias */ = {
 			isa = PBXGroup;
 			children = (
@@ -2043,6 +2083,7 @@
 				B78BEEAE28F76EA00039C92A /* PasswordViewController.swift */,
 				B78BEEB028F771310039C92A /* PasswordViewModel.swift */,
 				B78BEEB228F773770039C92A /* PasswordNavigationViewController.swift */,
+				B78BEEBA290099070039C92A /* R2SignupViewController.swift */,
 			);
 			path = "Registration View";
 			sourceTree = "<group>";
@@ -2887,6 +2928,7 @@
 				B75160E128D7CA0B0028BE35 /* Vaif R2 - VPN.entitlements */,
 				B7948D2728D6502C004CDB79 /* Info.plist */,
 				B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */,
+				B7F3FE4F294C0076008EBA42 /* GoogleService-Info.plist */,
 			);
 			path = "Vaif R2 - VPN";
 			sourceTree = "<group>";
@@ -2960,6 +3002,9 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7F3FE51294CC6A7008EBA42 /* API */,
+				B7F3FE4D294BFB42008EBA42 /* BridgingHeader */,
+				B76A56B7294BF1B700E49588 /* VPN */,
 				B7BAFCBE28E349DF000CDCD9 /* DependencyContainer */,
 				B79036DC28E28C8000341087 /* NavigationService */,
 				B79036D428E28A4300341087 /* UIConstants */,
@@ -3191,6 +3236,40 @@
 			path = "R2 Auth";
 			sourceTree = "<group>";
 		};
+		B7F3FE4D294BFB42008EBA42 /* BridgingHeader */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3FE4E294BFB7B008EBA42 /* VaifR2VPN-Bridging-Header.h */,
+			);
+			path = BridgingHeader;
+			sourceTree = "<group>";
+		};
+		B7F3FE51294CC6A7008EBA42 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3FE63294CD531008EBA42 /* Models */,
+				B7F3FE52294CC6B5008EBA42 /* WitWork.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B7F3FE63294CD531008EBA42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3FE67294CD61E008EBA42 /* Server models */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B7F3FE67294CD61E008EBA42 /* Server models */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3FE64294CD53B008EBA42 /* ServerModel.swift */,
+				B7F3FE68294CD638008EBA42 /* iKevServerModel.swift */,
+			);
+			path = "Server models";
+			sourceTree = "<group>";
+		};
 		C01C6274F32B807A421E8FBC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3250,6 +3329,14 @@
 				B7BAFCC528E34A42000CDCD9 /* Review */,
 				B7BAFCE328E37FA5000CDCD9 /* Modals */,
 				B7BAFCE528E37FA5000CDCD9 /* Modals-iOS */,
+				B78BEEB528FB26020039C92A /* Navajo-Swift */,
+				B78BEEB828FDE8FC0039C92A /* DeviceKit */,
+				B7F3FE55294CC7B2008EBA42 /* GBDeviceInfo */,
+				B7F3FE59294CCF1D008EBA42 /* FirebaseAnalytics */,
+				B7F3FE5B294CCF1D008EBA42 /* FirebaseAppCheck */,
+				B7F3FE5D294CCF1D008EBA42 /* FirebaseAuth */,
+				B7F3FE5F294CCF1D008EBA42 /* FirebaseFirestore */,
+				B7F3FE61294CCF1D008EBA42 /* FirebaseFunctions */,
 			);
 			productName = "Vaif R2 - VPN";
 			productReference = B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */;
@@ -3424,6 +3511,10 @@
 			mainGroup = B7948D0A28D6502A004CDB79;
 			packageReferences = (
 				B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
+				B78BEEB428FB26020039C92A /* XCRemoteSwiftPackageReference "Navajo-Swift" */,
+				B78BEEB728FDE8FC0039C92A /* XCRemoteSwiftPackageReference "DeviceKit" */,
+				B7F3FE54294CC7B1008EBA42 /* XCRemoteSwiftPackageReference "GBDeviceInfo" */,
+				B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = B7948D1428D6502A004CDB79 /* Products */;
 			projectDirPath = "";
@@ -3484,6 +3575,7 @@
 				AA7255EAB043D473F76C763F /* Pods-Vaif R2 - VPN-settings-metadata.plist in Resources */,
 				B75161DE28D906230028BE35 /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				B75161D628D906230028BE35 /* Montserrat-Light.ttf in Resources */,
+				B7F3FE50294C0077008EBA42 /* GoogleService-Info.plist in Resources */,
 				B79036B728E25C7F00341087 /* PMLogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3749,6 +3841,7 @@
 				B7948DDA28D7C3BB004CDB79 /* VPNController.swift in Sources */,
 				B751618328D8FB260028BE35 /* M13CheckboxBounceController.swift in Sources */,
 				B790362428E2244800341087 /* UIViewController+Extensions.swift in Sources */,
+				B7F3FE65294CD53B008EBA42 /* ServerModel.swift in Sources */,
 				B772623D28E50ED80016540C /* PMCell+Extensions.swift in Sources */,
 				B751618928D8FB260028BE35 /* M13Checkbox+IB.swift in Sources */,
 				B74BC16428F37EF400441353 /* PropertyStub.swift in Sources */,
@@ -3945,6 +4038,7 @@
 				B74BC13628F26A5300441353 /* MaintenanceManager.swift in Sources */,
 				B790367428E24A3B00341087 /* ShowImages.swift in Sources */,
 				B790356828E20DE500341087 /* Reusable.swift in Sources */,
+				B7F3FE53294CC6B5008EBA42 /* WitWork.swift in Sources */,
 				B74BC14428F37C9100441353 /* FileLogHandler.swift in Sources */,
 				B772622E28E5079E0016540C /* ImageAlias.swift in Sources */,
 				B79036CD28E2870400341087 /* Route.swift in Sources */,
@@ -4027,6 +4121,7 @@
 				B77262C228E79EAF0016540C /* AuthCredentials+vpncore.swift in Sources */,
 				B772629628E616770016540C /* Session+Alamofire.swift in Sources */,
 				B75161A728D8FB270028BE35 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				B7F3FE69294CD639008EBA42 /* iKevServerModel.swift in Sources */,
 				B74BC10128EBB40D00441353 /* AppSessionRefresher.swift in Sources */,
 				B790366728E2491400341087 /* Key+Codable.swift in Sources */,
 				B77262D828E7D5090016540C /* ReportsApiService.swift in Sources */,
@@ -4066,6 +4161,7 @@
 				B77262E928E7D7420016540C /* NELogContent.swift in Sources */,
 				B772626D28E5EFDE0016540C /* KeyDecodingStrategy+Extension.swift in Sources */,
 				B75161A028D8FB260028BE35 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
+				B78BEEBB290099070039C92A /* R2SignupViewController.swift in Sources */,
 				B790359328E2149400341087 /* TableViewCell+helper.swift in Sources */,
 				B790369728E24DD500341087 /* SummaryProgressCell.swift in Sources */,
 				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
@@ -4431,6 +4527,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks\n",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shared/VPN",
+				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4439,6 +4539,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/BridgingHeader/VaifR2VPN-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -4479,6 +4580,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks\n",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Shared/VPN",
+				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vaif.Vaif-R2---VPN";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -4487,6 +4592,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/BridgingHeader/VaifR2VPN-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -4891,6 +4997,38 @@
 				kind = branch;
 			};
 		};
+		B78BEEB428FB26020039C92A /* XCRemoteSwiftPackageReference "Navajo-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Wistas23/Navajo-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		B78BEEB728FDE8FC0039C92A /* XCRemoteSwiftPackageReference "DeviceKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devicekit/DeviceKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		B7F3FE54294CC7B1008EBA42 /* XCRemoteSwiftPackageReference "GBDeviceInfo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lmirosevic/GBDeviceInfo.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -4948,6 +5086,16 @@
 			package = B75160FE28D7D5440028BE35 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
 			productName = CocoaLumberjackSwift;
 		};
+		B78BEEB528FB26020039C92A /* Navajo-Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B78BEEB428FB26020039C92A /* XCRemoteSwiftPackageReference "Navajo-Swift" */;
+			productName = "Navajo-Swift";
+		};
+		B78BEEB828FDE8FC0039C92A /* DeviceKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B78BEEB728FDE8FC0039C92A /* XCRemoteSwiftPackageReference "DeviceKit" */;
+			productName = DeviceKit;
+		};
 		B7BAFCC328E34A3D000CDCD9 /* Search */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Search;
@@ -4963,6 +5111,36 @@
 		B7BAFCE528E37FA5000CDCD9 /* Modals-iOS */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "Modals-iOS";
+		};
+		B7F3FE55294CC7B2008EBA42 /* GBDeviceInfo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE54294CC7B1008EBA42 /* XCRemoteSwiftPackageReference "GBDeviceInfo" */;
+			productName = GBDeviceInfo;
+		};
+		B7F3FE59294CCF1D008EBA42 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B7F3FE5B294CCF1D008EBA42 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		B7F3FE5D294CCF1D008EBA42 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B7F3FE5F294CCF1D008EBA42 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		B7F3FE61294CCF1D008EBA42 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -81,10 +81,10 @@ extension LoginService {
 //        }
     }
 
-    public func createAccountKeysIfNeeded(user: User,
+    public func createAccountKeysIfNeeded(user: R2User,
                                           addresses: [Address]?,
                                           mailboxPassword: String?,
-                                          completion: @escaping (Swift.Result<User, LoginError>) -> Void) {
+                                          completion: @escaping (Swift.Result<R2User, LoginError>) -> Void) {
         PMLog.debug("Creating account keys if needed")
         let isAccountKeyCreationNeeded = user.keys.first(where: { $0.primary == 1 }) == nil
         guard isAccountKeyCreationNeeded else {
@@ -178,7 +178,7 @@ extension LoginService {
 //        }
     }
 
-    public func createAddressKeys(user: User, address: Address, mailboxPassword: String, completion: @escaping (Swift.Result<Key, CreateAddressKeysError>) -> Void) {
+    public func createAddressKeys(user: R2User, address: Address, mailboxPassword: String, completion: @escaping (Swift.Result<Key, CreateAddressKeysError>) -> Void) {
         PMLog.debug("Creating address keys")
 
         guard address.keys.isEmpty else {

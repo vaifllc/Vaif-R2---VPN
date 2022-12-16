@@ -15,12 +15,7 @@ protocol SignupViewControllerDelegate: AnyObject {
     func signupCloseButtonPressed()
     func signinButtonPressed()
     func hvEmailAlreadyExists(email: String)
-    func passwordIsShown()
-    func validatedPassword(password: String, completionHandler: (() -> Void)?)
-    func passwordBackButtonPressed()
 }
-
-
 
 enum SignupAccountType {
     case `internal`
@@ -31,7 +26,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
 
     weak var delegate: SignupViewControllerDelegate?
     var viewModel: SignupViewModel!
-    var passwordViewModel: PasswordViewModel!
     var customErrorPresenter: LoginErrorPresenter?
     var signupAccountType: SignupAccountType!
     var showOtherAccountButton = true
@@ -39,7 +33,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     var showSeparateDomainsButton = true
     var minimumAccountType: AccountType?
     var tapGesture: UITapGestureRecognizer?
-    var signupPasswordRestrictions: SignupPasswordRestrictions!
 
     // MARK: Outlets
 
@@ -68,30 +61,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
             internalNameTextField.spellCheckingType = .no
         }
     }
-    
-    
-    @IBOutlet weak var passwordTextField: PMTextField! {
-        didSet {
-            passwordTextField.title = CoreString._su_password_field_title
-            passwordTextField.assistiveText = CoreString._su_password_field_hint
-            passwordTextField.delegate = self
-            passwordTextField.textContentType = .password
-            passwordTextField.autocorrectionType = .no
-            passwordTextField.autocapitalizationType = .none
-        }
-    }
-    @IBOutlet weak var repeatPasswordTextField: PMTextField! {
-        didSet {
-            repeatPasswordTextField.title = CoreString._su_repeat_password_field_title
-            repeatPasswordTextField.delegate = self
-            repeatPasswordTextField.textContentType = .password
-            repeatPasswordTextField.autocorrectionType = .no
-            repeatPasswordTextField.autocapitalizationType = .none
-        }
-    }
-    
-    
-    
     @IBOutlet weak var domainsView: UIView!
     @IBOutlet weak var domainsLabel: UILabel!
     @IBOutlet weak var domainsButton: ProtonButton!
@@ -115,8 +84,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
             return externalEmailTextField
         case .internal:
             return internalNameTextField
-//            return passwordTextFied
-//            return repeatPasswordTextFied
         case .none:
             assertionFailure("signupAccountType should be configured during the segue")
             return internalNameTextField
@@ -143,7 +110,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         didSet {
             nextButton.setTitle(CoreString._su_next_button, for: .normal)
             nextButton.isEnabled = false
-
         }
     }
     @IBOutlet weak var signinButton: ProtonButton! {
@@ -172,116 +138,32 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
             brandLogo.isHidden = false
         }
         
-        setupDomainsView()
         setupGestures()
         setupNotifications()
-        otherAccountButton.isHidden = !showOtherAccountButton
+        
 
         focusOnce(view: currentlyUsedTextField, delay: .milliseconds(750))
-        internalNameTextField.returnKeyType = .next
-        passwordTextField.returnKeyType = .next
 
         setUpCloseButton(showCloseButton: showCloseButton, action: #selector(SignupViewController.onCloseButtonTap(_:)))
-        requestDomain()
-        configureAccountType()
+        //configureAccountType()
         generateAccessibilityIdentifiers()
-        delegate?.passwordIsShown()
         
         //try? internalNameTextField.setUpChallenge(viewModel.challenge, type: .username)
         //try? externalEmailTextField.setUpChallenge(viewModel.challenge, type: .username_email)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        focusOnce(view: passwordTextField)
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         navigationBarAdjuster.setUp(for: scrollView, shouldAdjustNavigationBar: showCloseButton, parent: parent)
-        navigationBarAdjuster.setUp(for: scrollView, parent: parent)
-        DispatchQueue.main.async {
-            self.scrollView.adjust(forKeyboardVisibilityNotification: nil)
-        }
+        scrollView.adjust(forKeyboardVisibilityNotification: nil)
     }
 
     // MARK: Actions
-    
-    private func validatePassword() {
-        _ = internalNameTextField.resignFirstResponder()
-        _ = passwordTextField.resignFirstResponder()
-        _ = repeatPasswordTextField.resignFirstResponder()
-        internalNameTextField.isError = false
-        passwordTextField.isError = false
-        repeatPasswordTextField.isError = false
-        let result =
-        passwordValidationResult(for: signupPasswordRestrictions,
-                                                        password: passwordTextField.value,
-                                                        repeatParrword: repeatPasswordTextField.value)
-        switch result {
-        case .failure(let error):
-            if self.customErrorPresenter?.willPresentError(error: error, from: self) == true { } else { self.showError(error: error) }
-        case .success:
-            nextButton.isSelected = true
-            lockUI()
-            delegate?.validatedPassword(password: passwordTextField.value) {
-                self.nextButton.isSelected = false
-                self.unlockUI()
-            }
-        }
-    }
-    
-    func passwordValidationResult(for restrictions: SignupPasswordRestrictions,
-                                  password: String,
-                                  repeatParrword: String) -> (Result<(), SignupError>) {
 
-        let passwordFailedRestrictions = restrictions.failedRestrictions(for: password)
-        let repeatPasswordFailedRestrictions = restrictions.failedRestrictions(for: repeatParrword)
-
-        if passwordFailedRestrictions.contains(.notEmpty) && repeatPasswordFailedRestrictions.contains(.notEmpty) {
-            return .failure(SignupError.passwordEmpty)
-        }
-
-        // inform the user
-        if passwordFailedRestrictions.contains(.atLeastEightCharactersLong)
-            && repeatPasswordFailedRestrictions.contains(.notEmpty) {
-            return .failure(SignupError.passwordShouldHaveAtLeastEightCharacters)
-        }
-
-        guard password == repeatParrword else {
-            return .failure(SignupError.passwordNotEqual)
-        }
-
-        if passwordFailedRestrictions.contains(.atLeastEightCharactersLong)
-            && repeatPasswordFailedRestrictions.contains(.atLeastEightCharactersLong) {
-            return .failure(SignupError.passwordShouldHaveAtLeastEightCharacters)
-        }
-
-        return .success
-    }
-
-    @IBAction func onOtherAccountButtonTap(_ sender: ProtonButton) {
-        cancelFocus()
-        PMBanner.dismissAll(on: self)
-        let isFirstResponder = currentlyUsedTextField.isFirstResponder
-        if isFirstResponder { _ = currentlyUsedTextField.resignFirstResponder() }
-        contentView.fadeOut(withDuration: 0.5) { [self] in
-            self.contentView.fadeIn(withDuration: 0.5)
-            self.currentlyUsedTextField.isError = false
-            if self.signupAccountType == .internal {
-                signupAccountType = .external
-            } else {
-                signupAccountType = .internal
-            }
-            configureAccountType()
-            if isFirstResponder { _ = currentlyUsedTextField.becomeFirstResponder() }
-        }
-    }
 
     @IBAction func onNextButtonTap(_ sender: ProtonButton) {
         cancelFocus()
         PMBanner.dismissAll(on: self)
-        validatePassword()
         nextButton.isSelected = true
         currentlyUsedTextField.isError = false
         if signupAccountType == .internal {
@@ -309,27 +191,6 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
         delegate?.signinButtonPressed()
     }
     
-    @IBAction private func onDomainsButtonTapped() {
-        dismissKeyboard()
-        var sheet: PMActionSheet?
-        let currentDomain = viewModel.currentlyChosenSignUpDomain
-        let items = viewModel.allSignUpDomains.map { [weak self] domain in
-            PMActionSheetPlainItem(title: "@\(domain)", icon: nil, isOn: domain == currentDomain) { [weak self] _ in
-                sheet?.dismiss(animated: true)
-                self?.viewModel.currentlyChosenSignUpDomain = domain
-                self?.configureDomainSuffix()
-            }
-        }
-        let header = PMActionSheetHeaderView(title: CoreString._su_domains_sheet_title,
-                                             subtitle: nil,
-                                             leftItem: PMActionSheetPlainItem(title: nil, icon: IconProvider.crossSmall) { _ in sheet?.dismiss(animated: true) },
-                                             rightItem: nil,
-                                             hasSeparator: false)
-        let itemGroup = PMActionSheetItemGroup(items: items, style: .clickable)
-        sheet = PMActionSheet(headerView: header, itemGroups: [itemGroup], showDragBar: false)
-        sheet?.eventsListener = self
-        sheet?.presentAt(self, animated: true)
-    }
 
     @objc func onCloseButtonTap(_ sender: UIButton) {
         cancelFocus()
@@ -338,68 +199,32 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
 
     // MARK: Private methods
 
-    private func requestDomain() {
-        viewModel.updateAvailableDomain { [weak self] _ in
-            self?.configureDomainSuffix()
-        }
-    }
+//    private func configureAccountType() {
+//        internalNameTextField.value = ""
+//        externalEmailTextField.value = ""
+//        switch signupAccountType {
+//        case .external:
+//            externalEmailTextField.isHidden = false
+//            usernameAndDomainsView.isHidden = true
+//            domainsView.isHidden = true
+//            domainsBottomSeparatorView.isHidden = true
+//            internalNameTextField.isHidden = true
+//        case .internal:
+//            externalEmailTextField.isHidden = true
+//            usernameAndDomainsView.isHidden = false
+//            domainsView.isHidden = false
+//            domainsBottomSeparatorView.isHidden = showOtherAccountButton
+//            internalNameTextField.isHidden = false
+//        case .none: break
+//        }
+//        let title = signupAccountType == .internal ? CoreString._su_email_address_button
+//                                                   : CoreString._su_proton_address_button
+//        otherAccountButton.setTitle(title, for: .normal)
+//    }
 
-    private func configureAccountType() {
-        internalNameTextField.value = ""
-        externalEmailTextField.value = ""
-        passwordTextField.value = ""
-        repeatPasswordTextField.value = ""
-        switch signupAccountType {
-        case .external:
-            externalEmailTextField.isHidden = false
-            usernameAndDomainsView.isHidden = true
-            domainsView.isHidden = true
-            domainsBottomSeparatorView.isHidden = true
-            internalNameTextField.isHidden = true
-        case .internal:
-            externalEmailTextField.isHidden = true
-            usernameAndDomainsView.isHidden = false
-            domainsView.isHidden = false
-            domainsBottomSeparatorView.isHidden = showOtherAccountButton
-            internalNameTextField.isHidden = false
-        case .none: break
-        }
-        let title = signupAccountType == .internal ? CoreString._su_email_address_button
-                                                   : CoreString._su_proton_address_button
-        otherAccountButton.setTitle(title, for: .normal)
-        configureDomainSuffix()
-    }
 
-    private func configureDomainSuffix() {
-        guard minimumAccountType != .username else {
-            domainsView.isHidden = true
-            domainsBottomSeparatorView.isHidden = true
-            return
-        }
-        
-        guard showSeparateDomainsButton else {
-            domainsView.isHidden = true
-            domainsBottomSeparatorView.isHidden = true
-            internalNameTextField.suffix = "@\(viewModel.currentlyChosenSignUpDomain)"
-            return
-        }
-        
-        domainsView.isHidden = false
-        domainsButton.setTitle("@\(viewModel.currentlyChosenSignUpDomain)", for: .normal)
-        if viewModel.allSignUpDomains.count > 1 {
-            domainsButton.isUserInteractionEnabled = true
-            domainsButton.setMode(mode: .image(type: .textWithChevron))
-        } else {
-            domainsButton.isUserInteractionEnabled = false
-            domainsButton.setMode(mode: .image(type: .textWithImage(image: nil)))
-        }
-    }
     
-    private func setupDomainsView() {
-        domainsButton.setMode(mode: .image(type: .textWithImage(image: nil)))
-        domainsLabel.textColor = ColorProvider.TextNorm
-        domainsLabel.text = CoreString._su_domains_sheet_title
-    }
+
     
     private func setupGestures() {
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard(_:)))
@@ -414,24 +239,14 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     }
 
     private func dismissKeyboard() {
-        if internalNameTextField.isFirstResponder {
-            _ = internalNameTextField.resignFirstResponder()
-        }
-        
-        if passwordTextField.isFirstResponder {
-            _ = passwordTextField.resignFirstResponder()
-        }
-
-        if repeatPasswordTextField.isFirstResponder {
-            _ = repeatPasswordTextField.resignFirstResponder()
+        if currentlyUsedTextField.isFirstResponder {
+            _ = currentlyUsedTextField.resignFirstResponder()
         }
     }
 
     private func validateNextButton() {
         if signupAccountType == .internal {
-            nextButton.isEnabled = viewModel.isEmailValid(email: internalNameTextField.value)
-
-           // nextButton.isEnabled = viewModel.isUserNameValid(name: currentlyUsedTextField.value)
+            nextButton.isEnabled = viewModel.isUserNameValid(name: currentlyUsedTextField.value)
         } else {
             nextButton.isEnabled = viewModel.isEmailValid(email: currentlyUsedTextField.value)
         }
@@ -542,10 +357,7 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
     }
 
     @objc private func keyboardWillShow(notification: NSNotification) {
-       // adjust(scrollView, notification: notification, topView: currentlyUsedTextField, bottomView: signinButton)
-        adjust(scrollView, notification: notification,
-               topView: topView(of: internalNameTextField, passwordTextField, repeatPasswordTextField),
-               bottomView: nextButton)
+        adjust(scrollView, notification: notification, topView: currentlyUsedTextField, bottomView: signinButton)
     }
 
     @objc private func keyboardWillHide(notification: NSNotification) {
@@ -563,43 +375,19 @@ extension SignupViewController: PMTextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: PMTextField) -> Bool {
-       // _ = currentlyUsedTextField.resignFirstResponder()
-        if textField == internalNameTextField {
-            _ = passwordTextField.becomeFirstResponder()
-        } else if textField == passwordTextField {
-            _ = repeatPasswordTextField.becomeFirstResponder()
-        } else {
-            _ = textField.resignFirstResponder()
-        }
-        
+        _ = currentlyUsedTextField.resignFirstResponder()
         return true
     }
 
     func didBeginEditing(textField: PMTextField) {
-        internalNameTextField.isError = false
-        passwordTextField.isError = false
-        repeatPasswordTextField.isError = false
+
     }
 }
 
 // MARK: - Additional errors handling
 
-extension SignupViewController: SignUpErrorCapable, LoginErrorCapable {
+extension SignupViewController: SignUpErrorCapable {
     var bannerPosition: PMBannerPosition { .top }
-    func invalidPassword(reason: SignUpInvalidPasswordReason) {
-        switch reason {
-        case .notFulfilling(let restrictions):
-            if restrictions.failedRestrictions(for: passwordTextField.value).isEmpty == false {
-                passwordTextField.isError = true
-            }
-            if restrictions.failedRestrictions(for: repeatPasswordTextField.value).isEmpty == false {
-                repeatPasswordTextField.isError = true
-            }
-        case .notEqual:
-            passwordTextField.isError = true
-            repeatPasswordTextField.isError = true
-        }
-    }
 }
 
 extension SignupViewController: PMActionSheetEventsListener {
@@ -615,4 +403,3 @@ extension SignupViewController: PMActionSheetEventsListener {
     
     func didDismiss() { }
 }
-

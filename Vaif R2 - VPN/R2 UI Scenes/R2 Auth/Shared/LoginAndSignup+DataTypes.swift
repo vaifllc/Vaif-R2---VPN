@@ -42,7 +42,7 @@ public extension LoginData {
         }
     }
     
-    func updated(user: User) -> LoginData {
+    func updated(user: R2User) -> LoginData {
         switch self {
         case .credential: return self
         case .userData(let userData):
@@ -58,14 +58,14 @@ public extension LoginData {
 
 public struct UserData {
     public let credential: AuthCredential
-    public let user: User
+    public let user: R2User
     public let salts: [KeySalt]
     public let passphrases: [String: String]
     public let addresses: [Address]
     public let scopes: [String]
 
     public init(credential: AuthCredential,
-                user: User,
+                user: R2User,
                 salts: [KeySalt],
                 passphrases: [String: String],
                 addresses: [Address],

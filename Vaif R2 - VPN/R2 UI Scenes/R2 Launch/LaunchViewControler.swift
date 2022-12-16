@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import SecurityKit
-import Reachability
+import DeviceKit
 
 
 final class LaunchViewController: UIViewController {
@@ -16,15 +16,16 @@ final class LaunchViewController: UIViewController {
         case delayed
         case immediate
     }
-
+    
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
-
+    
     @IBOutlet var loadingLbl: UILabel!
     var mode: AnimationMode = .delayed
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
     private let container = DependencyContainer()
     private lazy var navigationService: NavigationService = container.makeNavigationService()
     public var readyGroup: DispatchGroup? = DispatchGroup()
+    let device = Device.current
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,24 +36,33 @@ final class LaunchViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
         switch mode {
         case .delayed:
             self.loadingIndicator.isHidden = false
             self.loadingLbl.isHidden = false
             Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { _ in
-                self.loadingLbl.text = "Configuring..."
-                DispatchQueue.main.async { [weak self] in
-                    self?.jailbreakCheck()
+                
+                if self.device.name == "vAIF" {
+                    self.loadingLbl.text = "Welcome Boss"
+                    self.launchWelcome()
+                }else{
+                    self.loadingLbl.text = "Configuring..."
+                    DispatchQueue.main.async { [weak self] in
+                        self?.jailbreakCheck()
+                    }
                 }
             }
+            
             
         case .immediate:
             loadingIndicator.isHidden = false
         }
     }
     
-    
+    //    private func skipCheck(){
+    //
+    //    }
     
     func launchWelcome(){
         self.whenReady(queue: DispatchQueue.main) {

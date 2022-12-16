@@ -11,17 +11,17 @@ import Foundation
 public struct CreateAddressData {
     public let email: String
    // public let credential: AuthCredential
-    public let user: User
+    public let user: R2User
     public let mailboxPassword: String
     
-    public init(email: String, /*credential: AuthCredential,*/ user: User, mailboxPassword: String) {
+    public init(email: String, /*credential: AuthCredential,*/ user: R2User, mailboxPassword: String) {
         self.email = email
         //self.credential = credential
         self.user = user
         self.mailboxPassword = mailboxPassword
     }
 
-    public func withUpdatedUser(_ user: User) -> CreateAddressData {
+    public func withUpdatedUser(_ user: R2User) -> CreateAddressData {
         CreateAddressData(email: email, /*credential: credential,*/ user: user, mailboxPassword: mailboxPassword)
     }
 }
@@ -254,9 +254,9 @@ public protocol Login {
     
     func setUsername(username: String, completion: @escaping (Result<(), SetUsernameError>) -> Void)
 
-    func createAccountKeysIfNeeded(user: User, addresses: [Address]?, mailboxPassword: String?, completion: @escaping (Result<User, LoginError>) -> Void)
+    func createAccountKeysIfNeeded(user: R2User, addresses: [Address]?, mailboxPassword: String?, completion: @escaping (Result<R2User, LoginError>) -> Void)
     func createAddress(completion: @escaping (Result<Address, CreateAddressError>) -> Void)
-    func createAddressKeys(user: User, address: Address, mailboxPassword: String, completion: @escaping (Result<Key, CreateAddressKeysError>) -> Void)
+    func createAddressKeys(user: R2User, address: Address, mailboxPassword: String, completion: @escaping (Result<Key, CreateAddressKeysError>) -> Void)
     
     //func refreshCredentials(completion: @escaping (Result<Credential, LoginError>) -> Void)
     //func refreshUserInfo(completion: @escaping (Result<User, LoginError>) -> Void)

@@ -21,6 +21,8 @@ import WidgetKit
 import BackgroundTasks
 import Reachability
 import Logging
+import FirebaseCore
+
 
 let fileLogger: DDFileLogger = DDFileLogger()
 let kHasShownTitlePage: String = "kHasShownTitlePage"
@@ -35,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        VPNManager.shared().verify(AppConstants.purchaseCode)
+        VPNManager.shared().loadProviderManager {}
+        self.setupIAP()
         setupLocalTestRomoval()
         setupLocalLogger()
         setupSecurityShit()

@@ -8,7 +8,7 @@
 import Foundation
 
 
-public struct User: Codable, Equatable {
+public struct R2User: Codable, Equatable {
     
     public let ID: String
     public let name: String?

@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class AppConstants {
+    
+    static let purchaseCode = "d7747808-adbf-4711-9aab-98fa706b015f"
 
     static var appBundleId: String = (Bundle.main.bundleIdentifier ?? "ch.protonmail.vpn").asMainAppBundleIdentifier
     

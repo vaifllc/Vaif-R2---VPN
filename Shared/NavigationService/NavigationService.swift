@@ -164,8 +164,9 @@ final class NavigationService: LoginErrorPresenter {
     func launched() {
 //        let signupAvailability = SignupAvailability.available(parameters: SignupParameters(passwordRestrictions: SignupPasswordRestrictions.default, summaryScreenVariant: SummaryScreenVariant.noSummaryScreen))
         let signupParameters = SignupParameters(passwordRestrictions: .default, summaryScreenVariant: .noSummaryScreen)
-        let signupAvailability = SignupAvailability.available(parameters: signupParameters)
-        let login = LoginAndSignup(appName: "Proton VPN",
+        //let signupAvailability = SignupAvailability.available(parameters: signupParameters)
+        let signupAvailability = SignupAvailability.notAvailable
+        let login = LoginAndSignup(appName: "vAIF R2 - VPN",
                                    clientApp: .vpn,
                                    doh: doh,
                                    apiServiceDelegate: networking,

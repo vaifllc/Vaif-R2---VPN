@@ -151,7 +151,7 @@
         <image name="SplashFooterIcon" width="323" height="77"/>
         <image name="SplashIcon" width="80" height="80"/>
         <namedColor name="MobileBackgroundNorm">
-            <color red="0.46274509803921571" green="0.47058823529411764" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46299999952316284" green="0.47099998593330383" blue="0.57999998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

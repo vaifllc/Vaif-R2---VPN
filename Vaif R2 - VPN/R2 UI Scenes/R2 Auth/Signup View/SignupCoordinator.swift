@@ -30,6 +30,7 @@ final class SignupCoordinator {
     private var signupParameters: SignupParameters?
     private var navigationController: LoginNavigationViewController?
     private var signupViewController: SignupViewController?
+    
    // private var recoveryViewController: RecoveryViewController?
     private var countryPickerViewController: CountryPickerViewController?
     private var countryPicker = PMCountryPicker(searchBarPlaceholderText: CoreString._hv_sms_search_placeholder)

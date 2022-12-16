@@ -62,6 +62,35 @@ class SignupViewModel {
             editEmail()
         }
     }
+    
+    func passwordValidationResult(for restrictions: SignupPasswordRestrictions,
+                                  password: String,
+                                  repeatParrword: String) -> (Result<(), SignupError>) {
+
+        let passwordFailedRestrictions = restrictions.failedRestrictions(for: password)
+        let repeatPasswordFailedRestrictions = restrictions.failedRestrictions(for: repeatParrword)
+
+        if passwordFailedRestrictions.contains(.notEmpty) && repeatPasswordFailedRestrictions.contains(.notEmpty) {
+            return .failure(SignupError.passwordEmpty)
+        }
+
+        // inform the user
+        if passwordFailedRestrictions.contains(.atLeastEightCharactersLong)
+            && repeatPasswordFailedRestrictions.contains(.notEmpty) {
+            return .failure(SignupError.passwordShouldHaveAtLeastEightCharacters)
+        }
+
+        guard password == repeatParrword else {
+            return .failure(SignupError.passwordNotEqual)
+        }
+
+        if passwordFailedRestrictions.contains(.atLeastEightCharactersLong)
+            && repeatPasswordFailedRestrictions.contains(.atLeastEightCharactersLong) {
+            return .failure(SignupError.passwordShouldHaveAtLeastEightCharacters)
+        }
+
+        return .success
+    }
 //
 //    func checkInternalAccount(username: String, completion: @escaping (Result<(), AvailabilityError>) -> Void) {
 //        challenge.appendCheckedUsername(username)
