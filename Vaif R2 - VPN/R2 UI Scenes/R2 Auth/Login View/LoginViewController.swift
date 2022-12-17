@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 import PromiseKit
 import CocoaLumberjackSwift
+import FirebaseAuth
+import FirebaseFirestore
 
 protocol LoginStepsDelegate: AnyObject {
     func twoFactorCodeNeeded()
@@ -45,7 +47,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
     var initialError: LoginError?
     var showCloseButton = true
     var isSignupAvailable = true
-
+    lazy var db = Firestore.firestore()
     var viewModel: LoginViewModel!
     var customErrorPresenter: LoginErrorPresenter?
     var initialUsername: String?
@@ -60,7 +62,6 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
         setupBinding()
         setupDelegates()
@@ -187,6 +188,77 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         
         viewModel.isLoading.value = true
         
+        R1Login()
+        //R2Login()
+
+    }
+    
+    private func R1Login(){
+        let r1email = loginTextField.value
+        let r2password = passwordTextField.value
+        
+        viewModel.isLoading.value = true
+        Auth.auth().signIn(withEmail: r1email, password: r2password) { authData, authErro in
+            if let authErro = authErro {
+                let banner2 = PMBanner(message: "Login Error: \(authErro.localizedDescription)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
+                banner2.addButton(text: CoreString._hv_ok_button) { _ in
+                    self.isBannerShown = false
+                    banner2.dismiss()
+                }
+                banner2.show(at: .topCustom(.baner), on: self)
+                self.isBannerShown = true
+                self.viewModel.isLoading.value = false
+            }else {
+                print("===== login =====")
+                let email = authData?.user.email ?? ""
+                debugPrint("auth email: \(email)")
+                debugPrint("auth user id: \(authData?.user.uid ?? "")")
+                let ref = self.db.collection("users").document(email)
+                ref.getDocument { snapshot, error in
+                    print(snapshot?.data() ?? "")
+                    if let error = error {
+                        let banner3 = PMBanner(message: "Login Error: \(error.localizedDescription)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
+                        banner3.addButton(text: CoreString._hv_ok_button) { _ in
+                            self.isBannerShown = false
+                            banner3.dismiss()
+                        }
+                        banner3.show(at: .topCustom(.baner), on: self)
+                        self.isBannerShown = true
+                        self.viewModel.isLoading.value = false
+                    }else {
+                        let deviceInfo = WitWork.shared.getDeviceInfo()
+                        ref.updateData(["lastLogin": Date(),
+                                        "deviceInfo": deviceInfo]) { err in
+                            if let err = err {
+                                let banner4 = PMBanner(message: "Login Error: \(err.localizedDescription)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
+                                banner4.addButton(text: CoreString._hv_ok_button) { _ in
+                                    self.isBannerShown = false
+                                    banner4.dismiss()
+                                }
+                                banner4.show(at: .topCustom(.baner), on: self)
+                                self.isBannerShown = true
+                                self.viewModel.isLoading.value = false
+                            }else {
+                                WitWork.shared.user = Auth.auth().currentUser
+                                let banner = PMBanner(message: "Successful Login", style: PMBannerNewStyle.success, icon: IconProvider.checkmarkCircle, dismissDuration: Double.infinity)
+                                banner.addButton(text: CoreString._hv_ok_button) { _ in
+                                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let HomeNavController = storyBoard.instantiateViewController(identifier: "HomeNavID")
+                                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(HomeNavController)
+                                    self.isBannerShown = false
+                                    banner.dismiss()
+                                }
+                                banner.show(at: .topCustom(.baner), on: self)
+                                self.isBannerShown = true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func R2Login(){
         firstly {
             try Client.signInWithEmail(email: loginTextField.value, password: passwordTextField.value)
         }
@@ -238,8 +310,6 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
             self.isBannerShown = true
 
         }
-        
-        //viewModel.login(username: loginTextField.value, password: passwordTextField.value)
     }
 
     @IBAction func signUpPressed(_ sender: ProtonButton) {

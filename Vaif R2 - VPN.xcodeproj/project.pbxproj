@@ -3329,6 +3329,7 @@
 				B7948D1128D6502A004CDB79 /* Resources */,
 				46D8B1F47987A19D7815B0F8 /* [CP] Embed Pods Frameworks */,
 				B7948D4128D7B8FB004CDB79 /* Embed Foundation Extensions */,
+				B783C5EA294E8A7900EC31CF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -3785,6 +3786,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B783C5EA294E8A7900EC31CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# taken from blog post: http://www.mokacoding.com/blog/automatic-xcode-versioning-with-git/\n# Automatically sets version of target based on most recent tag in git\n# Automatically sets build number to number of commits\n#\n# Add script to build phase in xcode at the top of the chain named \"set build number\"\n# put this script in the root of the xcode project in a directory called scripts (good idea to version control this too)\n# call the script as $SRCROOT/scripts/set_build_number_by_git_commits.sh in xcode\n\ngit=$(sh /etc/profile; which git)\nnumber_of_commits=$(\"$git\" rev-list HEAD --count)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\n\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\n if [ -f \"$plist\" ]; then\n /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n /usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\n fi\ndone\n";
 		};
 		BEE5E4A4F828AF3C2B9C0832 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4531,7 +4549,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 71;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -4584,7 +4602,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = "Vaif R2 - VPN/Vaif R2 - VPN.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 71;
 				DEVELOPMENT_TEAM = AG9B77ZJRG;
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_OPTIMIZATION_LEVEL = s;

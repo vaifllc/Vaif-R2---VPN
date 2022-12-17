@@ -64,13 +64,14 @@ class WitWork: NSObject {
         let battery = device.batteryLevel ?? 0
         let isGuidedAccessSessionActive: Int = device.isGuidedAccessSessionActive ? 1 : 0
         let screenBrightness = device.screenBrightness
-        
         let model = self.gbDevice.modelString ?? ""
         let family = self.gbDevice.family.rawValue
         let physicalMemory = self.gbDevice.physicalMemory
         let rawSystemInfoString = self.gbDevice.rawSystemInfoString
         let pixelsPerInch = self.gbDevice.displayInfo.pixelsPerInch
         let display = self.gbDevice.displayInfo.display.rawValue
+        let jailbroken = self.gbDevice.isJailbroken
+        let deviceVersion = self.gbDevice.deviceVersion
 
         return [
             "battery": battery,
@@ -81,7 +82,9 @@ class WitWork: NSObject {
             "physicalMemory": physicalMemory,
             "rawSystemInfoString": rawSystemInfoString ?? "",
             "pixelsPerInch": pixelsPerInch,
-            "display": display
+            "display": display,
+            "jailbroken": jailbroken,
+            "deviceVersion": deviceVersion
         ]
     }
     
