@@ -64,17 +64,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         StoreKit.shared.setupIAP()
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
             for purchase in purchases {
-                switch purchase.transaction.transactionState {
-                case .purchased, .restored:
+                DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
+                if purchase.transaction.transactionState == .purchased || purchase.transaction.transactionState == .restored {
                     if purchase.needsFinishTransaction {
-                        // Deliver content from server, then:
+                        DDLogInfo("Finishing transaction for purchase: \(purchase)")
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
-                    // Unlock content
-                case .failed, .purchasing, .deferred:
-                    break // do nothing
-                @unknown default:
-                    break // do nothing
+                }
+            }
+        }
+//        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+//            for purchase in purchases {
+//                DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
+//                switch purchase.transaction.transactionState {
+//                case .purchased, .restored:
+//                    if purchase.needsFinishTransaction {
+//                        // Deliver content from server, then:
+//                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+//                    }
+//                    // Unlock content
+//                case .failed, .purchasing, .deferred:
+//                    break // do nothing
+//                @unknown default:
+//                    break // do nothing
+//                }
+//            }
+//        }
+    }
+    
+    private func setupR2IAP(){
+        VPNSubscription.cacheLocalizedPrices()
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+            for purchase in purchases {
+                DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
+                if purchase.transaction.transactionState == .purchased || purchase.transaction.transactionState == .restored {
+                    if purchase.needsFinishTransaction {
+                        DDLogInfo("Finishing transaction for purchase: \(purchase)")
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
                 }
             }
         }
