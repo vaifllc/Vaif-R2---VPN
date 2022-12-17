@@ -22,6 +22,7 @@ import BackgroundTasks
 import Reachability
 import Logging
 import FirebaseCore
+import SwiftyStoreKit
 
 
 let fileLogger: DDFileLogger = DDFileLogger()
@@ -59,6 +60,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    private func setupIAP() {
+        StoreKit.shared.setupIAP()
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+            for purchase in purchases {
+                switch purchase.transaction.transactionState {
+                case .purchased, .restored:
+                    if purchase.needsFinishTransaction {
+                        // Deliver content from server, then:
+                        SwiftyStoreKit.finishTransaction(purchase.transaction)
+                    }
+                    // Unlock content
+                case .failed, .purchasing, .deferred:
+                    break // do nothing
+                @unknown default:
+                    break // do nothing
+                }
+            }
+        }
+    }
     
     
     private func setupLogsForApp() {
@@ -155,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    private func setupIAP(){
+    private func setupR2IAP(){
         VPNSubscription.cacheLocalizedPrices()
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
             for purchase in purchases {
