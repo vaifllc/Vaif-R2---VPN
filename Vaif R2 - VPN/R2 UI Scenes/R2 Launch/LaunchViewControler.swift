@@ -41,16 +41,9 @@ final class LaunchViewController: UIViewController {
         case .delayed:
             self.loadingIndicator.isHidden = false
             self.loadingLbl.isHidden = false
-            Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { _ in
-                
-                if self.device.name == "vAIF" {
-                    self.loadingLbl.text = "Welcome Boss"
-                    self.launchWelcome()
-                }else{
-                    self.loadingLbl.text = "Configuring..."
-                    DispatchQueue.main.async { [weak self] in
-                        self?.jailbreakCheck()
-                    }
+            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: true) { _ in
+                DispatchQueue.main.async { [weak self] in
+                    self?.jailbreakCheck()
                 }
             }
             
@@ -60,10 +53,6 @@ final class LaunchViewController: UIViewController {
         }
     }
     
-    //    private func skipCheck(){
-    //
-    //    }
-    
     func launchWelcome(){
         self.whenReady(queue: DispatchQueue.main) {
             self.navigationService.launched()
@@ -71,7 +60,6 @@ final class LaunchViewController: UIViewController {
     }
     
     func jailbreakCheck(){
-        self.loadingLbl.text = "Running Jailbreak Check..."
         if SecurityKit.isDeviceJailBroken() {
             print(" jailbroken")
         }else{
@@ -83,7 +71,6 @@ final class LaunchViewController: UIViewController {
     }
     
     func simulatorkCheck(){
-        self.loadingLbl.text = "Running Device Check..."
         if SecurityKit.isDeviceSimulator() {
             print("Is Simulator")
         } else {
@@ -95,7 +82,6 @@ final class LaunchViewController: UIViewController {
     }
     
     func reverseEGCheck(){
-        self.loadingLbl.text = "Configuring..."
         if SecurityKit.isRevereseEngineeringToolsExecuted() {
             print("RevereseEngineeringToolsExecuted Is True")
         }else{
@@ -108,7 +94,6 @@ final class LaunchViewController: UIViewController {
     }
     
     func jailbreakCheck1(){
-        self.loadingLbl.text = "Configuring..."
         if SecurityKit.isDeviceJailBroken() {
             print(" jailbroken")
         }else{
@@ -120,7 +105,6 @@ final class LaunchViewController: UIViewController {
     }
     
     func simulatorkCheck1(){
-        self.loadingLbl.text = "Configuring..."
         if SecurityKit.isDeviceSimulator() {
             print("Is Simulator")
         } else {
@@ -132,7 +116,6 @@ final class LaunchViewController: UIViewController {
     }
     
     func reverseEGCheck1(){
-        self.loadingLbl.text = "Configuring..."
         if SecurityKit.isRevereseEngineeringToolsExecuted() {
             print("RevereseEngineeringToolsExecuted Is True")
         }else{

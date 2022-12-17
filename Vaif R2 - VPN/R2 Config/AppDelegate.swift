@@ -91,21 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
     }
-    
-    private func setupR2IAP(){
-        VPNSubscription.cacheLocalizedPrices()
-        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-            for purchase in purchases {
-                DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
-                if purchase.transaction.transactionState == .purchased || purchase.transaction.transactionState == .restored {
-                    if purchase.needsFinishTransaction {
-                        DDLogInfo("Finishing transaction for purchase: \(purchase)")
-                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-                    }
-                }
-            }
-        }
-    }
+
     
     
     private func setupLogsForApp() {
