@@ -41,7 +41,7 @@ final class LaunchViewController: UIViewController {
         case .delayed:
             self.loadingIndicator.isHidden = false
             self.loadingLbl.isHidden = false
-            Timer.scheduledTimer(withTimeInterval: 1.2, repeats: true) { _ in
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
                 DispatchQueue.main.async { [weak self] in
                     self?.jailbreakCheck()
                 }
@@ -63,7 +63,7 @@ final class LaunchViewController: UIViewController {
         if SecurityKit.isDeviceJailBroken() {
             print(" jailbroken")
         }else{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.simulatorkCheck()
                 print("not jailbroken")
             }
@@ -74,7 +74,7 @@ final class LaunchViewController: UIViewController {
         if SecurityKit.isDeviceSimulator() {
             print("Is Simulator")
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 print ("Is Not Simulator")
                 self.reverseEGCheck()
             }
@@ -85,7 +85,7 @@ final class LaunchViewController: UIViewController {
         if SecurityKit.isRevereseEngineeringToolsExecuted() {
             print("RevereseEngineeringToolsExecuted Is True")
         }else{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 print("isRevereseEngineeringToolsExecuted Is False")
                 self.launchWelcome()
                 self.loadingIndicator.isHidden = true
