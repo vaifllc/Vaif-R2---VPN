@@ -586,6 +586,10 @@
 		B7F3FE62294CCF1D008EBA42 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE61294CCF1D008EBA42 /* FirebaseFunctions */; };
 		B7F3FE65294CD53B008EBA42 /* ServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE64294CD53B008EBA42 /* ServerModel.swift */; };
 		B7F3FE69294CD639008EBA42 /* iKevServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE68294CD638008EBA42 /* iKevServerModel.swift */; };
+		B7F3FE6C294CE094008EBA42 /* PaidSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE6B294CE094008EBA42 /* PaidSubscription.swift */; };
+		B7F3FE6F294CE689008EBA42 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE6E294CE689008EBA42 /* SwiftDate */; };
+		B7F3FE71294D86AA008EBA42 /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE70294D86A9008EBA42 /* StoreKit.swift */; };
+		B7F3FE73294D86D2008EBA42 /* R1Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE72294D86D2008EBA42 /* R1Session.swift */; };
 		CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */; };
 		E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */; };
 		EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */; };
@@ -1175,6 +1179,9 @@
 		B7F3FE52294CC6B5008EBA42 /* WitWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitWork.swift; sourceTree = "<group>"; };
 		B7F3FE64294CD53B008EBA42 /* ServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerModel.swift; sourceTree = "<group>"; };
 		B7F3FE68294CD638008EBA42 /* iKevServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iKevServerModel.swift; sourceTree = "<group>"; };
+		B7F3FE6B294CE094008EBA42 /* PaidSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
+		B7F3FE70294D86A9008EBA42 /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
+		B7F3FE72294D86D2008EBA42 /* R1Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R1Session.swift; sourceTree = "<group>"; };
 		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1202,6 +1209,7 @@
 				B74F87C828E28E5A0012D190 /* BugReport in Frameworks */,
 				B7F3FE62294CCF1D008EBA42 /* FirebaseFunctions in Frameworks */,
 				B7BAFCE628E37FA5000CDCD9 /* Modals-iOS in Frameworks */,
+				B7F3FE6F294CE689008EBA42 /* SwiftDate in Frameworks */,
 				B7F3FE5A294CCF1D008EBA42 /* FirebaseAnalytics in Frameworks */,
 				B78BEEB628FB26020039C92A /* Navajo-Swift in Frameworks */,
 				B7EA16E428DBC03B008D8D3E /* NetworkExtension.framework in Frameworks */,
@@ -3002,6 +3010,7 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7F3FE6A294CDFD2008EBA42 /* StoreKit */,
 				B7F3FE51294CC6A7008EBA42 /* API */,
 				B7F3FE4D294BFB42008EBA42 /* BridgingHeader */,
 				B76A56B7294BF1B700E49588 /* VPN */,
@@ -3270,6 +3279,16 @@
 			path = "Server models";
 			sourceTree = "<group>";
 		};
+		B7F3FE6A294CDFD2008EBA42 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3FE6B294CE094008EBA42 /* PaidSubscription.swift */,
+				B7F3FE70294D86A9008EBA42 /* StoreKit.swift */,
+				B7F3FE72294D86D2008EBA42 /* R1Session.swift */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
 		C01C6274F32B807A421E8FBC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3337,6 +3356,7 @@
 				B7F3FE5D294CCF1D008EBA42 /* FirebaseAuth */,
 				B7F3FE5F294CCF1D008EBA42 /* FirebaseFirestore */,
 				B7F3FE61294CCF1D008EBA42 /* FirebaseFunctions */,
+				B7F3FE6E294CE689008EBA42 /* SwiftDate */,
 			);
 			productName = "Vaif R2 - VPN";
 			productReference = B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */;
@@ -3515,6 +3535,7 @@
 				B78BEEB728FDE8FC0039C92A /* XCRemoteSwiftPackageReference "DeviceKit" */,
 				B7F3FE54294CC7B1008EBA42 /* XCRemoteSwiftPackageReference "GBDeviceInfo" */,
 				B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B7F3FE6D294CE689008EBA42 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = B7948D1428D6502A004CDB79 /* Products */;
 			projectDirPath = "";
@@ -3807,6 +3828,7 @@
 				B751618E28D8FB260028BE35 /* NVActivityIndicatorView.swift in Sources */,
 				B75161AE28D8FB270028BE35 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				B772626A28E5EF9F0016540C /* Endpoint.swift in Sources */,
+				B7F3FE73294D86D2008EBA42 /* R1Session.swift in Sources */,
 				B79035B728E216C000341087 /* UITableView+Reusable.swift in Sources */,
 				B751619D28D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				B7948DC428D7C255004CDB79 /* ClientModels.swift in Sources */,
@@ -3822,6 +3844,7 @@
 				B74BC16E28F37F6500441353 /* WKScriptMessageMock.swift in Sources */,
 				B7948E1528D7C760004CDB79 /* OneTimeActions.swift in Sources */,
 				B79036A328E24FA000341087 /* LoginCoordinator.swift in Sources */,
+				B7F3FE6C294CE094008EBA42 /* PaidSubscription.swift in Sources */,
 				B79035A828E2158A00341087 /* String+Attributed.swift in Sources */,
 				B77262AD28E61D3C0016540C /* HTTPMethod.swift in Sources */,
 				B790368D28E24C3300341087 /* AlertService.swift in Sources */,
@@ -3829,6 +3852,7 @@
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
 				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				B79036AB28E251BC00341087 /* LoginService.swift in Sources */,
+				B7F3FE71294D86AA008EBA42 /* StoreKit.swift in Sources */,
 				B7948DCF28D7C2B7004CDB79 /* FirewallController.swift in Sources */,
 				B74BC16628F37F0F00441353 /* Stabbing+Ergonomics.swift in Sources */,
 				B790366B28E2493400341087 /* Key+NSCoding.swift in Sources */,
@@ -5029,6 +5053,14 @@
 				kind = branch;
 			};
 		};
+		B7F3FE6D294CE689008EBA42 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -5141,6 +5173,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
+		};
+		B7F3FE6E294CE689008EBA42 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F3FE6D294CE689008EBA42 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
 		};
 /* End XCSwiftPackageProductDependency section */
 
