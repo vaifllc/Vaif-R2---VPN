@@ -267,6 +267,7 @@
 		B77262EF28EA52F80016540C /* LogFilesTemporaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262EE28EA52F80016540C /* LogFilesTemporaryStorage.swift */; };
 		B77262F128EA55B00016540C /* LogFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262F028EA55B00016540C /* LogFileManager.swift */; };
 		B77262F428EA56070016540C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77262F328EA56070016540C /* String+Extension.swift */; };
+		B783C5ED294FEFD800EC31CF /* WWDataUsageVPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783C5EC294FEFD700EC31CF /* WWDataUsageVPN.swift */; };
 		B78BEEA828F727090039C92A /* OSLogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEA728F727090039C92A /* OSLogHandler.swift */; };
 		B78BEEAA28F727330039C92A /* OSLogFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEA928F727330039C92A /* OSLogFormatter.swift */; };
 		B78BEEAD28F74D080039C92A /* UIEdgeInsets+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78BEEAC28F74D080039C92A /* UIEdgeInsets+custom.swift */; };
@@ -920,6 +921,7 @@
 		B77262EE28EA52F80016540C /* LogFilesTemporaryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFilesTemporaryStorage.swift; sourceTree = "<group>"; };
 		B77262F028EA55B00016540C /* LogFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFileManager.swift; sourceTree = "<group>"; };
 		B77262F328EA56070016540C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B783C5EC294FEFD700EC31CF /* WWDataUsageVPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDataUsageVPN.swift; sourceTree = "<group>"; };
 		B78BEEA728F727090039C92A /* OSLogHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogHandler.swift; sourceTree = "<group>"; };
 		B78BEEA928F727330039C92A /* OSLogFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLogFormatter.swift; sourceTree = "<group>"; };
 		B78BEEAC28F74D080039C92A /* UIEdgeInsets+custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+custom.swift"; sourceTree = "<group>"; };
@@ -3258,6 +3260,7 @@
 			children = (
 				B7F3FE63294CD531008EBA42 /* Models */,
 				B7F3FE52294CC6B5008EBA42 /* WitWork.swift */,
+				B783C5EC294FEFD700EC31CF /* WWDataUsageVPN.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -3819,6 +3822,7 @@
 				B77262EB28E7D76F0016540C /* LogSource.swift in Sources */,
 				B790356528E20DA800341087 /* ProtonColorPalettemacOSV5.swift in Sources */,
 				B7B65EDA28E499D200F30E84 /* Storage.swift in Sources */,
+				B783C5ED294FEFD800EC31CF /* WWDataUsageVPN.swift in Sources */,
 				B751618728D8FB260028BE35 /* M13CheckboxDotController.swift in Sources */,
 				B790364F28E2467700341087 /* UILabel+Extensions.swift in Sources */,
 				B790362128E223FE00341087 /* ChallengeProtocol.swift in Sources */,

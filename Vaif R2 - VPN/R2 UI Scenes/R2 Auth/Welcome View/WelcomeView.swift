@@ -271,7 +271,7 @@ final class WelcomeView: UIView {
         signupButton.setTitle(CoreString._ls_create_account_button, for: .normal)
         
         guard signupAvailable else {
-            signupButton.isHidden = true
+            signupButton.isHidden = false
             return
         }
     }

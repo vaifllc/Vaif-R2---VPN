@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         VPNManager.shared().verify(AppConstants.purchaseCode)
         VPNManager.shared().loadProviderManager {}
-        self.setupIAP()
+        self.setupR1IAP()
         setupLocalTestRomoval()
         setupLocalLogger()
         setupSecurityShit()
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupLockdownWhitelistedDomains()
         setupReachabilityShit()
         setupContentBlocker()
-        setupIAP()
+        setupR1IAP()
         setupFirewallPeriodicCheck()
         setupWidgetToggleVPN()
         setupLogsForApp()
@@ -60,8 +60,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func setupIAP() {
+    private func setupR1IAP() {
         StoreKit.shared.setupIAP()
+    }
+    
+    private func setupR2IAP(){
+        VPNSubscription.cacheLocalizedPrices()
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
             for purchase in purchases {
                 DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
@@ -73,23 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-//        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-//            for purchase in purchases {
-//                DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
-//                switch purchase.transaction.transactionState {
-//                case .purchased, .restored:
-//                    if purchase.needsFinishTransaction {
-//                        // Deliver content from server, then:
-//                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-//                    }
-//                    // Unlock content
-//                case .failed, .purchasing, .deferred:
-//                    break // do nothing
-//                @unknown default:
-//                    break // do nothing
-//                }
-//            }
-//        }
     }
 
     
@@ -188,20 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    private func setupR2IAP(){
-        VPNSubscription.cacheLocalizedPrices()
-        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-            for purchase in purchases {
-                DDLogInfo("LAUNCH: Processing Purchase\n\(purchase)");
-                if purchase.transaction.transactionState == .purchased || purchase.transaction.transactionState == .restored {
-                    if purchase.needsFinishTransaction {
-                        DDLogInfo("Finishing transaction for purchase: \(purchase)")
-                        SwiftyStoreKit.finishTransaction(purchase.transaction)
-                    }
-                }
-            }
-        }
-    }
+
     
     private func setupFirewallPeriodicCheck(){
         DDLogInfo("BGTask: Registering BGTask id \(FirewallRepair.identifier)")
