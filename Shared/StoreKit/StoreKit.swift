@@ -15,10 +15,9 @@ typealias SessionPurchase = (sessionId: String, currentSubscription: PaidSubscri
 class StoreKit {
     static var shared: StoreKit = StoreKit()
     private var sessions = [SessionId: R1Session]()
-    var sessionPurchase: SessionPurchase? = nil
+    private var sessionPurchase: SessionPurchase? = nil
     var products: [SKProduct] = []
     let simulatedStartDate: Date
-    
      func isActivePaidSubscription() -> Bool { // avoid to this class calling when the first time init
         if let sessionPurchase = StoreKit.shared.sessionPurchase {
             if let paid = sessionPurchase.currentSubscription, // already paid ?
@@ -111,7 +110,6 @@ class StoreKit {
                     }).catch({ (error) in
                         seal.reject(error)
                     }).finally {}
-                    print("Purchase Success: \(success.productId)")
                     break
                 case .error(let error):
                     var strError = error.localizedDescription
@@ -135,10 +133,13 @@ class StoreKit {
         }
     }
     
-    func verifySubscription(skProduct: SKProduct) -> Promise<SKProduct> {
-        let productId = skProduct.productIdentifier
+    func verifySubscription(productId: String) -> Promise<PaidSubscription> {
+
         return Promise { seal in
-            let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: Define.itunes.secret_key)
+            var appleValidator: AppleReceiptValidator = AppleReceiptValidator(service: .production, sharedSecret: Define.itunes.secret_key)
+            #if DEBUG
+            appleValidator = AppleReceiptValidator(service: .sandbox, sharedSecret: Define.itunes.secret_key)
+            #endif
             SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
                 var strError = ""
                 switch result {
@@ -150,8 +151,23 @@ class StoreKit {
                         inReceipt: receipt)
                     switch purchaseResult {
                     case .purchased(let expiryDate, let items):
-                        print("\(productId) is valid until \(expiryDate)\n\(items)\n")
-                        seal.fulfill(skProduct)
+                        let activeSubscriptions = items.filter { item in
+                            guard let expiredDate = item.subscriptionExpirationDate else { return false }
+                            return (item.purchaseDate...expiredDate).contains(Date())
+                        }
+                        let sortedByMostRecentPurchase = activeSubscriptions.sorted { $0.purchaseDate > $1.purchaseDate }
+                        if let active = sortedByMostRecentPurchase.first {
+                            let paid = PaidSubscription(productId: productId,
+                                             purchaseDate: active.purchaseDate, expiresDate: expiryDate, is_trial_period: active.isTrialPeriod)
+                            WitWork.shared.set(subscription: paid)
+                            print(paid)
+                            print("\(productId) is valid until \(expiryDate)\n\(items)\n")
+                            seal.fulfill(paid)
+                        }else {
+                            seal.reject(WP_Error(msg: "unknow"))
+                        }
+                     
+                        
                     case .expired(let expiryDate, let items):
                         strError = "\(productId) is expired since \(expiryDate)\n\(items)\n"
                     case .notPurchased:
@@ -168,15 +184,21 @@ class StoreKit {
 
     func fetchReceiption() -> Promise<SessionPurchase> {
         return Promise { seal in
-            SwiftyStoreKit.fetchReceipt(forceRefresh: false) { result in
+            SwiftyStoreKit.fetchReceipt(forceRefresh: true) { result in
                 switch result {
                 case .success(let data):
                     let body = [
                         "receipt-data": data.base64EncodedString(),
                         "password": Define.itunes.secret_key
                     ]
+
                     let bodyData = try! JSONSerialization.data(withJSONObject: body, options: [])
-                    var request = URLRequest(url: Define.itunes.verify_receipt)
+                    var url: URL = URL(string: "https://buy.itunes.apple.com/verifyReceipt")!
+                    if self.isAppStoreReceiptSandbox() == true {
+                        url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
+                    }
+                    var request = URLRequest(url: url)
+                    print("request: \(request)")
                     request.httpMethod = "POST"
                     request.httpBody = bodyData
                     let task = URLSession.shared.dataTask(with: request) { (responseData, response, error) in
@@ -187,6 +209,7 @@ class StoreKit {
                             let session = R1Session(receiptData: data, parsedReceipt: json)
                             self.sessions[session.id] = session
                             let subscription = (sessionId: session.id, currentSubscription: session.currentSubscription)
+                            print(subscription)
                             // get current session from user default
                             if let currentSubscription = subscription.currentSubscription,
                                 currentSubscription.isActive == true {
@@ -221,7 +244,7 @@ class StoreKit {
                         // Deliver content from server, then:
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
-                    let _ = self.fetchReceiption()
+                    let _ = self.verifySubscription(productId: purchase.productId)
                     print("\(purchase.transaction.transactionState.debugDescription): \(purchase.productId)")
                 case .failed, .purchasing, .deferred:
                     print("failed")
@@ -255,5 +278,61 @@ class StoreKit {
             return nil
         }
     }
-}
+    
+    // MARK: Public
+     func isRunningInTestFlightEnvironment() -> Bool {
+         if isSimulator() {
+             return false
+         } else {
+             if isAppStoreReceiptSandbox() && !hasEmbeddedMobileProvision() {
+                 return true
+             } else {
+                 return false
+             }
+         }
+     }
+     
+     func isRunningInAppStoreEnvironment() -> Bool {
+         if isSimulator(){
+             return false
+         } else {
+             if isAppStoreReceiptSandbox() || hasEmbeddedMobileProvision() {
+                 return false
+             } else {
+                 return true
+             }
+         }
+     }
 
+     // MARK: Private
+     private func hasEmbeddedMobileProvision() -> Bool {
+         guard Bundle.main.path(forResource: "embedded", ofType: "mobileprovision") == nil else {
+             return true
+         }
+         return false
+     }
+     
+     private func isAppStoreReceiptSandbox() -> Bool {
+         
+         if isSimulator() {
+             return false
+         } else {
+             guard let url = Bundle.main.appStoreReceiptURL else {
+                 return false
+             }
+             guard url.lastPathComponent == "sandboxReceipt" else {
+                 return false
+             }
+             return true
+         }
+     }
+     
+     private func isSimulator() -> Bool {
+         
+         #if arch(i386) || arch(x86_64)
+         return true
+         #else
+         return false
+         #endif
+     }
+}

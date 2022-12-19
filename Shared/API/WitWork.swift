@@ -10,6 +10,7 @@ import DeviceKit
 import GBDeviceInfo
 import UIKit
 import FirebaseAuth
+import DeviceKit
 
 /// CONFIG
 let k_subscription       = "Subscription"
@@ -18,8 +19,7 @@ var k_title_premium: String = "PREMIUM"
 var k_title_profile: String = "PROFILE"
 var k_followId: String = "followId"
 var k_user: String = "user"
-
-
+var k_uuid: String = "uuid"
 
 struct Define {
     let cl_navigation: UIColor = .init(named: "cl_navigation")!
@@ -42,22 +42,25 @@ struct Define {
     
     struct itunes {
         static let secret_key                   =        "8d740f4cece34a0485e2066e87bc9c3a"
-        #if DEBUG
-            static let verify_receipt           = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
-        #else
-            static let verify_receipt           = URL(string: "https://buy.itunes.apple.com/verifyReceipt")!
-        #endif
     }
     
 }
 
 class WitWork: NSObject {
     static var shared: WitWork! = .init()
-    
     let device = Device.current
     let gbDevice: GBDeviceInfo! =  GBDeviceInfo.deviceInfo()
     lazy var user: User? = Auth.auth().currentUser
     var serversData: [ServerModel] = []
+    var uuid: String!
+    override init() {
+        super.init()
+        guard let uuid = UserDefaults.standard.string(forKey: k_uuid) else{
+            self.set(UIDevice.current.identifierForVendor?.uuidString ?? NSUUID().uuidString.lowercased())
+            return
+        }
+        self.set(uuid)
+    }
     func getDeviceInfo() -> [String: Any]{
         
         
@@ -96,6 +99,16 @@ class WitWork: NSObject {
     func removeFollower() {
         UserDefaults.standard.removeObject(forKey: k_followId)
         UserDefaults.standard.synchronize()
+    }
+    
+    func set(_ uuid: String) {
+        self.uuid = uuid
+        UserDefaults.standard.set(uuid, forKey: k_uuid)
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getUUID() -> String {
+        return self.uuid
     }
     
     //MARK: - Subscription

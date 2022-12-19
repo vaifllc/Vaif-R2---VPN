@@ -16,83 +16,37 @@ private let dateFormatter: DateFormatter = {
 
 public struct PaidSubscription {
     
-    public enum Level: Int {
-        case month = 0
-        case year = 1
-        case lifetime = 2
-        case unknow = 3
-
-        func description() -> String {
-            switch self {
-            case .lifetime:
-                return "io.wizstudio.insafe.lifetimex"
-            case .year:
-                return "io.wizstudio.insafe.annually"
-            case .month:
-                return "io.wizstudio.insafe.monthly"
-            default:
-                return ""
-            }
-        }
-        init(productId: String) {
-            switch productId {
-            case "io.wizstudio.insafe.lifetimex":
-                self = .lifetime
-            case "io.wizstudio.insafe.monthly":
-                self = .month
-            case "io.wizstudio.insafe.annually":
-                self = .year
-            default:
-                self = .unknow
-            }
-        }
-    }
-    
     public var productId: String
     public let purchaseDate: Date
     public let expiresDate: Date
-    public var level: Level
     public var is_trial_period: Bool
     public var isActive: Bool {
-        // is current date between purchaseDate and expiresDate?
-        debugPrint("------------")
-        debugPrint("productId: \(self.productId)")
-        debugPrint("purchase date: \(purchaseDate.debugDescription)\n")
-        debugPrint("current date: \(Date().debugDescription)\n")
-        debugPrint("expires date: \(expiresDate.debugDescription)\n")
-        debugPrint("------------")
-        if self.productId == Level.lifetime.description() || self.is_trial_period == true  {
+        if self.is_trial_period == true  {
             return true
         }
         return (purchaseDate...expiresDate).contains(Date())
     }
-    
+    init(productId: String, purchaseDate: Date, expiresDate: Date, is_trial_period: Bool) {
+        self.productId = productId
+        self.purchaseDate = purchaseDate
+        self.expiresDate = expiresDate
+        self.is_trial_period = is_trial_period
+    }
     init?(json: [String: Any]) {
-        if let pdId = json["product_id"] as? String,
-            pdId == Level.lifetime.description(){
-            self.productId = pdId
-            self.purchaseDate = Date()
-            self.expiresDate = Date()
-            self.level = .lifetime
-            self.is_trial_period = true
-        }else {
-            guard
-                let productId = json["product_id"] as? String,
-                let purchaseDateString = json["purchase_date"] as? String,
-                let purchaseDate = purchaseDateString.toISODate()?.date, //dateFormatter.date(from: purchaseDateString),
-                let expiresDateString = json["expires_date"] as? String,
-                let expiresDate =  expiresDateString.toISODate()?.date //dateFormatter.date(from: expiresDateString)
-                else {
-                    
-                    return nil
-            }
-            
-            self.productId = productId
-            self.purchaseDate = purchaseDate
-            self.expiresDate = expiresDate
-            self.level = Level(productId: productId)
-            self.is_trial_period = json["is_trial_period"] as? Bool ?? false
+        guard
+            let productId = json["product_id"] as? String,
+            let purchaseDateString = json["purchase_date"] as? String,
+            let purchaseDate = purchaseDateString.toISODate()?.date, //dateFormatter.date(from: purchaseDateString),
+            let expiresDateMs = json["expires_date_ms"] as? String
+            else {
+                
+                return nil
         }
+        let expiresDate = Date(timeIntervalSince1970: ((Double(expiresDateMs) ?? 0) / 1000.0))
+        self.productId = productId
+        self.purchaseDate = purchaseDate
+        self.expiresDate = expiresDate
+        self.is_trial_period = json["is_trial_period"] as? Bool ?? false
     }
 }
 
@@ -103,7 +57,6 @@ extension PaidSubscription {
             productId = coding.productId as String
             purchaseDate = coding.purchaseDate as Date
             expiresDate = coding.expiresDate as Date
-            level = Level(productId: productId)
             is_trial_period = coding.is_trial_period as Bool
         } else {
             return nil
@@ -142,4 +95,3 @@ extension PaidSubscription {
         }
     }
 }
-
