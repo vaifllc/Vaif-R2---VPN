@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,7 +86,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="jD7-vI-f6j"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-km-QY8" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-km-QY8" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="367.33333333333331" width="358" height="34"/>
                                                 <state key="normal" title="Need help?"/>
                                                 <connections>
@@ -157,6 +157,20 @@
             <point key="canvasLocation" x="31.199999999999999" y="119.70443349753695"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6eJ-M1-HM7">
+            <size key="intrinsicContentSize" width="234" height="18"/>
+        </designable>
+        <designable name="OmX-2q-ILB">
+            <size key="intrinsicContentSize" width="147" height="34"/>
+        </designable>
+        <designable name="reM-YD-5Pw">
+            <size key="intrinsicContentSize" width="55" height="34"/>
+        </designable>
+        <designable name="wbT-km-QY8">
+            <size key="intrinsicContentSize" width="91" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

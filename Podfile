@@ -29,8 +29,7 @@ target 'Vaif R2 - VPN' do
   
   #Pods For Downgrade
 
-  pod 'DeviceKit', '~> 4.0'
-  pod 'GBDeviceInfo', '~> 6.0'
+  pod 'GBDeviceInfo/Jailbreak', '~> 6.0'
   pod 'PureLayout'
   pod 'SwiftDate'
   pod 'SideMenu'

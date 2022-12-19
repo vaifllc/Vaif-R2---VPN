@@ -40,6 +40,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var brandImage: UIImageView!
     @IBOutlet weak var separatorView: UIView!
+    @IBOutlet private weak var helpButton: ProtonButton!
 
     // MARK: - Properties
 
@@ -100,7 +101,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         subtitleLabel.textColor = ColorProvider.TextWeak
         signUpButton.isHidden = !isSignupAvailable
         signUpButton.setTitle(CoreString._ls_create_account_button, for: .normal)
-       // helpButton.setTitle(CoreString._ls_help_button, for: .normal)
+        helpButton.setTitle(CoreString._ls_help_button, for: .normal)
         signInButton.setTitle(CoreString._ls_sign_in_button, for: .normal)
         loginTextField.title = CoreString._ls_username_title
         passwordTextField.title = CoreString._ls_password_title
@@ -108,7 +109,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         view.backgroundColor = ColorProvider.BackgroundNorm
         separatorView.backgroundColor = ColorProvider.InteractionWeak
         signUpButton.setMode(mode: .text)
-        //helpButton.setMode(mode: .text)
+        helpButton.setMode(mode: .text)
 
         loginTextField.autocorrectionType = .no
         loginTextField.autocapitalizationType = .none
