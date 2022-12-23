@@ -11,6 +11,7 @@ import Foundation
 enum LoginValidationError: Error, Equatable {
     case emptyUsername
     case emptyPassword
+    case emptyEmail
 }
 
 extension LoginValidationError: CustomStringConvertible {
@@ -20,6 +21,8 @@ extension LoginValidationError: CustomStringConvertible {
             return CoreString._ls_validation_invalid_username
         case .emptyPassword:
             return CoreString._ls_validation_invalid_password
+        case.emptyEmail:
+            return CoreString._ls_validation_invalid_email
         }
     }
 }

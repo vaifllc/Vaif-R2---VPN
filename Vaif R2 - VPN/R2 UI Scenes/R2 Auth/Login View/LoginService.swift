@@ -26,7 +26,7 @@ public final class `LoginService`: Login {
     var username: String?
     //let authManager: AuthManager
 
-    var defaultSignUpDomain = "protonmail.com"
+    var defaultSignUpDomain = "R1 v1.2.0"
     var updatedSignUpDomains: [String]?
     var chosenSignUpDomain: String?
     public var currentlyChosenSignUpDomain: String {

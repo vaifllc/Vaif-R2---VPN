@@ -36,7 +36,7 @@ final class SignupCoordinator {
     private var countryPicker = PMCountryPicker(searchBarPlaceholderText: CoreString._hv_sms_search_placeholder)
    // private var completeViewModel: CompleteViewModel?
     
-    private var signupAccountType: SignupAccountType = .internal
+    private var signupAccountType: SignupAccountType = .external
     private var name: String?
     private var password: String?
     private var verifyToken: String?

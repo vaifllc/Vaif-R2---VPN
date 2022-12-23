@@ -74,7 +74,7 @@ class WitWork: NSObject {
         let pixelsPerInch = self.gbDevice.displayInfo.pixelsPerInch
         let display = self.gbDevice.displayInfo.display.rawValue
         let jailbroken = self.gbDevice.isJailbroken
-        let deviceVersion = self.gbDevice.deviceVersion
+        let deviceVersion = self.gbDevice.deviceVersion.major
 
         return [
             "battery": battery,

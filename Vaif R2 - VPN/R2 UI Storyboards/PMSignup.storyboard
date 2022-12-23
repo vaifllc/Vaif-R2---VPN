@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Signup View Controller-->
-        <scene sceneID="fJP-VL-HzG">
+        <scene sceneID="D9E-mE-ewt">
             <objects>
-                <viewController storyboardIdentifier="Signup" id="iqT-bi-aVf" customClass="SignupViewController" customModule="Vaif_R2___VPN" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VIH-Fz-5Lm">
+                <viewController storyboardIdentifier="Signup" id="vzM-EU-HSM" customClass="SignupViewController" customModule="Vaif_R2___VPN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YPm-OR-5BG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFX-Mn-450">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esj-vW-20V">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="3j0-1D-pUy">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="cDb-GG-CVH">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-RV-w27">
-                                                <rect key="frame" x="8" y="55" width="374" height="496"/>
+                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBC-Oy-wZd">
+                                                <rect key="frame" x="8" y="55" width="374" height="768"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gSE-KX-NF3">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="0Ec-25-cf4">
                                                         <rect key="frame" x="8" y="7.9999999999999982" width="358" height="26.333333333333329"/>
                                                         <subviews>
-                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="ypr-ye-oLZ">
+                                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="H2A-Ym-9pu">
                                                                 <rect key="frame" x="139" y="0.0" width="80" height="80"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="80" id="2us-7T-pzj"/>
-                                                                    <constraint firstAttribute="width" secondItem="ypr-ye-oLZ" secondAttribute="height" id="lbF-Lv-V5U"/>
+                                                                    <constraint firstAttribute="width" constant="80" id="YMC-iP-rQD"/>
+                                                                    <constraint firstAttribute="width" secondItem="H2A-Ym-9pu" secondAttribute="height" id="tl5-0f-FCR"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Create your Proton Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-3U-H4Q">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Create your Proton Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLX-dA-tJV">
                                                                 <rect key="frame" x="37" y="0.0" width="284" height="26.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                                 <nil key="textColor"/>
@@ -44,121 +44,168 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="One account for all Proton services." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yh-VU-Nw8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="248" verticalHuggingPriority="251" text="One account for all Proton services." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-92-bMt">
                                                         <rect key="frame" x="8" y="50.333333333333329" width="358" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Ry8-n7-GXZ" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="200" width="358" height="96"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="95.670000000000002" id="gBm-P9-XUg"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="ZBA-10-DFx" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="296" width="358" height="96"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="95.670000000000002" id="ho4-Na-WUX"/>
-                                                        </constraints>
+                                                    <view contentMode="scaleToFill" horizontalHuggingPriority="248" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="yWr-3R-uUD" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="92.333333333333314" width="358" height="545.66666666666674"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Username"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="AJA-m7-zA0" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="392" width="358" height="96"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="95.670000000000002" id="cXq-hS-H00"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Repeat Password"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-GX-FRd" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="496" width="392" height="50.666666666666664"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Next"/>
-                                                        <connections>
-                                                            <action selector="onNextButtonTap:" destination="iqT-bi-aVf" eventType="touchUpInside" id="yhH-Wn-NhA"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-2A-yac" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="568" width="392" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="34" id="IBl-QB-sM5"/>
-                                                        </constraints>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n9N-aB-cOy">
+                                                        <rect key="frame" x="8" y="92.333333333333314" width="358" height="545.66666666666674"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="mng-AN-X8q" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="128"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="mN0-vN-zd5" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="135.99999999999997" width="358" height="128.00000000000003"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="CRz-kb-ash" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="272" width="358" height="128"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vu-En-PSB">
+                                                                <rect key="frame" x="0.0" y="408" width="358" height="101.66666666666669"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domain" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjs-u3-o5A">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="358" height="14.333333333333334"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAX-Dm-unB" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="22.333333333333258" width="358" height="79.333333333333329"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="onDomainsButtonTapped" destination="vzM-EU-HSM" eventType="touchUpInside" id="XYW-sW-orN"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="TAX-Dm-unB" secondAttribute="trailing" id="1FX-s9-UAu"/>
+                                                                    <constraint firstItem="TAX-Dm-unB" firstAttribute="leading" secondItem="4Vu-En-PSB" secondAttribute="leading" id="33U-0O-Fjm"/>
+                                                                    <constraint firstItem="TAX-Dm-unB" firstAttribute="top" secondItem="Yjs-u3-o5A" secondAttribute="bottom" constant="8" id="LBt-E9-Hz7"/>
+                                                                    <constraint firstItem="Yjs-u3-o5A" firstAttribute="top" secondItem="4Vu-En-PSB" secondAttribute="top" id="PRo-px-9oD"/>
+                                                                    <constraint firstItem="Yjs-u3-o5A" firstAttribute="leading" secondItem="4Vu-En-PSB" secondAttribute="leading" id="btZ-JS-6zt"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Yjs-u3-o5A" secondAttribute="trailing" id="f3Y-bm-iEa"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="TAX-Dm-unB" secondAttribute="bottom" id="qdP-GS-Akv"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EhX-DZ-ngS">
+                                                                <rect key="frame" x="0.0" y="517.66666666666663" width="358" height="28"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="28" id="i6n-c1-Nwq"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Th7-DY-GWq">
+                                                        <rect key="frame" x="8" y="638" width="358" height="80"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uej-9T-xlh" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="358" height="30"/>
+                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                                <state key="normal" title="Use your current email instead"/>
+                                                                <connections>
+                                                                    <action selector="onOtherAccountButtonTap:" destination="vzM-EU-HSM" eventType="touchUpInside" id="fZa-v1-kjO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-3T-eH3" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="46" width="358" height="34"/>
+                                                                <state key="normal" title="Next"/>
+                                                                <connections>
+                                                                    <action selector="onNextButtonTap:" destination="vzM-EU-HSM" eventType="touchUpInside" id="Met-81-zAy"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVS-9G-XXu" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="726" width="358" height="34"/>
                                                         <state key="normal" title="Sign in"/>
                                                         <connections>
-                                                            <action selector="onSignInButtonTap:" destination="iqT-bi-aVf" eventType="touchUpInside" id="ZDd-X3-1Mj"/>
+                                                            <action selector="onSignInButtonTap:" destination="vzM-EU-HSM" eventType="touchUpInside" id="SOr-hH-gJv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="centerY" secondItem="5KB-RV-w27" secondAttribute="centerY" constant="96" id="5P5-Sv-KGc"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="top" secondItem="Ry8-n7-GXZ" secondAttribute="top" constant="96" id="62a-CP-v5i"/>
-                                                    <constraint firstItem="0Yh-VU-Nw8" firstAttribute="top" secondItem="gSE-KX-NF3" secondAttribute="bottom" constant="16" id="9NK-R0-zQd"/>
-                                                    <constraint firstItem="gSE-KX-NF3" firstAttribute="top" secondItem="5KB-RV-w27" secondAttribute="top" constant="8" id="DfM-4d-O3w"/>
-                                                    <constraint firstItem="Wah-2A-yac" firstAttribute="leading" secondItem="5KB-RV-w27" secondAttribute="leading" constant="8" id="EOD-7p-m2P"/>
-                                                    <constraint firstAttribute="trailing" secondItem="gSE-KX-NF3" secondAttribute="trailing" constant="8" id="HVk-GE-Gwh"/>
-                                                    <constraint firstItem="Wah-2A-yac" firstAttribute="trailing" secondItem="5KB-RV-w27" secondAttribute="trailing" constant="26" id="Izz-NI-3fV"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="top" secondItem="AJA-m7-zA0" secondAttribute="top" constant="-96" id="J0C-Nn-xWK"/>
-                                                    <constraint firstItem="gSE-KX-NF3" firstAttribute="leading" secondItem="5KB-RV-w27" secondAttribute="leading" constant="8" id="WnC-IP-I37"/>
-                                                    <constraint firstAttribute="height" constant="496" id="XCg-ET-mWj"/>
-                                                    <constraint firstItem="Wah-2A-yac" firstAttribute="bottom" secondItem="5KB-RV-w27" secondAttribute="bottom" constant="106" id="XYE-HL-qR1"/>
-                                                    <constraint firstItem="0Yh-VU-Nw8" firstAttribute="leading" secondItem="5KB-RV-w27" secondAttribute="leading" constant="8" id="bzD-TN-REe"/>
-                                                    <constraint firstItem="0Yh-VU-Nw8" firstAttribute="trailing" secondItem="5KB-RV-w27" secondAttribute="trailing" constant="-8" id="gdQ-88-UXv"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="trailing" secondItem="Ry8-n7-GXZ" secondAttribute="trailing" id="hTY-Z5-8wL"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="leading" secondItem="AJA-m7-zA0" secondAttribute="leading" id="pYp-CJ-bDS"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="trailing" secondItem="AJA-m7-zA0" secondAttribute="trailing" id="q2x-Pb-2dr"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="leading" secondItem="Ry8-n7-GXZ" secondAttribute="leading" id="u5b-lD-jdU"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="trailing" secondItem="0Yh-VU-Nw8" secondAttribute="trailing" id="v0g-vQ-pmX"/>
-                                                    <constraint firstItem="ZBA-10-DFx" firstAttribute="leading" secondItem="0Yh-VU-Nw8" secondAttribute="leading" id="wUg-1s-gsO"/>
+                                                    <constraint firstItem="Th7-DY-GWq" firstAttribute="top" secondItem="n9N-aB-cOy" secondAttribute="bottom" id="02A-hB-h6I"/>
+                                                    <constraint firstAttribute="trailing" secondItem="0Ec-25-cf4" secondAttribute="trailing" constant="8" id="0jz-xi-KIv"/>
+                                                    <constraint firstItem="bLD-92-bMt" firstAttribute="trailing" secondItem="zBC-Oy-wZd" secondAttribute="trailing" constant="-8" id="72u-yI-NLp"/>
+                                                    <constraint firstItem="n9N-aB-cOy" firstAttribute="leading" secondItem="yWr-3R-uUD" secondAttribute="leading" id="972-ia-8VD"/>
+                                                    <constraint firstItem="yWr-3R-uUD" firstAttribute="leading" secondItem="zBC-Oy-wZd" secondAttribute="leading" constant="8" id="DsQ-wO-xyP"/>
+                                                    <constraint firstItem="Th7-DY-GWq" firstAttribute="trailing" secondItem="zBC-Oy-wZd" secondAttribute="trailing" constant="-8" id="EoN-Ka-kgl"/>
+                                                    <constraint firstItem="yWr-3R-uUD" firstAttribute="top" secondItem="bLD-92-bMt" secondAttribute="bottom" constant="24" id="GbX-Wq-oKn"/>
+                                                    <constraint firstItem="Th7-DY-GWq" firstAttribute="leading" secondItem="zBC-Oy-wZd" secondAttribute="leading" constant="8" id="Gpv-9V-ge5"/>
+                                                    <constraint firstItem="n9N-aB-cOy" firstAttribute="trailing" secondItem="yWr-3R-uUD" secondAttribute="trailing" id="HLF-pV-bgg"/>
+                                                    <constraint firstItem="0Ec-25-cf4" firstAttribute="leading" secondItem="zBC-Oy-wZd" secondAttribute="leading" constant="8" id="KcY-sr-bgj"/>
+                                                    <constraint firstItem="SVS-9G-XXu" firstAttribute="trailing" secondItem="zBC-Oy-wZd" secondAttribute="trailing" constant="-8" id="MAY-NX-RVp"/>
+                                                    <constraint firstItem="Th7-DY-GWq" firstAttribute="top" secondItem="yWr-3R-uUD" secondAttribute="bottom" id="OZB-Ja-Zi2"/>
+                                                    <constraint firstItem="SVS-9G-XXu" firstAttribute="leading" secondItem="zBC-Oy-wZd" secondAttribute="leading" constant="8" id="V5I-aF-zWs"/>
+                                                    <constraint firstItem="bLD-92-bMt" firstAttribute="top" secondItem="0Ec-25-cf4" secondAttribute="bottom" constant="16" id="Vbj-Od-g5E"/>
+                                                    <constraint firstItem="SVS-9G-XXu" firstAttribute="top" secondItem="Th7-DY-GWq" secondAttribute="bottom" constant="8" id="WD0-AI-PUE"/>
+                                                    <constraint firstItem="yWr-3R-uUD" firstAttribute="trailing" secondItem="zBC-Oy-wZd" secondAttribute="trailing" constant="-8" id="ZGx-Nt-qnq"/>
+                                                    <constraint firstItem="SVS-9G-XXu" firstAttribute="bottom" secondItem="zBC-Oy-wZd" secondAttribute="bottom" constant="-8" id="hzx-Zz-0vL"/>
+                                                    <constraint firstItem="bLD-92-bMt" firstAttribute="leading" secondItem="zBC-Oy-wZd" secondAttribute="leading" constant="8" id="mix-aB-iZG"/>
+                                                    <constraint firstItem="0Ec-25-cf4" firstAttribute="top" secondItem="zBC-Oy-wZd" secondAttribute="top" constant="8" id="n5D-PG-mTh"/>
+                                                    <constraint firstItem="n9N-aB-cOy" firstAttribute="top" secondItem="bLD-92-bMt" secondAttribute="bottom" constant="24" id="nHT-uR-qer"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="5KB-RV-w27" firstAttribute="centerX" secondItem="3j0-1D-pUy" secondAttribute="centerXWithinMargins" priority="999" id="1Xt-ik-WTW"/>
-                                            <constraint firstItem="5KB-RV-w27" firstAttribute="trailing" secondItem="3j0-1D-pUy" secondAttribute="trailingMargin" id="XAt-uR-aeM"/>
-                                            <constraint firstItem="5KB-RV-w27" firstAttribute="top" secondItem="3j0-1D-pUy" secondAttribute="topMargin" id="XRO-cG-3sa"/>
-                                            <constraint firstItem="5KB-RV-w27" firstAttribute="leading" secondItem="3j0-1D-pUy" secondAttribute="leadingMargin" id="isa-za-Ekf"/>
-                                            <constraint firstItem="5KB-RV-w27" firstAttribute="bottom" secondItem="3j0-1D-pUy" secondAttribute="bottomMargin" constant="-251" id="nzE-Pe-j4n"/>
+                                            <constraint firstItem="zBC-Oy-wZd" firstAttribute="trailing" secondItem="cDb-GG-CVH" secondAttribute="trailingMargin" id="4fB-q3-wfm"/>
+                                            <constraint firstItem="zBC-Oy-wZd" firstAttribute="leading" secondItem="cDb-GG-CVH" secondAttribute="leadingMargin" id="ix4-D4-Eve"/>
+                                            <constraint firstItem="zBC-Oy-wZd" firstAttribute="centerX" secondItem="cDb-GG-CVH" secondAttribute="centerXWithinMargins" priority="999" id="jBV-Pc-I0O"/>
+                                            <constraint firstItem="zBC-Oy-wZd" firstAttribute="top" secondItem="cDb-GG-CVH" secondAttribute="topMargin" id="sIP-uU-QeZ"/>
+                                            <constraint firstItem="zBC-Oy-wZd" firstAttribute="bottom" secondItem="cDb-GG-CVH" secondAttribute="bottomMargin" id="yB5-lv-KWa"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="3j0-1D-pUy" firstAttribute="leading" secondItem="xFX-Mn-450" secondAttribute="leading" id="EyI-t1-mNi"/>
-                                    <constraint firstItem="3j0-1D-pUy" firstAttribute="trailing" secondItem="xFX-Mn-450" secondAttribute="trailing" id="Ttd-XJ-5F6"/>
-                                    <constraint firstItem="3j0-1D-pUy" firstAttribute="top" secondItem="xFX-Mn-450" secondAttribute="top" id="TxZ-U3-hJD"/>
-                                    <constraint firstItem="3j0-1D-pUy" firstAttribute="bottom" secondItem="xFX-Mn-450" secondAttribute="bottom" id="lvc-BW-5CN"/>
+                                    <constraint firstItem="cDb-GG-CVH" firstAttribute="bottom" secondItem="esj-vW-20V" secondAttribute="bottom" id="BXK-jd-rcC"/>
+                                    <constraint firstItem="cDb-GG-CVH" firstAttribute="trailing" secondItem="esj-vW-20V" secondAttribute="trailing" id="bFh-pV-ZI2"/>
+                                    <constraint firstItem="cDb-GG-CVH" firstAttribute="leading" secondItem="esj-vW-20V" secondAttribute="leading" id="oKq-0t-nqp"/>
+                                    <constraint firstItem="cDb-GG-CVH" firstAttribute="top" secondItem="esj-vW-20V" secondAttribute="top" id="zN0-FH-WBw"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="JwW-8u-xZd"/>
+                        <viewLayoutGuide key="safeArea" id="bct-DK-eTP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xFX-Mn-450" firstAttribute="trailing" secondItem="VIH-Fz-5Lm" secondAttribute="trailing" id="Gd8-Al-kDI"/>
-                            <constraint firstItem="xFX-Mn-450" firstAttribute="bottom" secondItem="VIH-Fz-5Lm" secondAttribute="bottom" id="QRh-y8-cTK"/>
-                            <constraint firstItem="xFX-Mn-450" firstAttribute="top" secondItem="VIH-Fz-5Lm" secondAttribute="top" id="bok-qs-g3v"/>
-                            <constraint firstItem="xFX-Mn-450" firstAttribute="leading" secondItem="VIH-Fz-5Lm" secondAttribute="leading" id="uUW-BU-66o"/>
+                            <constraint firstItem="esj-vW-20V" firstAttribute="trailing" secondItem="YPm-OR-5BG" secondAttribute="trailing" id="LDH-rG-5MF"/>
+                            <constraint firstItem="esj-vW-20V" firstAttribute="top" secondItem="YPm-OR-5BG" secondAttribute="top" id="Tpu-wZ-I8E"/>
+                            <constraint firstItem="esj-vW-20V" firstAttribute="leading" secondItem="YPm-OR-5BG" secondAttribute="leading" id="gXR-5J-tKs"/>
+                            <constraint firstItem="esj-vW-20V" firstAttribute="bottom" secondItem="YPm-OR-5BG" secondAttribute="bottom" id="vgE-mn-4U6"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="brandLogo" destination="ypr-ye-oLZ" id="OKe-UT-ePj"/>
-                        <outlet property="contentView" destination="xFX-Mn-450" id="8Ce-gO-pjP"/>
-                        <outlet property="createAccountDescriptionLabel" destination="0Yh-VU-Nw8" id="tRF-YG-vkd"/>
-                        <outlet property="createAccountTitleLabel" destination="Phq-3U-H4Q" id="hsh-nA-SzI"/>
-                        <outlet property="internalNameTextField" destination="Ry8-n7-GXZ" id="doA-pM-GjI"/>
-                        <outlet property="nextButton" destination="4OY-GX-FRd" id="FAc-hf-oft"/>
-                        <outlet property="scrollView" destination="3j0-1D-pUy" id="Nxk-Jn-ds4"/>
-                        <outlet property="signinButton" destination="Wah-2A-yac" id="ti5-1O-KF1"/>
+                        <outlet property="brandLogo" destination="H2A-Ym-9pu" id="V1C-fX-At9"/>
+                        <outlet property="confirmPasswordTextField" destination="CRz-kb-ash" id="U7I-9k-wGF"/>
+                        <outlet property="contentView" destination="esj-vW-20V" id="9k0-aj-dN5"/>
+                        <outlet property="createAccountDescriptionLabel" destination="bLD-92-bMt" id="otp-1N-d8v"/>
+                        <outlet property="createAccountTitleLabel" destination="LLX-dA-tJV" id="n6z-Jo-u6E"/>
+                        <outlet property="domainsBottomSeparatorView" destination="EhX-DZ-ngS" id="QLW-pE-CiN"/>
+                        <outlet property="domainsButton" destination="TAX-Dm-unB" id="17d-c4-60h"/>
+                        <outlet property="domainsLabel" destination="Yjs-u3-o5A" id="iv3-gy-f1N"/>
+                        <outlet property="domainsView" destination="4Vu-En-PSB" id="81R-hu-QOQ"/>
+                        <outlet property="externalEmailTextField" destination="yWr-3R-uUD" id="Zat-7i-doA"/>
+                        <outlet property="internalNameTextField" destination="mng-AN-X8q" id="gEZ-z9-P7j"/>
+                        <outlet property="nextButton" destination="x3b-3T-eH3" id="h1o-3g-7ta"/>
+                        <outlet property="otherAccountButton" destination="Uej-9T-xlh" id="AA5-ci-Adk"/>
+                        <outlet property="passwordTextField" destination="mN0-vN-zd5" id="4e6-7M-HLU"/>
+                        <outlet property="scrollView" destination="cDb-GG-CVH" id="7xN-bZ-VjP"/>
+                        <outlet property="signinButton" destination="SVS-9G-XXu" id="Ob5-88-s6V"/>
+                        <outlet property="usernameAndDomainsView" destination="n9N-aB-cOy" id="Mkv-1p-nhZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A2w-Ea-pJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHL-6g-1fL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-391.40625" y="-618.44802342606147"/>
         </scene>

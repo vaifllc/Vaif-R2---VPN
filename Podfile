@@ -39,6 +39,9 @@ target 'Vaif R2 - VPN' do
   pod 'TTTAttributedLabel'
   pod 'SVPullToRefresh'
   pod 'GoogleUtilities'
+  pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
+  pod 'SwiftValidators'
+  pod 'Navajo-Swift'
 end
 
 

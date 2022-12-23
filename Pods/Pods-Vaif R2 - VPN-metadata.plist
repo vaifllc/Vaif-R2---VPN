@@ -1391,6 +1391,61 @@ THE SOFTWARE.
 		<dict>
 			<key>authors</key>
 			<dict>
+				<key>Jason Nam</key>
+				<string>contact@jasonnam.com</string>
+			</dict>
+			<key>description</key>
+			<string>&lt;p&gt;Evaluating Password Strength
+Validating Password&lt;/p&gt;
+
+&lt;p&gt;Available Validation Rules
+-Allowed Characters
+-Required Characters (custom, lowercase, uppercase, decimal, symbol)
+-Non-Dictionary Word
+-Minimum / Maximum Length
+-Predicate Match
+-Regular Expression Match
+-Block Evaluation&lt;/p&gt;
+
+&lt;p&gt;Localization&lt;/p&gt;
+</string>
+			<key>homepage</key>
+			<string>https://github.com/jasonnam/Navajo-Swift</string>
+			<key>licenseText</key>
+			<string>Copyright (c) 2015-2016 Jason Nam (http://www.jasonnam.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</string>
+			<key>licenseType</key>
+			<string>MIT</string>
+			<key>name</key>
+			<string>Navajo-Swift</string>
+			<key>socialMediaURL</key>
+			<string>http://jasonnam.com</string>
+			<key>summary</key>
+			<string>Password Validator &amp; Strength Evaluator</string>
+			<key>version</key>
+			<string>2.1.0</string>
+		</dict>
+		<dict>
+			<key>authors</key>
+			<dict>
 				<key>Nicolas Richard</key>
 				<string>nicorichard@gmail.com</string>
 			</dict>
@@ -2148,6 +2203,92 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			<string>A very flexible message bar for iOS written in Swift.</string>
 			<key>version</key>
 			<string>9.0.6</string>
+		</dict>
+		<dict>
+			<key>authors</key>
+			<dict>
+				<key>Jeff Potter</key>
+				<string>jeff.potter6@gmail.com</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>homepage</key>
+			<string>https://github.com/jpotts18/SwiftValidator</string>
+			<key>licenseText</key>
+			<string>The MIT License
+
+Copyright (c) 2014-2015 Jeff Potter 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</string>
+			<key>licenseType</key>
+			<string>MIT</string>
+			<key>name</key>
+			<string>SwiftValidator</string>
+			<key>socialMediaURL</key>
+			<string>http://twitter.com/jpotts18</string>
+			<key>summary</key>
+			<string>A UITextField Validation library for Swift</string>
+			<key>version</key>
+			<string>4.0.0</string>
+		</dict>
+		<dict>
+			<key>authors</key>
+			<dict>
+				<key>gkaimakas</key>
+				<string>gkaimakas@gmail.com</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>homepage</key>
+			<string>https://github.com/gkaimakas/SwiftValidators</string>
+			<key>licenseText</key>
+			<string>Copyright (c) 2019 gkaimakas@gmail.com &lt;gkaimakas@gmail.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</string>
+			<key>licenseType</key>
+			<string>MIT</string>
+			<key>name</key>
+			<string>SwiftValidators</string>
+			<key>socialMediaURL</key>
+			<string></string>
+			<key>summary</key>
+			<string>String validation for iOS developed in Swift</string>
+			<key>version</key>
+			<string>9.0.3</string>
 		</dict>
 		<dict>
 			<key>authors</key>

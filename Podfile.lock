@@ -70,6 +70,7 @@ PODS:
   - lottie-ios (3.4.3)
   - Macaw (0.9.7):
     - SWXMLHash
+  - Navajo-Swift (2.1.0)
   - NicoProgress (0.4.0)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
@@ -95,6 +96,8 @@ PODS:
   - SwiftMessages (9.0.6):
     - SwiftMessages/App (= 9.0.6)
   - SwiftMessages/App (9.0.6)
+  - SwiftValidator (4.0.0)
+  - SwiftValidators (9.0.3)
   - SwiftyStoreKit (0.16.1)
   - SWXMLHash (7.0.0)
   - TrustKit (2.0.1)
@@ -114,6 +117,7 @@ DEPENDENCIES:
   - Logging
   - lottie-ios
   - Macaw (= 0.9.7)
+  - Navajo-Swift
   - NicoProgress
   - PopupDialog
   - PromiseKit
@@ -127,6 +131,8 @@ DEPENDENCIES:
   - SVPullToRefresh
   - SwiftDate
   - SwiftMessages
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, tag `4.2.0`)
+  - SwiftValidators
   - SwiftyStoreKit
   - TrustKit
   - TTTAttributedLabel
@@ -147,6 +153,7 @@ SPEC REPOS:
     - Logging
     - lottie-ios
     - Macaw
+    - Navajo-Swift
     - NicoProgress
     - PopupDialog
     - PromiseKit
@@ -161,6 +168,7 @@ SPEC REPOS:
     - SVPullToRefresh
     - SwiftDate
     - SwiftMessages
+    - SwiftValidators
     - SwiftyStoreKit
     - SWXMLHash
     - TrustKit
@@ -170,11 +178,17 @@ EXTERNAL SOURCES:
   AwaitKit:
     :commit: 4b725f40dd189f40c0962cba792f06a2073bd977
     :git: https://github.com/yannickl/AwaitKit.git
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
 
 CHECKOUT OPTIONS:
   AwaitKit:
     :commit: 4b725f40dd189f40c0962cba792f06a2073bd977
     :git: https://github.com/yannickl/AwaitKit.git
+  SwiftValidator:
+    :git: https://github.com/jpotts18/SwiftValidator.git
+    :tag: 4.2.0
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -192,6 +206,7 @@ SPEC CHECKSUMS:
   Logging: beeb016c9c80cf77042d62e83495816847ef108b
   lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
   Macaw: 4a931baf9a9826b06d0d8ecf300014c962ab9d50
+  Navajo-Swift: 57b93e73efbfbf452433efbff04402de56beff51
   NicoProgress: 8e26d401623a1ba9456748b04b30183d5e212d25
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PromiseKit: 49d70c53d5d20e346beaea4b276b5dd2ab446bb4
@@ -206,11 +221,13 @@ SPEC CHECKSUMS:
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
+  SwiftValidator: 249b6b3ae3b294266c5b9de134d94f18f2d5aa47
+  SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   SWXMLHash: cf8682ebf12f124e77554d6a5f9170830626d99e
   TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: ec72e381339dd65273b5a62916175a91abf0568d
+PODFILE CHECKSUM: 8b16701148a63a4014dfa5790462e4dc57205148
 
 COCOAPODS: 1.11.3

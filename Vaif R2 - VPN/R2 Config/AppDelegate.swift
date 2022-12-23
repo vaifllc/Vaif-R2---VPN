@@ -54,10 +54,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupFirewallPeriodicCheck()
         setupWidgetToggleVPN()
         setupLogsForApp()
+        setupFirebaseLogger()
         //setupCoreIntegration()
         Storage.setSpecificDefaults(defaults: UserDefaults(suiteName: AppConstants.AppGroups.main)!)
         container.makeMaintenanceManagerHelper().startMaintenanceManager()
         return true
+    }
+    
+    private func setupFirebaseLogger(){
+        FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
     }
     
     private func setupR1IAP() {

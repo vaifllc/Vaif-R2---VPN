@@ -100,7 +100,17 @@ final class LoginViewModel {
         return !password.isEmpty ? Swift.Result.success : Swift.Result.failure(LoginValidationError.emptyPassword)
     }
     
+    func validate(cpassword: String) -> Swift.Result<(), LoginValidationError> {
+        return !cpassword.isEmpty ? Swift.Result.success : Swift.Result.failure(LoginValidationError.emptyPassword)
+    }
+    
+    func isValidEmail(email: String) -> Bool {
+        guard !email.isEmpty else { return false }
+        return email.isValidEmail()
+    }
+    
     func updateAvailableDomain(result: (([String]?) -> Void)? = nil) {
         login.updateAllAvailableDomains(type: .login) { res in result?(res) }
     }
+    
 }

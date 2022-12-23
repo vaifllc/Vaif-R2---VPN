@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Signup View Controller-->
+        <scene sceneID="2to-oJ-iBH">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="eXu-ZL-84K" customClass="R1SignupViewController" customModule="Vaif_R2___VPN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wGQ-gJ-ATz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="jtW-Y7-FsC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qI-R5-gIe">
+                                        <rect key="frame" x="8" y="66.999999999999972" width="377" height="409.33333333333326"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="6YI-jr-xwi">
+                                                <rect key="frame" x="154" y="7.9999999999999982" width="69.333333333333314" height="26.333333333333329"/>
+                                                <subviews>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKj-nE-XqM">
+                                                        <rect key="frame" x="-5.3333333333333428" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="dKj-nE-XqM" secondAttribute="height" multiplier="1:1" id="4sa-j1-Ces"/>
+                                                            <constraint firstAttribute="width" constant="80" id="5HN-S9-fC3"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcn-LN-uPg" customClass="TitleLabel" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="26.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Enter your Proton Account details." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3q-1g-AhM" customClass="SubtitleLabel" customModule="ProtonCore_LoginUI">
+                                                <rect key="frame" x="8" y="42.333333333333329" width="361" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyb-MU-dlt" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="84.333333333333343" width="361" height="80"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email or username"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-CZ-HAj" customClass="PMTextField" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="172.33333333333334" width="361" height="80"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g6K-ga-2IK">
+                                                <rect key="frame" x="8" y="270.33333333333331" width="361" height="76"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iid-yL-2mc" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34"/>
+                                                        <state key="normal" title="Sign in"/>
+                                                        <connections>
+                                                            <action selector="signInPressed:" destination="eXu-ZL-84K" eventType="touchUpInside" id="qoB-bc-edo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzR-Zw-v6o" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="42" width="361" height="34"/>
+                                                        <state key="normal" title="Create an account"/>
+                                                        <connections>
+                                                            <action selector="signUpPressed:" destination="eXu-ZL-84K" eventType="touchUpInside" id="ZpE-TJ-b7K"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="qrh-lA-Umy">
+                                                <rect key="frame" x="8" y="356.33333333333331" width="361" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="7mF-Wc-jmf"/>
+                                                </constraints>
+                                            </view>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CI-X8-JTf" customClass="ProtonButton" customModule="Vaif_R2___VPN" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="367.33333333333331" width="361" height="34"/>
+                                                <state key="normal" title="Need help?"/>
+                                                <connections>
+                                                    <action selector="needHelpPressed:" destination="eXu-ZL-84K" eventType="touchUpInside" id="3WC-F8-UQa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="3CI-X8-JTf" firstAttribute="top" secondItem="qrh-lA-Umy" secondAttribute="bottom" constant="10" id="3hV-nu-tLy"/>
+                                            <constraint firstItem="g6K-ga-2IK" firstAttribute="leading" secondItem="8qI-R5-gIe" secondAttribute="leading" constant="8" id="Aqk-dl-Wd7"/>
+                                            <constraint firstItem="Lyb-MU-dlt" firstAttribute="top" secondItem="c3q-1g-AhM" secondAttribute="bottom" constant="24" id="CMT-vS-LLN"/>
+                                            <constraint firstItem="ehN-CZ-HAj" firstAttribute="trailing" secondItem="8qI-R5-gIe" secondAttribute="trailing" constant="-8" id="CY0-hn-YiG"/>
+                                            <constraint firstItem="3CI-X8-JTf" firstAttribute="bottom" secondItem="8qI-R5-gIe" secondAttribute="bottom" constant="-8" id="Ett-g0-2b5"/>
+                                            <constraint firstItem="Lyb-MU-dlt" firstAttribute="trailing" secondItem="8qI-R5-gIe" secondAttribute="trailing" constant="-8" id="JGo-mN-Di0"/>
+                                            <constraint firstItem="qrh-lA-Umy" firstAttribute="top" secondItem="g6K-ga-2IK" secondAttribute="bottom" constant="10" id="JNu-ar-uWk"/>
+                                            <constraint firstItem="qrh-lA-Umy" firstAttribute="leading" secondItem="8qI-R5-gIe" secondAttribute="leading" constant="8" id="LBF-at-5ZC"/>
+                                            <constraint firstItem="ehN-CZ-HAj" firstAttribute="top" secondItem="Lyb-MU-dlt" secondAttribute="bottom" constant="8" id="MJg-CJ-cQD"/>
+                                            <constraint firstItem="3CI-X8-JTf" firstAttribute="leading" secondItem="8qI-R5-gIe" secondAttribute="leading" constant="8" id="ar9-dX-WHs"/>
+                                            <constraint firstItem="6YI-jr-xwi" firstAttribute="centerX" secondItem="8qI-R5-gIe" secondAttribute="centerX" id="d3p-4B-Yco"/>
+                                            <constraint firstItem="qrh-lA-Umy" firstAttribute="trailing" secondItem="8qI-R5-gIe" secondAttribute="trailing" constant="-8" id="hGF-KR-eIP"/>
+                                            <constraint firstItem="c3q-1g-AhM" firstAttribute="top" secondItem="6YI-jr-xwi" secondAttribute="bottom" constant="8" id="hLi-9V-ESn"/>
+                                            <constraint firstItem="ehN-CZ-HAj" firstAttribute="leading" secondItem="8qI-R5-gIe" secondAttribute="leading" constant="8" id="i72-2d-M01"/>
+                                            <constraint firstItem="6YI-jr-xwi" firstAttribute="top" secondItem="8qI-R5-gIe" secondAttribute="top" constant="8" id="nld-hr-FVh"/>
+                                            <constraint firstItem="g6K-ga-2IK" firstAttribute="top" secondItem="ehN-CZ-HAj" secondAttribute="bottom" constant="18" id="ssB-Bh-VxG"/>
+                                            <constraint firstItem="g6K-ga-2IK" firstAttribute="trailing" secondItem="8qI-R5-gIe" secondAttribute="trailing" constant="-8" id="wJT-rl-ZRG"/>
+                                            <constraint firstItem="c3q-1g-AhM" firstAttribute="trailing" secondItem="8qI-R5-gIe" secondAttribute="trailing" constant="-8" id="xU1-8D-lk3"/>
+                                            <constraint firstItem="c3q-1g-AhM" firstAttribute="leading" secondItem="8qI-R5-gIe" secondAttribute="leading" constant="8" id="xdr-Rt-SxD"/>
+                                            <constraint firstItem="3CI-X8-JTf" firstAttribute="trailing" secondItem="8qI-R5-gIe" secondAttribute="trailing" constant="-8" id="xnp-f9-lA0"/>
+                                            <constraint firstItem="Lyb-MU-dlt" firstAttribute="leading" secondItem="8qI-R5-gIe" secondAttribute="leading" constant="8" id="za2-yK-rmm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8qI-R5-gIe" firstAttribute="leading" secondItem="jtW-Y7-FsC" secondAttribute="leadingMargin" id="Js2-km-w8p"/>
+                                    <constraint firstItem="8qI-R5-gIe" firstAttribute="centerX" secondItem="jtW-Y7-FsC" secondAttribute="centerXWithinMargins" priority="999" id="Zea-vk-evk"/>
+                                    <constraint firstItem="8qI-R5-gIe" firstAttribute="top" secondItem="jtW-Y7-FsC" secondAttribute="topMargin" id="i6c-hk-Ynu"/>
+                                    <constraint firstItem="8qI-R5-gIe" firstAttribute="trailing" secondItem="jtW-Y7-FsC" secondAttribute="trailingMargin" id="jaK-Lk-zS1"/>
+                                    <constraint firstItem="8qI-R5-gIe" firstAttribute="bottom" secondItem="jtW-Y7-FsC" secondAttribute="bottomMargin" id="uxx-9l-hAa"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nfS-Ac-8hH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jtW-Y7-FsC" firstAttribute="leading" secondItem="wGQ-gJ-ATz" secondAttribute="leading" id="H2g-Dk-hK4"/>
+                            <constraint firstItem="jtW-Y7-FsC" firstAttribute="bottom" secondItem="wGQ-gJ-ATz" secondAttribute="bottom" id="bot-fs-tuV"/>
+                            <constraint firstItem="jtW-Y7-FsC" firstAttribute="trailing" secondItem="wGQ-gJ-ATz" secondAttribute="trailing" id="tLP-Tp-PYF"/>
+                            <constraint firstItem="jtW-Y7-FsC" firstAttribute="top" secondItem="wGQ-gJ-ATz" secondAttribute="top" id="trk-D0-Mrx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="brandImage" destination="dKj-nE-XqM" id="xY4-6H-xfS"/>
+                        <outlet property="helpButton" destination="3CI-X8-JTf" id="cpZ-Rh-LRz"/>
+                        <outlet property="loginTextField" destination="Lyb-MU-dlt" id="DKx-sZ-kAd"/>
+                        <outlet property="passwordTextField" destination="ehN-CZ-HAj" id="RXJ-iY-2yu"/>
+                        <outlet property="scrollView" destination="jtW-Y7-FsC" id="ACo-bH-lCn"/>
+                        <outlet property="separatorView" destination="qrh-lA-Umy" id="Xbl-jD-Hpz"/>
+                        <outlet property="signInButton" destination="iid-yL-2mc" id="jGW-i9-DvW"/>
+                        <outlet property="signUpButton" destination="uzR-Zw-v6o" id="jf7-gA-AUP"/>
+                        <outlet property="subtitleLabel" destination="c3q-1g-AhM" id="gUd-aO-D79"/>
+                        <outlet property="titleLabel" destination="qcn-LN-uPg" id="TPQ-t3-WoS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVm-4b-k5p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="119.70443349753695"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="3CI-X8-JTf">
+            <size key="intrinsicContentSize" width="91" height="34"/>
+        </designable>
+        <designable name="c3q-1g-AhM">
+            <size key="intrinsicContentSize" width="234" height="18"/>
+        </designable>
+        <designable name="iid-yL-2mc">
+            <size key="intrinsicContentSize" width="55" height="34"/>
+        </designable>
+        <designable name="uzR-Zw-v6o">
+            <size key="intrinsicContentSize" width="147" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

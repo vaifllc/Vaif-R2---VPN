@@ -1,8 +1,8 @@
 //
-//  LoginViewController.swift
+//  R1SignupViewController.swift
 //  Vaif R2 - VPN
 //
-//  Created by VAIF on 9/26/22.
+//  Created by VAIF on 12/18/22.
 //
 
 import Foundation
@@ -12,22 +12,28 @@ import CocoaLumberjackSwift
 import FirebaseAuth
 import FirebaseFirestore
 
-protocol LoginStepsDelegate: AnyObject {
+protocol R1SignupStepsDelegate: AnyObject {
     func twoFactorCodeNeeded()
     func mailboxPasswordNeeded()
     func createAddressNeeded(data: CreateAddressData)
     func userAccountSetupNeeded()
     func firstPasswordChangeNeeded()
+    
 }
 
-protocol LoginViewControllerDelegate: LoginStepsDelegate {
+protocol R1SignupViewControllerDelegate: R1SignupStepsDelegate {
     func userDidDismissLoginViewController()
     func userDidRequestSignup()
     func userDidRequestHelp()
     func loginViewControllerDidFinish(endLoading: @escaping () -> Void, data: LoginData)
+    func validatedName(name: String, signupAccountType: SignupAccountType)
+    func validatedEmail(email: String, signupAccountType: SignupAccountType)
+    func signupCloseButtonPressed()
+    func signinButtonPressed()
+    func hvEmailAlreadyExists(email: String)
 }
 
-final class LoginViewController: UIViewController, AccessibleView, Focusable {
+final class R1SignupViewController: UIViewController, AccessibleView, Focusable {
 
     // MARK: - Outlets
 
@@ -44,7 +50,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
 
     // MARK: - Properties
 
-    weak var delegate: LoginViewControllerDelegate?
+    weak var delegate: R1SignupViewControllerDelegate?
     var initialError: LoginError?
     var showCloseButton = true
     var isSignupAvailable = true
@@ -57,7 +63,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
     private let navigationBarAdjuster = NavigationBarAdjustingScrollViewDelegate()
     
     static let accountStateDidChange = Notification.Name("AccountUIAccountStateDidChangeNotification")
-    private var isBannerShown = false
+    private var isBannerShown = false { didSet { updateButtonStatus() } }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { darkModeAwarePreferredStatusBarStyle() }
 
@@ -75,7 +81,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
 
         focusOnce(view: loginTextField, delay: .milliseconds(750))
 
-        setUpCloseButton(showCloseButton: showCloseButton, action: #selector(LoginViewController.closePressed(_:)))
+        setUpCloseButton(showCloseButton: showCloseButton, action: #selector(R1SignupViewController.closePressed(_:)))
 
         generateAccessibilityIdentifiers()
     }
@@ -100,9 +106,9 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         subtitleLabel.text = CoreString._ls_screen_subtitle
         subtitleLabel.textColor = ColorProvider.TextWeak
         signUpButton.isHidden = !isSignupAvailable
-        signUpButton.setTitle(CoreString._ls_create_account_button, for: .normal)
+        signUpButton.setTitle(CoreString._ls_sign_in_button, for: .normal)
         helpButton.setTitle(CoreString._ls_help_button, for: .normal)
-        signInButton.setTitle(CoreString._ls_sign_in_button, for: .normal)
+        signInButton.setTitle(CoreString._ls_create_account_button, for: .normal)
         loginTextField.title = CoreString._ls_username_title
         passwordTextField.title = CoreString._ls_password_title
 
@@ -178,10 +184,10 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         cancelFocus()
         dismissKeyboard()
 
-        let usernameValid = validateUsername()
+
         let passwordValid = validatePassword()
 
-        guard usernameValid, passwordValid else {
+        guard passwordValid else {
             return
         }
 
@@ -189,162 +195,37 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
         
         viewModel.isLoading.value = true
         
-        R1Login()
-        //R2Login()
+        R2Signup()
 
     }
     
-//    private func R1LoginV2(){
-//        let r1email = loginTextField.value
-//        let r2password = passwordTextField.value
-//        AuthService.shared.login(email: r1email,
-//                                 password: r2password) { (result) in
-//            switch result {
-//            case .success(let user):
-//                self.showAlert(with: "Success!", and: "You are authorized!") {
-//                    FirestoreService.shared.getUserData(user: user) { (result) in
-//
-//                        switch result {
-//
-//                        case .success(let muser):
-//                            let mainTabBar = MainTabBarController(currentUser: muser)
-//                            mainTabBar.modalPresentationStyle = .fullScreen
-//                            self.present(mainTabBar, animated: true, completion: nil)
-//
-//                        case .failure(let error):
-//                            self.present(SetupProfileViewController(currentUser: user), animated: true, completion: nil)
-//                        }
-//                    }
-//                }
-//
-//            case .failure(let error):
-//                self.showAlert(with: "Error!", and: error.localizedDescription)
-//            }
-//    }
-//    }
+    private func updateButtonStatus() {
+        if validateEmailAddress != nil, !isBannerShown {
+            signUpButton.isEnabled = true
+        } else {
+            signUpButton.isEnabled = false
+        }
+    }
     
-    private func R1Login(){
+    private var validateEmailAddress: String? {
+        let emailaddress = loginTextField.value
+        guard viewModel.isValidEmail(email: emailaddress) else { return nil }
+        return emailaddress
+    }
+    
+    private func R2Signup(){
         let r1email = loginTextField.value
         let r2password = passwordTextField.value
         
         viewModel.isLoading.value = true
-        Auth.auth().signIn(withEmail: r1email, password: r2password) { authData, authErro in
-            if let authErro = authErro {
-                let banner2 = PMBanner(message: "Login Error: \(authErro.localizedDescription)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
-                banner2.addButton(text: CoreString._hv_ok_button) { _ in
-                    self.isBannerShown = false
-                    banner2.dismiss()
-                }
-                banner2.show(at: .topCustom(.baner), on: self)
-                self.isBannerShown = true
-                self.viewModel.isLoading.value = false
-            }else {
-                print("===== login =====")
-                let email = authData?.user.email ?? ""
-                debugPrint("auth email: \(email)")
-                debugPrint("auth user id: \(authData?.user.uid ?? "")")
-                let ref = self.db.collection("users").document(email)
-                ref.getDocument { snapshot, error in
-                    print(snapshot?.data() ?? "")
-                    if let error = error {
-                        let banner3 = PMBanner(message: "Login Error: \(error.localizedDescription)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
-                        banner3.addButton(text: CoreString._hv_ok_button) { _ in
-                            self.isBannerShown = false
-                            banner3.dismiss()
-                        }
-                        banner3.show(at: .topCustom(.baner), on: self)
-                        self.isBannerShown = true
-                        self.viewModel.isLoading.value = false
-                    }else {
-                        let deviceInfo = WitWork.shared.getDeviceInfo()
-                        ref.updateData(["lastLogin": Date(),
-                                        "deviceInfo": deviceInfo]) { err in
-                            if let err = err {
-                                let banner4 = PMBanner(message: "Login Error: \(err.localizedDescription)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
-                                banner4.addButton(text: CoreString._hv_ok_button) { _ in
-                                    self.isBannerShown = false
-                                    banner4.dismiss()
-                                }
-                                banner4.show(at: .topCustom(.baner), on: self)
-                                self.isBannerShown = true
-                                self.viewModel.isLoading.value = false
-                            }else {
-                                WitWork.shared.user = Auth.auth().currentUser
-                                let banner = PMBanner(message: "Successful Login", style: PMBannerNewStyle.success, icon: IconProvider.checkmarkCircle, dismissDuration: Double.infinity)
-                                banner.addButton(text: CoreString._hv_ok_button) { _ in
-                                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let HomeNavController = storyBoard.instantiateViewController(identifier: "HomeNavID")
-                                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(HomeNavController)
-                                    self.isBannerShown = false
-                                    banner.dismiss()
-                                }
-                                banner.show(at: .topCustom(.baner), on: self)
-                                self.isBannerShown = true
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        
     }
     
-    private func R2Login(){
-        firstly {
-            try Client.signInWithEmail(email: loginTextField.value, password: passwordTextField.value)
-        }
-        .done { (signin: SignIn) in
-            try setAPICredentials(email: self.loginTextField.value, password: self.passwordTextField.value)
-            setAPICredentialsConfirmed(confirmed: true)
-            self.viewModel.isLoading.value = false
-            NotificationCenter.default.post(name: LoginViewModel.accountStateDidChange, object: self)
-            
-            let banner = PMBanner(message: "Successful Login", style: PMBannerNewStyle.success, icon: IconProvider.checkmarkCircle, dismissDuration: Double.infinity)
-            banner.addButton(text: CoreString._hv_ok_button) { _ in
-                // logged in and confirmed - update this email with the receipt and refresh VPN credentials
-                firstly { () -> Promise<SubscriptionEvent> in
-                    try Client.subscriptionEvent()
-                }
-                .then { (result: SubscriptionEvent) -> Promise<GetKey> in
-                    try Client.getKey()
-                }
-                .done { (getKey: GetKey) in
-                    try setVPNCredentials(id: getKey.id, keyBase64: getKey.b64)
-                    if (getUserWantsVPNEnabled() == true) {
-                        VPNController.shared.restart()
-                    }
-                }
-                .catch { error in
-                    // it's okay for this to error out with "no subscription in receipt"
-                    DDLogError("HomeViewController ConfirmEmail subscriptionevent error (ok for it to be \"no subscription in receipt\"): \(error)")
-                }
-                self.isBannerShown = false
-                banner.dismiss()
-            }
-            banner.show(at: .topCustom(.baner), on: self)
-            self.isBannerShown = true
-
-        }
-        .catch { error in
-            self.viewModel.isLoading.value = false
-            var errorMessage = error.localizedDescription
-            if let apiError = error as? R2ApiError {
-                errorMessage = apiError.message
-            }
-            
-            let banner2 = PMBanner(message: "Login Error: \(errorMessage)", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
-            banner2.addButton(text: CoreString._hv_ok_button) { _ in
-                self.isBannerShown = false
-                banner2.dismiss()
-            }
-            banner2.show(at: .topCustom(.baner), on: self)
-            self.isBannerShown = true
-
-        }
-    }
 
     @IBAction func signUpPressed(_ sender: ProtonButton) {
         cancelFocus()
-        delegate?.userDidRequestSignup()
+        PMBanner.dismissAll(on: self)
+        delegate?.signinButtonPressed()
     }
 
 
@@ -387,7 +268,10 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
     // MARK: - Validation
 
     @discardableResult
-    
+    func isValidEmail(email: String) -> Bool {
+        guard !email.isEmpty else { return false }
+        return email.isValidEmail()
+    }
     private func validateUsername() -> Bool {
         let usernameValid = viewModel.validate(username: loginTextField.value)
         switch usernameValid {
@@ -424,7 +308,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
 
 // MARK: - Text field delegate
 
-extension LoginViewController: PMTextFieldDelegate {
+extension R1SignupViewController: PMTextFieldDelegate {
 
     func didChangeValue(_ textField: PMTextField, value: String) {}
 
@@ -453,7 +337,7 @@ extension LoginViewController: PMTextFieldDelegate {
 
 // MARK: - Additional errors handling
 
-extension LoginViewController: LoginErrorCapable {
+extension R1SignupViewController: LoginErrorCapable {
     func onUserAccountSetupNeeded() {
         delegate?.userAccountSetupNeeded()
     }

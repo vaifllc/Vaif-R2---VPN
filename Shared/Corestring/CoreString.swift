@@ -146,6 +146,7 @@ public class LocalizedString {
 
     /// Password field title
     public lazy var _ls_password_title = NSLocalizedString("Password", comment: "Password field title")
+    public lazy var _ls_confirmpassword_title = NSLocalizedString("Repeat Password", comment: "Repeat Password field title")
 
     /// Help button
     public lazy var _ls_help_button = NSLocalizedString("Need help?", comment: "Help button")
@@ -161,7 +162,7 @@ public class LocalizedString {
 
     // Login welcome screen
 
-    public lazy var _ls_welcome_footer = NSLocalizedString("One account for all Proton services.", comment: "Welcome screen footer label")
+    public lazy var _ls_welcome_footer = NSLocalizedString("One account for all R2 services.", comment: "Welcome screen footer label")
 
     // Login help
 
@@ -190,6 +191,8 @@ public class LocalizedString {
 
     /// Invalid password hint
     public lazy var _ls_validation_invalid_password = NSLocalizedString("Please enter your R2 Account password.", comment: "Invalid password hint")
+    
+    public lazy var _ls_validation_invalid_email = NSLocalizedString("Please enter a valid email address.", comment: "Invalid email hint")
 
     // Login errors
 
@@ -399,10 +402,10 @@ public class LocalizedString {
     // Signup
 
     /// Signup main view title
-    public lazy var _su_main_view_title = NSLocalizedString("Create your Proton Account", comment: "Signup main view title")
+    public lazy var _su_main_view_title = NSLocalizedString("Create your R2 Account", comment: "Signup main view title")
 
     /// Signup main view description
-    public lazy var _su_main_view_desc = NSLocalizedString("One account for all Proton services.", comment: "Signup main view description")
+    public lazy var _su_main_view_desc = NSLocalizedString("One account for all R2 services.", comment: "Signup main view description")
 
     /// Next button
     public lazy var _su_next_button = NSLocalizedString("Next", comment: "Next button")
@@ -431,7 +434,7 @@ public class LocalizedString {
     /// Password field title
     public lazy var _su_password_field_title = NSLocalizedString("Password", comment: "Password field title")
 
-    public lazy var _su_password_field_hint = NSLocalizedString("Password must contain at least 8 characters", comment: "Password field hint about minimum length")
+    public lazy var _su_password_field_hint = NSLocalizedString("Password must contain at least 8 characters and one special character", comment: "Password field hint about minimum length")
 
     /// Repeat password field title
     public lazy var _su_repeat_password_field_title = NSLocalizedString("Repeat password", comment: "Repeat password field title")
