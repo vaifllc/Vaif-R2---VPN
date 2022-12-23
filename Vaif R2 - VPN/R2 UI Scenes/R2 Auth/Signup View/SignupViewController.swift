@@ -321,13 +321,13 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
                 let err = maybeError as NSError
                 switch err.code {
                 case AuthErrorCode.emailAlreadyInUse.rawValue:
-                    self.internalNameTextField.isError = false
+                    self.internalNameTextField.isError = true
                     self.internalNameTextField.errorMessage = "Email address is already in use."
                     print("Email address is already in use.")
                 case AuthErrorCode.operationNotAllowed.rawValue:
                     print("Operation not allowedl")
                 case AuthErrorCode.invalidEmail.rawValue:
-                    self.internalNameTextField.isError = false
+                    self.internalNameTextField.isError = true
                     self.internalNameTextField.errorMessage = "Invalid Email"
                     print("Invalid email")
                 default:
