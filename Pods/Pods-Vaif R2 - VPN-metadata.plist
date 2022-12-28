@@ -261,6 +261,51 @@ SOFTWARE.
 		<dict>
 			<key>authors</key>
 			<dict>
+				<key>Shin Yamamoto</key>
+				<string>shin@scenee.com</string>
+			</dict>
+			<key>description</key>
+			<string>&lt;p&gt;FloatingPanel is a clean and easy-to-use UI component for a new interface introduced in Apple Maps, Shortcuts and Stocks app.
+The new interface displays the related contents and utilities in parallel as a user wants.&lt;/p&gt;
+</string>
+			<key>homepage</key>
+			<string>https://github.com/SCENEE/FloatingPanel</string>
+			<key>licenseText</key>
+			<string>MIT License
+
+Copyright (c) 2018 Shin Yamamoto
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</string>
+			<key>licenseType</key>
+			<string>MIT</string>
+			<key>name</key>
+			<string>FloatingPanel</string>
+			<key>socialMediaURL</key>
+			<string>https://twitter.com/scenee</string>
+			<key>summary</key>
+			<string>FloatingPanel is a clean and easy-to-use UI component of a floating panel interface.</string>
+			<key>version</key>
+			<string>1.7.6</string>
+		</dict>
+		<dict>
+			<key>authors</key>
+			<dict>
 				<key>Luka Mirosevic</key>
 				<string></string>
 			</dict>

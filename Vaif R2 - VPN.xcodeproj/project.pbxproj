@@ -443,7 +443,7 @@
 		B7948D1728D6502A004CDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1628D6502A004CDB79 /* AppDelegate.swift */; };
 		B7948D1928D6502A004CDB79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1828D6502A004CDB79 /* SceneDelegate.swift */; };
 		B7948D1E28D6502A004CDB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7948D1C28D6502A004CDB79 /* Main.storyboard */; };
-		B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */; };
+		B7948D2128D6502A004CDB79 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7948D1F28D6502A004CDB79 /* Model.xcdatamodeld */; };
 		B7948D2328D6502C004CDB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2228D6502C004CDB79 /* Assets.xcassets */; };
 		B7948D2628D6502C004CDB79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2428D6502C004CDB79 /* LaunchScreen.storyboard */; };
 		B7948D2F28D7B8C6004CDB79 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B7948D2E28D7B8C6004CDB79 /* Settings.bundle */; };
@@ -573,6 +573,27 @@
 		B7BAFCE128E37E55000CDCD9 /* IosAlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BAFCE028E37E55000CDCD9 /* IosAlertService.swift */; };
 		B7BAFCE428E37FA5000CDCD9 /* Modals in Frameworks */ = {isa = PBXBuildFile; productRef = B7BAFCE328E37FA5000CDCD9 /* Modals */; };
 		B7BAFCE628E37FA5000CDCD9 /* Modals-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = B7BAFCE528E37FA5000CDCD9 /* Modals-iOS */; };
+		B7C672AB295B7876005321DC /* VPNStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672AA295B7876005321DC /* VPNStatusViewModel.swift */; };
+		B7C672AE295B7A4E005321DC /* DispatchQueue+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672AD295B7A4E005321DC /* DispatchQueue+Ext.swift */; };
+		B7C672B1295B7A9D005321DC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672B0295B7A9D005321DC /* NetworkManager.swift */; };
+		B7C672B3295B7B29005321DC /* NetworkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672B2295B7B29005321DC /* NetworkType.swift */; };
+		B7C672B6295B8ADA005321DC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672B5295B8ADA005321DC /* StorageManager.swift */; };
+		B7C672B8295BB4DA005321DC /* NetworkTrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672B7295BB4DA005321DC /* NetworkTrust.swift */; };
+		B7C672BA295BB593005321DC /* Network+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672B9295BB593005321DC /* Network+CoreDataClass.swift */; };
+		B7C672BC295BB5B8005321DC /* Network+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672BB295BB5B8005321DC /* Network+CoreDataProperties.swift */; };
+		B7C672BE295BB784005321DC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672BD295BB784005321DC /* Config.swift */; };
+		B7C672C0295BB827005321DC /* R2UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672BF295BB827005321DC /* R2UserDefaults.swift */; };
+		B7C672C2295BB8B6005321DC /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672C1295BB8B6005321DC /* Application.swift */; };
+		B7C672C5295BB9A4005321DC /* GeoLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672C4295BB9A4005321DC /* GeoLookup.swift */; };
+		B7C672C8295BBA31005321DC /* NotificationName+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672C7295BBA31005321DC /* NotificationName+Ext.swift */; };
+		B7C672CB295BBEA9005321DC /* NEVPNStatus+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672CA295BBEA9005321DC /* NEVPNStatus+Ext.swift */; };
+		B7C672D1295BC3E9005321DC /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672D0295BC3E9005321DC /* UserActivityType.swift */; };
+		B7C672D4295BC4A9005321DC /* Pinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672D3295BC4A9005321DC /* Pinger.swift */; };
+		B7C672D9295BC944005321DC /* UserActivityTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672D8295BC944005321DC /* UserActivityTitle.swift */; };
+		B7C672DC295BD02A005321DC /* NetworkViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672DB295BD02A005321DC /* NetworkViewTableCell.swift */; };
+		B7C672DF295BDC74005321DC /* FloatingPanelController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672DE295BDC74005321DC /* FloatingPanelController+Ext.swift */; };
+		B7C672E1295BE80A005321DC /* Server+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672E0295BE80A005321DC /* Server+CoreDataProperties.swift */; };
+		B7C672E3295BE822005321DC /* Server+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C672E2295BE822005321DC /* Server+CoreDataClass.swift */; };
 		B7EA16E128DBBCB2008D8D3E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160F928D7CFB90028BE35 /* CloudKit.framework */; };
 		B7EA16E228DBBD0E008D8D3E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7948D5F28D7B9BE004CDB79 /* NetworkExtension.framework */; };
 		B7EA16E328DBBD18008D8D3E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75160FC28D7CFD00028BE35 /* NotificationCenter.framework */; };
@@ -596,6 +617,13 @@
 		B7F3FE6F294CE689008EBA42 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = B7F3FE6E294CE689008EBA42 /* SwiftDate */; };
 		B7F3FE71294D86AA008EBA42 /* StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE70294D86A9008EBA42 /* StoreKit.swift */; };
 		B7F3FE73294D86D2008EBA42 /* R1Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F3FE72294D86D2008EBA42 /* R1Session.swift */; };
+		B7F453E22956264000B803C8 /* CardTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = B7F453E12956264000B803C8 /* CardTabBar */; };
+		B7F453E42956268000B803C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F453E32956268000B803C8 /* HomeViewController.swift */; };
+		B7F453EA2956415900B803C8 /* R2TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F453E92956415900B803C8 /* R2TabbarController.swift */; };
+		B7F453EC295645C200B803C8 /* R2NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F453EB295645C200B803C8 /* R2NavigationController.swift */; };
+		B7F453F22958E1AA00B803C8 /* ControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F453F12958E1AA00B803C8 /* ControlPanelViewController.swift */; };
+		B7F453F4295A1D8800B803C8 /* ControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F453F3295A1D8800B803C8 /* ControlPanelView.swift */; };
+		B7F453F6295A1E1100B803C8 /* ConnectionInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F453F5295A1E1100B803C8 /* ConnectionInfoView.swift */; };
 		CF2B62D277F25B2CE9C56B43 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220A9E4E2D4B9D0A1D5C5773 /* Pods-Vaif R2 - VPNTests-settings-metadata.plist */; };
 		E2B5A519CD92EC038AF735B3 /* Pods-Vaif R2 - VPN Tunnel-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA0D035D492B21AA0A4B64B /* Pods-Vaif R2 - VPN Tunnel-metadata.plist */; };
 		EB15B813F4B56A046CC2BF8F /* Pods-Vaif R2 - VPNTests-metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C653ECC5596B4D7FAE294FF /* Pods-Vaif R2 - VPNTests-metadata.plist */; };
@@ -1184,6 +1212,27 @@
 		B7BAFCDD28E37DED000CDCD9 /* TrackedAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedAlertController.swift; sourceTree = "<group>"; };
 		B7BAFCE028E37E55000CDCD9 /* IosAlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosAlertService.swift; sourceTree = "<group>"; };
 		B7BAFCE228E37F75000CDCD9 /* Modals */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Modals; path = libraries/Modals; sourceTree = "<group>"; };
+		B7C672AA295B7876005321DC /* VPNStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNStatusViewModel.swift; sourceTree = "<group>"; };
+		B7C672AD295B7A4E005321DC /* DispatchQueue+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Ext.swift"; sourceTree = "<group>"; };
+		B7C672B0295B7A9D005321DC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B7C672B2295B7B29005321DC /* NetworkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkType.swift; sourceTree = "<group>"; };
+		B7C672B5295B8ADA005321DC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B7C672B7295BB4DA005321DC /* NetworkTrust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTrust.swift; sourceTree = "<group>"; };
+		B7C672B9295BB593005321DC /* Network+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B7C672BB295BB5B8005321DC /* Network+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B7C672BD295BB784005321DC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B7C672BF295BB827005321DC /* R2UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2UserDefaults.swift; sourceTree = "<group>"; };
+		B7C672C1295BB8B6005321DC /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		B7C672C4295BB9A4005321DC /* GeoLookup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLookup.swift; sourceTree = "<group>"; };
+		B7C672C7295BBA31005321DC /* NotificationName+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Ext.swift"; sourceTree = "<group>"; };
+		B7C672CA295BBEA9005321DC /* NEVPNStatus+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NEVPNStatus+Ext.swift"; sourceTree = "<group>"; };
+		B7C672D0295BC3E9005321DC /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
+		B7C672D3295BC4A9005321DC /* Pinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pinger.swift; sourceTree = "<group>"; };
+		B7C672D8295BC944005321DC /* UserActivityTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityTitle.swift; sourceTree = "<group>"; };
+		B7C672DB295BD02A005321DC /* NetworkViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewTableCell.swift; sourceTree = "<group>"; };
+		B7C672DE295BDC74005321DC /* FloatingPanelController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPanelController+Ext.swift"; sourceTree = "<group>"; };
+		B7C672E0295BE80A005321DC /* Server+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B7C672E2295BE822005321DC /* Server+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B7EA16F028DBD25C008D8D3E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7F3FE4B294BF90C008EBA42 /* libVPNManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVPNManager.a; sourceTree = "<group>"; };
 		B7F3FE4E294BFB7B008EBA42 /* VaifR2VPN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VaifR2VPN-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1194,6 +1243,12 @@
 		B7F3FE6B294CE094008EBA42 /* PaidSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidSubscription.swift; sourceTree = "<group>"; };
 		B7F3FE70294D86A9008EBA42 /* StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKit.swift; sourceTree = "<group>"; };
 		B7F3FE72294D86D2008EBA42 /* R1Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R1Session.swift; sourceTree = "<group>"; };
+		B7F453E32956268000B803C8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B7F453E92956415900B803C8 /* R2TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2TabbarController.swift; sourceTree = "<group>"; };
+		B7F453EB295645C200B803C8 /* R2NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2NavigationController.swift; sourceTree = "<group>"; };
+		B7F453F12958E1AA00B803C8 /* ControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewController.swift; sourceTree = "<group>"; };
+		B7F453F3295A1D8800B803C8 /* ControlPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelView.swift; sourceTree = "<group>"; };
+		B7F453F5295A1E1100B803C8 /* ConnectionInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionInfoView.swift; sourceTree = "<group>"; };
 		D3A09E92C95F5FF493D74507 /* Pods_Vaif_R2___VPN_Tunnel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN_Tunnel.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B3E96B9658F8A12C009C14 /* Pods_Vaif_R2___VPNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPNTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49B89B58DEA47C8F242A32A /* Pods_Vaif_R2___VPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Vaif_R2___VPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1218,6 +1273,7 @@
 				044AFE25B43116C9CBBE3E59 /* Pods_Vaif_R2___VPN.framework in Frameworks */,
 				B751610228D7D5440028BE35 /* CocoaLumberjackSwift in Frameworks */,
 				B78BEEB928FDE8FC0039C92A /* DeviceKit in Frameworks */,
+				B7F453E22956264000B803C8 /* CardTabBar in Frameworks */,
 				B74F87C828E28E5A0012D190 /* BugReport in Frameworks */,
 				B7F3FE62294CCF1D008EBA42 /* FirebaseFunctions in Frameworks */,
 				B7BAFCE628E37FA5000CDCD9 /* Modals-iOS in Frameworks */,
@@ -1345,6 +1401,10 @@
 		B741AFC728F4D5E60076DBE1 /* R2 Home */ = {
 			isa = PBXGroup;
 			children = (
+				B7C672DD295BDC65005321DC /* FloatingPanelController+Ext */,
+				B7C672DA295BD020005321DC /* NetworkView */,
+				B7F453F02958E18700B803C8 /* Control Panel */,
+				B7F453E32956268000B803C8 /* HomeViewController.swift */,
 			);
 			path = "R2 Home";
 			sourceTree = "<group>";
@@ -1357,7 +1417,7 @@
 			path = EnvironmentsView;
 			sourceTree = "<group>";
 		};
-		B74BC0FD28EBB3A800441353 /* AppSession */ = {
+		B74BC0FD28EBB3A800441353 /* AppSessionManager */ = {
 			isa = PBXGroup;
 			children = (
 				B74BC0FE28EBB3B500441353 /* AppSessionManager.swift */,
@@ -1368,15 +1428,15 @@
 				B74BC10C28EC88D700441353 /* AnnouncementManager.swift */,
 				B74BC10E28EC88EF00441353 /* Announcement.swift */,
 			);
-			path = AppSession;
+			path = AppSessionManager;
 			sourceTree = "<group>";
 		};
-		B74BC10628EBB5B800441353 /* AppState */ = {
+		B74BC10628EBB5B800441353 /* AppStateManager */ = {
 			isa = PBXGroup;
 			children = (
 				B74BC10728EBB5BE00441353 /* AppStateManager.swift */,
 			);
-			path = AppState;
+			path = AppStateManager;
 			sourceTree = "<group>";
 		};
 		B74BC11028EC891300441353 /* Date+Misc */ = {
@@ -1480,7 +1540,7 @@
 			path = FileManager;
 			sourceTree = "<group>";
 		};
-		B74BC15428F37E2000441353 /* UnitTests */ = {
+		B74BC15428F37E2000441353 /* UnitTestsManager */ = {
 			isa = PBXGroup;
 			children = (
 				B74BC15528F37E2800441353 /* BasicFixtures.swift */,
@@ -1497,7 +1557,7 @@
 				B74BC16B28F37F4E00441353 /* UIBarButtonItem+SimulateTap.swift */,
 				B74BC16D28F37F6500441353 /* WKScriptMessageMock.swift */,
 			);
-			path = UnitTests;
+			path = UnitTestsManager;
 			sourceTree = "<group>";
 		};
 		B74BC17528F3805300441353 /* Level+Print */ = {
@@ -1536,6 +1596,7 @@
 		B751611428D7DF440028BE35 /* R2 UI Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B7F453E82956414C00B803C8 /* R2 Tabbar */,
 				B741AFC728F4D5E60076DBE1 /* R2 Home */,
 				B74BC12528EDDC2500441353 /* R2 SplashScreen */,
 				B72A851F28EB5DBE00CB115E /* R2 Launch */,
@@ -1555,6 +1616,9 @@
 				B7948D1628D6502A004CDB79 /* AppDelegate.swift */,
 				B7948D1828D6502A004CDB79 /* SceneDelegate.swift */,
 				B7B65EE528E49DFA00F30E84 /* CoreAppConstants.swift */,
+				B7C672BD295BB784005321DC /* Config.swift */,
+				B7C672BF295BB827005321DC /* R2UserDefaults.swift */,
+				B7C672C1295BB8B6005321DC /* Application.swift */,
 			);
 			path = "R2 Config";
 			sourceTree = "<group>";
@@ -1597,6 +1661,9 @@
 		B751612528D8BAAA0028BE35 /* Base Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B7C672C9295BBE9C005321DC /* NEVPNStatus+Ext */,
+				B7C672C6295BBA2B005321DC /* NotificationName+Ext */,
+				B7C672AC295B7A0D005321DC /* DispatchQueue+Ext */,
 				B78BEEAB28F74CFA0039C92A /* UIEdgeInsets+custom.swift */,
 				B78BEEA628F727020039C92A /* OSLogHandler */,
 				B74BC18128F381F200441353 /* Atomic */,
@@ -1896,11 +1963,11 @@
 			path = TrustKitHelper;
 			sourceTree = "<group>";
 		};
-		B772625C28E520670016540C /* BugReport */ = {
+		B772625C28E520670016540C /* BugReportManager */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = BugReport;
+			path = BugReportManager;
 			sourceTree = "<group>";
 		};
 		B772626128E525270016540C /* StoreKitManager+Errors */ = {
@@ -2975,7 +3042,7 @@
 				B751611428D7DF440028BE35 /* R2 UI Scenes */,
 				B75160E128D7CA0B0028BE35 /* Vaif R2 - VPN.entitlements */,
 				B7948D2728D6502C004CDB79 /* Info.plist */,
-				B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */,
+				B7948D1F28D6502A004CDB79 /* Model.xcdatamodeld */,
 				B7F3FE4F294C0076008EBA42 /* GoogleService-Info.plist */,
 			);
 			path = "Vaif R2 - VPN";
@@ -3050,6 +3117,7 @@
 		B7948DB328D7BFDA004CDB79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7C672CF295BC3CB005321DC /* UserActivity */,
 				B7F3FE6A294CDFD2008EBA42 /* StoreKit */,
 				B7F3FE51294CC6A7008EBA42 /* API */,
 				B7F3FE4D294BFB42008EBA42 /* BridgingHeader */,
@@ -3164,25 +3232,20 @@
 		B7B65ED528E4995E00F30E84 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B74BC15428F37E2000441353 /* UnitTests */,
+				B7C672D5295BC51C005321DC /* ServerManager */,
+				B7C672D2295BC49D005321DC /* PingManager */,
+				B7C672CC295BC098005321DC /* ConnectionManager */,
+				B7C672C3295BB992005321DC /* GeoManager */,
+				B7C672B4295B8AC3005321DC /* StorageManager */,
+				B7C672AF295B7A94005321DC /* NetworkManager */,
+				B74BC15428F37E2000441353 /* UnitTestsManager */,
 				B74BC14928F37D5000441353 /* FileManager */,
 				B74BC13428F26A4500441353 /* MaintenanceManager */,
-				B74BC10628EBB5B800441353 /* AppState */,
-				B74BC0FD28EBB3A800441353 /* AppSession */,
-				B772625C28E520670016540C /* BugReport */,
-				B7B65ED628E4996F00F30E84 /* Storage */,
+				B74BC10628EBB5B800441353 /* AppStateManager */,
+				B74BC0FD28EBB3A800441353 /* AppSessionManager */,
+				B772625C28E520670016540C /* BugReportManager */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		B7B65ED628E4996F00F30E84 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				B7B65ED728E4997D00F30E84 /* PropertiesManager.swift */,
-				B7B65ED928E499D200F30E84 /* Storage.swift */,
-				B7B65EDB28E499EB00F30E84 /* PropertiesManager+Log.swift */,
-			);
-			path = Storage;
 			sourceTree = "<group>";
 		};
 		B7B65EDD28E49A3C00F30E84 /* Logger */ = {
@@ -3270,6 +3333,110 @@
 			path = IosAlertService;
 			sourceTree = "<group>";
 		};
+		B7C672AC295B7A0D005321DC /* DispatchQueue+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672AD295B7A4E005321DC /* DispatchQueue+Ext.swift */,
+			);
+			path = "DispatchQueue+Ext";
+			sourceTree = "<group>";
+		};
+		B7C672AF295B7A94005321DC /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672B0295B7A9D005321DC /* NetworkManager.swift */,
+				B7C672B2295B7B29005321DC /* NetworkType.swift */,
+				B7C672B7295BB4DA005321DC /* NetworkTrust.swift */,
+				B7C672B9295BB593005321DC /* Network+CoreDataClass.swift */,
+				B7C672BB295BB5B8005321DC /* Network+CoreDataProperties.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B7C672B4295B8AC3005321DC /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7B65ED928E499D200F30E84 /* Storage.swift */,
+				B7B65ED728E4997D00F30E84 /* PropertiesManager.swift */,
+				B7B65EDB28E499EB00F30E84 /* PropertiesManager+Log.swift */,
+				B7C672B5295B8ADA005321DC /* StorageManager.swift */,
+			);
+			path = StorageManager;
+			sourceTree = "<group>";
+		};
+		B7C672C3295BB992005321DC /* GeoManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672C4295BB9A4005321DC /* GeoLookup.swift */,
+			);
+			path = GeoManager;
+			sourceTree = "<group>";
+		};
+		B7C672C6295BBA2B005321DC /* NotificationName+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672C7295BBA31005321DC /* NotificationName+Ext.swift */,
+			);
+			path = "NotificationName+Ext";
+			sourceTree = "<group>";
+		};
+		B7C672C9295BBE9C005321DC /* NEVPNStatus+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672CA295BBEA9005321DC /* NEVPNStatus+Ext.swift */,
+			);
+			path = "NEVPNStatus+Ext";
+			sourceTree = "<group>";
+		};
+		B7C672CC295BC098005321DC /* ConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConnectionManager;
+			sourceTree = "<group>";
+		};
+		B7C672CF295BC3CB005321DC /* UserActivity */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672D0295BC3E9005321DC /* UserActivityType.swift */,
+				B7C672D8295BC944005321DC /* UserActivityTitle.swift */,
+			);
+			path = UserActivity;
+			sourceTree = "<group>";
+		};
+		B7C672D2295BC49D005321DC /* PingManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672D3295BC4A9005321DC /* Pinger.swift */,
+			);
+			path = PingManager;
+			sourceTree = "<group>";
+		};
+		B7C672D5295BC51C005321DC /* ServerManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672E0295BE80A005321DC /* Server+CoreDataProperties.swift */,
+				B7C672E2295BE822005321DC /* Server+CoreDataClass.swift */,
+			);
+			path = ServerManager;
+			sourceTree = "<group>";
+		};
+		B7C672DA295BD020005321DC /* NetworkView */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672DB295BD02A005321DC /* NetworkViewTableCell.swift */,
+			);
+			path = NetworkView;
+			sourceTree = "<group>";
+		};
+		B7C672DD295BDC65005321DC /* FloatingPanelController+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				B7C672DE295BDC74005321DC /* FloatingPanelController+Ext.swift */,
+			);
+			path = "FloatingPanelController+Ext";
+			sourceTree = "<group>";
+		};
 		B7EA1A8A28DBEAC9008D8D3E /* R2 Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -3317,6 +3484,7 @@
 			children = (
 				B7F3FE64294CD53B008EBA42 /* ServerModel.swift */,
 				B7F3FE68294CD638008EBA42 /* iKevServerModel.swift */,
+				B7C672AA295B7876005321DC /* VPNStatusViewModel.swift */,
 			);
 			path = "Server models";
 			sourceTree = "<group>";
@@ -3329,6 +3497,25 @@
 				B7F3FE72294D86D2008EBA42 /* R1Session.swift */,
 			);
 			path = StoreKit;
+			sourceTree = "<group>";
+		};
+		B7F453E82956414C00B803C8 /* R2 Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				B7F453E92956415900B803C8 /* R2TabbarController.swift */,
+				B7F453EB295645C200B803C8 /* R2NavigationController.swift */,
+			);
+			path = "R2 Tabbar";
+			sourceTree = "<group>";
+		};
+		B7F453F02958E18700B803C8 /* Control Panel */ = {
+			isa = PBXGroup;
+			children = (
+				B7F453F12958E1AA00B803C8 /* ControlPanelViewController.swift */,
+				B7F453F3295A1D8800B803C8 /* ControlPanelView.swift */,
+				B7F453F5295A1E1100B803C8 /* ConnectionInfoView.swift */,
+			);
+			path = "Control Panel";
 			sourceTree = "<group>";
 		};
 		C01C6274F32B807A421E8FBC /* Pods */ = {
@@ -3399,6 +3586,7 @@
 				B7F3FE5F294CCF1D008EBA42 /* FirebaseFirestore */,
 				B7F3FE61294CCF1D008EBA42 /* FirebaseFunctions */,
 				B7F3FE6E294CE689008EBA42 /* SwiftDate */,
+				B7F453E12956264000B803C8 /* CardTabBar */,
 			);
 			productName = "Vaif R2 - VPN";
 			productReference = B7948D1328D6502A004CDB79 /* Vaif R2 - VPN.app */;
@@ -3578,6 +3766,7 @@
 				B7F3FE54294CC7B1008EBA42 /* XCRemoteSwiftPackageReference "GBDeviceInfo" */,
 				B7F3FE58294CCF1D008EBA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B7F3FE6D294CE689008EBA42 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				B7F453E02956264000B803C8 /* XCRemoteSwiftPackageReference "CardTabBar" */,
 			);
 			productRefGroup = B7948D1428D6502A004CDB79 /* Products */;
 			projectDirPath = "";
@@ -3859,6 +4048,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7B65EE628E49DFA00F30E84 /* CoreAppConstants.swift in Sources */,
+				B7C672DF295BDC74005321DC /* FloatingPanelController+Ext.swift in Sources */,
 				B77262EB28E7D76F0016540C /* LogSource.swift in Sources */,
 				B790356528E20DA800341087 /* ProtonColorPalettemacOSV5.swift in Sources */,
 				B7B65EDA28E499D200F30E84 /* Storage.swift in Sources */,
@@ -3894,6 +4084,7 @@
 				B790368D28E24C3300341087 /* AlertService.swift in Sources */,
 				B74BC16028F37ED300441353 /* InitialReturn.swift in Sources */,
 				B751617428D8FB260028BE35 /* TransitionSubmitButton.swift in Sources */,
+				B7C672C0295BB827005321DC /* R2UserDefaults.swift in Sources */,
 				B751619128D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				B79036AB28E251BC00341087 /* LoginService.swift in Sources */,
 				B7F3FE71294D86AA008EBA42 /* StoreKit.swift in Sources */,
@@ -3939,12 +4130,16 @@
 				B72A852328EB647F00CB115E /* CompleteViewModel.swift in Sources */,
 				B79035A228E2154300341087 /* UISearchBar+helper.swift in Sources */,
 				B751617628D8FB260028BE35 /* TimerEx.swift in Sources */,
+				B7C672D9295BC944005321DC /* UserActivityTitle.swift in Sources */,
 				B772628E28E615250016540C /* DoHProviderGoogle.swift in Sources */,
+				B7C672AB295B7876005321DC /* VPNStatusViewModel.swift in Sources */,
 				B772624428E512040016540C /* NSError+Extension.swift in Sources */,
 				B751617C28D8FB260028BE35 /* M13CheckboxAddRemovePathGenerator.swift in Sources */,
 				B790363928E2271C00341087 /* CoreString+Plurals.swift in Sources */,
 				B74BC14B28F37D6500441353 /* FileSystemMock.swift in Sources */,
 				B7BAFCDC28E37D3E000CDCD9 /* UIAlertService.swift in Sources */,
+				B7C672B3295B7B29005321DC /* NetworkType.swift in Sources */,
+				B7C672BA295BB593005321DC /* Network+CoreDataClass.swift in Sources */,
 				B790360928E21FE100341087 /* CountryCodeTableViewCell.swift in Sources */,
 				B79035EA28E21BA600341087 /* PMTabBarConfig.swift in Sources */,
 				B772624F28E514CA0016540C /* TimeInterval+Extension.swift in Sources */,
@@ -3953,6 +4148,8 @@
 				B75161A228D8FB270028BE35 /* NVActivityIndicatorAnimationCircleStrokeSpin.swift in Sources */,
 				B7948DB928D7C032004CDB79 /* FirewallUtilities.swift in Sources */,
 				B75161A428D8FB270028BE35 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
+				B7C672C2295BB8B6005321DC /* Application.swift in Sources */,
+				B7F453EC295645C200B803C8 /* R2NavigationController.swift in Sources */,
 				B7BAFCE128E37E55000CDCD9 /* IosAlertService.swift in Sources */,
 				B7B65EEC28E4A0F900F30E84 /* Coordinator.swift in Sources */,
 				B7948DFB28D7C59C004CDB79 /* DomainNameValidator.swift in Sources */,
@@ -4013,6 +4210,7 @@
 				B7948DDE28D7C3E5004CDB79 /* VPNSubscription.swift in Sources */,
 				B7948E0F28D7C69D004CDB79 /* PushNotificationsAuthorizationUI.swift in Sources */,
 				B790358B28E2140F00341087 /* UIStackView+helper.swift in Sources */,
+				B7C672DC295BD02A005321DC /* NetworkViewTableCell.swift in Sources */,
 				B790360D28E2206D00341087 /* CountryPickerViewController.swift in Sources */,
 				B75161AB28D8FB270028BE35 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				B74BC13128EDDD6700441353 /* SplashAnimator.swift in Sources */,
@@ -4023,6 +4221,7 @@
 				B790366F28E2495D00341087 /* KeyedDecodingContainer+DecodeBoolFromInt.swift in Sources */,
 				B79036BE28E26BB700341087 /* SignupViewController.swift in Sources */,
 				B7948DF328D7C54C004CDB79 /* VPNRegion.swift in Sources */,
+				B7C672CB295BBEA9005321DC /* NEVPNStatus+Ext.swift in Sources */,
 				B751619328D8FB260028BE35 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				B7948E1D28D7C79B004CDB79 /* ProtectedFileAccess.swift in Sources */,
 				B7B65EEF28E4A14800F30E84 /* UpsellColors.swift in Sources */,
@@ -4041,13 +4240,14 @@
 				B751619628D8FB260028BE35 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				B74BC17728F3806A00441353 /* Level+Print.swift in Sources */,
 				B7B65EBD28E3B5C600F30E84 /* TroubleshootCoordinator.swift in Sources */,
-				B7948D2128D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld in Sources */,
+				B7948D2128D6502A004CDB79 /* Model.xcdatamodeld in Sources */,
 				B751619528D8FB260028BE35 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				B790364528E22DBB00341087 /* Observable.swift in Sources */,
 				B772623328E50A270016540C /* User.swift in Sources */,
 				B79035C528E217CC00341087 /* PMActionSheetHeaderModel.swift in Sources */,
 				B790357B28E2113C00341087 /* SettingsV5.swift in Sources */,
 				B790364D28E22EB400341087 /* SubtitleLabel.swift in Sources */,
+				B7C672BE295BB784005321DC /* Config.swift in Sources */,
 				B77262A228E619810016540C /* URLConvertible+URLRequestConvertible.swift in Sources */,
 				B751617F28D8FB260028BE35 /* M13CheckboxAnimationGenerator.swift in Sources */,
 				B790368F28E24D3D00341087 /* WelcomeAnimationViewController.swift in Sources */,
@@ -4055,7 +4255,9 @@
 				B75161A328D8FB270028BE35 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				B72A852728EB683200CB115E /* DynamicBugReportConfigRequest.swift in Sources */,
 				B77262BE28E79A6B0016540C /* KeychainConstants.swift in Sources */,
+				B7C672C8295BBA31005321DC /* NotificationName+Ext.swift in Sources */,
 				B75161B428D900A60028BE35 /* PopupDialogButtonExt.swift in Sources */,
+				B7C672B8295BB4DA005321DC /* NetworkTrust.swift in Sources */,
 				B7948DFD28D7C5D8004CDB79 /* BlockDayLog.swift in Sources */,
 				B77262CF28E7D3010016540C /* HVCommon.swift in Sources */,
 				B751619928D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
@@ -4065,6 +4267,7 @@
 				B79035EE28E21C0900341087 /* PMTabBarError.swift in Sources */,
 				B79035CD28E2182B00341087 /* PMActionSheetPlainCellHeaderHeader.swift in Sources */,
 				B79036C628E280E900341087 /* UIView+Amination.swift in Sources */,
+				B7C672BC295BB5B8005321DC /* Network+CoreDataProperties.swift in Sources */,
 				B77262E128E7D6820016540C /* LogContent.swift in Sources */,
 				B79036B528E2586500341087 /* LoginViewController.swift in Sources */,
 				B78BEEB328F773770039C92A /* PasswordNavigationViewController.swift in Sources */,
@@ -4092,6 +4295,7 @@
 				B7948DC928D7C276004CDB79 /* Environment.swift in Sources */,
 				B7B65EE428E49B7100F30E84 /* Optional+stringForLog.swift in Sources */,
 				B751612328D8B8220028BE35 /* FirewallRepair.swift in Sources */,
+				B7C672B6295B8ADA005321DC /* StorageManager.swift in Sources */,
 				B7BAFCD628E37753000CDCD9 /* AppDisplayState.swift in Sources */,
 				B751617728D8FB260028BE35 /* M13CheckboxPathGenerator.swift in Sources */,
 				B74BC11D28EC983600441353 /* CoreApiFeatureRequest.swift in Sources */,
@@ -4113,6 +4317,7 @@
 				B79036CD28E2870400341087 /* Route.swift in Sources */,
 				B77262BA28E79A050016540C /* AuthKeychain.swift in Sources */,
 				B74BC0FA28EBAB8E00441353 /* EnvironmentsViewController.swift in Sources */,
+				B7C672C5295BB9A4005321DC /* GeoLookup.swift in Sources */,
 				B790356B28E20E2900341087 /* PMFontAttributes.swift in Sources */,
 				B751618428D8FB260028BE35 /* DefaultValues.swift in Sources */,
 				B74BC16228F37EE400441353 /* PerformConcurrently.swift in Sources */,
@@ -4124,6 +4329,7 @@
 				B7948E0328D7C633004CDB79 /* PushNotifications.swift in Sources */,
 				B74BC10F28EC88EF00441353 /* Announcement.swift in Sources */,
 				B790359C28E2150400341087 /* UIGestureRecognizer+helper.swift in Sources */,
+				B7F453F4295A1D8800B803C8 /* ControlPanelView.swift in Sources */,
 				B79036A728E24FFA00341087 /* LoginViewModel2.swift in Sources */,
 				B79035D928E21A9800341087 /* PMActionBar.swift in Sources */,
 				B790358828E213DE00341087 /* UILabel+link.swift in Sources */,
@@ -4133,12 +4339,14 @@
 				B7BAFCC028E349E7000CDCD9 /* DependencyContainer.swift in Sources */,
 				B790363B28E2273100341087 /* CoreString_V5.swift in Sources */,
 				B74BC11928EC979A00441353 /* CoreApiService.swift in Sources */,
+				B7F453E42956268000B803C8 /* HomeViewController.swift in Sources */,
 				B772627128E5F2FB0016540C /* AuthTypes.swift in Sources */,
 				B751619B28D8FB260028BE35 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				B74BC12128EC98CF00441353 /* CoreApiFeatureRespone.swift in Sources */,
 				B790355628E209BB00341087 /* IconProvider.swift in Sources */,
 				B790357028E20FF300341087 /* ProtonButton.swift in Sources */,
 				B79035AE28E215C100341087 /* NSLayoutConstraint+Helpers.swift in Sources */,
+				B7C672D4295BC4A9005321DC /* Pinger.swift in Sources */,
 				B790363728E226FC00341087 /* CoreString.swift in Sources */,
 				B772626F28E5F20F0016540C /* Error+Extensions.swift in Sources */,
 				B7BAFCD128E37684000CDCD9 /* TimerFactory.swift in Sources */,
@@ -4163,6 +4371,7 @@
 				B772629228E6162C0016540C /* Session.swift in Sources */,
 				B751618B28D8FB260028BE35 /* NVActivityIndicatorPresenter.swift in Sources */,
 				B790369328E24D6D00341087 /* WelcomeViewController.swift in Sources */,
+				B7C672E3295BE822005321DC /* Server+CoreDataClass.swift in Sources */,
 				B790364228E22D9100341087 /* TemporaryHacks.swift in Sources */,
 				B790358D28E2144C00341087 /* UIDevice+info.swift in Sources */,
 				B790359628E214C700341087 /* UIImage+Extensions.swift in Sources */,
@@ -4177,6 +4386,7 @@
 				B79035CF28E2183F00341087 /* PMActionSheetToggleCell.swift in Sources */,
 				B77262C928E7C4440016540C /* NetworkError.swift in Sources */,
 				B790360528E21FAA00341087 /* CountryCode.swift in Sources */,
+				B7C672AE295B7A4E005321DC /* DispatchQueue+Ext.swift in Sources */,
 				B7B65EDF28E49A5700F30E84 /* Logger+Callers.swift in Sources */,
 				B74BC15A28F37E7600441353 /* Codable+Ergonomics.swift in Sources */,
 				B72A852C28EB6AD900CB115E /* UIView+nib.swift in Sources */,
@@ -4195,6 +4405,7 @@
 				B74BC10128EBB40D00441353 /* AppSessionRefresher.swift in Sources */,
 				B790366728E2491400341087 /* Key+Codable.swift in Sources */,
 				B77262D828E7D5090016540C /* ReportsApiService.swift in Sources */,
+				B7C672B1295B7A9D005321DC /* NetworkManager.swift in Sources */,
 				B77262D128E7D37A0016540C /* ObfuscatedConstants.swift in Sources */,
 				B751617228D8FB260028BE35 /* SpinerLayer.swift in Sources */,
 				B772628228E614140016540C /* AlternativeRoutingRequestInterceptor.swift in Sources */,
@@ -4225,6 +4436,7 @@
 				B751619728D8FB260028BE35 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				B77262DC28E7D5AB0016540C /* ReportsBugResponse.swift in Sources */,
 				B772629428E6165B0016540C /* Session+AFNetworking.swift in Sources */,
+				B7F453F6295A1E1100B803C8 /* ConnectionInfoView.swift in Sources */,
 				B77262C728E7C4180016540C /* ProtonVpnError.swift in Sources */,
 				B790368428E24B7000341087 /* AddressKey_v2.swift in Sources */,
 				B790355D28E20BE100341087 /* ProtonColorPaletteiOSV5.swift in Sources */,
@@ -4238,6 +4450,7 @@
 				B751612928D8BB2B0028BE35 /* Align.swift in Sources */,
 				B790368228E24B5500341087 /* Address_v2.swift in Sources */,
 				B79035B428E2169A00341087 /* GlobalFunction.swift in Sources */,
+				B7F453F22958E1AA00B803C8 /* ControlPanelViewController.swift in Sources */,
 				B79036B128E255FB00341087 /* LoginService+Login.swift in Sources */,
 				B75161AF28D8FB270028BE35 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				B74BC10D28EC88D700441353 /* AnnouncementManager.swift in Sources */,
@@ -4254,6 +4467,7 @@
 				B751619C28D8FB260028BE35 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				B772623B28E50EB60016540C /* PMTitleCell.swift in Sources */,
 				B79036C328E2771D00341087 /* PMLog.swift in Sources */,
+				B7C672D1295BC3E9005321DC /* UserActivityType.swift in Sources */,
 				B74BC10B28EC88C100441353 /* AnnouncementStorage.swift in Sources */,
 				B72A852128EB5F9600CB115E /* LaunchViewControler.swift in Sources */,
 				B74BC10828EBB5BE00441353 /* AppStateManager.swift in Sources */,
@@ -4274,9 +4488,11 @@
 				B79035BF28E2177C00341087 /* PMActionSheetDragBarView.swift in Sources */,
 				B772625B28E51C990016540C /* TrustKitHelper.swift in Sources */,
 				B7B65EE928E4A03500F30E84 /* LocalizedString+Fallback.swift in Sources */,
+				B7F453EA2956415900B803C8 /* R2TabbarController.swift in Sources */,
 				B751619228D8FB260028BE35 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				B75161A828D8FB270028BE35 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				B77262E528E7D7120016540C /* EmptyLogContent.swift in Sources */,
+				B7C672E1295BE80A005321DC /* Server+CoreDataProperties.swift in Sources */,
 				B790367A28E24AE500341087 /* Address.swift in Sources */,
 				B790360F28E220A200341087 /* PMCountryPicker.swift in Sources */,
 				B790356028E20C3C00341087 /* UIColor+Helper.swift in Sources */,
@@ -5109,6 +5325,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		B7F453E02956264000B803C8 /* XCRemoteSwiftPackageReference "CardTabBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yusadogru/CardTabBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -5227,16 +5451,21 @@
 			package = B7F3FE6D294CE689008EBA42 /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
 		};
+		B7F453E12956264000B803C8 /* CardTabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7F453E02956264000B803C8 /* XCRemoteSwiftPackageReference "CardTabBar" */;
+			productName = CardTabBar;
+		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		B7948D1F28D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodeld */ = {
+		B7948D1F28D6502A004CDB79 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */,
 			);
 			currentVersion = B7948D2028D6502A004CDB79 /* Vaif_R2___VPN.xcdatamodel */;
-			path = "Vaif_R2___VPN.xcdatamodeld";
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

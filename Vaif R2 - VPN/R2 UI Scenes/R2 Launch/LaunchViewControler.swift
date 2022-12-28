@@ -55,7 +55,11 @@ final class LaunchViewController: UIViewController {
     
     func launchWelcome(){
         self.whenReady(queue: DispatchQueue.main) {
-            self.navigationService.launched()
+            if let _ = WitWork.shared.user {
+                self.navigationService.presentHomeViewController()
+            } else {
+                self.navigationService.launched()
+            }
         }
     }
     

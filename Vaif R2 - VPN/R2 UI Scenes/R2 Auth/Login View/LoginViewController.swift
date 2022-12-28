@@ -52,13 +52,13 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
     var viewModel: LoginViewModel!
     var customErrorPresenter: LoginErrorPresenter?
     var initialUsername: String?
-    
+    public var readyGroup: DispatchGroup? = DispatchGroup()
     var focusNoMore: Bool = false
     private let navigationBarAdjuster = NavigationBarAdjustingScrollViewDelegate()
-    
+    private lazy var navigationService: NavigationService = container.makeNavigationService()
     static let accountStateDidChange = Notification.Name("AccountUIAccountStateDidChangeNotification")
     private var isBannerShown = false
-    
+    private let container = DependencyContainer()
     override var preferredStatusBarStyle: UIStatusBarStyle { darkModeAwarePreferredStatusBarStyle() }
     
     override func viewDidLoad() {
@@ -235,13 +235,17 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
                 case AuthErrorCode.wrongPassword.rawValue:
                     self.passwordTextField.isError = true
                     self.passwordTextField.errorMessage = "Invalid password"
+                    self.viewModel.isLoading.value = false
                 case AuthErrorCode.operationNotAllowed.rawValue:
+                    self.viewModel.isLoading.value = false
                     print("Operation not allowedl")
                 case AuthErrorCode.unverifiedEmail.rawValue:
                     self.loginTextField.isError = true
                     self.loginTextField.errorMessage = "Invalid Email"
+                    self.viewModel.isLoading.value = false
                     print("Invalid email")
                 default:
+                    self.viewModel.isLoading.value = false
                     print("unknown error: \(err.localizedDescription)")
                 }
             }else {
@@ -273,12 +277,22 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
                                 print("update error snap Id: \(err.localizedDescription)")
                             }else {
                                 WitWork.shared.user = Auth.auth().currentUser
-                                self.dismiss(animated: true, completion: nil)
+                                self.whenReady(queue: DispatchQueue.main) {
+                                    self.navigationService.presentHomeViewController()
+                                }
+//                                self.dismiss(animated: true, completion: nil)
                             }
                         }
                     }
                 }
             }
+        }
+    }
+    
+    private func whenReady(queue: DispatchQueue, completion: @escaping () -> Void) {
+        self.readyGroup?.notify(queue: queue) {
+            completion()
+            self.readyGroup = nil
         }
     }
     

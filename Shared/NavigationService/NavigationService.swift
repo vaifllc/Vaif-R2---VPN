@@ -151,6 +151,10 @@ final class NavigationService: LoginErrorPresenter {
     private let doh: DoHVPN
     private var login: LoginAndSignupInterface?
     weak var delegate: LoginServiceDelegate?
+    
+    private lazy var tabBarController = {
+        return makeTabBarController()
+    }()
 
     
     // MARK: Initializers
@@ -159,6 +163,13 @@ final class NavigationService: LoginErrorPresenter {
         networkingDelegate = factory.makeNetworkingDelegate()
         networking2 = factory.makeNetworking()
         doh = factory.makeDoHVPN()
+    }
+    
+    private func makeTabBarController() -> TabBarController? {
+        guard let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return nil }
+//        tabBarController.viewModel = TabBarViewModel(navigationService: self, sessionManager: appSessionManager, appStateManager: appStateManager, vpnGateway: vpnGateway)
+        
+        return tabBarController
     }
     
     func launched() {
@@ -211,6 +222,10 @@ final class NavigationService: LoginErrorPresenter {
     func presentWelcome(initialError: String?) {
         loginService.showWelcome(initialError: initialError, withOverlayViewController: nil)
     }
+    
+    func presentHomeViewController(){
+        setupTabs()
+    }
 
     private func presentMainInterface() {
         setupTabs()
@@ -234,29 +249,30 @@ final class NavigationService: LoginErrorPresenter {
 //    }
     
     private func setupTabs() {
-//        guard let tabBarController = tabBarController else { return }
-//
+        guard let tabBarController = tabBarController else { return }
+
 //        tabBarController.viewModel = TabBarViewModel(navigationService: self, sessionManager: appSessionManager, appStateManager: appStateManager, vpnGateway: vpnGateway)
-//
-//        var tabViewControllers = [UIViewController]()
-//
+
+        var tabViewControllers = [UIViewController]()
+
 //        tabViewControllers.append(UINavigationController(rootViewController: makeCountriesViewController()))
 //        tabViewControllers.append(UINavigationController(rootViewController: makeMapViewController()))
-//
-//        if let protonQCViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProtonQCViewController") as? ProtonQCViewController {
-//            tabViewControllers.append(protonQCViewController)
-//        }
-//
-//        tabViewControllers.append(UINavigationController(rootViewController: makeProfilesViewController()))
-//
+
+        if let protonQCViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+            tabViewControllers.append(protonQCViewController)
+        }
+
+       // tabViewControllers.append(UINavigationController(rootViewController: makeProfilesViewController()))
+
 //        if let settingsViewController = makeSettingsViewController() {
 //            tabViewControllers.append(UINavigationController(rootViewController: settingsViewController))
 //        }
-//
-//        tabBarController.setViewControllers(tabViewControllers, animated: false)
-//        tabBarController.setupView()
-//
-//        windowService.show(viewController: tabBarController)
+
+        tabBarController.setViewControllers(tabViewControllers, animated: false)
+        tabBarController.setupView()
+
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
+        //windowService.show(viewController: tabBarController)
     }
 
     private func showNewBrandModal() {

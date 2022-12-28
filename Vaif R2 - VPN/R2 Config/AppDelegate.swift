@@ -23,6 +23,8 @@ import Reachability
 import Logging
 import FirebaseCore
 import SwiftyStoreKit
+import CardTabBar
+import GSMessages
 
 
 let fileLogger: DDFileLogger = DDFileLogger()
@@ -36,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var propertiesManager: PropertiesManagerProtocol = container.makePropertiesManager()
     private lazy var appStateManager: AppStateManager = container.makeAppStateManager()
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
+    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
@@ -55,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupWidgetToggleVPN()
         setupLogsForApp()
         setupFirebaseLogger()
+        setupAppearance()
+        window?.tintColor = .brandColor()
         //setupCoreIntegration()
         Storage.setSpecificDefaults(defaults: UserDefaults(suiteName: AppConstants.AppGroups.main)!)
         container.makeMaintenanceManagerHelper().startMaintenanceManager()
@@ -63,6 +68,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupFirebaseLogger(){
         FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
+    }
+    
+    func setupAppearance() {
+        
+        
+        UINavigationBar.appearance().barTintColor = .secondaryBackgroundColor()
+        UINavigationBar.appearance().tintColor = .normalTextColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.normalTextColor()]
+        UINavigationBar.appearance().isTranslucent = false
+        
+        UITabBar.appearance().backgroundColor = .secondaryBackgroundColor()
+        UITabBar.appearance().barTintColor = .secondaryBackgroundColor()
+        UITabBar.appearance().tintColor = .iconAccent()
+        UITabBar.appearance().unselectedItemTintColor = .iconWeak()
+        UITabBar.appearance().isTranslucent = false
+
+        UISwitch.appearance().onTintColor = .brandColor()
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.textAccent()], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.weakTextColor()], for: .normal)
+        
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.secondaryBackgroundColor()
+        UIPageControl.appearance().currentPageIndicatorTintColor = .brandColor()
+        
+        GSMessage.successBackgroundColor = UIColor.brandColor()
+        GSMessage.warningBackgroundColor = UIColor.notificationWarningColor()
+        GSMessage.errorBackgroundColor = UIColor.notificationErrorColor()
+        
+        if #available(iOS 15.0, *) { // Removes unnecessary padding at the top of tables
+            UITableView.appearance().sectionHeaderTopPadding = 0.0
+        }
     }
     
     private func setupR1IAP() {

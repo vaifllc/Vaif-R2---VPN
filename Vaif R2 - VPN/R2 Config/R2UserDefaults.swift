@@ -1,0 +1,232 @@
+//
+//  UserDefaults.swift
+//  Vaif R2 - VPN
+//
+//  Created by VAIF on 12/27/22.
+//
+
+import Foundation
+
+extension UserDefaults {
+    
+    static var shared: UserDefaults {
+        return UserDefaults(suiteName: R2Config.appGroup)!
+    }
+    
+    struct Key {
+        static let wireguardTunnelProviderError = "wireguardTunnelProviderError"
+        static let openvpnTunnelProviderError = "TunnelKitLastError"
+        static let isMultiHop = "isMultiHop"
+        static let exitServerLocation = "exitServerLocation"
+        static let isLogging = "isLogging"
+        static let networkProtectionEnabled = "networkProtection.enabled"
+        static let networkProtectionUntrustedConnect = "networkProtection.untrusted.connect"
+        static let networkProtectionTrustedDisconnect = "networkProtection.trusted.disconnect"
+        static let isCustomDNS = "isCustomDNS"
+        static let customDNSProtocol = "customDNSProtocol"
+        static let customDNS = "customDNS"
+        static let isAntiTracker = "isAntiTracker"
+        static let isAntiTrackerHardcore = "isAntiTrackerHardcore"
+        static let antiTrackerDNS = "antiTrackerDNS"
+        static let antiTrackerHardcoreDNS = "antiTrackerHardcoreDNS"
+        static let wgKeyTimestamp = "wgKeyTimestamp"
+        static let wgRegenerationRate = "wgRegenerationRate"
+        static let hostNames = "hostNames"
+        static let ipv6HostNames = "ipv6HostNames"
+        static let apiHostName = "apiHostName"
+        static let hasUserConsent = "hasUserConsent"
+        static let sessionsLimit = "sessionsLimit"
+        static let upgradeToUrl = "upgradeToUrl"
+        static let connectionStatus = "connectionStatus"
+        static let connectionLocation = "connectionLocation"
+        static let connectionIpAddress = "connectionIpAddress"
+        static let connectionIpv6Address = "connectionIpv6Address"
+        static let keepAlive = "keepAlive"
+        static let serversSort = "serversSort"
+        static let notAskToReconnect = "notAskToReconnect"
+        static let selectedProtocolIndex = "selectedProtocolIndex"
+        static let selectedProtocol = "selectedProtocol"
+        static let resolvedDNSInsideVPN = "resolvedDNSInsideVPN"
+        static let resolvedDNSOutsideVPN = "resolvedDNSOutsideVPN"
+        static let selectedServerCity = "SelectedServerCity"
+        static let selectedServerGateway = "SelectedServerGateway"
+        static let selectedServerRandom = "SelectedServerRandom"
+        static let selectedServerFastest = "SelectedServerFastest"
+        static let selectedServerStatus = "SelectedServerStatus"
+        static let selectedExitServerCity = "SelectedExitServerCity"
+        static let selectedExitServerGateway = "SelectedExitServerGateway"
+        static let selectedExitServerRandom = "SelectedExitServerRandom"
+        static let fastestServerPreferred = "FastestServerPreferred"
+        static let fastestServerConfigured = "FastestServerConfiguredForOpenVPN"
+        static let firstInstall = "FirstInstall"
+        static let secureDNS = "SecureDNS"
+        static let serviceStatus = "ServiceStatus"
+        static let isIPv6 = "isIPv6"
+        static let showIPv4Servers = "showIPv4Servers"
+        static let killSwitch = "killSwitch"
+    }
+    
+    @objc dynamic var wireguardTunnelProviderError: String {
+        return string(forKey: Key.wireguardTunnelProviderError) ?? ""
+    }
+    
+    @objc dynamic var openvpnTunnelProviderError: String {
+        return string(forKey: Key.openvpnTunnelProviderError) ?? ""
+    }
+    
+    @objc dynamic var isMultiHop: Bool {
+        return bool(forKey: Key.isMultiHop)
+    }
+    
+    @objc dynamic var exitServerLocation: String {
+        return string(forKey: Key.exitServerLocation) ?? ""
+    }
+    
+    @objc dynamic var isLogging: Bool {
+        return bool(forKey: Key.isLogging)
+    }
+    
+    @objc dynamic var networkProtectionEnabled: Bool {
+        return bool(forKey: Key.networkProtectionEnabled)
+    }
+    
+    @objc dynamic var networkProtectionUntrustedConnect: Bool {
+        return bool(forKey: Key.networkProtectionUntrustedConnect)
+    }
+    
+    @objc dynamic var networkProtectionTrustedDisconnect: Bool {
+        return bool(forKey: Key.networkProtectionTrustedDisconnect)
+    }
+    
+    @objc dynamic var isCustomDNS: Bool {
+        return bool(forKey: Key.isCustomDNS)
+    }
+    
+    @objc dynamic var customDNS: String {
+        return string(forKey: Key.customDNS) ?? ""
+    }
+    
+    @objc dynamic var customDNSProtocol: String {
+        return string(forKey: Key.customDNSProtocol) ?? "plain"
+    }
+    
+    @objc dynamic var isAntiTracker: Bool {
+        return bool(forKey: Key.isAntiTracker)
+    }
+    
+    @objc dynamic var isAntiTrackerHardcore: Bool {
+        return bool(forKey: Key.isAntiTrackerHardcore)
+    }
+    
+    @objc dynamic var antiTrackerDNS: String {
+        return string(forKey: Key.antiTrackerDNS) ?? ""
+    }
+    
+    @objc dynamic var antiTrackerHardcoreDNS: String {
+        return string(forKey: Key.antiTrackerHardcoreDNS) ?? ""
+    }
+    
+    @objc dynamic var wgKeyTimestamp: Date {
+        if let date = object(forKey: Key.wgKeyTimestamp) as? Date {
+            return date
+        }
+        
+        return Date()
+    }
+    
+    @objc dynamic var wgRegenerationRate: Int {
+        return integer(forKey: Key.wgRegenerationRate)
+    }
+    
+    @objc dynamic var hostNames: [String] {
+        return stringArray(forKey: Key.hostNames) ?? []
+    }
+    
+    @objc dynamic var ipv6HostNames: [String] {
+        return stringArray(forKey: Key.ipv6HostNames) ?? []
+    }
+    
+    @objc dynamic var apiHostName: String {
+        return string(forKey: Key.apiHostName) ?? R2Config.ApiHostName
+    }
+    
+    @objc dynamic var hasUserConsent: Bool {
+        return bool(forKey: Key.hasUserConsent)
+    }
+    
+    @objc dynamic var sessionsLimit: Int {
+        return integer(forKey: Key.sessionsLimit)
+    }
+    
+    @objc dynamic var upgradeToUrl: String {
+        return string(forKey: Key.upgradeToUrl) ?? ""
+    }
+    
+    @objc dynamic var keepAlive: Bool {
+        return bool(forKey: Key.keepAlive)
+    }
+    
+    @objc dynamic var serversSort: String {
+        return string(forKey: Key.serversSort) ?? ""
+    }
+    
+    @objc dynamic var notAskToReconnect: Bool {
+        return bool(forKey: Key.notAskToReconnect)
+    }
+    
+    @objc dynamic var resolvedDNSInsideVPN: [String] {
+        return stringArray(forKey: Key.resolvedDNSInsideVPN) ?? [customDNS]
+    }
+    
+    @objc dynamic var isIPv6: Bool {
+        return bool(forKey: Key.isIPv6)
+    }
+    
+    @objc dynamic var showIPv4Servers: Bool {
+        return bool(forKey: Key.showIPv4Servers)
+    }
+    
+    @objc dynamic var killSwitch: Bool {
+        return bool(forKey: Key.killSwitch)
+    }
+    
+    static func registerUserDefaults() {
+        shared.register(defaults: [Key.networkProtectionUntrustedConnect: true])
+        shared.register(defaults: [Key.networkProtectionTrustedDisconnect: true])
+        shared.register(defaults: [Key.keepAlive: true])
+        shared.register(defaults: [Key.wgRegenerationRate: R2Config.wgKeyRegenerationRate])
+        shared.register(defaults: [Key.wgKeyTimestamp: Date()])
+        standard.register(defaults: [Key.selectedServerFastest: true])
+        standard.register(defaults: [Key.showIPv4Servers: true])
+        shared.register(defaults: [Key.serversSort: "city"])
+    }
+    
+    static func clearSession() {
+        shared.removeObject(forKey: Key.isMultiHop)
+        shared.removeObject(forKey: Key.isLogging)
+        shared.removeObject(forKey: Key.networkProtectionEnabled)
+        shared.removeObject(forKey: Key.networkProtectionUntrustedConnect)
+        shared.removeObject(forKey: Key.networkProtectionTrustedDisconnect)
+        shared.removeObject(forKey: Key.isCustomDNS)
+        shared.removeObject(forKey: Key.customDNS)
+        shared.removeObject(forKey: Key.customDNSProtocol)
+        shared.removeObject(forKey: Key.resolvedDNSInsideVPN)
+        shared.removeObject(forKey: Key.isAntiTracker)
+        shared.removeObject(forKey: Key.isAntiTrackerHardcore)
+        shared.removeObject(forKey: Key.wgKeyTimestamp)
+        shared.removeObject(forKey: Key.wgRegenerationRate)
+        shared.removeObject(forKey: Key.apiHostName)
+        shared.removeObject(forKey: Key.sessionsLimit)
+        shared.removeObject(forKey: Key.keepAlive)
+        shared.removeObject(forKey: Key.notAskToReconnect)
+        shared.removeObject(forKey: Key.isIPv6)
+        shared.removeObject(forKey: Key.killSwitch)
+        standard.removeObject(forKey: Key.selectedServerFastest)
+        standard.removeObject(forKey: Key.fastestServerConfigured)
+        standard.removeObject(forKey: Key.showIPv4Servers)
+        standard.removeObject(forKey: Key.selectedProtocolIndex)
+        standard.removeObject(forKey: Key.selectedProtocol)
+        standard.synchronize()
+    }
+    
+}

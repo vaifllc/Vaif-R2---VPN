@@ -10,6 +10,30 @@ import UIKit
 
 
 extension UIViewController {
+    
+    func registerUserActivity(type: String, title: String) {
+        let activity = NSUserActivity(activityType: type)
+        activity.title = title
+        activity.isEligibleForSearch = true
+        activity.isEligibleForPrediction = true
+        
+        userActivity = activity
+        userActivity?.becomeCurrent()
+    }
+    
+    func evaluateIsNetworkReachable() -> Bool {
+        guard NetworkManager.shared.isNetworkReachable else {
+            let message = "Connection error: Please check your Internet connection and try again."
+            let banner = PMBanner(message: message, style: PMBannerNewStyle.error, dismissDuration: Double.infinity)
+            banner.addButton(text: CoreString._hv_ok_button) { _ in
+                banner.dismiss()
+            }
+            return false
+        }
+        
+        return true
+    }
+    
     func showBanner(message: String, position: PMBannerPosition) {
         unlockUI()
         let banner = PMBanner(message: message, style: PMBannerNewStyle.error, dismissDuration: Double.infinity)

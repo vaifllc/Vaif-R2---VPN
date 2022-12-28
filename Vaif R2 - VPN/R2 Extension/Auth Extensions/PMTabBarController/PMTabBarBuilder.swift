@@ -11,7 +11,7 @@ import UIKit
 public final class PMTabBarBuilder {
     private var items: [PMTabBarItem] = []
     private var height: CGFloat = 48
-    private var backgroundColor: UIColor = ColorProvider.FloatyBackground
+    private var backgroundColor: UIColor = ColorProvider.BackgroundNorm
     private var floatingHeight: CGFloat?
     private var vcs: [UIViewController] = []
     private var selectedIndex: Int = 0

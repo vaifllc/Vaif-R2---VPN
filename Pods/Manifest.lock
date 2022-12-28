@@ -22,6 +22,7 @@ PODS:
     - CocoaLumberjack/Core
   - Connectivity (5.0.0)
   - DynamicBlurView (4.1.0)
+  - FloatingPanel (1.7.6)
   - GBDeviceInfo/Jailbreak (6.7.0):
     - GBJailbreakDetection (~> 1.3)
   - GBJailbreakDetection (1.3.0)
@@ -109,6 +110,7 @@ DEPENDENCIES:
   - AwesomeSpotlightView
   - CocoaLumberjack/Swift
   - Connectivity
+  - FloatingPanel (~> 1.7.2)
   - GBDeviceInfo/Jailbreak (~> 6.0)
   - GoogleUtilities
   - GSMessages
@@ -144,6 +146,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - Connectivity
     - DynamicBlurView
+    - FloatingPanel
     - GBDeviceInfo
     - GBJailbreakDetection
     - GoogleUtilities
@@ -197,6 +200,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
   Connectivity: e990703fb8d8db54649ea05facac92000cc0f3eb
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  FloatingPanel: 9016eac88f21ca9fce53f5709e1f49485c0c355e
   GBDeviceInfo: c1a46e3fe1b5406a0ebaa60f8a871cfed9da9a42
   GBJailbreakDetection: a216773574b62dddb6c876ffdb52c54ac05e27e0
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
@@ -228,6 +232,6 @@ SPEC CHECKSUMS:
   TrustKit: dad4c3a08248c21fcb9a3b5be3c2e2b9d4f9b973
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
 
-PODFILE CHECKSUM: 8b16701148a63a4014dfa5790462e4dc57205148
+PODFILE CHECKSUM: 4a49df7cfba361c43bf119041d3025a1f1c550e3
 
 COCOAPODS: 1.11.3

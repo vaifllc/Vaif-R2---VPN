@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "CardTabBar",
+        "repositoryURL": "https://github.com/yusadogru/CardTabBar.git",
+        "state": {
+          "branch": null,
+          "revision": "2a642e770e41f5409e3127162612878c054da07a",
+          "version": "1.0.1"
+        }
+      },
+      {
         "package": "CocoaLumberjack",
         "repositoryURL": "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
         "state": {

@@ -42,6 +42,7 @@ target 'Vaif R2 - VPN' do
   pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :tag => '4.2.0'
   pod 'SwiftValidators'
   pod 'Navajo-Swift'
+  pod 'FloatingPanel', '~> 1.7.2'
 end
 
 

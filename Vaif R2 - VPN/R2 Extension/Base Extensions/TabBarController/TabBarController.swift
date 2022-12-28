@@ -34,7 +34,7 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
 
     func setupView() {
-        view.backgroundColor = .backgroundColor()
+        view.backgroundColor = ColorProvider.BackgroundNorm
         selectedIndex = 0
     }
     
