@@ -14,6 +14,27 @@ public struct ProtonColorPaletteiOS {
     static let instance = ProtonColorPaletteiOS()
 
     private init() {}
+    
+    // MARK: - Field
+    public let FieldDisabled = ProtonColor(name: "ProtonCarbonFieldDisabled")
+    public let FieldFocus = ProtonColor(name: "ProtonCarbonFieldFocus")
+    public let FieldHighlight = ProtonColor(name: "ProtonCarbonFieldHighlight")
+    public let FieldHighlightError = ProtonColor(name: "ProtonCarbonFieldHighlightError")
+    public let FieldHover = ProtonColor(name: "ProtonCarbonFieldHover")
+    public let FieldNorm = ProtonColor(name: "ProtonCarbonFieldNorm")
+    // MARK: - Signal
+    public let SignalDanger = ProtonColor(name: "ProtonCarbonSignalDanger")
+    public let SignalDangerActive = ProtonColor(name: "ProtonCarbonSignalDangerActive")
+    public let SignalDangerHover = ProtonColor(name: "ProtonCarbonSignalDangerHover")
+    public let SignalInfo = ProtonColor(name: "ProtonCarbonSignalInfo")
+    public let SignalInfoActive = ProtonColor(name: "ProtonCarbonSignalInfoActive")
+    public let SignalInfoHover = ProtonColor(name: "ProtonCarbonSignalInfoHover")
+    public let SignalSuccess = ProtonColor(name: "ProtonCarbonSignalSuccess")
+    public let SignalSuccessActive = ProtonColor(name: "ProtonCarbonSignalSuccessActive")
+    public let SignalSuccessHover = ProtonColor(name: "ProtonCarbonSignalSuccessHover")
+    public let SignalWarning = ProtonColor(name: "ProtonCarbonSignalWarning")
+    public let SignalWarningActive = ProtonColor(name: "ProtonCarbonSignalWarningActive")
+    public let SignalWarningHover = ProtonColor(name: "ProtonCarbonSignalWarningHover")
 
     // MARK: MobileBrand
     public let BrandDarken40 = ProtonColor(name: "MobileBrandDarken40")

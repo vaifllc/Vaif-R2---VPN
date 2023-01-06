@@ -20,20 +20,11 @@
         }
       },
       {
-        "package": "CardTabBar",
-        "repositoryURL": "https://github.com/yusadogru/CardTabBar.git",
-        "state": {
-          "branch": null,
-          "revision": "2a642e770e41f5409e3127162612878c054da07a",
-          "version": "1.0.1"
-        }
-      },
-      {
         "package": "CocoaLumberjack",
         "repositoryURL": "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
         "state": {
           "branch": "master",
-          "revision": "d94863e350c1ad652af61972f15bf7c5f645285e",
+          "revision": "3b116a300c1d449f1bbfe0784f34cfc91928231d",
           "version": null
         }
       },
@@ -41,9 +32,9 @@
         "package": "DeviceKit",
         "repositoryURL": "https://github.com/devicekit/DeviceKit.git",
         "state": {
-          "branch": null,
-          "revision": "20e0991f3975916ab0f6d58db84d8bc64f883537",
-          "version": "4.7.0"
+          "branch": "master",
+          "revision": "1291f3789e1a9d8142b949940d4baf0da611cb54",
+          "version": null
         }
       },
       {
@@ -51,7 +42,7 @@
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk.git",
         "state": {
           "branch": "master",
-          "revision": "7e15877ffb28dae1ab8469aa7bd81ac91ab5c451",
+          "revision": "96e30e6e4b8c1465d4079889358106b469f58ad8",
           "version": null
         }
       },
@@ -59,9 +50,9 @@
         "package": "GBDeviceInfo",
         "repositoryURL": "https://github.com/lmirosevic/GBDeviceInfo.git",
         "state": {
-          "branch": null,
+          "branch": "master",
           "revision": "1658a344ce94dc39640c5a9f8dce870d79ab32ae",
-          "version": "7.1.0"
+          "version": null
         }
       },
       {
@@ -105,8 +96,8 @@
         "repositoryURL": "https://github.com/google/gtm-session-fetcher.git",
         "state": {
           "branch": null,
-          "revision": "5ccda3981422a84186387dbb763ba739178b529c",
-          "version": "2.3.0"
+          "revision": "efda500b6d9858d38a76dbfbfa396bd644692e4a",
+          "version": "3.0.0"
         }
       },
       {
@@ -125,15 +116,6 @@
           "branch": null,
           "revision": "819d0a2173aff699fb8c364b6fb906f7cdb1a692",
           "version": "2.30909.0"
-        }
-      },
-      {
-        "package": "Navajo-Swift",
-        "repositoryURL": "https://github.com/Wistas23/Navajo-Swift.git",
-        "state": {
-          "branch": null,
-          "revision": "2ae2a9beb8165284b0bf2ace69b0be1ce2661ad4",
-          "version": "2.1.2"
         }
       },
       {
@@ -176,9 +158,18 @@
         "package": "SwiftDate",
         "repositoryURL": "https://github.com/malcommac/SwiftDate.git",
         "state": {
-          "branch": null,
+          "branch": "master",
           "revision": "5d943224c3bb173e6ecf27295611615eba90c80e",
-          "version": "7.0.0"
+          "version": null
+        }
+      },
+      {
+        "package": "WireGuardKit",
+        "repositoryURL": "https://git.zx2c4.com/wireguard-apple",
+        "state": {
+          "branch": "23618f9",
+          "revision": "23618f994f17d8ad8f2f65d79b4a1e8a0830b334",
+          "version": null
         }
       }
     ]

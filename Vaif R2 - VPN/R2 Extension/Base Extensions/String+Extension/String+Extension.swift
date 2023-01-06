@@ -9,6 +9,81 @@ import Foundation
 
 public extension String {
     
+    func commaSeparatedToArray() -> [String] {
+        return components(separatedBy: .whitespaces)
+            .joined()
+            .split(separator: ",")
+            .map(String.init)
+    }
+    func base64KeyToHex() -> String? {
+        let base64 = self
+        
+        guard base64.count == 44 else {
+            return nil
+        }
+        
+        guard base64.last == "=" else {
+            return nil
+        }
+        
+        guard let keyData = Data(base64Encoded: base64) else {
+            return nil
+        }
+        
+        guard keyData.count == 32 else {
+            return nil
+        }
+        
+        let hexKey = keyData.reduce("") {$0 + String(format: "%02x", $1)}
+        
+        return hexKey
+    }
+    func deletingPrefix(_ prefix: String) -> String {
+        guard self.hasPrefix(prefix) else {
+            return self
+        }
+        
+        return String(self.dropFirst(prefix.count))
+    }
+    
+    func deletingSuffix(_ suffix: String) -> String {
+        guard self.hasSuffix(suffix) else {
+            return self
+        }
+        
+        return String(self.dropLast(suffix.count))
+    }
+    
+    func updateAttribute(key: String, value: String) -> String {
+        var array = [String]()
+        for setting in self.components(separatedBy: "\n") {
+            if setting.hasPrefix(key) {
+                array.append("\(key)=\(value)")
+            } else {
+                array.append(setting)
+            }
+        }
+        return array.joined(separator: "\n")
+    }
+    
+    func initials() -> String {
+        let invalids = "[.,/#!$@%^&*;:{}=\\-_`~()]"
+        let splits = self
+            .components(separatedBy: .whitespaces)
+            .compactMap { $0.first?.uppercased() }
+            .filter { !invalids.contains($0) }
+
+        var initials = [splits.first]
+        if splits.count > 1 {
+            initials.append(splits.last)
+        }
+
+        let result = initials
+            .compactMap { $0 }
+            .joined()
+        return result.isEmpty ? "?": result
+    }
+    
     func contains(_ string: String) -> Bool {
         return self.range(of: string, options: NSString.CompareOptions.caseInsensitive) != nil ? true : false
     }

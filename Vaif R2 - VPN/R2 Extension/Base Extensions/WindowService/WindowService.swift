@@ -45,7 +45,9 @@ class WindowServiceImplementation: WindowService {
     private let window: UIWindow
     
     init (window: UIWindow) {
-        self.window = window
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        
+        self.window = (windowScene?.windows.first)!
 
         if ProcessInfo.processInfo.arguments.contains("UITests") {
             window.layer.speed = 100
@@ -55,9 +57,9 @@ class WindowServiceImplementation: WindowService {
     }
     
     func setupAppearance() {
-        window.tintColor = .brandColor()
+        window.tintColor = .secondaryBackgroundColor()
         
-        UINavigationBar.appearance().barTintColor = .backgroundColor()
+        UINavigationBar.appearance().barTintColor = .secondaryBackgroundColor()
         UINavigationBar.appearance().tintColor = .normalTextColor()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.normalTextColor()]
         UINavigationBar.appearance().isTranslucent = false
@@ -80,9 +82,9 @@ class WindowServiceImplementation: WindowService {
         GSMessage.warningBackgroundColor = UIColor.notificationWarningColor()
         GSMessage.errorBackgroundColor = UIColor.notificationErrorColor()
         
-        if #available(iOS 15.0, *) { // Removes unnecessary padding at the top of tables
-            UITableView.appearance().sectionHeaderTopPadding = 0.0
-        }
+        // Removes unnecessary padding at the top of tables
+        UITableView.appearance().sectionHeaderTopPadding = 0.0
+        
     }
     
     // MARK: - Presentation

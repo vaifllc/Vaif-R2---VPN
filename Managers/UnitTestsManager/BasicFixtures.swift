@@ -20,3 +20,32 @@ public extension String {
 public extension Array {
     static var empty: Array { [] }
 }
+
+extension Array where Element: Equatable {
+    
+    func next(item: Element) -> Element? {
+        if let index = self.firstIndex(of: item), index + 1 <= self.count {
+            return index + 1 == self.count ? nil : self[index + 1]
+        }
+        return nil
+    }
+    
+    mutating func move(_ item: Element, to newIndex: Index) {
+        if let index = firstIndex(of: item) {
+            move(at: index, to: newIndex)
+        }
+    }
+    
+    mutating func move(at index: Index, to newIndex: Index) {
+        insert(remove(at: index), at: newIndex)
+    }
+    
+    public subscript(safeIndex index: Int) -> Element? {
+        guard index >= 0, index < endIndex else {
+            return nil
+        }
+        
+        return self[index]
+    }
+    
+}

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import FirebaseAuth
 
 protocol TabBarViewModelModelDelegate: AnyObject {
     func removeLoginBox()
@@ -72,12 +72,12 @@ class TabBarViewModel {
     
     func settingShouldBeSelected() -> Bool {
         return false
-//        if sessionManager.loggedIn {
-//            return true
-//        } else {
-//            navigationService.presentWelcome(initialError: nil)
-//            return false
-//        }
+        if Auth.auth().currentUser?.uid != nil {
+            return true
+        } else {
+            navigationService.presentWelcome(initialError: nil)
+            return false
+        }
     }
     
     @objc func stateChanged() {

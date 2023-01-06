@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 public extension UIDevice {
+    
+    var hasNotch: Bool {
+        let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        return bottom > 0
+    }
     /// A boolean value that indicates the device has a physical home button or not.
     static var hasPhysicalHome: Bool {
         guard #available(iOS 11.0, *) else {

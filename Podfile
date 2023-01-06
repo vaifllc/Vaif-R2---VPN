@@ -43,6 +43,10 @@ target 'Vaif R2 - VPN' do
   pod 'SwiftValidators'
   pod 'Navajo-Swift'
   pod 'FloatingPanel', '~> 1.7.2'
+  pod 'SnapKit', '~> 5.0.1'
+  pod 'TunnelKit', '~> 3.5.0'
+  pod 'OpenSSL-Apple', :path => '/Users/vaif/openssl-apple'
+
 end
 
 
@@ -73,6 +77,11 @@ target :'Vaif R2 - VPNTests' do
   # see https://github.com/pointfreeco/swift-snapshot-testing/pull/308
   #pod 'SnapshotTesting', :git => 'https://github.com/pointfreeco/swift-snapshot-testing.git', :commit => '8e9f685'
   pod 'SnapshotTesting'
+end
+
+target 'wireguard-tunnel-provider' do
+    pod 'KeychainAccess'
+    pod 'Logging'
 end
 
 post_install do |installer|

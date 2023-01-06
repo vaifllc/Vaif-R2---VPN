@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class TabBarController: UITabBarController, UITabBarControllerDelegate {
+final class TabBarController: UITabBarController {
 
     private var quickConnectButtonConnecting = false
     private let quickConnectButton = UIButton()
@@ -24,7 +24,7 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         delegate = self
         setupView()
-        setupQuickConnectView()
+        //setupQuickConnectView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,20 +96,16 @@ extension TabBarController: TabBarViewModelDelegate {
     }
 }
 
-//extension TabBarController: UITabBarControllerDelegate {
-//
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        // to help with data updating and easier to understand navigation, pop nvc to root
-//        if let navigationViewController = viewController as? UINavigationController, navigationViewController != self.selectedViewController {
-//            navigationViewController.popToRootViewController(animated: false)
-//        }
-//
-//        if viewController is ProtonQCViewController {
-//            return false
-//        } else if let viewModel = viewModel, viewController == viewControllers?.last { // settings
-//            return viewModel.settingShouldBeSelected()
-//        } else {
-//            return true
-//        }
-//    }
-//}
+extension TabBarController: UITabBarControllerDelegate {
+    
+    
+
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        // to help with data updating and easier to understand navigation, pop nvc to root
+        if let navigationViewController = viewController as? UINavigationController, navigationViewController != self.selectedViewController {
+            navigationViewController.popToRootViewController(animated: true)
+        }
+
+        return true
+    }
+}

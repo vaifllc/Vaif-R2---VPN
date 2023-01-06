@@ -55,11 +55,11 @@ extension AppInfo {
     }
 
     public var bundleShortVersion: String {
-        return bundleInfoDictionary["CFBundleShortVersionString"] as? String ?? ""
+        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
     }
 
     public var bundleVersion: String {
-        return bundleInfoDictionary["CFBundleVersion"] as? String ?? ""
+        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
     }
 
     private var platformName: String {
@@ -125,4 +125,3 @@ public class AppInfoImplementation: AppInfo {
         bundleInfoDictionary = infoDict
     }
 }
-

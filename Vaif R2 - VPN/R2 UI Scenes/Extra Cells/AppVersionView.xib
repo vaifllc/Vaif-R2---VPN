@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xkj-fI-Vph" customClass="AppVersionView" customModule="Vaif_R2___VPN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="268" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-Sw-d8J">
+                    <rect key="frame" x="0.0" y="71" width="268" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="C3g-yQ-pcv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="y3e-Ij-E0u"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="y3e-Ij-E0u" firstAttribute="trailing" secondItem="XgC-Sw-d8J" secondAttribute="trailing" id="H8A-h1-ht2"/>
+                <constraint firstItem="XgC-Sw-d8J" firstAttribute="topMargin" secondItem="y3e-Ij-E0u" secondAttribute="top" constant="20" id="Ore-j6-AO7"/>
+                <constraint firstItem="XgC-Sw-d8J" firstAttribute="leading" secondItem="y3e-Ij-E0u" secondAttribute="leading" id="vLP-ei-C8W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="appVersionLabel" destination="XgC-Sw-d8J" id="e2D-bY-VTH"/>
+            </connections>
+            <point key="canvasLocation" x="-30.399999999999999" y="-256.82158920539734"/>
+        </view>
+    </objects>
+</document>

@@ -26,7 +26,23 @@ class ControlPanelView: UITableView {
     
     // MARK: - Properties -
     
+    var ipv4ViewModel: ProofsViewModel! {
+        didSet {
+            connectionInfoView.update(ipv4ViewModel: ipv4ViewModel, ipv6ViewModel: ipv6ViewModel, addressType: addressType)
+        }
+    }
     
+    var ipv6ViewModel: ProofsViewModel! {
+        didSet {
+            connectionInfoView.update(ipv4ViewModel: ipv4ViewModel, ipv6ViewModel: ipv6ViewModel, addressType: addressType)
+        }
+    }
+    
+    var addressType: AddressType = .IPv4 {
+        didSet {
+            connectionInfoView.update(ipv4ViewModel: ipv4ViewModel, ipv6ViewModel: ipv6ViewModel, addressType: addressType)
+        }
+    }
     
     
     // MARK: - View lifecycle -
@@ -42,9 +58,12 @@ class ControlPanelView: UITableView {
     
     // MARK: - Methods -
     
+    
     func setupView() {
-        connectSwitch.thumbTintColor = .lightGray
-        connectSwitch.onTintColor = .blue
+        if #available(iOS 13.0, *) {
+            connectSwitch.thumbTintColor = .gray
+            connectSwitch.onTintColor = .blue
+        }
         
         updateConnectSwitch()
         UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged, argument: protectionStatusTableCell)

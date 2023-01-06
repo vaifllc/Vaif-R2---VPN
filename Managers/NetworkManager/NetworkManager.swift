@@ -44,15 +44,14 @@ class NetworkManager {
         do {
             try reachability.startNotifier()
         } catch {
-            //log(info: "Unable to start reachability notifier")
-            print("Unable to start reachability notifier")
+            log.info( "Unable to start reachability notifier")
         }
         
         #warning("Remove network signal check after issue with VPN connections is resolved in Reachability.swift library")
         // More info: https://github.com/ashleymills/Reachability.swift/issues/195
-//        if Application.shared.settings.connectionProtocol.tunnelType() == .wireguard {
-//            startNetworkSignalCheck()
-//        }
+        if Application.shared.settings.connectionProtocol.tunnelType() == .wireguard {
+            startNetworkSignalCheck()
+        }
     }
     
     func stopMonitoring() {
@@ -75,7 +74,7 @@ class NetworkManager {
                     StorageManager.saveWiFiNetwork(name: ssid)
                     NotificationCenter.default.post(name: Notification.Name.NetworkSaved, object: nil)
                     updateNetwork(name: ssid, type: NetworkType.wifi.rawValue)
-                } else if Application.shared.status == .invalid {
+                } else if Application.shared.connectionManager.status == .invalid {
                     updateNetwork(name: "Wi-Fi", type: NetworkType.none.rawValue)
                 } else {
                     updateNetwork(name: "No network", type: NetworkType.none.rawValue)
@@ -107,4 +106,3 @@ class NetworkManager {
     }
     
 }
-

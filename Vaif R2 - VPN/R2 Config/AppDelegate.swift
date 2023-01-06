@@ -23,7 +23,6 @@ import Reachability
 import Logging
 import FirebaseCore
 import SwiftyStoreKit
-import CardTabBar
 import GSMessages
 
 
@@ -38,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private lazy var propertiesManager: PropertiesManagerProtocol = container.makePropertiesManager()
     private lazy var appStateManager: AppStateManager = container.makeAppStateManager()
     var splashPresenter: SplashPresenterDescription? = SplashPresenter()
+    public var readyGroup: DispatchGroup? = DispatchGroup()
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -58,16 +58,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupWidgetToggleVPN()
         setupLogsForApp()
         setupFirebaseLogger()
-        setupAppearance()
-        window?.tintColor = .brandColor()
+        //setupAppearance()
+        window?.tintColor = .secondaryBackgroundColor()
         //setupCoreIntegration()
         Storage.setSpecificDefaults(defaults: UserDefaults(suiteName: AppConstants.AppGroups.main)!)
         container.makeMaintenanceManagerHelper().startMaintenanceManager()
+        whenReady(queue: DispatchQueue.main) {
+            self.navigationService.launched()
+        }
         return true
+    }
+    
+    public func whenReady(queue: DispatchQueue, completion: @escaping () -> Void) {
+        self.readyGroup?.notify(queue: queue) {
+            completion()
+            self.readyGroup = nil
+        }
     }
     
     private func setupFirebaseLogger(){
         FirebaseConfiguration.shared.setLoggerLevel(FirebaseLoggerLevel.min)
+    }
+    
+    private func refreshUI() {
+        if let mainViewController = UIApplication.topViewController() as? HomeViewController {
+            mainViewController.refreshUI()
+        }
     }
     
     func setupAppearance() {
@@ -96,9 +112,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GSMessage.warningBackgroundColor = UIColor.notificationWarningColor()
         GSMessage.errorBackgroundColor = UIColor.notificationErrorColor()
         
-        if #available(iOS 15.0, *) { // Removes unnecessary padding at the top of tables
+        // Removes unnecessary padding at the top of tables
             UITableView.appearance().sectionHeaderTopPadding = 0.0
-        }
+        
     }
     
     private func setupR1IAP() {
@@ -266,8 +282,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DDLogInfo("applicationDidBecomeActive")
         PacketTunnelProviderLogs.flush()
         updateMetrics(.resetIfNeeded, rescheduleNotifications: .always)
-        
         FirewallRepair.run(context: .homeScreenDidLoad)
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -588,3 +604,4 @@ extension AppDelegate {
         }
     }
 }
+

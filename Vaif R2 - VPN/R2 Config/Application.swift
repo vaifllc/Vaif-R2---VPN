@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import NetworkExtension
 
 class Application {
     
@@ -14,14 +13,30 @@ class Application {
     
     static var shared = Application()
     
+    //var authentication: Authentication
+    //var connectionManager: ConnectionManager
     
     
-    var status: NEVPNStatus = .invalid {
+    
+    var connectionManager: ConnectionManager
+    
+    var settings: R1Settings {
         didSet {
-            UserDefaults.shared.set(status.rawValue, forKey: UserDefaults.Key.connectionStatus)
+            connectionManager.settings = settings
         }
     }
     
+    var serverList: VPNServerList {
+        didSet {
+            settings = R1Settings(serverList: serverList)
+        }
+    }
+    
+    var serviceStatus: ServiceStatus {
+        didSet {
+            serviceStatus.save()
+        }
+    }
     
     var network = Network(context: StorageManager.context, needToSave: false) {
         didSet {
@@ -32,5 +47,19 @@ class Application {
     var geoLookup = GeoLookup(ipAddress: "", countryCode: "", country: "", city: "", isIvpnServer: false, isp: "", latitude: 0, longitude: 0)
     
     // MARK: - Initialize -
+    
+    private init() {
+        serverList = VPNServerList()
+        serviceStatus = ServiceStatus()
+//        authentication = Authentication()
+        settings = R1Settings(serverList: serverList)
+        connectionManager = ConnectionManager(settings: settings, vpnManager: VPNManager2())
+    }
+    
+    // MARK: - Methods -
+    
+    func clearSession() {
+        serviceStatus.isActive = false
+    }
     
 }

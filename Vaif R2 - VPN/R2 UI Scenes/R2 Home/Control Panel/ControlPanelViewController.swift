@@ -52,6 +52,7 @@ class ControlPanelViewController: UITableViewController {
         initView()
         addObservers()
         setupGestureRecognizers()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -118,13 +119,13 @@ class ControlPanelViewController: UITableViewController {
         
         registerUserActivity(type: UserActivityType.Disconnect, title: UserActivityTitle.Disconnect)
         
-        DispatchQueue.delay(0.5) {
-            if Application.shared.status.isDisconnected() {
-              //  Pinger.shared.ping()
-               // Application.shared.settings.updateRandomServer()
-            }
-            
-        }
+//        DispatchQueue.delay(0.5) {
+//            if Application.shared.status.isDisconnected() {
+//              //  Pinger.shared.ping()
+//               // Application.shared.settings.updateRandomServer()
+//            }
+//            
+//        }
     }
     
     
@@ -174,7 +175,7 @@ class ControlPanelViewController: UITableViewController {
     // MARK: - Private methods -
     
     private func initView() {
-        tableView.backgroundColor = ColorProvider.FloatyBackground
+        tableView.backgroundColor = .backgroundColor()
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         controlPanelView.updateServerNames()
         controlPanelView.updateServerLabels(viewModel: vpnStatusViewModel)

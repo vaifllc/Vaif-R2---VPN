@@ -1,0 +1,5 @@
+#include "Pods/Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN.release.xcconfig"
+
+Environment = production
+ApiHostName = api.ivpn.net
+TlsHostName = ivpn.net

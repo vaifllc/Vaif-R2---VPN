@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol Endpoint {
+protocol R1Endpoint {
     associatedtype Response: Codable
     var request: URLRequest { get }
 }

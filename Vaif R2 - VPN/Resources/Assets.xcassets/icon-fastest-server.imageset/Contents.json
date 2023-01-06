@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon-fastest-server.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

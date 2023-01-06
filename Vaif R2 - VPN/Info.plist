@@ -2,6 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>OSLogPreferences</key>
+	<dict>
+		<key>vAIF-R2</key>
+		<dict>
+			<key>DEFAULT-OPTIONS</key>
+			<dict>
+				<key>Level</key>
+				<dict>
+					<key>Enable</key>
+					<string>$(OSLOG_LEVEL_ENABLE)</string>
+					<key>Persist</key>
+					<string>$(OSLOG_LEVEL_PERSIST)</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>ApiHostName</key>
+	<string>$(ApiHostName)</string>
+	<key>Environment</key>
+	<string>$(Environment)</string>
+	<key>TlsHostName</key>
+	<string>$(TlsHostName)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Bold.ttf</string>

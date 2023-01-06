@@ -152,11 +152,11 @@ extension DependencyContainer: NavigationServiceFactory {
 }
 
 // MARK: SettingsServiceFactory
-//extension DependencyContainer: SettingsServiceFactory {
-//    func makeSettingsService() -> SettingsService {
-//        return navigationService as! SettingsService
-//    }
-//}
+extension DependencyContainer: SettingsServiceFactory {
+    func makeSettingsService() -> SettingsService {
+        return navigationService
+    }
+}
 
 // MARK: VpnManagerFactory
 //extension DependencyContainer: VpnManagerFactory {

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Vaif R2 - VPN Blocker.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Vaif R2 - VPN Firewall Widget.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Vaif R2 - VPN FirewallWidget ExtensionExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Vaif R2 - VPN Tunnel.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Vaif R2 - VPN Widget.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Vaif R2 - VPN WidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Vaif R2 - VPN.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Vaif R2 - VPNTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>79</integer>
+		</dict>
+		<key>VaifR2.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>98</integer>
+		</dict>
+		<key>WireGuardGoBridgeiOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>80</integer>
+		</dict>
+		<key>wireguard-tunnel-provider.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>85</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B764A64F29653D3300BD8B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D1228D6502A004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D3328D7B8FB004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D5D28D7B9BE004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D6F28D7B9DB004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D8028D7B9FA004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D9128D7BA18004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7948D9E28D7BA4C004CDB79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

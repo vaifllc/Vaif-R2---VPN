@@ -22,7 +22,7 @@ class OSLogContent: LogContent {
                 let position = store.position(timeIntervalSinceLatestBoot: 1)
                 let entries = try store.getEntries(at: position)
                     .compactMap { $0 as? OSLogEntryLog }
-                    .filter { $0.subsystem == "PROTON-APP" }
+                    .filter { $0.subsystem == "vAIF-R2" }
                     .map { "\(dateFormatter.string(from: $0.date)) | \($0.level.stringValue.uppercased()) | \($0.composedMessage)" }
                 let result = entries.joined(separator: "\n")
                 callback(result)

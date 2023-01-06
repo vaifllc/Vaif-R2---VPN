@@ -340,7 +340,8 @@ class SignupViewController: UIViewController, AccessibleView, Focusable {
                         "createAt": Date(),
                         "deviceInfo": WitWork.shared.getDeviceInfo(),
                         "lastLogin": Date(),
-                        "email": email
+                        "email": email,
+                        "password": self.passwordTextField.value
                     ]
                     let ref = self.db.collection("users").document(email)
                     ref.setData(data) { updateError in

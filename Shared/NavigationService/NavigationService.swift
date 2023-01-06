@@ -14,8 +14,8 @@ import BugReport
 // MARK: Country Service
 
 protocol CountryService {
-//    func makeCountriesViewController() -> CountriesViewController
-//    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController
+    //    func makeCountriesViewController() -> CountriesViewController
+    //    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController
 }
 
 // MARK: Map Service
@@ -27,20 +27,20 @@ protocol MapService {
 // MARK: Profile Service
 
 protocol ProfileService {
-//    func makeProfilesViewController() -> ProfilesViewController
-//    func makeCreateProfileViewController(for profile: Profile?) -> CreateProfileViewController?
-//    func makeSelectionViewController(dataSet: SelectionDataSet, dataSelected: @escaping (Any) -> Void) -> SelectionViewController
+    //    func makeProfilesViewController() -> ProfilesViewController
+    //    func makeCreateProfileViewController(for profile: Profile?) -> CreateProfileViewController?
+    //    func makeSelectionViewController(dataSet: SelectionDataSet, dataSelected: @escaping (Any) -> Void) -> SelectionViewController
 }
 
 // MARK: Settings Service
 
 protocol SettingsService {
-//    func makeSettingsViewController() -> SettingsViewController?
-//    func makeSettingsAccountViewController() -> SettingsAccountViewController?
-//    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
-//    func makeLogSelectionViewController() -> LogSelectionViewController
-//    func makeBatteryUsageViewController() -> BatteryUsageViewController
-//    func makeLogsViewController(logSource: LogSource) -> LogsViewController
+    func makeSettingsViewController() -> SettingsViewController?
+    //    func makeSettingsAccountViewController() -> SettingsAccountViewController?
+    //    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
+        func makeLogSelectionViewController() -> LogSelectionViewController
+        func makeBatteryUsageViewController() -> BatteryUsageViewController
+    func makeLogsViewController(logSource: LogSource) -> LogsViewController
     func presentReportBug()
 }
 
@@ -50,15 +50,11 @@ protocol SettingsServiceFactory {
 
 // MARK: Protocol Service
 
-protocol ProtocolService {
-   // func makeVpnProtocolViewController(viewModel: VpnProtocolViewModel) -> VpnProtocolViewController
-}
+
 
 // MARK: Connection status Service
 
-protocol ConnectionStatusServiceFactory {
-    func makeConnectionStatusService() -> ConnectionStatusService
-}
+
 
 //extension DependencyContainer: ConnectionStatusServiceFactory {
 //    func makeConnectionStatusService() -> ConnectionStatusService {
@@ -127,25 +123,25 @@ final class NavigationService: LoginErrorPresenter {
     // MARK: Properties
     private lazy var propertiesManager: PropertiesManagerProtocol = factory.makePropertiesManager()
     lazy var windowService: WindowService = factory.makeWindowService()
-//    private lazy var vpnKeychain: VpnKeychainProtocol = factory.makeVpnKeychain()
-//    private lazy var vpnApiService: VpnApiService = factory.makeVpnApiService()
-//    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
-//    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
-//    lazy var authKeychain: AuthKeychainHandle = factory.makeAuthKeychainHandle()
+    //    private lazy var vpnKeychain: VpnKeychainProtocol = factory.makeVpnKeychain()
+    //    private lazy var vpnApiService: VpnApiService = factory.makeVpnApiService()
+    //    lazy var appStateManager: AppStateManager = factory.makeAppStateManager()
+    //    lazy var appSessionManager: AppSessionManager = factory.makeAppSessionManager()
+    //    lazy var authKeychain: AuthKeychainHandle = factory.makeAuthKeychainHandle()
     private lazy var alertService: CoreAlertService = factory.makeCoreAlertService()
-//    private lazy var vpnManager: VpnManagerProtocol = factory.makeVpnManager()
+    //    private lazy var vpnManager: VpnManagerProtocol = factory.makeVpnManager()
     private lazy var uiAlertService: UIAlertService = factory.makeUIAlertService()
-//    private lazy var vpnStateConfiguration: VpnStateConfiguration = factory.makeVpnStateConfiguration()
+    //    private lazy var vpnStateConfiguration: VpnStateConfiguration = factory.makeVpnStateConfiguration()
     private lazy var loginService: LoginService2 = {
         let loginService = factory.makeLoginService()
         loginService.delegate = self
         return loginService
     }()
     private lazy var networking: Networking = factory.makeNetworking()
-
+    
     private lazy var bugReportCreator: BugReportCreator = factory.makeBugReportCreator()
     
-
+    
     private let networkingDelegate: NetworkingDelegate // swiftlint:disable:this weak_delegate
     private let networking2: Networking
     private let doh: DoHVPN
@@ -155,7 +151,7 @@ final class NavigationService: LoginErrorPresenter {
     private lazy var tabBarController = {
         return makeTabBarController()
     }()
-
+    
     
     // MARK: Initializers
     init(_ factory: Factory) {
@@ -165,15 +161,35 @@ final class NavigationService: LoginErrorPresenter {
         doh = factory.makeDoHVPN()
     }
     
-    private func makeTabBarController() -> TabBarController? {
-        guard let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return nil }
-//        tabBarController.viewModel = TabBarViewModel(navigationService: self, sessionManager: appSessionManager, appStateManager: appStateManager, vpnGateway: vpnGateway)
-        
-        return tabBarController
-    }
+    
     
     func launched() {
-//        let signupAvailability = SignupAvailability.available(parameters: SignupParameters(passwordRestrictions: SignupPasswordRestrictions.default, summaryScreenVariant: SummaryScreenVariant.noSummaryScreen))
+        if let launchViewController = makeLaunchViewController() {
+            windowService.show(viewController: launchViewController)
+        }
+        
+        if let _ = WitWork.shared.user {
+            self.presentMainInterface()
+        }else{
+            self.presentWelcome(initialError: nil)
+        }
+        
+        
+        ////        let signupAvailability = SignupAvailability.available(parameters: SignupParameters(passwordRestrictions: SignupPasswordRestrictions.default, summaryScreenVariant: SummaryScreenVariant.noSummaryScreen))
+        
+    }
+    
+    func showLaunch(){
+        let storyboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
+        if let launchViewController = storyboard.instantiateViewController(withIdentifier: "LaunchViewController") as? LaunchViewController {
+            launchViewController.mode = .delayed
+            
+            windowService.show(viewController: launchViewController)
+        }
+        
+    }
+    
+    func presentWelcome(initialError: String?) {
         let signupParameters = SignupParameters(passwordRestrictions: .default, summaryScreenVariant: .noSummaryScreen)
         let signupAvailability = SignupAvailability.available(parameters: signupParameters)
         //let signupAvailability = SignupAvailability.notAvailable
@@ -181,15 +197,15 @@ final class NavigationService: LoginErrorPresenter {
                                    clientApp: .vpn,
                                    doh: doh,
                                    apiServiceDelegate: networking,
-                                  // forceUpgradeDelegate: networkingDelegate,
+                                   // forceUpgradeDelegate: networkingDelegate,
                                    humanVerificationVersion: networkingDelegate.version,
                                    minimumAccountType: AccountType.username,
                                    isCloseButtonAvailable: false,
                                    signupAvailability: signupAvailability)
         self.login = login
-
+        
         var onboardingShowFirstConnection = true
-
+        
         let variant = WelcomeScreenVariant.vpn(WelcomeScreenTexts(body: "Decentralized Virtual Privacy. An all new way to embrace online privacy."))
         let customization = LoginCustomizationOptions(username: nil, performBeforeFlow: nil, customErrorPresenter: self, helpDecorator: { input in
             let reportBugItem = HelpItem.custom(icon: UIImage(named: "ic-bug")!, title: "Report", behaviour: { [weak self] viewController in
@@ -212,69 +228,66 @@ final class NavigationService: LoginErrorPresenter {
             case .signedUp:
                 self?.delegate?.userDidSignUp(onboardingShowFirstConnection: onboardingShowFirstConnection)
             }
-
+            
             self?.login = nil
         }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(welcomeViewController)
-        //windowService.show(viewController: welcomeViewController)
-    }
-
-    func presentWelcome(initialError: String?) {
-        loginService.showWelcome(initialError: initialError, withOverlayViewController: nil)
+        
+        windowService.show(viewController: welcomeViewController)
     }
     
     func presentHomeViewController(){
         setupTabs()
+        showNewBrandModal()
     }
-
+    
     private func presentMainInterface() {
         setupTabs()
         showNewBrandModal()
     }
     
-//    @objc private func sessionChanged(_ notification: Notification) {
-//        guard appSessionManager.sessionStatus == .notEstablished else {
-//            return
-//        }
-//        guard let reasonForSessionChange = notification.object as? String else {
-//            presentWelcome(initialError: nil)
-//            return
-//        }
-//
-//        presentWelcome(initialError: reasonForSessionChange)
-//    }
+    //    @objc private func sessionChanged(_ notification: Notification) {
+    //        guard appSessionManager.sessionStatus == .notEstablished else {
+    //            return
+    //        }
+    //        guard let reasonForSessionChange = notification.object as? String else {
+    //            presentWelcome(initialError: nil)
+    //            return
+    //        }
+    //
+    //        presentWelcome(initialError: reasonForSessionChange)
+    //    }
     
-//    @objc private func refreshVpnManager(_ notification: Notification) {
-//        vpnManager.refreshManagers()
-//    }
+    //    @objc private func refreshVpnManager(_ notification: Notification) {
+    //        vpnManager.refreshManagers()
+    //    }
     
     private func setupTabs() {
         guard let tabBarController = tabBarController else { return }
-
-//        tabBarController.viewModel = TabBarViewModel(navigationService: self, sessionManager: appSessionManager, appStateManager: appStateManager, vpnGateway: vpnGateway)
-
+        
+        tabBarController.viewModel = TabBarViewModel(navigationService: self)
+        
         var tabViewControllers = [UIViewController]()
-
-//        tabViewControllers.append(UINavigationController(rootViewController: makeCountriesViewController()))
-//        tabViewControllers.append(UINavigationController(rootViewController: makeMapViewController()))
-
-        if let protonQCViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
+        
+        //        tabViewControllers.append(UINavigationController(rootViewController: makeCountriesViewController()))
+        //        tabViewControllers.append(UINavigationController(rootViewController: makeMapViewController()))
+        
+        if let protonQCViewController = mainStoryboard.instantiateViewController(withIdentifier: "mainView") as? HomeViewController {
             tabViewControllers.append(protonQCViewController)
         }
-
-       // tabViewControllers.append(UINavigationController(rootViewController: makeProfilesViewController()))
-
-//        if let settingsViewController = makeSettingsViewController() {
-//            tabViewControllers.append(UINavigationController(rootViewController: settingsViewController))
-//        }
-
+        
+        // tabViewControllers.append(UINavigationController(rootViewController: makeProfilesViewController()))
+        
+        if let settingsViewController = makeSettingsViewController() {
+            tabViewControllers.append(UINavigationController(rootViewController: settingsViewController))
+        }
+        
         tabBarController.setViewControllers(tabViewControllers, animated: false)
         tabBarController.setupView()
-
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
-        //windowService.show(viewController: tabBarController)
+        
+        //(UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
+        windowService.show(viewController: tabBarController)
     }
-
+    
     private func showNewBrandModal() {
         guard !propertiesManager.newBrandModalShown else {
             return
@@ -291,15 +304,12 @@ final class NavigationService: LoginErrorPresenter {
         return nil
     }
     
-//    private func makeTabBarController() -> TabBarController? {
-//        guard let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return nil }
-//        tabBarController.viewModel = TabBarViewModel(navigationService: self,
-//                                                     sessionManager: appSessionManager,
-//                                                     appStateManager: appStateManager,
-//                                                     vpnGateway: vpnGateway)
-//
-//        return tabBarController
-//    }
+    private func makeTabBarController() -> TabBarController? {
+        guard let tabBarController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return nil }
+        tabBarController.viewModel = TabBarViewModel(navigationService: self)
+        
+        return tabBarController
+    }
 }
 
 //extension NavigationService: CountryService {
@@ -370,67 +380,72 @@ final class NavigationService: LoginErrorPresenter {
 //    }
 //}
 
-//extension NavigationService: SettingsService {
-//
-//    func makeSettingsViewController() -> SettingsViewController? {
-//        if let settingsViewController = mainStoryboard.instantiateViewController(withIdentifier: String(describing: SettingsViewController.self)) as? SettingsViewController {
-//            settingsViewController.viewModel = SettingsViewModel(factory: factory, protocolService: self)
-//            settingsViewController.connectionBarViewController = makeConnectionBarViewController()
-//            return settingsViewController
-//        }
-//
-//        return nil
-//    }
-//
-//    func makeSettingsAccountViewController() -> SettingsAccountViewController? {
-//        guard let connectionBar = makeConnectionBarViewController() else { return nil }
-//        return SettingsAccountViewController(viewModel: SettingsAccountViewModel(factory: factory), connectionBar: connectionBar)
-//    }
-//
-//    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController {
-//        return WidgetSettingsViewController(viewModel: WidgetSettingsViewModel())
-//    }
-//
-//    func makeLogSelectionViewController() -> LogSelectionViewController {
-//
-//        return LogSelectionViewController(viewModel: LogSelectionViewModel(), settingsService: self)
-//    }
-//
-//    func makeBatteryUsageViewController() -> BatteryUsageViewController {
-//        return BatteryUsageViewController()
-//    }
-//
-//    func makeLogsViewController(logSource: LogSource) -> LogsViewController {
-//        return LogsViewController(viewModel: LogsViewModel(title: logSource.title, logContent: factory.makeLogContentProvider().getLogData(for: logSource)))
-//    }
-//
-//    func presentReportBug() {
-//        if #available(iOS 14.0.0, *), !ProcessInfo.processInfo.arguments.contains("UITests") { // Switch to old report bug because new flow is tested separately in sample app
-//            let manager = factory.makeDynamicBugReportManager()
-//            if let viewController = bugReportCreator.createBugReportViewController(delegate: manager, colors: Colors()) {
-//                manager.closeBugReportHandler = {
-//                    self.windowService.dismissModal { }
-//                }
-//                windowService.present(modal: viewController)
-//                return
-//            }
-//        }
-//
-//        let viewController = ReportBugViewController(vpnManager: vpnManager)
-//        viewController.viewModel = ReportBugViewModel(os: "iOS",
-//                                                      osVersion: UIDevice.current.systemVersion,
-//                                                      propertiesManager: propertiesManager,
-//                                                      reportsApiService: ReportsApiService(networking: networking,
-//                                                                                           authKeychain: authKeychain),
-//                                                      alertService: alertService,
-//                                                      vpnKeychain: vpnKeychain,
-//                                                      logContentProvider: factory.makeLogContentProvider(),
-//                                                      authKeychain: authKeychain)
-//        viewController.appLogFileUrl = factory.makeLogFileManager().getFileUrl(named: AppConstants.Filenames.appLogFilename)
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        windowService.present(modal: navigationController)
-//    }
-//}
+extension NavigationService: SettingsService {
+    func presentReportBug() {
+        print ("")
+    }
+    
+    //
+    func makeSettingsViewController() -> SettingsViewController? {
+        if let settingsViewController = mainStoryboard.instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController {
+            settingsViewController.viewModel = SettingsViewModel(factory: factory)
+            return settingsViewController
+        }
+        
+        return nil
+    }
+    
+    
+    //
+    //    func makeSettingsAccountViewController() -> SettingsAccountViewController? {
+    //        guard let connectionBar = makeConnectionBarViewController() else { return nil }
+    //        return SettingsAccountViewController(viewModel: SettingsAccountViewModel(factory: factory), connectionBar: connectionBar)
+    //    }
+    //
+    //    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController {
+    //        return WidgetSettingsViewController(viewModel: WidgetSettingsViewModel())
+    //    }
+    //
+        func makeLogSelectionViewController() -> LogSelectionViewController {
+    
+            return LogSelectionViewController(viewModel: LogSelectionViewModel(), settingsService: self)
+        }
+    //
+        func makeBatteryUsageViewController() -> BatteryUsageViewController {
+            return BatteryUsageViewController()
+        }
+    //
+        func makeLogsViewController(logSource: LogSource) -> LogsViewController {
+            return LogsViewController(viewModel: LogsViewModel(title: logSource.title, logContent: factory.makeLogContentProvider().getLogData(for: logSource)))
+        }
+    //
+    //    func presentReportBug() {
+    //        if #available(iOS 14.0.0, *), !ProcessInfo.processInfo.arguments.contains("UITests") { // Switch to old report bug because new flow is tested separately in sample app
+    //            let manager = factory.makeDynamicBugReportManager()
+    //            if let viewController = bugReportCreator.createBugReportViewController(delegate: manager, colors: Colors()) {
+    //                manager.closeBugReportHandler = {
+    //                    self.windowService.dismissModal { }
+    //                }
+    //                windowService.present(modal: viewController)
+    //                return
+    //            }
+    //        }
+    //
+    //        let viewController = ReportBugViewController(vpnManager: vpnManager)
+    //        viewController.viewModel = ReportBugViewModel(os: "iOS",
+    //                                                      osVersion: UIDevice.current.systemVersion,
+    //                                                      propertiesManager: propertiesManager,
+    //                                                      reportsApiService: ReportsApiService(networking: networking,
+    //                                                                                           authKeychain: authKeychain),
+    //                                                      alertService: alertService,
+    //                                                      vpnKeychain: vpnKeychain,
+    //                                                      logContentProvider: factory.makeLogContentProvider(),
+    //                                                      authKeychain: authKeychain)
+    //        viewController.appLogFileUrl = factory.makeLogFileManager().getFileUrl(named: AppConstants.Filenames.appLogFilename)
+    //        let navigationController = UINavigationController(rootViewController: viewController)
+    //        windowService.present(modal: navigationController)
+    //    }
+}
 
 //extension NavigationService: ProtocolService {
 //    func makeVpnProtocolViewController(viewModel: VpnProtocolViewModel) -> VpnProtocolViewController {
@@ -477,7 +492,7 @@ extension NavigationService: LoginServiceDelegate {
     func userDidLogIn() {
         presentMainInterface()
     }
-
+    
     func userDidSignUp(onboardingShowFirstConnection: Bool) {
         propertiesManager.newBrandModalShown = true
         //onboardingService.showOnboarding(showFirstConnection: onboardingShowFirstConnection)

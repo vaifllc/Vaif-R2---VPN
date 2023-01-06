@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="iIO-tW-NEM" customClass="AccountDetailsTableViewCell" customModule="Vaif_R2___VPN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="iIO-tW-NEM" id="Pyh-0f-XcI">
+                <rect key="frame" x="0.0" y="0.0" width="383.66666666666669" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" preservesSuperviewLayoutMargins="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NnS-XN-gjc">
+                        <rect key="frame" x="20" y="0.0" width="347.66666666666669" height="70"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44g-Vm-6SC">
+                                <rect key="frame" x="0.0" y="21" width="28" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDL-d6-Ouw">
+                                        <rect key="frame" x="4" y="4" width="20" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="White"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="MobileBrandNorm"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="3dE-8o-vhI"/>
+                                    <constraint firstItem="WDL-d6-Ouw" firstAttribute="centerX" secondItem="44g-Vm-6SC" secondAttribute="centerX" id="8Lw-4G-VPN"/>
+                                    <constraint firstAttribute="width" constant="28" id="Wrr-GC-8CG"/>
+                                    <constraint firstItem="WDL-d6-Ouw" firstAttribute="centerY" secondItem="44g-Vm-6SC" secondAttribute="centerY" id="oTj-Yl-ekl"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Gch-Rn-XD5">
+                                <rect key="frame" x="44" y="12" width="303.66666666666669" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfL-7y-4tv">
+                                        <rect key="frame" x="0.0" y="0.0" width="303.66666666666669" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="TextNorm"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpN-Tw-35B">
+                                        <rect key="frame" x="0.0" y="23" width="303.66666666666669" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="TextWeak"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Gch-Rn-XD5" firstAttribute="height" secondItem="NnS-XN-gjc" secondAttribute="height" constant="-24" id="NEQ-SC-rNC"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="NnS-XN-gjc" secondAttribute="bottom" id="FQ6-ap-N8s"/>
+                    <constraint firstAttribute="top" secondItem="NnS-XN-gjc" secondAttribute="top" id="Ixm-tp-Hgn"/>
+                    <constraint firstItem="NnS-XN-gjc" firstAttribute="trailing" secondItem="Pyh-0f-XcI" secondAttribute="trailing" constant="-16" id="NM0-5A-XVe"/>
+                    <constraint firstItem="NnS-XN-gjc" firstAttribute="leading" secondItem="Pyh-0f-XcI" secondAttribute="leadingMargin" id="zeb-mn-3Z0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="initialsRect" destination="44g-Vm-6SC" id="I2n-6y-mN9"/>
+                <outlet property="initialsText" destination="WDL-d6-Ouw" id="hut-0d-HST"/>
+                <outlet property="plan" destination="hpN-Tw-35B" id="mdO-U2-axc"/>
+                <outlet property="username" destination="rfL-7y-4tv" id="9Tm-7b-qpk"/>
+            </connections>
+            <point key="canvasLocation" x="-142.02898550724638" y="75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="MobileBrandNorm">
+            <color red="0.66699999570846558" green="0.67799997329711914" blue="0.92500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextNorm">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextWeak">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

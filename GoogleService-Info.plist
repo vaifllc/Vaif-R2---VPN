@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>165763511996-dgdut7naq9i7ujk8k9hkjncdjedd75eg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.165763511996-dgdut7naq9i7ujk8k9hkjncdjedd75eg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCRD3A4-2lxqn09ptyTqRUA_zYQzsDkeeA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>165763511996</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vaif.Vaif-R2---VPN</string>
+	<key>PROJECT_ID</key>
+	<string>vaif-r2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vaif-r2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:165763511996:ios:4b416f1405a573d31682b9</string>
+	<key>DATABASE_URL</key>
+	<string>https://vaif-r2-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

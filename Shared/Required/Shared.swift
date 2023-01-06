@@ -246,6 +246,8 @@ extension UIDevice {
         }
         return identifier
     }
+    
+
 }
 
 enum AppConfiguration {

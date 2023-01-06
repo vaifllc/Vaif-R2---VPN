@@ -19,7 +19,7 @@ class StorageManager {
         let container = NSPersistentContainer(name: "Model")
         container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
-                log.info("Unresolved error \(error), \(error.userInfo)")
+                log.error( "Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
@@ -34,7 +34,7 @@ class StorageManager {
                 try context.save()
             } catch {
                 let nserror = error as NSError
-                log.info("Unresolved error \(nserror), \(nserror.userInfo)")
+                log.error("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
@@ -42,6 +42,7 @@ class StorageManager {
     static func clearSession() {
         remove(entityName: "Network")
         remove(entityName: "Server")
+        remove(entityName: "CustomPort")
     }
     
     static func remove(entityName: String) {
@@ -91,7 +92,7 @@ extension StorageManager {
                 return result
             }
         } catch {
-            log.info("Coult not load collection from StorageManager")
+            log.error("Coult not load collection from StorageManager")
         }
         
         return nil
@@ -136,6 +137,29 @@ extension StorageManager {
                 saveContext()
             }
         }
+    }
+    
+    static func saveCustomPort(vpnProtocol: String = "", type: String = "", port: Int = 0) {
+        let customPort = CustomPort(context: context)
+        customPort.vpnProtocol = vpnProtocol
+        customPort.type = type
+        customPort.port = Int32(port)
+        saveContext()
+    }
+    
+    static func fetchCustomPorts(vpnProtocol: String = "") -> [CustomPort]? {
+        let request: NSFetchRequest<CustomPort> = CustomPort.fetchRequest(vpnProtocol: vpnProtocol)
+        
+        do {
+            let result = try context.fetch(request)
+            if !result.isEmpty {
+                return result
+            }
+        } catch {
+            log.error( "Coult not load collection from StorageManager")
+        }
+        
+        return nil
     }
     
 }
@@ -284,3 +308,65 @@ extension StorageManager {
 
 // MARK: - Server -
 
+extension StorageManager {
+    
+    static func saveServer(gateway: String, isFastestEnabled: Bool) {
+        if let server = fetchServer(gateway: gateway) {
+            server.isFastestEnabled = isFastestEnabled
+        } else {
+            let newServer = R1Server(context: context)
+            newServer.gateway = gateway.replacingOccurrences(of: ".wg.", with: ".gw.")
+            newServer.isFastestEnabled = isFastestEnabled
+        }
+        
+        saveContext()
+    }
+    
+    static func fetchServers(gateway: String = "", isFastestEnabled: Bool = false) -> [R1Server]? {
+        let request: NSFetchRequest<R1Server> = R1Server.fetchRequest(gateway: gateway, isFastestEnabled: isFastestEnabled)
+        
+        do {
+            let result = try context.fetch(request)
+            if !result.isEmpty {
+                return result
+            }
+        } catch {
+            log.error( "Coult not load collection from StorageManager")
+        }
+        
+        return nil
+    }
+    
+    static func fetchServer(gateway: String) -> R1Server? {
+        if let servers = fetchServers(gateway: gateway) {
+            if let server = servers.first {
+                return server
+            }
+        }
+        
+        return nil
+    }
+    
+    static func isFastestEnabled(server vpnServer: ServerModel) -> Bool {
+        if let server = fetchServer(gateway: vpnServer.gateway) {
+            return server.isFastestEnabled
+        }
+
+        return false
+    }
+    
+    static func canUpdateServer(isOn: Bool) -> Bool {
+        guard !isOn else { return true }
+        
+        if UserDefaults.standard.bool(forKey: UserDefaults.Key.fastestServerConfigured) {
+            if let servers = fetchServers(isFastestEnabled: true) {
+                if servers.count == 1 {
+                    return false
+                }
+            }
+        }
+        
+        return true
+    }
+    
+}
