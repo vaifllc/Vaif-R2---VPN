@@ -94,13 +94,13 @@ class ConnectToServerPopupView: UIView {
     }()
     
     // MARK: - Properties -
-    
+    var vpnServer2: R1ServerModel!
     var vpnServer: ServerModel! {
         didSet {
             let serverViewModel = VPNServerViewModel(server: vpnServer)
             flagImage.image = serverViewModel.imageForCountryCode
             locationLabel.icon(text: serverViewModel.formattedServerNameForMainScreen, imageName: serverViewModel.imageNameForPingTime)
-            locationLabel.accessibilityLabel = serverViewModel.server.city
+            locationLabel.accessibilityLabel = serverViewModel.server.state
             
             if !Application.shared.connectionManager.status.isDisconnected() && Application.shared.settings.selectedServer == vpnServer {
                 actionButton.setTitle("DISCONNECT", for: .normal)

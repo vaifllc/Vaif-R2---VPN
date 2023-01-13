@@ -24,6 +24,9 @@ import Logging
 import FirebaseCore
 import SwiftyStoreKit
 import GSMessages
+import Paywall
+import GoogleMobileAds
+
 
 
 let fileLogger: DDFileLogger = DDFileLogger()
@@ -45,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VPNManager.shared().verify(AppConstants.purchaseCode)
         VPNManager.shared().loadProviderManager {}
         self.setupR1IAP()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         setupLocalTestRomoval()
         setupLocalLogger()
         setupSecurityShit()
@@ -58,7 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupWidgetToggleVPN()
         setupLogsForApp()
         setupFirebaseLogger()
-        //setupAppearance()
+        //PaywallService.initPaywall()
+        setupAppearance()
         window?.tintColor = .secondaryBackgroundColor()
         //setupCoreIntegration()
         Storage.setSpecificDefaults(defaults: UserDefaults(suiteName: AppConstants.AppGroups.main)!)

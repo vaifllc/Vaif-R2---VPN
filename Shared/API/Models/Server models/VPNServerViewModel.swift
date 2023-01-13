@@ -15,6 +15,11 @@ struct VPNServerViewModel {
     var server: ServerModel
     var selectedHost: Host?
     
+    var textInPlaceOfConnectIcon: String? {
+        return "UPGRADE" 
+    }
+    
+    
     var imageNameForPingTimeForMainScreen: String {
         if server.randomServerLabelShouldBePresented {
             return ""
@@ -30,7 +35,7 @@ struct VPNServerViewModel {
         
         if let selectedHost = selectedHost {
             let hostNameComponents = selectedHost.hostName.components(separatedBy: ".")
-            return "\(server.city) (\(hostNameComponents[0])), \(server.countryCode.uppercased())"
+            return "\(server.state) (\(hostNameComponents[0])), \(server.countryCode.uppercased())"
         }
         
         return formattedServerName
@@ -57,7 +62,7 @@ struct VPNServerViewModel {
         
         if let selectedHost = selectedHost {
             let hostNameComponents = selectedHost.hostName.components(separatedBy: ".")
-            return "\(server.city) (\(hostNameComponents[0])), \(server.countryCode.uppercased())"
+            return "\(server.state) (\(hostNameComponents[0])), \(server.countryCode.uppercased())"
         }
         
         return formattedServerName
@@ -87,11 +92,11 @@ struct VPNServerViewModel {
     }
     
     var formattedServerName: String {
-        if server.isHost {
-            return server.gateway
-        }
+//        if server.isHost {
+//            return server.gateway
+//        }
         
-        return "\(server.city), \(server.countryCode.uppercased())"
+        return "\(server.state), \(server.countryCode.uppercased())"
     }
     
     var imageForCountryCode: UIImage? {
@@ -125,10 +130,10 @@ struct VPNServerViewModel {
     
     func formattedServerName(sort: ServersSort) -> String {
         guard sort != .country else {
-            return "\(server.countryCode.uppercased()), \(server.city)"
+            return "\(server.countryCode.uppercased()), \(server.state)"
         }
         
-        return "\(server.city), \(server.countryCode.uppercased())"
+        return "\(server.state), \(server.countryCode.uppercased())"
     }
     
 }

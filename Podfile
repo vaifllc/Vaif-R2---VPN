@@ -1,11 +1,13 @@
+# Uncomment the next line to define a global platform for your project
 inhibit_all_warnings!
 use_frameworks!
 
 platform :ios, '15.0'
 
-target 'Vaif R2 - VPN' do
-  # Pods for Vaif R2 - VPN V1
-  plugin 'cocoapods-acknowledgements', :settings_bundle => true
+target 'VaifR2' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+plugin 'cocoapods-acknowledgements', :settings_bundle => true
   pod 'AwesomeSpotlightView'
   pod 'RQShineLabel'
   pod 'NicoProgress'
@@ -46,42 +48,83 @@ target 'Vaif R2 - VPN' do
   pod 'SnapKit', '~> 5.0.1'
   pod 'TunnelKit', '~> 3.5.0'
   pod 'OpenSSL-Apple', :path => '/Users/vaif/openssl-apple'
+  
 
-end
 
+  # Pods for VaifR2
 
-target :'Vaif R2 - VPN Tunnel' do
-  pod 'PromiseKit'
-  pod 'KeychainAccess'
-  pod 'SwiftyStoreKit'
-  pod 'ReachabilitySwift'
-end
-
-target :'Vaif R2 - VPN Widget' do
-  pod 'PromiseKit'
-  pod 'SwiftyStoreKit'
-  pod 'KeychainAccess'
-  pod 'CocoaLumberjack/Swift'
-  pod 'ReachabilitySwift'
-end
-
-target :'Vaif R2 - VPN Firewall Widget' do
-  pod 'PromiseKit'
-  pod 'SwiftyStoreKit'
-  pod 'KeychainAccess'
-  pod 'CocoaLumberjack/Swift'
-  pod 'ReachabilitySwift'
-end
-
-target :'Vaif R2 - VPNTests' do
+  target 'VaifR2Tests' do
+    inherit! :search_paths
+    # Pods for testing
   # see https://github.com/pointfreeco/swift-snapshot-testing/pull/308
   #pod 'SnapshotTesting', :git => 'https://github.com/pointfreeco/swift-snapshot-testing.git', :commit => '8e9f685'
   pod 'SnapshotTesting'
+  end
+
+end
+
+target 'VaifR2 Blocker' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VaifR2 Blocker
+
+end
+
+target 'VaifR2 Firewall Widget' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'PromiseKit'
+  pod 'SwiftyStoreKit'
+  pod 'KeychainAccess'
+  pod 'CocoaLumberjack/Swift'
+  pod 'ReachabilitySwift'
+
+  # Pods for VaifR2 Firewall Widget
+
+end
+
+target 'VaifR2 FirewallWidget ExtensionExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VaifR2 FirewallWidget ExtensionExtension
+
+end
+
+target 'VaifR2 Tunnel' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VaifR2 Tunnel
+  pod 'PromiseKit'
+  pod 'KeychainAccess'
+  pod 'SwiftyStoreKit'
+  pod 'ReachabilitySwift'
+
+end
+
+target 'VaifR2 Widget' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VaifR2 Widget
+  pod 'PromiseKit'
+  pod 'SwiftyStoreKit'
+  pod 'KeychainAccess'
+  pod 'CocoaLumberjack/Swift'
+  pod 'ReachabilitySwift'
+
 end
 
 target 'wireguard-tunnel-provider' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for wireguard-tunnel-provider
     pod 'KeychainAccess'
     pod 'Logging'
+
 end
 
 post_install do |installer|
@@ -89,7 +132,7 @@ post_install do |installer|
   # Create plist with info about used frameworks
   plugin 'cocoapods-acknowledgements'
   require 'fileutils'
-  FileUtils.cp_r('Pods/Target Support Files/Pods-Vaif R2 - VPN/Pods-Vaif R2 - VPN-acknowledgements.markdown', 'ACKNOWLEDGEMENTS.md')
+  FileUtils.cp_r('Pods/Target Support Files/Pods-VaifR2/Pods-VaifR2-acknowledgements.markdown', 'ACKNOWLEDGEMENTS.md')
 
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

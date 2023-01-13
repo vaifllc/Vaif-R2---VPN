@@ -215,7 +215,7 @@ class VPNServerList {
             allHosts.append(server)
             
             for host in server.hosts {
-                allHosts.append(ServerModel(gateway: host.hostName, countryCode: server.countryCode, country: "", city: server.city, load: host.load))
+                allHosts.append(ServerModel(gateway: host.hostName, countryCode: server.countryCode, country: "", city: server.city, load: host.load, tier: 0))
             }
         }
         
@@ -276,7 +276,7 @@ class VPNServerList {
             return server
         }
         
-        return ServerModel(gateway: "Not loaded", countryCode: "US", country: "", city: "")
+        return ServerModel(gateway: "Not loaded", countryCode: "US", country: "", city: "", tier: 0)
     }
     
     func getRandomServer(isExitServer: Bool) -> ServerModel {
@@ -291,7 +291,7 @@ class VPNServerList {
             return randomServer
         }
         
-        return ServerModel(gateway: "Not loaded", countryCode: "US", country: "", city: "")
+        return ServerModel(gateway: "Not loaded", countryCode: "US", country: "", city: "", tier: 0)
     }
     
     func saveAllServers(exceptionGateway: String) {
@@ -375,7 +375,8 @@ class VPNServerList {
                 latitude: server["latitude"] as? Double ?? 0,
                 longitude: server["longitude"] as? Double ?? 0,
                 ipAddresses: serverIpList,
-                hosts: serverHostsList
+                hosts: serverHostsList,
+                tier: 0
             )
             
             servers.append(newServer)

@@ -18,6 +18,18 @@ public extension String {
 }
 
 public extension Array {
+    func filter2(_ isIncluded: (Element) throws -> Bool) rethrows -> ([Element], [Element]) {
+        var yes = [Element]()
+        var no = [Element]()
+        for elem in self {
+            if try isIncluded(elem) {
+                yes.append(elem)
+            } else {
+                no.append(elem)
+            }
+        }
+        return (yes, no)
+    }
     static var empty: Array { [] }
 }
 

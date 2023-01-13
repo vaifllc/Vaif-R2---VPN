@@ -52,8 +52,8 @@ final class SettingsViewModel {
         var sections: [TableViewSection] = []
         
         sections.append(accountSection)
-        sections.append(securitySection)
-        sections.append(advancedSection)
+       // sections.append(securitySection)
+        //sections.append(advancedSection)
         
         if let connectionSection = connectionSection {
             sections.append(connectionSection)

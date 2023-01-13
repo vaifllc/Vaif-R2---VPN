@@ -175,7 +175,7 @@ class ControlPanelViewController: UITableViewController {
     // MARK: - Private methods -
     
     private func initView() {
-        tableView.backgroundColor = .backgroundColor()
+        tableView.backgroundColor = .secondaryBackgroundColor()
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
         controlPanelView.updateServerNames()
         controlPanelView.updateServerLabels(viewModel: vpnStatusViewModel)

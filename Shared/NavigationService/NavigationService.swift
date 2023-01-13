@@ -14,7 +14,7 @@ import BugReport
 // MARK: Country Service
 
 protocol CountryService {
-    //    func makeCountriesViewController() -> CountriesViewController
+    func makeCountriesViewController() -> CountriesViewController
     //    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController
 }
 
@@ -38,8 +38,8 @@ protocol SettingsService {
     func makeSettingsViewController() -> SettingsViewController?
     //    func makeSettingsAccountViewController() -> SettingsAccountViewController?
     //    func makeExtensionsSettingsViewController() -> WidgetSettingsViewController
-        func makeLogSelectionViewController() -> LogSelectionViewController
-        func makeBatteryUsageViewController() -> BatteryUsageViewController
+    func makeLogSelectionViewController() -> LogSelectionViewController
+    func makeBatteryUsageViewController() -> BatteryUsageViewController
     func makeLogsViewController(logSource: LogSource) -> LogsViewController
     func presentReportBug()
 }
@@ -62,9 +62,9 @@ protocol SettingsServiceFactory {
 //    }
 //}
 
-protocol ConnectionStatusService {
-    func presentStatusViewController()
-}
+//protocol ConnectionStatusService {
+//    func presentStatusViewController()
+//}
 
 typealias AlertService = CoreAlertService
 
@@ -264,27 +264,29 @@ final class NavigationService: LoginErrorPresenter {
     private func setupTabs() {
         guard let tabBarController = tabBarController else { return }
         
-        tabBarController.viewModel = TabBarViewModel(navigationService: self)
+//        tabBarController.viewModel = TabBarViewModel(navigationService: self, sessionManager: appSessionManager, appStateManager: appStateManager, vpnGateway: vpnGateway)
         
         var tabViewControllers = [UIViewController]()
-        
-        //        tabViewControllers.append(UINavigationController(rootViewController: makeCountriesViewController()))
-        //        tabViewControllers.append(UINavigationController(rootViewController: makeMapViewController()))
-        
         if let protonQCViewController = mainStoryboard.instantiateViewController(withIdentifier: "mainView") as? HomeViewController {
             tabViewControllers.append(protonQCViewController)
         }
         
-        // tabViewControllers.append(UINavigationController(rootViewController: makeProfilesViewController()))
+        tabViewControllers.append(UINavigationController(rootViewController: makeCountriesViewController()))
+        //tabViewControllers.append(UINavigationController(rootViewController: makeMapViewController()))
+        
+//        if let protonQCViewController = mainStoryboard.instantiateViewController(withIdentifier: "mainView") as? HomeViewController {
+//            tabViewControllers.append(protonQCViewController)
+//        }
+        
+        //tabViewControllers.append(UINavigationController(rootViewController: makeProfilesViewController()))
         
         if let settingsViewController = makeSettingsViewController() {
             tabViewControllers.append(UINavigationController(rootViewController: settingsViewController))
         }
         
-        tabBarController.setViewControllers(tabViewControllers, animated: false)
+        tabBarController.setViewControllers(tabViewControllers, animated: true)
         tabBarController.setupView()
         
-        //(UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
         windowService.show(viewController: tabBarController)
     }
     
@@ -312,22 +314,23 @@ final class NavigationService: LoginErrorPresenter {
     }
 }
 
-//extension NavigationService: CountryService {
-//    func makeCountriesViewController() -> CountriesViewController {
-//        let countriesViewController = countriesStoryboard.instantiateViewController(withIdentifier: String(describing: CountriesViewController.self)) as! CountriesViewController
-//        countriesViewController.viewModel = CountriesViewModel(factory: factory, vpnGateway: vpnGateway, countryService: self)
-//        countriesViewController.connectionBarViewController = makeConnectionBarViewController()
-//
-//        return countriesViewController
-//    }
-//
-//    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController {
-//        let countryViewController = countriesStoryboard.instantiateViewController(withIdentifier: String(describing: CountryViewController.self)) as! CountryViewController
-//        countryViewController.viewModel = country
-//        countryViewController.connectionBarViewController = makeConnectionBarViewController()
-//        return countryViewController
-//    }
-//}
+extension NavigationService: CountryService {
+    func makeCountriesViewController() -> CountriesViewController {
+        let countriesViewController = countriesStoryboard.instantiateViewController(withIdentifier: String(describing: CountriesViewController.self)) as! CountriesViewController
+        countriesViewController.viewModel = CountriesViewModel(factory: factory,
+                                                               /*vpnGateway: vpnGateway,*/ countryService: self)
+        //countriesViewController.connectionBarViewController = makeConnectionBarViewController()
+        
+        return countriesViewController
+    }
+    
+    //    func makeCountryViewController(country: CountryItemViewModel) -> CountryViewController {
+    //        let countryViewController = countriesStoryboard.instantiateViewController(withIdentifier: String(describing: CountryViewController.self)) as! CountryViewController
+    //        countryViewController.viewModel = country
+    //        countryViewController.connectionBarViewController = makeConnectionBarViewController()
+    //        return countryViewController
+    //    }
+}
 
 //extension NavigationService: MapService {
 //    func makeMapViewController() -> MapViewController {
@@ -406,18 +409,18 @@ extension NavigationService: SettingsService {
     //        return WidgetSettingsViewController(viewModel: WidgetSettingsViewModel())
     //    }
     //
-        func makeLogSelectionViewController() -> LogSelectionViewController {
-    
-            return LogSelectionViewController(viewModel: LogSelectionViewModel(), settingsService: self)
-        }
+    func makeLogSelectionViewController() -> LogSelectionViewController {
+        
+        return LogSelectionViewController(viewModel: LogSelectionViewModel(), settingsService: self)
+    }
     //
-        func makeBatteryUsageViewController() -> BatteryUsageViewController {
-            return BatteryUsageViewController()
-        }
+    func makeBatteryUsageViewController() -> BatteryUsageViewController {
+        return BatteryUsageViewController()
+    }
     //
-        func makeLogsViewController(logSource: LogSource) -> LogsViewController {
-            return LogsViewController(viewModel: LogsViewModel(title: logSource.title, logContent: factory.makeLogContentProvider().getLogData(for: logSource)))
-        }
+    func makeLogsViewController(logSource: LogSource) -> LogsViewController {
+        return LogsViewController(viewModel: LogsViewModel(title: logSource.title, logContent: factory.makeLogContentProvider().getLogData(for: logSource)))
+    }
     //
     //    func presentReportBug() {
     //        if #available(iOS 14.0.0, *), !ProcessInfo.processInfo.arguments.contains("UITests") { // Switch to old report bug because new flow is tested separately in sample app

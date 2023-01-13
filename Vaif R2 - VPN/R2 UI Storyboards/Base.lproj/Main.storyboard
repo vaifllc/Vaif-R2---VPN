@@ -208,16 +208,16 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-Nj-XZ9">
                                                             <rect key="frame" x="0.0" y="0.0" width="213.33333333333334" height="56.333333333333336"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your status is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJk-Ki-Qwe">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your status is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJk-Ki-Qwe">
                                                                     <rect key="frame" x="0.0" y="0.0" width="213.33333333333334" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                    <color key="textColor" name="ivpnBackgroundSecondary"/>
+                                                                    <color key="textColor" name="MobileTextWeak"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="GM1-Wl-VAj">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="disconnected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="GM1-Wl-VAj">
                                                                     <rect key="frame" x="0.0" y="18.000000000000004" width="213.33333333333334" height="38.333333333333343"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                                                    <color key="textColor" name="ivpnBackgroundPrimary"/>
+                                                                    <color key="textColor" name="MobileTextNorm"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -238,7 +238,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="otC-Cc-Ypk" secondAttribute="trailing" constant="30" id="fev-gY-ORt"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
+                                        <color key="backgroundColor" name="MobileFloatyBackground"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="85" id="krd-NI-bVv">
                                         <rect key="frame" x="0.0" y="150" width="390" height="85"/>
@@ -253,7 +253,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-mp-yEP">
                                                             <rect key="frame" x="0.0" y="0.0" width="299.66666666666669" height="15.666666666666666"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" name="MobileIconWeak"/>
+                                                            <color key="textColor" name="MobileTextWeak"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-tC-hBr">
@@ -269,7 +269,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Prague, NL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-kh-Syq">
                                                                     <rect key="frame" x="28.000000000000007" y="0.0" width="92.666666666666686" height="20"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                                    <color key="textColor" name="ivpnBackgroundSecondary"/>
+                                                                    <color key="textColor" name="MobileTextNorm"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPv6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rr6-Y2-JF5">
@@ -333,7 +333,7 @@
                                                 <constraint firstItem="nUO-7d-z5C" firstAttribute="leading" secondItem="jlO-D7-lQT" secondAttribute="leading" constant="30" id="cXA-AS-cvI"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
+                                        <color key="backgroundColor" name="MobileFloatyBackground"/>
                                         <accessibility key="accessibilityConfiguration" label="Select server"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="85" id="IQ4-cU-9m6" customClass="NetworkViewTableCell" customModule="VaifR2" customModuleProvider="target">
@@ -352,7 +352,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi network" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5r-5m-YFg">
                                                                     <rect key="frame" x="0.0" y="0.0" width="79" height="14.333333333333334"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextWeak"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvz-LN-yyz">
@@ -371,7 +371,7 @@
                                                                 <constraint firstAttribute="height" constant="20" id="gdX-J0-q19"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="textColor" name="MobileTextNorm"/>
                                                             <nil key="highlightedColor"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -389,7 +389,7 @@
                                                 <constraint firstItem="wef-ag-Nqh" firstAttribute="leading" secondItem="W3g-jK-nCR" secondAttribute="leading" constant="30" id="qcT-RE-T4k"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
+                                        <color key="backgroundColor" name="MobileFloatyBackground"/>
                                         <accessibility key="accessibilityConfiguration" label="Select network trust"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="Qvz-LN-yyz" id="tPM-S6-ff8"/>
@@ -412,7 +412,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protocol, Port" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlF-7y-MkN">
                                                                     <rect key="frame" x="0.0" y="0.0" width="314.66666666666669" height="14.333333333333334"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextWeak"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVH-X7-aaU">
@@ -432,7 +432,7 @@
                                                 <constraint firstItem="b9V-ib-JOr" firstAttribute="centerY" secondItem="lQc-FW-LVP" secondAttribute="centerY" id="w53-eb-KVo"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
+                                        <color key="backgroundColor" name="MobileFloatyBackground"/>
                                         <accessibility key="accessibilityConfiguration" label="Select protocol"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="260" id="vBr-x7-m9B">
@@ -455,7 +455,7 @@
                                                                         <constraint firstAttribute="height" constant="20" id="oGY-3S-fwR"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextWeak"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-h8-92P">
@@ -481,7 +481,7 @@
                                                                         <constraint firstAttribute="width" constant="125" id="pGG-Dp-v9X"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextNorm"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -525,7 +525,7 @@
                                                                         <constraint firstAttribute="width" constant="60" id="aIL-6S-brj"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextWeak"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34L-GY-XCy">
@@ -551,7 +551,7 @@
                                                                         <constraint firstAttribute="width" constant="125" id="U13-XT-ZcQ"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextNorm"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -598,7 +598,7 @@
                                                                         <constraint firstAttribute="width" constant="110" id="M6W-Vz-vDe"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextWeak"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5x-OK-myx">
@@ -630,7 +630,7 @@
                                                                         <constraint firstAttribute="height" constant="20" id="FWq-bE-uqb"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" name="ivpnLabel5"/>
+                                                                    <color key="textColor" name="MobileTextNorm"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -686,7 +686,7 @@
                                                 <constraint firstItem="50Q-0g-ZKa" firstAttribute="leading" secondItem="Lcb-Jc-wbO" secondAttribute="leading" constant="30" id="N37-CW-a5o"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="MobileBackgroundNorm"/>
+                                        <color key="backgroundColor" name="MobileFloatyBackground"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="85" id="Kud-ZQ-U5f">
                                         <rect key="frame" x="0.0" y="665" width="390" height="85"/>
@@ -779,14 +779,11 @@
         <namedColor name="MobileFloatyBackground">
             <color red="0.20800000429153442" green="0.20000000298023224" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="MobileIconWeak">
+        <namedColor name="MobileTextNorm">
+            <color red="0.046999998390674591" green="0.046999998390674591" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MobileTextWeak">
             <color red="0.43900001049041748" green="0.42699998617172241" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ivpnBackgroundPrimary">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ivpnBackgroundSecondary">
-            <color red="0.51800000667572021" green="0.57999998331069946" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ivpnBlue">
             <color red="0.22400000691413879" green="0.56099998950958252" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

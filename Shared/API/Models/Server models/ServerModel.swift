@@ -9,9 +9,8 @@ import Foundation
 import NetworkExtension
 import CoreLocation
 
-class ServerModel: NSObject {
-//    var country: String = ""
-//    var countryCode: String = ""
+public class ServerModel: NSObject {
+    //MARK: - V1 Server Models
     var ipAddress: String = ""
     var ovpn: String = ""
     var ovpnName: String = ""
@@ -20,35 +19,28 @@ class ServerModel: NSObject {
     var state: String = ""
     var status: Bool = false
     var pingMs: Int?
-    
     var status2: NEVPNStatus = .invalid {
         didSet {
             UserDefaults.standard.set(status2.rawValue, forKey: UserDefaults.Key.selectedServerStatus)
             UserDefaults.standard.synchronize()
         }
     }
-    
     var fastest = false {
         didSet {
             UserDefaults.standard.set(fastest, forKey: UserDefaults.Key.selectedServerFastest)
             UserDefaults.standard.synchronize()
         }
     }
-    
     var random = false
-    
     var fastestServerLabelShouldBePresented: Bool {
         return fastest && pingMs == nil && Application.shared.connectionManager.status.isDisconnected()
     }
-    
     var randomServerLabelShouldBePresented: Bool {
         return random && Application.shared.connectionManager.status.isDisconnected()
     }
-    
     var location: CLLocation {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
-    
     var supportsIPv6: Bool {
         for host in hosts {
             if host.ipv6 == nil {
@@ -58,7 +50,6 @@ class ServerModel: NSObject {
         
         return true
     }
-    
     var enabledIPv6: Bool {
         for host in hosts {
             if !(host.ipv6?.localIP.isEmpty ?? true) {
@@ -68,15 +59,12 @@ class ServerModel: NSObject {
         
         return false
     }
-    
     var isHost: Bool {
         return country == "" && gateway != ""
     }
-    
     var hostGateway: String {
         return gateway.components(separatedBy: CharacterSet.decimalDigits).joined()
     }
-    
     private (set) var gateway: String
     private (set) var latitude: Double
     private (set) var longitude: Double
@@ -86,9 +74,31 @@ class ServerModel: NSObject {
     private (set) var country: String
     private (set) var city: String
     private (set) var countryCode: String
+    
+    //MARK: - V2 Server Models
+//    public let id: String
+//    public let name: String
+//    public let domain: String
+//    public private(set) var load: Int
+//    public let entryCountryCode: String // use when feature.secureCore is true
+//    public let exitCountryCode: String
+    public let tier: Int
+//    public private(set) var score: Double
+//    public private(set) var status: Int
+//    public let feature: ServerFeature
+//    public let city: String?
+//    public var ips: [ServerIp] = []
+//    public var location: ServerLocation
+//    public let hostCountry: String?
+//    public let translatedCity: String?
+    
+    
+
+    
+
     //private (set) var state: String
     
-    init(gateway: String, countryCode: String, country: String, city: String, latitude: Double = 0, longitude: Double = 0, ipAddresses: [String] = [], hosts: [Host] = [], fastest: Bool = false, load: Double = 0) {
+    init(gateway: String, countryCode: String, country: String, city: String, latitude: Double = 0, longitude: Double = 0, ipAddresses: [String] = [], hosts: [Host] = [], fastest: Bool = false, load: Double = 0,tier: Int) {
         self.gateway = gateway
         self.countryCode = countryCode
         self.country = country
@@ -100,11 +110,31 @@ class ServerModel: NSObject {
         self.hosts = hosts
         self.fastest = fastest
         self.load = load
+        self.tier = tier
     }
     
-//    override init() {
-//        super.init()
-//    }
+    //    override init() {
+    //        super.init()
+    //    }
+    
+    public func matches(searchQuery: String) -> Bool {
+        let query = searchQuery.lowercased()
+        
+        if ovpnName.lowercased().contains(query) {
+            return true
+        }
+        
+        if country.lowercased().contains(query) {
+            return true
+        }
+        
+        if state.lowercased().contains(query) {
+            return true
+        }
+        
+        
+        return false
+    }
     
     func getLocationFromGateway() -> String {
         let gatewayParts = gateway.components(separatedBy: ".")
@@ -178,4 +208,3 @@ class ServerModel: NSObject {
                 "status": self.status]
     }
 }
-

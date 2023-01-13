@@ -23,6 +23,37 @@ extension UIViewController {
 }
 
 public extension UIViewController {
+    
+    var isPresentedModally: Bool {
+        if let navigationController = navigationController {
+            if navigationController.viewControllers.first != self {
+                return false
+            }
+        }
+        
+        if presentingViewController != nil {
+            return true
+        }
+        
+        if navigationController?.presentingViewController?.presentedViewController == navigationController {
+            return true
+        }
+        
+        if tabBarController?.presentingViewController is UITabBarController {
+            return true
+        }
+        
+        return false
+    }
+    
+    @IBAction func dismissViewController(_ sender: Any) {
+        if #available(iOS 13.0, *) {
+            if let presentationController = navigationController?.presentationController {
+                presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+            }
+        }
+        navigationController?.dismiss(animated: true)
+    }
 
     func setUpCloseButton(showCloseButton: Bool, action: Selector?) {
         if showCloseButton {

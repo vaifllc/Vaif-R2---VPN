@@ -10,8 +10,6 @@
 import Foundation
 import TrustKit
 import Alamofire
-import ProtonCore_Log
-import ProtonCore_CoreTranslation
 
 private let requestQueue = DispatchQueue(label: "ch.protonmail.alamofire")
 

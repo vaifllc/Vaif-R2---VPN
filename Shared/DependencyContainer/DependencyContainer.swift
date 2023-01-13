@@ -140,7 +140,7 @@ final class DependencyContainer {
         return doh
     }()
     //lazy var profileManager = ProfileManager(serverStorage: makeServerStorage(), propertiesManager: makePropertiesManager(), profileStorage: ProfileStorage(authKeychain: makeAuthKeychainHandle()))
-    //private lazy var searchStorage = SearchModuleStorage(storage: storage)
+    private lazy var searchStorage = SearchModuleStorage(storage: storage)
    // private lazy var review = Review(configuration: Configuration(settings: propertiesManager.ratingSettings), plan: (try? vpnKeychain.fetchCached().accountPlan.description), logger: { message in log.debug("\(message)", category: .review) })
 }
 
@@ -225,11 +225,11 @@ extension DependencyContainer: AppSessionManagerFactory {
 }
 
 // MARK: ServerStorageFactory
-//extension DependencyContainer: ServerStorageFactory {
-//    func makeServerStorage() -> ServerStorage {
-//        return ServerStorageConcrete()
-//    }
-//}
+extension DependencyContainer: ServerStorageFactory {
+    func makeServerStorage() -> ServerStorage {
+        return ServerStorageConcrete()
+    }
+}
 
 // MARK: VpnGatewayFactory
 //extension DependencyContainer: VpnGatewayFactory {
@@ -470,11 +470,11 @@ extension DependencyContainer: BugReportCreatorFactory {
 //}
 
 // MARK: SearchStorageFactory
-//extension DependencyContainer: SearchStorageFactory {
-//    func makeSearchStorage() -> SearchStorage {
-//        return searchStorage
-//    }
-//}
+extension DependencyContainer: SearchStorageFactory {
+    func makeSearchStorage() -> SearchStorage {
+        return searchStorage
+    }
+}
 
 // MARK: ReviewFactory
 //extension DependencyContainer: ReviewFactory {

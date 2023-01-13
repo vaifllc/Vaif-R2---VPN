@@ -53,7 +53,7 @@ class R1Settings {
     init(serverList: VPNServerList) {
         connectionProtocol = ConnectionSettings.getSavedProtocol()
         
-        selectedServer = serverList.servers.first ?? ServerModel(gateway: "Not loaded", countryCode: "US", country: "", city: "")
+        selectedServer = serverList.servers.first ?? ServerModel(gateway: "Not loaded", countryCode: "US", country: "", city: "", tier: 0)
         selectedExitServer = serverList.getExitServer(entryServer: selectedServer)
         
         if let savedCity = UserDefaults.standard.string(forKey: UserDefaults.Key.selectedServerCity) {

@@ -9,6 +9,7 @@ import Foundation
 
 public extension String {
     
+    
     func commaSeparatedToArray() -> [String] {
         return components(separatedBy: .whitespaces)
             .joined()

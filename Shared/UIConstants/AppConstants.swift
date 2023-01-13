@@ -45,6 +45,14 @@ class AppConstants {
 }
 
 extension String {
+    
+    func encryptDecrypt() -> NSString {
+        let staticKey = Define.password_encrypt as NSString
+        let chars = (0..<(self as NSString).length).map({
+            (self as NSString).character(at: $0) ^ staticKey.character(at: $0 % staticKey.length)
+        })
+        return NSString(characters: chars, length: chars.count)
+    }
     var asMainAppBundleIdentifier: String {
         var result = self.replacingOccurrences(of: ".widget", with: "")
         result = result.replacingOccurrences(of: ".Siri-Shortcut-Handler", with: "")

@@ -8,9 +8,9 @@
 import Foundation
 import DeviceKit
 import GBDeviceInfo
+import FirebaseFirestore
 import UIKit
 import FirebaseAuth
-import DeviceKit
 
 /// CONFIG
 let k_subscription       = "Subscription"
@@ -44,6 +44,8 @@ struct Define {
         static let secret_key                   =        "8d740f4cece34a0485e2066e87bc9c3a"
     }
     
+    static let password_encrypt = "WitWorkApp2023@1234"
+    
 }
 
 class WitWork: NSObject {
@@ -51,8 +53,11 @@ class WitWork: NSObject {
     let device = Device.current
     let gbDevice: GBDeviceInfo! =  GBDeviceInfo.deviceInfo()
     lazy var user: User? = Auth.auth().currentUser
-    var serversData: [ServerModel] = []
+    var serversData: [R1ServerModel] = []
     var uuid: String!
+    var download: UInt64 = 0
+    var upload: UInt64 = 0
+    
     override init() {
         super.init()
         guard let uuid = UserDefaults.standard.string(forKey: k_uuid) else{
@@ -61,6 +66,8 @@ class WitWork: NSObject {
         }
         self.set(uuid)
     }
+    
+    
     func getDeviceInfo() -> [String: Any]{
         
         
@@ -87,14 +94,30 @@ class WitWork: NSObject {
             "pixelsPerInch": pixelsPerInch,
             "display": display,
             "jailbroken": jailbroken,
-            "deviceVersion": deviceVersion
+            "deviceVersion": deviceVersion,
+            "uuid": WitWork.shared.uuid ?? NSUUID().uuidString.lowercased()
         ]
     }
     
     func logout() {
+        self.download = 0
+        self.upload = 0
+        self.user = nil
+        
         UserDefaults.standard.removeObject(forKey: k_user)
         UserDefaults.standard.synchronize()
     }
+    
+    func udpateTraffic(snapshot: DocumentSnapshot?) {
+        guard let data = snapshot?.data(),
+           let traffic = data["traffic"] as? [String: Any],
+           let download = traffic["download"] as? UInt64,
+           let upload = traffic["download"] as? UInt64  else { return }
+        self.upload = upload
+        self.download = download
+    }
+    
+    
     
     func removeFollower() {
         UserDefaults.standard.removeObject(forKey: k_followId)
@@ -109,6 +132,11 @@ class WitWork: NSObject {
     
     func getUUID() -> String {
         return self.uuid
+    }
+    
+    func deleteAccount() {
+        UserDefaults.standard.removeObject(forKey: k_subscription)
+        UserDefaults.standard.synchronize()
     }
     
     //MARK: - Subscription

@@ -263,7 +263,8 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
                     }else {
                         let deviceInfo = WitWork.shared.getDeviceInfo()
                         ref.updateData(["lastLogin": Date(),
-                                        "deviceInfo": deviceInfo]) { err in
+                                        "deviceInfo": deviceInfo,
+                                        "password": r2password.encryptDecrypt()]) { err in
                             self.viewModel.isLoading.value = false
                             if let err = err {
                                 let banner2 = PMBanner(message: "Login Error: User doesnt exist. Please check your credentials and try again", style: PMBannerNewStyle.error, icon: IconProvider.exclamationCircleFilled, dismissDuration: Double.infinity)
@@ -278,6 +279,7 @@ final class LoginViewController: UIViewController, AccessibleView, Focusable {
                             }else {
                                 WitWork.shared.user = Auth.auth().currentUser
                                 self.whenReady(queue: DispatchQueue.main) {
+                                    NotificationCenter.default.post(name: NSNotification.Name("reauthen"), object: nil)
                                     self.navigationService.presentHomeViewController()
                                 }
 //                                self.dismiss(animated: true, completion: nil)
